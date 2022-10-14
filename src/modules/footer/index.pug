@@ -1,0 +1,213 @@
+mixin footer-accordion(name, link, parent, ...links)
+	.py-2
+		a(href="#"+link data-toggle="collapse" aria-expanded="false" aria-controls=link).text-white.dropdown-footer-block
+			u= name
+	.collapse(id=link data-parent=parent)
+		ul.footer__active-ul.list-unstyled.footer__ul.ml-0.mb-3.pl-2.pt-2
+			each item in links
+				li.mb-2.pb-1
+					a(href='#').text-white= item
+mixin footer-accordion-marketing(name, link, parent, ...links)
+	.py-2
+		a(href="#"+link data-toggle="collapse" aria-expanded="false" aria-controls=link).text-white.dropdown-footer-block
+			u= name
+	.collapse(id=link data-parent=parent)
+		ul.footer__active-ul.list-unstyled.footer__ul.ml-0.mb-3.pl-2.pt-2
+			each item, index in links
+				if index == links.length - 1
+					li.mb-2.pb-1
+						a(href="#").text-white.footer__active-ul-disabled= item
+				else
+					li.mb-2.pb-1
+						a(href='#').text-white= item
+mixin footer-accordion-open(name, link, parent, ...links)
+	.py-2
+		a(href="#"+link data-toggle="collapse" aria-expanded="true" aria-controls=link).text-white.dropdown-footer-block
+			u= name
+	.collapse.show(id=link data-parent=parent)
+		ul.footer__active-ul.list-unstyled.footer__ul.ml-0.mb-3.pl-2.pt-2
+			each item in links
+				li.mb-2.pb-1
+					a(href='#').text-white= item
+mixin footer-accordion-open-marketing(name, link, parent, ...links)
+	.py-2
+		a(href="#"+link data-toggle="collapse" aria-expanded="true" aria-controls=link).text-white.dropdown-footer-block
+			u= name
+	.collapse.show(id=link data-parent=parent)
+		ul.footer__active-ul.list-unstyled.footer__ul.ml-0.mb-3.pl-2.pt-2
+			each item, index in links
+				if index == links.length - 1
+					li.mb-2.pb-1
+						a(href="#").text-white.footer__active-ul-disabled= item
+				else
+					li.mb-2.pb-1
+						a(href='#').text-white= item
+footer.footer.pb-4.pt-5
+	.container
+		.row.d-none.d-sm-flex
+			.col-lg-4.col-sm-6#footer-parent-1
+				p.footer__title.active-title(data-click='show-ul').font-weight-bold.text-warning Услуги
+				+footer-accordion('Комплексные проекты', 'collapse-footer-1',  '#footer-parent-1', 'Digital стратегия' , 'Digital консалтинг', 'Компаниям с продуктами B2B', 'Компаниям с дилерскими сетями', 'Быстрый запуск - посадочная + реклама')
+				+footer-accordion-open-marketing('Маркетинг', 'collapse-footer-2', '#footer-parent-1', 'Performance - контекст и таргетинг', 'SEO оптимизация', 'Продвижение в linkedIN', 'Email маркетинг', 'CRM маркетинг', 'SMM', 'Сквозная аналитика', 'Проведение мероприятий онлайн', 'Система подогрева клиентов', 'SERM (Работа с отзывами)', 'Account Based Marketing')
+				+footer-accordion('Разработка', 'collapse-footer-3', '#footer-parent-1', 'Разработка сайтов', 'Система дилерских сайтов / сайты клоны', 'B2B порталы', 'Техническая поддержка', 'Разработка мобильных приложений', 'Разработка онлайн сервисов')
+				+footer-accordion('Дизайн', 'collapse-footer-4', '#footer-parent-1', 'Брендинг', 'Разработка продукта')
+				+footer-accordion('Продажи', 'collapse-footer-5', '#footer-parent-1', 'Интеграция CRM', 'Система контроля дилерской сети', 'Построение отделов продаж')
+				.mb-5
+					+footer-accordion('Исследования', 'collapse-footer-6', '#footer-parent-1', 'Исследование конкурентов', 'Customer Journey Map', 'Заказные исследования', 'Исследование спроса')
+				.d-lg-none
+					p.footer__title(data-click='show-ul')
+						a(href='https://www.completo.ru/about/').font-weight-bold О компании
+					ul.list-unstyled.footer__ul.ml-0.mb-4
+						li.footer__main-link
+							a(href='https://www.completo.ru/about/' target='_blank') О компании
+						li.footer__main-link
+							a(href='http://school.completo.ru/' target='_blank') Школа стажеров
+						li.footer__main-link
+							a(href='https://club.completo.ru' target='_blank') Комплето Клуб
+						li.footer__main-link
+							a(href='https://www.completo.ru/vacancy/' target='_blank') Вакансии
+						li.footer__main-link
+							a(href='https://www.completo.ru/checklist-for-agencies/' target='_blank') Тест агентств
+						li.footer__main-link
+							a(href='https://www.completo.ru/privacy_policy.rtf' target='_blank') Политика конфиденциальности
+			.col-lg-4.col-sm-6#footer-parent-3
+				p.footer__title(data-click='show-ul').font-weight-bold.text-warning Наши кейсы
+				.mb-5
+					+footer-accordion-open('Кейсы по отраслям', 'collapse-footer-10', '#footer-parent-3', 'B2C маркетинг', 'B2B маркетинг', 'Банки', 'Промышленность и энергетика', 'Ритейл и B2C товары', 'IT', 'Медицина и здоровье', 'Производство и дистрибьютеры', 'Услуги и консалтинг', 'Интернет проекты и стартапы', 'Авторынок и логистика', 'Недвижимость и строительство')
+					+footer-accordion('Кейсы по услугам', 'collapse-footer-11', '#footer-parent-3', 'Кейсы по контекстной рекламе', 'Кейсы по SEO', 'Кейсы по таргетированной рекламе', 'Кейсы по email маркетингу', 'Кейсы по разработке сайтов', 'Разработка личных кабинетов', 'Техническая поддержка', 'Кейсы по SMM', 'Прогрев клиентов (SalesFarm)', 'Кейсы по CRM маркетингу', 'Кейсы по сквозной аналитике', 'Стратегия интернет-маркетинга', 'Исследования конкурентов', 'SERM (работа с отзывами)', 'Разработка мобильных приложений')
+					ul.footer__active-ul.list-unstyled.footer__ul.ml-0.mb-3.pt-2
+						li.mb-2.pb-1
+							a(href='#').text-white
+								u Кейсы по компаниям
+				ul.list-unstyled.d-lg-none.ml-0.mb-5
+					li.footer__link-content.mb-4
+						a.font-weight-bold(href='https://blog.completo.ru/')
+							u Блог
+					li.footer__link-content.mb-4
+						a.font-weight-bold(href='https://www.completo.ru/contacts/')
+							u Контакты
+					li.footer__link-content.mb-4
+						a.font-weight-bold(href='https://wa.me/79587091189')
+							u Написать в WhatsApp
+			.col-lg-4.col-sm-6.d-none.d-lg-block
+				p.footer__title(data-click='show-ul')
+					a(href='https://www.completo.ru/about/').font-weight-bold О компании
+				ul.list-unstyled.footer__ul.ml-0
+					li.footer__main-link
+						a(href='https://www.completo.ru/about/' target='_blank') О компании
+					li.footer__main-link
+						a(href='http://school.completo.ru/' target='_blank') Школа стажеров
+					li.footer__main-link
+						a(href='https://club.completo.ru' target='_blank') Комплето Клуб
+					li.footer__main-link
+						a(href='https://www.completo.ru/vacancy/' target='_blank') Вакансии
+					li.footer__main-link
+						a(href='https://www.completo.ru/checklist-for-agencies/' target='_blank') Тест агентств
+					li.footer__main-link
+						a(href='https://www.completo.ru/privacy_policy.rtf' target='_blank') Политика конфиденциальности
+				ul.list-unstyled.hide-md.ml-0.mt-5
+					li.footer__link-content.mb-4
+						a.font-weight-bold(href='https://blog.completo.ru/')
+							u Блог
+					li.footer__link-content.mb-4
+						a.font-weight-bold(href='https://www.completo.ru/contacts/')
+							u Контакты
+					li.footer__link-content.mb-4
+						a.font-weight-bold(href='tel:+74956408997')
+							u +7(495) 640-89-97
+					li.footer__link-content.mb-4
+						a.font-weight-bold(href='https://wa.me/79587091189')
+							u Написать в WhatsApp
+		.row.d-sm-none#footer-mobile-block
+			.col-12#footer-parent-mob-1
+				a.footer__title-xs(href="#footer-parent-container-mob-1" data-toggle="collapse" aria-expanded="false" aria-controls="footer-parent-container-mob-1").font-weight-bold.text-warning.d-block.mb-3
+					span Услуги
+					i.arrow-down
+						span
+						span
+				.collapse.text-center#footer-parent-container-mob-1(data-parent="#footer-mobile-block")
+					+footer-accordion('Комплексные проекты', 'collapse-footer-mob-1',  '#footer-parent-mob-1', 'Digital стратегия' , 'Digital консалтинг', 'Компаниям с продуктами B2B', 'Компаниям с дилерскими сетями', 'Быстрый запуск - посадочная + реклама')
+					+footer-accordion-marketing('Маркетинг', 'collapse-footer-mob-2', '#footer-parent-mob-1', 'Performance - контекст и таргетинг', 'SEO оптимизация', 'Продвижение в linkedIN', 'Email маркетинг', 'CRM маркетинг', 'SMM', 'Сквозная аналитика', 'Проведение мероприятий онлайн', 'Система подогрева клиентов', 'SERM (Работа с отзывами)', 'Account Based Marketing')
+					+footer-accordion('Разработка', 'collapse-footer-mob-3', '#footer-parent-mob-1', 'Разработка сайтов', 'Система дилерских сайтов / сайты клоны', 'B2B порталы', 'Техническая поддержка', 'Разработка мобильных приложений', 'Разработка онлайн сервисов')
+					+footer-accordion('Дизайн', 'collapse-footer-mob-4', '#footer-parent-mob-1', 'Брендинг', 'Разработка продукта')
+					+footer-accordion('Продажи', 'collapse-footer-mob-5', '#footer-parent-mob-1', 'Интеграция CRM', 'Система контроля дилерской сети', 'Построение отделов продаж')
+					.mb-4
+						+footer-accordion('Исследования', 'collapse-footer-mob-6', '#footer-parent-mob-1', 'Исследование конкурентов', 'Customer Journey Map', 'Заказные исследования', 'Исследование спроса')
+			.col-12#footer-parent-mob-2
+				a.footer__title-xs(href="#footer-parent-container-mob-2" data-toggle="collapse" aria-expanded="false" aria-controls="footer-parent-container-mob-2").font-weight-bold.text-warning.d-block.mb-3
+					span Наши кейсы
+					i.arrow-down
+						span
+						span
+				.collapse.text-center#footer-parent-container-mob-2(data-parent="#footer-mobile-block")
+					+footer-accordion('Кейсы по отраслям', 'collapse-footer-mob-10', '#footer-parent-mob-2', 'B2C маркетинг', 'B2B маркетинг', 'Банки', 'Промышленность и энергетика', 'Ритейл и B2C товары', 'IT', 'Медицина и здоровье', 'Производство и дистрибьютеры', 'Услуги и консалтинг', 'Интернет проекты и стартапы', 'Авторынок и логистика', 'Недвижимость и строительство')
+					+footer-accordion('Кейсы по услугам', 'collapse-footer-mob-11', '#footer-parent-mob-2', 'Кейсы по контекстной рекламе', 'Кейсы по SEO', 'Кейсы по таргетированной рекламе', 'Кейсы по email маркетингу', 'Кейсы по разработке сайтов', 'Разработка личных кабинетов', 'Техническая поддержка', 'Кейсы по SMM', 'Прогрев клиентов (SalesFarm)', 'Кейсы по CRM маркетингу', 'Кейсы по сквозной аналитике', 'Стратегия интернет-маркетинга', 'Исследования конкурентов', 'SERM (работа с отзывами)', 'Разработка мобильных приложений')
+					ul.footer__active-ul.list-unstyled.footer__ul.ml-0.mb-3.pt-2
+						li.mb-2.pb-1
+							a(href='#').text-white
+								u Кейсы по компаниям
+			.col-12#footer-parent-mob-3
+				a.footer__title-xs(href="#footer-parent-container-mob-3" data-toggle="collapse" aria-expanded="false" aria-controls="footer-parent-container-mob-3").font-weight-bold.text-warning.d-block.mb-3
+					span О компании
+					i.arrow-down
+						span
+						span
+				.collapse.text-center#footer-parent-container-mob-3(data-parent="#footer-mobile-block")
+					ul.footer__active-ul.list-unstyled.footer__ul.ml-0.mb-3
+						li.footer__main-link
+							a(href='https://www.completo.ru/about/' target='_blank') О компании
+						li.footer__main-link
+							a(href='http://school.completo.ru/' target='_blank') Школа стажеров
+						li.footer__main-link
+							a(href='https://club.completo.ru' target='_blank') Комплето Клуб
+						li.footer__main-link
+							a(href='https://www.completo.ru/vacancy/' target='_blank') Вакансии
+						li.footer__main-link
+							a(href='https://www.completo.ru/checklist-for-agencies/' target='_blank') Тест агентств
+						li.footer__main-link
+							a(href='https://www.completo.ru/privacy_policy.rtf' target='_blank') Политика конфиденциальности
+				ul.list-unstyled.d-lg-none.ml-0
+					li.footer__link-content.mb-3
+						a.font-weight-bold(href='https://blog.completo.ru/')
+							u Блог
+					li.footer__link-content.mb-3
+						a.font-weight-bold(href='https://www.completo.ru/contacts/')
+							u Контакты
+					li.footer__link-content.mb-3
+						a.font-weight-bold(href='https://wa.me/79587091189')
+							u Написать в WhatsApp
+		.row.footer__last-row
+			.col-lg-4.col-sm-6.xs-order-2
+				p.text-white.mb-3
+					| &#169;
+					span.footer-date 2020
+					| , Маркетинговая группа «Комплето»
+				a.navbar-brand(href='https://www.completo.ru')
+					img(src='https://www.completo.ru/picture/upload/Completo_logoNEW_white_08-10-2018.png' alt='')
+			.col-lg-4.col-sm-6.xs-order-1
+				p.text-white.mb-3 Изучайте все наши материалы бесплатно и присоединяйтесь к нам!
+				ul.footer__social-link.d-flex.pl-0.list-unstyled
+					li.mr-3
+						+social-link('https://www.facebook.com/completo.ru/', 'facebook-svgrepo-com.svg')
+					li.mr-3
+						+social-link('https://vk.com/completoru', 'iconmonstr-vk-1.svg')
+					li.mr-3
+						+social-link('http://completo.tv/', 'iconmonstr-youtube-1.svg')
+					li.mr-3
+						+social-link('https://www.linkedin.com/company/completo/', 'iconmonstr-linkedin-1.svg')
+					li.mr-3
+						+social-link('https://www.instagram.com/completo.ru/', 'iconmonstr-instagram-11.svg')
+				ul.footer__social-link.d-flex.pl-0.list-unstyled
+					li.mr-3
+						+social-link('https://twitter.com/Completo_Ru/', 'iconmonstr-twitter-1.svg')
+					li.mr-3
+						+social-link('https://www.slideshare.net/Completo_ru', 'slideshare-logo.svg')
+					li.mr-3
+						+social-link('https://www.behance.net/completo', 'iconmonstr-behance-1.svg')
+					li.mr-3
+						+social-link('mailto:contact@completo.ru', 'iconmonstr-email-2.svg')
+			.col-lg-4.col-sm-6.xs-order-1
+				button.btn.btn-warning.data-scroll(data-scroll='form-content') Запросить предложение
+			.col-lg-4.col-sm-6.d-lg-none.d-flex.align-items-center.footer_phone-link
+				a.font-weight-bold.text-warning(href='tel:+74956408997')
+					u +7(495) 640-89-97

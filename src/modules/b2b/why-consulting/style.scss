@@ -1,0 +1,12 @@
+.b2b-work-with {
+	background-image: url('../picture/backgrounds/b2b-pattern-bg.png');
+	background-color: #444444;
+	background-size: cover;
+	padding: 57px 0;
+	&-card {
+		min-width: 190px;
+		&-circle {
+			background-color: #848484;
+		}
+	}
+}

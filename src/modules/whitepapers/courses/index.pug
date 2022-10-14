@@ -1,0 +1,68 @@
+mixin internet-system-card(text, text2)
+	.col-md-6.col-lg-4.mb-4
+		.d-flex
+			.bg-warning.internet-system-dealers__img-block.d-flex.align-items-center.justify-content-center.mr-2
+				img(src="picture/upload/dealers-check.svg", alt="").internet-system-dealers__img
+			p.mb-0.mt-2
+				span.internet-system-dealers__text.text-warning= text
+				br
+				span= text2
+mixin videocourse-img(img)
+	a(href="picture/upload/"+img data-fancybox="gallery").videocourse__sert-img
+		img(src="picture/upload/"+img, alt="").w-100
+.py-5.position-relative.internet-system-dealers.internet-system-dealers-new
+	.container
+		.row
+			.col-md-12
+				nav.breadcrumb
+					ol.breadcrumb
+						li.breadcrumb-item
+							a(href="/").text-secondary Главная
+						li.breadcrumb-item.active.text-dark(aria-current="page") SEO-оптимизация
+		.row
+			.col-md-12
+				h2.h2.mb-0.mb-md-5.position-relative.z-index-2.form-h2
+					span.yellow-border Получите самую подробную
+						span.border-container.animation.visible.animated(data-animate="newline")
+					br
+					span инструкцию по оптимизации сайта!
+		.row.mt-4.mb-md-5.mb-4
+			.col-sm-4.col-md-3.mb-4 
+				img(src="picture/upload/whitepapers-openbook.png", alt="").w-100
+			.col-sm-8.col-md-9
+				.row
+					+internet-system-card('Какие ', 'факторы учесть при SEO-оптимизации?')
+					+internet-system-card('Как ', 'улучшить индексацию страниц?')
+					+internet-system-card('Какие ', 'инструменты и сервисы использовать?')
+					+internet-system-card('Какие ', 'могут быть проблемы и как с ними бороться?')
+					+internet-system-card('Каких ', 'страниц не должно быть на сайте?')
+.videocourse__teach-block-dark.position-relative.whitepapers-block-bg
+	.container
+		.row
+			.col-md-12.col-lg-11 
+				.d-flex
+					.dealers-level__card-icon-block
+						i.icon.dealers-level__card-icon.icon-complect.text-white
+					.dealers-level__bloquote.dealers-level__bloquote-sm.mt-5.mt-md-0
+						p.mb-3
+							span.text-secondary.font-weight-bold.dealers-level__bloquote-title Мы собрали более 100 практических советов для абсолютной SEO-оптимизации сайта.
+						p.h4.font-weight-normal.text-white.mb-3 Мы привлекли лучших SEO-специалистов из своей компании и всей отрасли, потратили около года на сбор и анализ информации и теперь
+						p.mb-3
+							span.text-secondary.font-weight-bold.dealers-level__bloquote-title со 100% уверенностью можем сказать - если в нашем справочнике чего-то нет, значит его нет в принципе!
+.py-5
+	.container.my-md-4
+		.row
+			.col-md-12
+				.custom-scrollbar
+					.d-flex.justify-content-center
+						+videocourse-img('whitepapers-01.jpg')
+						+videocourse-img('whitepapers-02.jpg')
+						+videocourse-img('whitepapers-03.jpg')
+						+videocourse-img('whitepapers-04.jpg')
+						+videocourse-img('whitepapers-05.jpg')
+						+videocourse-img('whitepapers-06.jpg')
+						+videocourse-img('whitepapers-07.jpg')
+			.col-md-12.d-md-flex.justify-content-center.d-none
+				button.btn.btn-warning.data-scroll.mt-5.mb-4.d-block.dealers__block-head-btn.whitepapers-dialog__btn(data-scroll='whitepapershead')  Скачать PDF
+			.col-md-12.d-flex.justify-content-center.d-md-none
+				button.btn.btn-warning.data-scroll.mt-5.mb-4.d-block.dealers__block-head-btn.whitepapers-dialog__btn(data-toggle="modal" data-target="#myModalForm")  Скачать PDF

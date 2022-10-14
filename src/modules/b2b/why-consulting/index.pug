@@ -1,0 +1,29 @@
+mixin why-consulting-card(icon, text)
+	.d-flex.mx-3.mb-4.align-items-center.b2b-work-with-card
+		.system-modules-container__list-icon-block.mb-0.b2b-work-with-card-circle.mr-2
+			i.icon.system-modules-container__list-icon.text-secondary(class="icon-"+icon)
+		p.font-weight-bold.text-white.mb-0= text
+.container.mt-md-4
+	.row 
+		.col-md-12
+			h2.mb-4.mb-md-5
+				span.yellow-border Мы уже работали с:
+					span.border-container.animation.visible.animated(data-animate="newline")
+.b2b-work-with
+	.container
+		.row
+			.col-md-12
+				.custom-scrollbar
+					.d-flex.why-consulting__card-container-mobile
+						+why-consulting-card('b2b-pump', 'Насосное оборудование')
+						+why-consulting-card('b2b-recycle', 'Промышленные пластиковые емкости')
+						+why-consulting-card('b2b-excavator', 'Строительная техника')
+						+why-consulting-card('b2b-microscope', 'Дорогое мед. оборудование')
+						+why-consulting-card('b2b-medical-research', 'Лабораторные комплексы')
+						+why-consulting-card('b2b-fertilizer', 'Удобрения и химикаты')
+						+why-consulting-card('b2b-factory', 'Промышленная недвижимость')
+						+why-consulting-card('b2b-law', 'Юр.услуги для бизнеса')
+						+why-consulting-card('b2b-electrical-circuit', 'Электротехническое оборудование')
+						+why-consulting-card('b2b-light-bulb', 'Световое оборудование')
+			.col-md-12.d-flex.justify-content-center 
+				button.btn.btn-warning.data-scroll.mt-4.mt-md-5.mb-2.d-block(data-scroll="form-content") Запросить предложение

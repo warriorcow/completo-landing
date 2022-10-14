@@ -1,0 +1,26 @@
+mixin seo-num(num, text)
+	.d-flex.align-items-center.primary-head-item
+		.primary-head-item-num
+			span.primary-head-item-num-text= num
+		.primary-head-item-text.text-white!= text
+.primary-head
+	.container-fluid.primary-head-container.h-100
+		.row.h-100.align-items-center
+			.col-lg-4.col-md-4.d-none.d-md-block
+				+seo-num('1', 'сформированный спрос')
+				+seo-num('2', 'смежный спрос')
+				+seo-num('3', 'конкурентный и на товары-заменители')
+				+seo-num('4', 'репутационный: <br> отзывы и мнения')
+			.offset-xl-1.col-md-8.col-xl-6
+				.primary-head__title-container
+					.h1.main-title.primary-head__title Системное SEO:
+						br
+						| Работаем со всеми видами спроса
+				button.btn.btn-warning.data-scroll.mt-4.mb-4.d-block(data-scroll="form-content") Вести SEO по системе!
+	.primary-head-video
+		video(autoplay="autoplay" muted playsinline loop poster="picture/upload/slide_1-seo.jpg")
+			source(src="picture/upload/Seo-1.mp4" type="video/mp4")
+	.primary-head-img.primary-head-img-1
+		img(src="picture/upload/line_1.png", alt="")
+	.primary-head-img.primary-head-img-2
+		img(src="picture/upload/line_2.png", alt="")

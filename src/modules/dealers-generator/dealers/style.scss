@@ -1,0 +1,72 @@
+.dealers {
+	padding: 60px 0;
+	background-image: url(../picture/backgrounds/bg-lightgrey.svg);
+	background-repeat: repeat-x;
+	background-position: center;
+	&__table {
+		background-color: white;
+		padding: 23px 30px;
+		border: 1px solid $yellow;
+		box-shadow: 0 3px 15px rgba(0,0,0,.25);
+		margin-bottom: 40px;
+		table {
+			min-width: 800px;
+			@include media-breakpoint-down(xs) {
+				min-width: 600px;
+			}
+			td, th {
+				border-top: none;
+				padding: 7px 15px;
+				@include media-breakpoint-down(md) {
+					font-size: 14px;
+				}
+				@include media-breakpoint-down(xs) {
+					font-size: 12px;
+					padding: 5px;
+				}
+			}
+			td:nth-child(1) {
+				width: 300px;
+				@include media-breakpoint-down(md) {
+					width: 220px;
+				}
+				@include media-breakpoint-down(xs) {
+					width: 140px;
+				}
+			}
+			th {
+				font-weight: normal;
+				strong {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	&__card {
+		padding: 35px 25px;
+		display: flex;
+		align-items: flex-start;
+		box-shadow: 0 6px 6px rgba(0,0,0,.15);
+		height: 100%;
+		@include media-breakpoint-down(sm) {
+			flex-direction: column;
+		}
+		&-1 {
+			background-color: white;
+			border: 1px solid $yellow;
+		}
+		&-2 {
+			background-image: linear-gradient(180.16deg,#003541 .32%,rgba(0,45,55,.7) 41.84%);
+			border: 1px solid transparent;
+		}
+	}
+}
+.table-no {
+	background-color: rgba(222,41,41,.2);
+	padding: 3px 10px;
+}
+
+.table-yes {
+	background-color: rgba(111,207,151,.2);
+	padding: 3px 10px;
+}

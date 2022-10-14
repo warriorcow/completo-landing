@@ -1,0 +1,28 @@
+.ad-block-container {
+	background-image: url('../picture/upload/line_3.png');
+	background-position: center top;
+	background-size: cover;
+	background-repeat: no-repeat;
+	&-card {
+		box-shadow: 0 3px 15px rgba(0,0,0,.25);
+		min-height: 127px;
+		&-img {
+			height: 49px;
+		}
+	}
+}
+
+.double-text {
+	white-space: nowrap;
+}
+
+.dealers-problems__main-card .bloquote-container-block {
+	@include media-breakpoint-down(xs) {
+		font-size: 18px;
+	}
+}
+.dealers-problems__main-card-new {
+	@include media-breakpoint-down(xs) {
+		padding-bottom: 45px;
+	}
+}

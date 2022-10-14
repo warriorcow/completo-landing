@@ -1,0 +1,209 @@
+.dealers-problems {
+	background-color: #f2f6fa;
+	padding: 50px 0;
+	background-image: url(../picture/backgrounds/spiral.png);
+	background-repeat: repeat-x;
+	background-position: center;
+	.slick-dots {
+		left: 15px;
+	}
+	.slick-dotted.slick-slider {
+		padding-bottom: 0;
+	}
+	&__main-card {
+		background-color: white;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 25px 80px 25px 35px;
+		box-shadow: 0 3px 15px rgba(0,0,0,.25);
+		border: 1px solid $yellow;
+		border-radius: 6px;
+		margin-top: 40px;
+		position: relative;
+		>* {
+			position: relative;
+			z-index: 1;
+		}
+		@include media-breakpoint-down(sm) {
+			flex-wrap: wrap;
+			padding: 25px 30px;
+		}
+		&:before,
+		&:after {
+			content: '';
+			border: 1px solid $yellow;
+			border-radius: 6px;
+			position: absolute;
+			z-index: 0;
+		}
+		&:before {
+			width: calc(100% + 24px);
+			height: calc(100% + 30px);
+			opacity: 0.3;
+			left: -12px;
+			top: -15px;
+		}
+		&:after {
+			width: calc(100% + 14px);
+			height: calc(100% + 12px);
+			opacity: 0.6;
+			left: -7px;
+			top: -6px;
+		}
+		&__img {
+			width: 15%;
+			@include media-breakpoint-down(sm) {
+				width: 100px;
+			}
+		}
+	}
+	&__quote {
+		width: calc(80% - 30px);
+		@include media-breakpoint-down(sm) {
+			width: calc(100% - 40px);
+			margin: 15px auto 0;
+		}
+		&-text {
+			position: relative;
+			font-size: 24px;
+			color: #215b5f;
+			font-weight: bold;
+			@include media-breakpoint-down(sm) {
+				font-size: 18px;
+			}
+			&:before,
+			&:after {
+				font-size: 100px;
+				position: absolute;
+				top: 0;
+				line-height: 30px;
+				@include media-breakpoint-down(sm) {
+					font-size: 60px;
+				}
+			}
+			&:before {
+				content: '\00AB';
+				left: -60px;
+				@include media-breakpoint-down(sm) {
+					left: -40px;
+				}
+			}
+			&:after {
+				content: '\00BB';
+				right: -50px;
+				@include media-breakpoint-down(sm) {
+					right: -40px;
+				}
+			}
+		}
+		&-main-text {
+			background-image: linear-gradient(176.78deg,rgba(7,125,151,.83) 21.15%,#205A5E 51.5%);
+			display: inline-block;
+			margin-bottom: 20px;
+			span {
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				-webkit-text-stroke: 1.5px white;
+				color: white;
+				font-weight: bold;
+				font-size: 48px;
+				@include media-breakpoint-down(sm) {
+					font-size: 30px;
+				}
+			}
+		}
+	}
+	&__breadcrumbs {
+		font-size: 12px;
+		margin-bottom: 20px;
+		.separate {
+			margin: 0 3px;
+		}
+		a {
+			color: #077d97;
+			text-decoration: none;
+		}
+	}
+	&__card {
+		background-color: $yellow;
+		height: 100%;
+		padding: 20px;
+		padding-right: 50px;
+		box-shadow: 0 5px 15px #e0b429;
+		position: relative;
+		z-index: 2;
+		@include media-breakpoint-down(lg) {
+			.h4 {
+				font-size: 1rem;
+			}
+			p {
+				font-size: 14px;
+			}
+		}
+		@include media-breakpoint-down(sm) {
+			height: 150px;
+		}
+		&-1,
+		&-2,
+		&-3,
+		&-4 {
+			&:before {
+				content: '';
+				width: 100%;
+				height: 100%;
+				background-color: $yellow;
+				transform: skew(6deg);
+				position: absolute;
+				right: 15px;
+				top: 0;
+				z-index: -1;
+				box-shadow: -14px 5px 22px #e0b429;
+				@include media-breakpoint-down(md) {
+					display: none;
+				}
+			}
+		}
+		&-2 {
+			&:before {
+				right: auto;
+				left: 15px;
+				transform: skew(-6deg);
+				box-shadow: 14px 5px 22px #e0b429;
+			}
+		}
+		&-3 {
+			&:before {
+				transform: skew(-6deg);
+			}
+		}
+		&-4 {
+			&:before {
+				right: auto;
+				left: 15px;
+				box-shadow: 14px 5px 22px #e0b429;
+			}
+		}
+		&-container {
+			margin-bottom: 30px;
+			counter-increment: counter;
+			&-main {
+				counter-reset: counter;
+			}
+			&:before {
+				content: counter(counter);
+				position: absolute;
+				right: 30px;
+				bottom: 0;
+				text-shadow: -1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;
+				color: $yellow;
+				font-size: 68px;
+				font-weight: bold;
+				z-index: 3;
+				@include media-breakpoint-down(sm) {
+					display: none;
+				}
+			}
+		}
+	}
+}

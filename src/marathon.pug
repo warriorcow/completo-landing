@@ -1,0 +1,23 @@
+- var title = "Бесплатный курс интернет-маркетинга с сертификатом, онлайн курс по маркетингу";
+doctype html
+html(lang="ru")
+    head
+        include modules/head/index.pug
+    body
+        .header-black-bg
+            include modules/header/index.pug
+        .marathone
+            include modules/marathon/head/index.pug
+            include modules/marathon/courses/index.pug
+            include modules/marathon/program/index.pug
+            include modules/marathon/advantages/index.pug
+            include modules/marathon/clients/index.pug
+            include modules/marathon/marketing/index.pug
+            .marathon__form.position-relative.videocourse__advantages-middle
+                //- img(src="picture/upload/video-Group_428.png", alt="").videocourse__advantages-middle-img
+                .container.my-md-4.position-relative
+                    .row
+                        .col-md-12
+                            +form-messendger('Зарегистрируйтесь ', 'бесплатный', 'В удобном мессенджере')
+        include modules/footer/index.pug
+        include modules/foot/index.pug

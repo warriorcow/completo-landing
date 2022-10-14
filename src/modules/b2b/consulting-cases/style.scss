@@ -1,0 +1,65 @@
+.case__card {
+	text-decoration: none !important;
+	border-radius: 4px;
+	max-width: 353px;
+	width: 353px !important;
+	height: 353px;
+	display: block;
+	@include media-breakpoint-down(xs) {
+		max-width: 250px;
+		height: 250px;
+		width: 250px !important;
+	}
+	&-text,
+	&-title {
+		position: relative;
+		z-index: 2;
+	}
+	&-notebook {
+		padding: 40px;
+		@include media-breakpoint-down(xs) {
+			padding: 25px;
+		}
+		&-title {
+			font-weight: bold;
+			font-size: 18px;
+		}
+		&-img {
+			width: 100%;
+		}
+	}
+	&-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: flex-start;
+		padding: 20px;
+		background-size: cover;
+		position: relative;
+		height: 100%;
+		border-radius: 4px;
+		&:before {
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-image: linear-gradient(180deg,rgba(0,0,0,.1) 9.58%,rgba(0,0,0,.83) 100%);
+			transition: .2s ease all;
+			z-index: 1;
+			border-radius: 4px;
+		}
+		&:hover:before {
+			opacity: 0.6;
+		}
+	}
+}
+
+.cases-bg-blue {
+	background-color: #133F73;
+}
+
+.cases-bg-red {
+	background-color: #BA1F33;
+}

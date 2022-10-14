@@ -1,0 +1,10 @@
+.marketing-consultation__title {
+	@include media-breakpoint-up(xl) {
+		font-size: 36px;
+	}
+	&-yellow {
+		@include media-breakpoint-up(md) {
+			font-size: 34px;
+		}
+	}
+}

@@ -1,0 +1,122 @@
+mixin btn-carousel
+	.row
+		.col-6.mb-4
+			button.btn.btn-warning.step__prev.mt-4.mb-4.d-flex.align-items-center.w-100.step__btn-mobile
+				i.icon.icon-arrow-left.step__next-icon
+				span.ml-2 Предыдущий этап
+		.col-6.mb-4
+			button.btn.btn-warning.step__next.mt-4.mb-4.d-flex.align-items-center.w-100.step__btn-mobile
+				span.mr-2 Следующий этап
+				i.icon.icon-arrow-right.step__next-icon
+mixin step-list(...lists)
+	ul.step__list.list-unstyled.d-none.d-md-flex
+		each list, index in lists
+			if index == 0
+				li.step__list-item.active
+					a(href="#" data-link=index).step__list-item-link
+						span.step__list-item-link-num= index + 1
+						span.step__list-item-link-text= list
+			else
+				li.step__list-item
+					a(href="#" data-link=index).step__list-item-link
+						span.step__list-item-link-num= index + 1
+						span.step__list-item-link-text= list
+mixin step-next-btn
+	button.btn.btn-warning.step__next.mt-4.mb-4.d-none.d-md-inline-flex.align-items-center
+		span.mr-2 Следующий этап
+		i.icon.icon-arrow-right.step__next-icon
+mixin step-carousel
+	.step__carousel-container
+		.step__carousel-container-dot
+		.step__carousel-container-dot
+		.step__carousel-container-dot
+		.step__carousel
+			img(src="picture/upload/new_seo_step1.png", alt="").w-100.step__carousel-img
+			.custom-step
+				img(src="picture/upload/step_1.jpg", alt="").w-100
+			img(src="picture/upload/step3_new.png", alt="").w-100.step__carousel-img
+			.custom-step-video
+				video(autoplay loop)
+					source(src="picture/upload/step_2.webm" type='video/webm; codecs="vp8, vorbis"')
+					source(src="picture/upload/step_2.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+			img(src="picture/upload/new_seo_step5.png", alt="").w-100.step__carousel-img
+			.custom-step
+				img(src="picture/upload/step_3.jpg", alt="").w-100
+.bg-lightyellow.py-5.step.overflow-hidden
+	.container.mt-lg-5.mt-md-4.mb-md-4
+		.row
+			.col-md-12
+				h2.h2.mb-4.form-h2
+					span.green-red(data-text="Этапы") Этапы 
+					span SEO-продвижения сайтов
+				+step-list('Поисковый аудит сайта', 'Разработка SEO-стратегии', 'SEO по пути клиента', 'Работа над сайтом', 'Работа с внешними ресурсами', 'Консалтинг и аналитика')
+			.col-md-12.d-flex.align-items-center.mb-4
+				.step__heading
+					span.h4.text-uppercase.mb-0 Этап
+					span.step__heading-num.h4.mx-2.mb-0 1
+				h3.step__heading-name.text-uppercase.mb-0 Поисковый аудит сайта
+		.row
+			.col-xl-4.col-lg-5.col-md-6
+				.step__container.step__container-active(data-show="0")
+					.d-block
+						ol.pl-4.mb-4
+							li.mb-2 Полный технический аудит сайта по чек-листу из 200+ пунктов
+							li.mb-2 Анализ Коммерческих факторов
+							li.mb-2 Анализ видимости сайта в сравнении с конкурентами
+							li.mb-2 Сбор общей семантики
+							li.mb-2 Составление прогнозов по росту органического трафика, kpi
+						p
+							span.font-weight-bold Результат: 
+							span документ с рекомендациями по улучшению сайта по требованиям ПС, прогнозная таблица
+					+step-next-btn
+				.step__container(data-show="1")
+					.d-block
+						ol.pl-4.mb-4
+							li.mb-2 План по технической модернизации сайта и доработки юзабилити
+							li.mb-2 План работ по проработке коммерческих факторов сайта
+							li.mb-2 План работ по проработке поведенческих факторов сайта
+							li.mb-2 План работ по внутренней оптимизации сайта
+							li.mb-2 План работ по внешней оптимизации сайта
+					+step-next-btn
+				.step__container(data-show="2")
+					.d-block
+						ol.pl-4.mb-4
+							li.mb-2 Составляем путь клиента по стадиям принятия решения о покупке
+							li.mb-2 Кластеризуем запросы по стадиям принятия решения
+							li.mb-2 Делим трафик на «прогревающий» и «конверсионный»
+							li.mb-2 Включаем отслеживание пользователей по степени «прогретости»
+							li.mb-2 Подключаем «правильную» перелинковку
+							li.mb-2 Подогреваем пользователей прямо из поисковиков
+					+step-next-btn
+				.step__container(data-show="3")
+					.d-block
+						ol.pl-4.mb-4
+							li.mb-2 Технические улучшения
+							li.mb-2 ТЗ на проработку разделов (каталог, оплата, контакты и пр.)
+							li.mb-2 On-page оптимизация страниц
+							li.mb-2 Проработка поведенческих факторов
+							li.mb-2 Работа над юзабилити
+							li.mb-2 Проработка информационного спроса
+					+step-next-btn
+				.step__container(data-show="4")
+					.d-block
+						ol.pl-4.mb-4
+							li.mb-2 Проработка ссылочной стратегии
+							li.mb-2 Размещение ссылочной массы на форумах и информационных площадках
+							li.mb-2 Анализ ссылочной массы конкурентов
+							li.mb-2 Работа с отзывами
+					+step-next-btn
+				.step__container(data-show="5")
+					.d-block
+						ol.pl-4.mb-4
+							li.mb-2 Мониторинг проекта
+							li.mb-2 Анализ трафика и позиций
+							li.mb-2 Генерация новых гипотез
+							li.mb-2 Полный отчет по трафику и конверсиям
+							li.mb-2 Сравнение результатов со спросом в отрасли
+							li.mb-2 Сверка с изначальным прогнозом по SEO
+					button.btn.btn-warning.data-scroll.mt-4.mb-4.d-none.d-md-inline-block(data-scroll="form-content") Вести SEO по системе!
+			.col-xl-8.col-lg-7.col-md-6
+				+step-carousel
+			.col-md-12.d-md-none
+				+btn-carousel

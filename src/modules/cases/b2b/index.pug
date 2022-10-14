@@ -1,0 +1,61 @@
+mixin b2b-cases-video(img, text, link)
+	.col-md-6.col-xl-4.mb-4
+		a(href=link data-fancybox).case-main-card.case-main-card-video-block.align-items-end
+			img(src='picture/upload/'+img alt='').case-main-card__img-bg
+			.case-main-card-content
+				p.h4.text-white= text
+			img(src="picture/upload/cases-category-video.svg", alt="").case-main-card-video
+mixin b2b-cases-notebook(img, text, bg)
+	.col-md-6.col-xl-4.mb-4
+		a(href="#" target="_blank").case__card.case__card-notebook.text-center.case__card-new(class=bg)
+			.text-white.case__card-notebook-title.mb-4= text
+			img(src="picture/upload/"+img, alt="").case__card-notebook-img
+mixin b2b-cases-card(img, text, logo)
+	.col-md-6.col-xl-4.mb-4
+		a(href="#" target="_blank").case-main-card
+			.case-main-card__logo
+				img(src="picture/upload/"+logo, alt="").case-main-card__logo-img
+			img(src='picture/upload/'+img alt='').case-main-card__img-bg
+			.case-main-card-content
+				.header__cases-card-tag.bg-warning.mb-3 Кейс
+				p.h4.text-white= text
+mixin b2b-cases-card-2(title, text, num, text2, img)
+	.col-md-6.col-xl-4.mb-4
+		a(href="#" target="_blank").case-main-card-white
+			.case-main-card-content
+				.h4.mb-2
+					span.text-dark= title
+					i.icon.icon-arrow-right.text-primary.case-main-card-white__icon.ml-2
+				p.mb-2.text-dark= text
+			if img !== undefined
+				.case-main-card-content-img 
+					img(src="picture/upload/"+img, alt="").case-main-card-white__img
+			.case-main-card-content-bottom.text-center
+				.h2.text-secondary.mb-2= num
+				p.text-dark.mb-0= text2
+.cases-container-page.pb-md-5.pb-4
+	.container
+		.row
+			.col-md-12
+				nav.breadcrumb
+					ol.breadcrumb
+						li.breadcrumb-item
+							a(href="/").text-secondary Главная
+						li.breadcrumb-item
+							a(href="/").text-secondary Кейсы
+						li.breadcrumb-item.active.text-dark(aria-current="page") B2B
+		.row
+			.col-md-12
+				h1.h2.mb-5.form-h2
+					span.yellow-border.z-index-3 B2B маркетинг
+						span.border-container.animation.visible.animated(data-animate='newline')
+		.row
+			+b2b-cases-card('case-img-1.jpg', 'Как сделать охват в соцсетях 1 млн человек для стройматериалов',  'alta-2.png')
+			+b2b-cases-card('case-img-2.jpg', 'Системный электронный маркетинг для музыкальной школы',  'Lafarge_(Unternehmen)_logo.svg')
+			+b2b-cases-card-2('Генератор дилерских сайтов', 'с аналитикой, SEO, шаблонами РК', '33 269 202', 'рублей прибыли', '03.jpg')
+			+b2b-cases-card('case-img-1.jpg', 'Как сделать охват в соцсетях 1 млн человек для стройматериалов',  'Motorola_new_logo.svg')
+			+b2b-cases-card-2('SEO для сложного продукта', 'работа с несформированным спросом', 'на 68%', 'вырос трафик')
+			+b2b-cases-card('case-img-2.jpg', 'Системный электронный маркетинг для музыкальной школы',  'logo_site.svg')
+			+b2b-cases-notebook('case-img-3.png', 'Сайт Ступинского химического завода', 'cases-bg-red')
+			+b2b-cases-video('case-img-1.jpg', 'Система подогрева клиентов — Комплето на конференции Яндекса', 'https://www.youtube.com/watch?v=EUS7KhS7m9o')
+

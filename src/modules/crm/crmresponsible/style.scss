@@ -1,0 +1,11 @@
+.crm__icon {
+	height: 58px;
+	object-fit: contain;
+	object-position: left top;
+	margin-bottom: 15px;
+}
+.crm-responce {
+	&__text {
+		max-width: 195px;
+	}
+}

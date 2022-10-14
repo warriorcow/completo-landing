@@ -1,0 +1,114 @@
+.dealers {
+	&__block-head {
+		height: 600px;
+		&-btn {
+			@include media-breakpoint-down(xs) {
+				width: 100%;
+			}
+		}
+		@include media-breakpoint-down(md) {
+			height: 675px;
+		}
+		@include media-breakpoint-down(sm) {
+			height: initial;
+			padding-top: 100px;
+			padding-bottom: 30px;
+		}
+		.h1.main-title.primary-head__title {
+			@include media-breakpoint-down(lg) {
+				font-size: 40px;
+			}
+		}
+		.primary-head-video {
+			height: 100%;
+			&:before {
+				display: none;
+			}
+			img, video {
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	&__text-yellow {
+		text-shadow: 1px 0 0 #fecc2f,-1px 0 0 #fecc2f,0 1px 0 #fecc2f,0 -1px 0 #fecc2f,1px 1px #fecc2f,-1px -1px 0 #fecc2f,1px -1px 0 #fecc2f,-1px 1px 0 #fecc2f;
+		font-size: 30px;
+		display: inline-block;
+		white-space: nowrap;
+		font-weight: 700;
+		color: #785d13;
+	}
+	&__head {
+		&-absolute {
+			position: absolute;
+			left: calc(33% - 215px);
+			display: flex;
+			align-items: flex-end;
+			bottom: 50px;
+			z-index: 3;
+			&-img {
+				width: 46px;
+				margin-left: 13px;
+				transform: translateY(-7px);
+			}
+		}
+		&-bloquote {
+			position: absolute;
+			bottom: -70px;
+			left: 270px;
+			@include media-breakpoint-down(lg) {
+				bottom: -110px;
+			}
+			@include media-breakpoint-down(md) {
+				bottom: -150px;
+				left: 180px;
+			}
+			@include media-breakpoint-down(sm) {
+				position: initial;
+				margin-top: 30px;
+			}
+			&-big-text {
+				font-size: 14px;
+				font-weight: bold;
+				margin-left: -3px;
+				@include media-breakpoint-down(xs) {
+					margin-left: 0;
+				}
+			}
+			&-small-text {
+				font-size: 10px;
+			}
+			&-img {
+				width: 100%;
+				&-block {
+					width: 93px;
+					height: 93px;
+					background-color: $white;
+					border-radius: 100%;
+					overflow: hidden;
+					min-width: 93px;
+					margin-right: 13px;
+				}
+			}
+			&-block {
+				font-size: 12px;
+				position: relative;
+				max-width: 220px;
+				&:before,
+				&:after {
+					display: block;
+					font-size: 36px;
+					color: $white;
+					line-height: 0.5;
+				}
+				&:before {
+					content: '\201C';
+				}
+				&:after {
+					content: '\201D';
+					text-align: right;
+				}
+			}
+		}
+	}
+}

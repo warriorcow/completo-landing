@@ -1,0 +1,28 @@
+mixin blog(title, text, href, num)
+	.new-cases-blog__card.big-shadow.animation.visible(data-animate="big_shadow")
+		.new-cases-blog__card-top
+			a(href=href target="_blank").new-cases-blog__card-title
+				u= title
+			p.new-cases-blog__card-text.mt-3.mb-4= text
+		.new-cases-blog__card-bottom.d-flex.align-items-center.justify-content-between
+			a(href=href target="_blank")
+				<svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M23.7071 8.70711C24.0976 8.31658 24.0976 7.68342 23.7071 7.29289L17.3431 0.928932C16.9526 0.538408 16.3195 0.538408 15.9289 0.928932C15.5384 1.31946 15.5384 1.95262 15.9289 2.34315L21.5858 8L15.9289 13.6569C15.5384 14.0474 15.5384 14.6805 15.9289 15.0711C16.3195 15.4616 16.9526 15.4616 17.3431 15.0711L23.7071 8.70711ZM0 9H23V7H0V9Z" fill="#FECC2F"/> </svg> 
+			p.mb-0.text-warning.d-flex
+				span= num
+				i.icon.icon-eye.ml-2
+
+.new-cases-blog
+	.container
+		.row
+			.col-md-12
+				h2.h1.mt-5.mb-4 Популярное в блоге
+		.row
+			.col-md-12
+				.custom-scrollbar
+					.new-cases-blog__scrollbar
+						.d-flex
+							+blog('Socsale. CRM-система продаж в социальных сетях', 'Новый сервис для продаж через соцсети', 'https://blog.completo.ru/socsale-crm-sistema-prodazh-cherez-sotsialnye-seti/', '607')
+							+blog('Как запустить рекламу ВКонтакте: инструкция для начинающих', 'Пошаговая инструкция по настройке таргетированной рекламы', 'https://blog.completo.ru/kak-nastroit-targeting-v-vk/', '867')
+							+blog('Альтернативные рекламные каналы: подборка', 'Какие вы знаете рекламные каналы помимо SEO и контекста? А их больше 11!', 'https://blog.completo.ru/za-predelami-seo-i-konteksta-kipit-zhizn-obzor-vseh-nestandartnyih-reklamnyih-kanalov-i-sistem-privlecheniya-auditorii/', '17888')
+							+blog('Как привлечь 7000 человек на мероприятие с помощью рекламы в соцсетях', 'Кейс привлечения людей на офлайн-мероприятие', 'https://blog.completo.ru/kak-privlech-7000-chelovek-cherez-socseti/', '2856')
+							+blog('7 шагов, как сделать вирусный контент', 'Креативные механики создания контента, который будет разлетаться как горячие пирожки', 'https://blog.completo.ru/vystuplenie-kak-virusnyj-marketing-pomogaet-biznesu/', '2820')

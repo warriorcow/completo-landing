@@ -1,0 +1,26 @@
+mixin seo-num(num, text)
+	.d-flex.align-items-center.primary-head-item
+		.primary-head-item-num
+			span.primary-head-item-num-text= num
+		.primary-head-item-text.text-white!= text
+.primary-head
+	.container-fluid.primary-head-container.h-100
+		.row.h-100.align-items-center
+			.col-lg-4.col-md-4.d-none.d-md-block
+					+seo-num('1', 'Контекстная реклама')
+					+seo-num('2', 'Таргет и SMM')
+					+seo-num('3', 'Медийная реклама')
+					+seo-num('4', 'Контент-маркетинг')
+			.offset-xl-1.col-md-8.col-xl-6
+				.h1.main-title.primary-head__title Системный Performance:
+					br
+					| гарантированный рост 
+					br 
+					| вашей компании 
+				button.btn.btn-warning.data-scroll.mt-4.mb-4.d-block(data-scroll="form-content") Вести контекст по системе!
+	.primary-head-video
+		img(src="picture/backgrounds/performance-top__bg.png", alt="")
+	.primary-head-img.primary-head-img-1
+		img(src="picture/upload/line_1.png", alt="")
+	.primary-head-img.primary-head-img-2
+		img(src="picture/upload/line_2.png", alt="")

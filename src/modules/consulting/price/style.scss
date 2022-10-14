@@ -1,0 +1,107 @@
+.price-consulting {
+	background-image: url('../picture/backgrounds/bg-lightyellow.png');
+	background-color: #FFFDE5;
+	&__num {
+		font-size: 150px;
+		font-weight: bold;
+		line-height: 0.8;
+		@include media-breakpoint-down(xs) {
+			font-size: 92px;
+		}
+	}
+	&__text {
+		text-shadow: -1px -1px 0 $dark,1px -1px 0 $dark,-1px 1px 0 $dark,1px 1px 0 $dark;
+		font-weight: bold;
+		color: #FFFDE5;
+		font-size: 36px;
+		text-transform: uppercase;
+		@include media-breakpoint-down(xs) {
+			font-size: 22px;
+		}
+	}
+	&__block {
+		padding-top: 113px;
+		position: relative;
+		@include media-breakpoint-down(sm) {
+			padding-top: 0;
+		}
+		&-item {
+			justify-content: flex-end;
+			@include media-breakpoint-down(md) {
+				justify-content: flex-start;
+			}
+			&-center {
+				@include media-breakpoint-down(xs) {
+					justify-content: center;
+				}
+			}
+		}
+		&:before {
+			content: '';
+			width: 246px;
+			height: 103px;
+			background-image: url('../picture/upload/Group_294.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+			@include media-breakpoint-down(md) {
+				bottom: 0;
+				left: 50%;
+				background-image: url('../picture/upload/Group_294-2.png');
+				width: 120px;
+				height: 200px;
+			}
+			@include media-breakpoint-down(sm) {
+				left: auto;
+			}
+			@include media-breakpoint-down(xs) {
+				display: none;
+			}
+		}
+	}
+	&__img {
+		height: 144px;
+		width: 100%;
+		object-fit: contain;
+		object-position: center;
+	}
+	&__icon {
+		width: 80px;
+		position: relative;
+		z-index: 2;
+		transform: translateX(-20px);
+		&-block {
+			position: absolute;
+			top: 32px;
+			right: 0;
+			@include media-breakpoint-down(xs) {
+				position: relative;
+				top: 0;
+				right: initial;
+				margin-bottom: 20px;
+				margin-left: 15px;
+			}
+			&:before {
+				content: '';
+				width: 80px;
+				height: 80px;
+				top: 5px;
+				left: 0;
+				right: 0;
+				margin: auto;
+				position: absolute;
+				background-color: $yellow;
+				border-radius: 100%;
+				z-index: 1;
+				@include media-breakpoint-down(xs) {
+					right: initial;
+				}
+			}
+		}
+	}
+}

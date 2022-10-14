@@ -1,0 +1,25 @@
+mixin carousel-list-block(...lists)
+	ul.carousel__list-block
+		each list, index in lists
+			if index == 0
+				li.carousel__list-block-item.active.mb-4
+					a(href="#" data-link=index).carousel__list-block-item-link= index + 1 + '. ' + list
+			else
+				li.carousel__list-block-item.mb-4
+					a(href="#" data-link=index).carousel__list-block-item-link= index + 1 + '. ' + list
+mixin carousel-list-main(...images)
+	.carousel__list-carousel.pb-0
+		each img in images
+			.bg-white
+				img(src="picture/upload/"+img, alt="").w-100.carousel__list-carousel-img-min
+.bg-lightyellow.border-top.border-secondary.py-5.position-relative.overflow-hidden.border-bottom
+	.container
+		.row
+			.col-xl-3.col-lg-4.col-md-4
+				.h4 Виды маркетинговых стратегий
+				+carousel-list-block('Стратегия интернет-маркетинга', 'Стратегия и брендинг для нового продукта', 'Стратегия вывода на российский рынок иностранной компании', 'Стратегия привлечения б2б-партнеров', 'Стратегия автоматизации маркетинга')
+				button.btn.btn-warning.data-scroll.mt-4.mb-4.w-100.d-none.d-md-inline-block(data-scroll="form-content") Хочу
+			.col-xl-9.col-lg-8.col-md-8
+				+carousel-list-main('block3_slide1+.jpg', 'block3_slide2+.jpg', 'block3_slide3+.jpg', 'block3_slide4+.jpg', 'block3_slide5+.jpg')
+			.col-md-12.d-block.d-md-none
+				button.btn.btn-warning.data-scroll.mt-4.mb-4.w-100(data-scroll="form-content") Хочу

@@ -1,0 +1,47 @@
+- var title = "Создание CRM";
+- var information = "Заказать демонстрацию";
+- var result_title = "Какие результаты дает внедрение CRM-систем";
+- var result_btn = "Хочу настройку CRM";
+doctype html
+html(lang="ru")
+	head
+		include modules/head/index.pug
+	body
+		include modules/header/index.pug
+		include modules/crm/head/index.pug
+		include modules/crm/crmhead/index.pug
+		include modules/crm/crmwework/index.pug
+		include modules/crm/crmresponsible/index.pug
+		include modules/crm/crmimplement/index.pug
+		include modules/crm/crmsetup/index.pug
+		include modules/crm/steps/index.pug
+		include modules/crm/profit/index.pug
+		include modules/result/index-2.pug
+		.py-5.border-top.border-secondary.border-bottom.bg-lightyellow
+			.container
+				.row
+					.col-md-12.col-lg-8.col-xl-6
+						.h2.mb-3 Слишком сложно разобраться во всех тонкостях?
+						p.mb-5 Наши статьи прольют свет на то как это делается и каких результатов можно достичь, а также в них мы разберем несколько “граблей” при самостоятельной настройке CRM.
+			include modules/crm/blog/index.pug
+		include modules/crm/example2/index.pug
+		.information.bg-white
+			.container
+				.row
+					.col-xl-6
+						.h2.mb-5 Собираете информацию для руководства?
+					include modules/information/index.pug
+		.about__wrapper-razrabotka
+			include modules/about/index.pug
+		.form-container
+			.container#new-form-main
+				.row.pt-5.pb-5#form-content
+					.col-md-12
+						.h2.mb-4.form-h2 Сделайте сайт инструментом бизнеса
+							br
+							| вместе с 
+							span.yellow-border Комплето
+								span.border-container.animation.visible.animated(data-animate="newline")
+					include modules/form/index.pug
+		include modules/footer/index.pug
+		include modules/foot/index.pug

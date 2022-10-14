@@ -1,0 +1,27 @@
+- var title = "Бесплатный курс интернет-маркетинга с сертификатом, онлайн курс по маркетингу";
+doctype html
+html(lang="ru")
+	head
+		include modules/head/index.pug
+	body
+		.header-black-bg
+			include modules/header/index.pug
+		include modules/videocourse/head/index.pug
+		include modules/videocourse/courses/index.pug
+		include modules/videocourse/teachers/index-2.pug
+		include modules/videocourse/teachers/index.pug
+		include modules/videocourse/advantages/index.pug
+		include modules/videocourse/clients/index.pug
+		include modules/videocourse/review/index.pug
+		include modules/videocourse/marketing/index.pug
+		.form-container
+			.container#new-form-main
+				.row.pt-5.pb-5
+					.col-md-12
+						.h2.mb-4.form-h2
+							span.yellow-border Куда отпр
+								span.border-container.animation.visible.animated(data-animate="newline")
+							| авить материалы?
+					include modules/form-2/index.pug
+		include modules/footer/index.pug
+		include modules/foot/index.pug

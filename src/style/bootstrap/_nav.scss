@@ -1,0 +1,225 @@
+// Base class
+//
+// Kickstart any navigation component with a set of style resets. Works with
+// `<nav>`s or `<ul>`s.
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+	list-style: none;
+}
+
+.dropdown-element_active i.arrow-down {
+	transform: rotate(180deg);
+}
+
+i.arrow-down {
+	position: absolute;
+	top: 2px;
+	bottom: 0;
+	right: 5px;
+	margin: auto;
+	width: 8px;
+	height: 4px;
+	@include media-breakpoint-down(md) {
+		transition: 0.2s ease all;
+	}
+	span {
+		position: absolute;
+		height: 2px;
+		width: 5px;
+		transition: 0.2s ease all;
+	}
+	span:first-child {
+		transform: rotate(45deg);
+		left: 0;
+		top: 0;
+		background-color: $yellow;
+	}
+	span:last-child {
+		transform: rotate(-45deg);
+		right: 0;
+		top: 0;
+		background-color: $yellow;
+	}
+}
+
+.dropdown,
+.dropdown_md {
+	position: absolute;
+	left: 8px;
+	top: 40px;
+	padding-top: 10px;
+	min-width: 400px;
+	display: none;
+	flex-direction: column;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	max-height: 310px;
+	@include media-breakpoint-down(md) {
+		position: initial;
+		padding-left: 15px;
+		margin-bottom: 10px;
+		min-width: initial;
+		max-height: initial;
+		padding-top: 0;
+	}
+	li {
+		padding-top: 6px;
+		color: white;
+		line-height: 1.6;
+		font-size: 18px;
+		&.flex-ul-li {
+			width: 320px;
+			@include media-breakpoint-down(lg) {
+				width: 295px;
+				max-width: 100%;
+			}
+		}
+		a {
+			color: white;
+			text-decoration: none;
+			font-size: 18px;
+			position: relative;
+			padding-bottom: 6px;
+            background-image: linear-gradient($yellow, $yellow) !important;
+            background-position: 0 100%;
+            background-repeat: no-repeat;
+            background-size: 0 4px;
+            transition: background-size .3s;
+			&:hover {
+                background-size: 100% 4px;
+			}
+		}
+	}
+    a.cases__row-title {
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        position: relative;
+        background-image: linear-gradient($yellow, $yellow);
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        background-size: 0 4px;
+        transition: background-size .3s;
+        &:hover {
+            background-size: 100% 4px;
+        }
+    }
+}
+
+.nav-link {
+  display: block;
+  padding: $nav-link-padding-y $nav-link-padding-x;
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+
+  // Disabled state lightens text
+  &.disabled {
+    color: $nav-link-disabled-color;
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+//
+// Tabs
+//
+
+.nav-tabs {
+  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+
+  .nav-item {
+    margin-bottom: -$nav-tabs-border-width;
+  }
+
+  .nav-link {
+    border: $nav-tabs-border-width solid transparent;
+    @include border-top-radius($nav-tabs-border-radius);
+
+    @include hover-focus {
+      border-color: $nav-tabs-link-hover-border-color;
+    }
+
+    &.disabled {
+      color: $nav-link-disabled-color;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: $nav-tabs-link-active-color;
+    background-color: $nav-tabs-link-active-bg;
+    border-color: $nav-tabs-link-active-border-color;
+  }
+
+  .dropdown-menu {
+    // Make dropdown border overlap tab border
+    margin-top: -$nav-tabs-border-width;
+    // Remove the top rounded corners here since there is a hard edge above the menu
+    @include border-top-radius(0);
+  }
+}
+
+
+.navbar .nav-item.no-relative .dropdown {
+	height: 310px;
+	left: inherit;
+}
+
+
+//
+// Pills
+//
+
+.nav-pills {
+  .nav-link {
+    @include border-radius($nav-pills-border-radius);
+  }
+
+  .nav-link.active,
+  .show > .nav-link {
+    color: $nav-pills-link-active-color;
+    background-color: $nav-pills-link-active-bg;
+  }
+}
+
+
+//
+// Justified variants
+//
+
+.nav-fill {
+  .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+.nav-justified {
+  .nav-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+}

@@ -1,0 +1,71 @@
+mixin cases-card-big(logo, color, title, link, ...tags)
+    .cases-card__rounded.card.mb-5.cases-card__rounded-bg(class="cases-card__rounded-bg-" + color)
+        .card-body
+            img(src="picture/upload/" + logo, alt="").cases-card__nda-img
+            .mb-4
+                p.mb-1.font-weight-bold= title
+                a(href=link target="_blank")
+                    u= link
+            .mb-3
+                small.bg-warning.rounded.px-2.py-1.text-dark.case__card-title.font-weight-bold.mr-2 Видео
+                a(href="#").cases-card__link-primary
+                    u В 9 раз увеличили посещаемость сайта для завода с сетью дилеров
+            .mb-3
+                small.bg-warning.rounded.px-2.py-1.text-dark.case__card-title.font-weight-bold.mr-2 Кейс
+                a(href="#").cases-card__link-primary
+                    u В 9 раз увеличили посещаемость сайта для завода с сетью дилеров с помощью SEO
+            .mb-3
+                small.bg-warning.rounded.px-2.py-1.text-dark.case__card-title.font-weight-bold.mr-2 Кейс
+                a(href="#").cases-card__link-primary
+                    u Увеличиваем продажи в 20 раз для стройматериалов с помощью контекста
+            .d-flex.flex-wrap
+                each tag in tags
+                    a(href="#").cases-card__tag= tag
+
+mixin cases-card-min(name, title, link, caseLink, ...tags)
+    .cases-card__rounded.border.card.mb-5
+        .card-body
+            if name
+                .h3.mb-3= name
+            else
+                img(src="picture/upload/image_2-nda.png", alt="").cases-card__nda-img
+            .mb-4
+                p.mb-1.font-weight-bold= title
+                if link
+                    a(href=link target="_blank").text-dark
+                        u= link
+            .mb-4
+                small.bg-warning.rounded.px-2.py-1.text-dark.case__card-title.font-weight-bold.mr-2 Кейс
+                a(href="#").text-dark.cases-card__link-primary
+                    u= caseLink
+            .d-flex.flex-wrap
+                each tag in tags
+                    a(href="#").cases-card__tag= tag
+.cases-container-page
+    .container
+        .row
+            .col-md-12
+                nav.breadcrumb
+                    ol.breadcrumb
+                        li.breadcrumb-item
+                            a(href="/").text-primary Главная
+                        li.breadcrumb-item.active.text-dark(aria-current="page") Кейсы
+        .row
+            .col-md-12.pb-md-3
+                h1.h1.mb-2 Кейсы по компаниям
+                p.h4.font-weight-normal.mb-5 Работаем по системе
+        .row
+            .col-xl-3.col-lg-4.col-md-6
+                +cases-card-big('alta-2.png', 'blue', 'Завод стройматериалов', 'www.alta-profil.ru', 'Стратегия интернет-маркетинга', 'B2B-маркетинг', 'EMAIL-маркетинг', 'SMM', 'SEO', 'Разработка сайтов Performance')
+                +cases-card-min('Favorit Motors', 'Московский автодилер', 'favorit-motors.ru', 'Хитрый ретаргетинг для FAVORIT MOTORS', 'B2B-маркетинг', 'Performance')
+            .col-xl-3.col-lg-4.col-md-6
+                +cases-card-min('Favorit Motors', 'Московский автодилер', 'favorit-motors.ru', 'Хитрый ретаргетинг для FAVORIT MOTORS', 'B2B-маркетинг', 'Performance')
+                +cases-card-min(false, 'Российский сервис для управления бизнесом', false, 'Как покупают сервис для управления бизнесом? Разрабатываем путь партнера (CJM)', 'Стратегия интернет-маркетинга', 'CJM')
+                +cases-card-min('Favorit Motors', 'Московский автодилер', 'favorit-motors.ru', 'Хитрый ретаргетинг для FAVORIT MOTORS', 'B2B-маркетинг', 'Performance')
+            .col-xl-3.col-lg-4.col-md-6
+                +cases-card-min(false, 'Российский сервис для управления бизнесом', false, 'Как покупают сервис для управления бизнесом? Разрабатываем путь партнера (CJM)', 'Стратегия интернет-маркетинга', 'CJM')
+                +cases-card-big('logo_megaflex.svg', 'green', 'Завод стройматериалов', 'www.alta-profil.ru', 'Стратегия интернет-маркетинга', 'B2B-маркетинг', 'EMAIL-маркетинг', 'SMM')
+            .col-xl-3.col-lg-4.col-md-6
+                +cases-card-big('torex.png', 'red', 'Завод стройматериалов', 'www.alta-profil.ru', 'Стратегия интернет-маркетинга', 'B2B-маркетинг', 'EMAIL-маркетинг', 'SMM')
+                +cases-card-min('Favorit Motors', 'Московский автодилер', 'favorit-motors.ru', 'Хитрый ретаргетинг для FAVORIT MOTORS', 'B2B-маркетинг', 'Performance')
+

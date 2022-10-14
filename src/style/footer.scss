@@ -1,0 +1,31 @@
+[id^="bs-namespace_footer"] {
+  @import "bootstrap/functions";
+  @import "bootstrap/variables";
+  @import "bootstrap/mixins";
+  @import "bootstrap/root";
+
+  @import "../modules/footer/style";
+
+  .footer {
+    font-size: 16px;
+    //line-height: 1;
+    .btn {
+      width: auto;
+    }
+    .collapse.in {
+      display: block;
+    }
+    .collapse.show {
+      display: block;
+      .footer__ul {
+        @include media-breakpoint-down(xs) {
+          display: block !important;
+        }
+      }
+    }
+    a:hover {
+     border-bottom: none;
+    }
+  }
+}
+

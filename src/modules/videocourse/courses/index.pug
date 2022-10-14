@@ -1,0 +1,44 @@
+mixin videocourse-img(img)
+	a(href="picture/upload/"+img data-fancybox="gallery").videocourse__sert-img
+		img(src="picture/upload/"+img, alt="").w-100
+.py-5.position-relative
+	.container.my-md-4
+		.row
+			.col-md-12
+				nav.breadcrumb
+					ol.breadcrumb
+						li.breadcrumb-item
+							a(href="/").text-secondary Главная
+						li.breadcrumb-item.active.text-dark(aria-current="page") Видеокурс для интернет-маркетологов
+			.col-md-12.col-lg-10.col-xl-8
+				h2.h2.mb-5.position-relative.z-index-2.form-h2 Обучающие курсы стоят дорого, но 
+					span.yellow-border.nowrap-text хочется с чего-то
+						span.border-container.animation.visible.animated(data-animate="newline")
+					span 
+					span начать?
+		.row.mb-4
+			.col-md-12.mt-5.mt-md-0
+				.d-flex.pl-md-2
+					.dealers-level__card-icon-block
+						i.icon.dealers-level__card-icon.icon-dealers-analysis
+					.dealers-level__bloquote.dealers-level__bloquote-sm.mt-5.mt-md-0
+						p.h4.font-weight-normal.mb-3
+							span.text-secondary.font-weight-bold.dealers-level__bloquote-title Пройдите 
+							span обучение маркетингу бесплатно — всего 8 видеоуроков по основным темам интернет-маркетинга.
+						p.h4.font-weight-normal.mb-3 Вы можете пройти наш курс интернет-маркетинга онлайн. 
+						p.h4.font-weight-normal.mb-3 Уроки состоят из видео мастер-классов с дополнительными материалами для изучения. 
+						p.h4.font-weight-normal.mb-3 В конце — сертификат, который не стыдно прикрепить к резюме на hh.
+.videocourse__sert
+	.container 
+		.row
+			//- .col-md-12
+			//- 	img(src="picture/upload/video-Group_424.png", alt="").videocourse__sert-absolute-img.d-none.d-sm-block
+			.col-md-12
+				.custom-scrollbar
+					.d-flex.justify-content-center
+						+videocourse-img('video-image_26.jpg')
+						+videocourse-img('video-image_27.jpg')
+						+videocourse-img('video-image_28.jpg')
+						+videocourse-img('video-image_26.jpg')
+						+videocourse-img('video-image_27.jpg')
+						+videocourse-img('video-image_28.jpg')

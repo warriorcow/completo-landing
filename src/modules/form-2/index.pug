@@ -1,0 +1,59 @@
+.col-md-12
+	form.form.form-content.validate.p-4.show-modal-done(id="form-content" method="post" novalidate="novalidate")
+		.row
+			.col-lg-6.mb-4
+				.form-group
+					label(for="text-01") Как вас зовут
+					input#text-01(type="text" placeholder="Введите ваше имя" required name="name")
+			.col-lg-6.mb-4
+				.form-group
+					label(for="text-02") Электронная почта
+					input#text-02(type="email" placeholder="Введите ваш E-mail" name="email" required)
+			.col-lg-12.mb-4
+				.row
+					.col-md-6.col-lg-4.col-xl-3.mb-4
+						button.btn.btn-warning.form_btn.w-100
+							img(src="picture/upload/mail.svg", alt="").form_btn-icon
+							| Отправить на E-mail
+					.col-md-6.col-lg-4.col-xl-3.mb-4
+						a.btn.btn-warning.form_btn.w-100(href="https://completo.ru/privacy_policy.rtf" target="_blank")
+							img(src="picture/upload/vk.svg", alt="").form_btn-icon
+							| Отправить в VK
+					.col-md-6.col-lg-4.col-xl-3.mb-4
+						a.btn.btn-warning.form_btn.w-100(href="https://completo.ru/privacy_policy.rtf" target="_blank")
+							img(src="picture/upload/tg.svg", alt="").form_btn-icon
+							| Отправить в Telegram
+			.col-lg-12.mb-4
+				.form-group
+					input(type="checkbox" id="text-3" name="agree").form-input-radio.visually-hidden
+					label(for="text-3").d-flex.align-items-center
+						span.form-input-checkbox.checkbox.mr-4
+						span.form-input-checkbox-text Согласен присылать мне полезный и интересный контент
+			.col-lg-12
+				.row
+					.col-md-6.col-lg-8.d-flex.align-items-center
+						p.mb-4 Нажимая кнопку "Отправить", я соглашаюсь на
+							|
+							a(href="https://completo.ru/privacy_policy.rtf")
+								u обработку персональных данных
+.modal.fade(tabindex="-1" role="dialog")#content-modal-done
+	.modal-dialog.modal-dialog-centered(role="document")
+		.modal-content.border-secondary.border.justify-content-center
+			.modal-header
+				.modal-title
+					h2.text-center.mt-3.mt-sm-5 Спасибо за интерес!
+				button.close(type="button" data-dismiss="modal" aria-label="Close")
+					span.modal__close-btn(aria-hidden="true")
+			.modal-body.text-center
+				p.mb-4.text-center Чтобы получить еще больше полезного
+					br
+					| контента, переходите в наши чат-боты
+				ul.d-flex.pl-0.mb-5.list-unstyled.align-items-center.justify-content-center
+					li.mr-4
+						a(href="https://completo.ru/privacy_policy.rtf")
+							span.rounded-circle.circle.circle--big.d-flex.align-items-center.justify-content-center
+								img(src="picture/upload/vk-white.svg", alt="").icon.icon--big
+					li
+						a(href="https://completo.ru/privacy_policy.rtf")
+							span.rounded-circle.circle.circle--big.d-flex.align-items-center.justify-content-center
+								img(src="picture/upload/tg-white.svg", alt="").icon.icon--big

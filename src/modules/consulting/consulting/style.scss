@@ -1,0 +1,5 @@
+.consulting-block-item {
+	@include media-breakpoint-down(sm) {
+		min-width: 300px;
+	}
+}

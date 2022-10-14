@@ -1,0 +1,24 @@
+mixin carousel-list-block(...lists)
+	ul.carousel__list-block
+		each list, index in lists
+			if index == 0
+				li.carousel__list-block-item.active.mb-4
+					a(href="#" data-link=index).carousel__list-block-item-link!= index + 1 + '. ' + list
+			else
+				li.carousel__list-block-item.mb-4
+					a(href="#" data-link=index).carousel__list-block-item-link!= index + 1 + '. ' + list
+mixin carousel-list-main(...images)
+	.carousel__list-carousel.pb-0
+		each img in images
+			img(src="picture/upload/"+img, alt="").w-100
+.price-consulting.overflow-hidden.py-5
+	.container.my-md-4
+		.row
+			.col-xl-3.col-lg-4.col-md-4
+				.h4 Примеры вебинаров, которые провели в своем учебном центре MAED
+				+carousel-list-block('«Задачи маркетинга» <br> Юрий Робул', '«Кто драйвер в бизнесе?» <br> Николай Жданько', '«Как создать продающий лендинг» <br> Валерий Домашенко', '«Digital-директор» <br> Михаил Федоров', '«Структура посадочной посадочной страницы» <br> Андрей Гавриков')
+				button.btn.btn-warning.data-scroll.mt-4.mb-4.w-100.d-none.d-md-inline-block(data-scroll="form-content") Хочу
+			.col-xl-9.col-lg-8.col-md-8
+				+carousel-list-main('goonline-image6.png', 'goonline-image17.png', 'goonline-image3.png', 'goonline-image14.png', 'goonline-image16.png')
+			.col-md-12.d-block.d-md-none
+				button.btn.btn-warning.data-scroll.mt-4.mb-4.w-100(data-scroll="form-content") Хочу

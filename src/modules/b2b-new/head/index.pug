@@ -1,0 +1,42 @@
+mixin header__link(title, text, link)
+	if link
+		a(href="#").d-flex.align-items-center.b2b__header__link
+			.b2b__header__link__title.text-dark= title
+			.b2b__header__link-circle.ml-2.d-flex.d-sm-none
+				i.icon.icon-arrow-right.text-warning
+	else 
+		.b2b__header__link__title.text-dark= title
+	if link
+		a(href="#").d-inline-flex.align-items-center.b2b__header__link
+			.text-uppercase.b2b__header__yellow-dark= text 
+			.b2b__header__link-circle.ml-2.d-none.d-sm-flex
+				i.icon.icon-arrow-right.text-warning
+	else 
+		.text-uppercase.b2b__header__yellow-dark= text 
+
+.b2b__header
+	.container
+		.row.align-items-center
+			.col-lg-6
+				h1.h1.b2b__header__title.text-uppercase.mb-4 B2B Sales Performance
+				p.h3.b2b__header__text.text-uppercase.mb-4
+					span.font-weight-normal Системный digital-маркетинг
+					br
+					span для роста продаж B2B-компаний
+				.row.position-relative.mb-4
+					img(src="picture/upload/b2b__hand.svg", alt="").b2b__header-absolute-img
+					.col-6.mb-4
+						+header__link('550+', 'Успешных кейсов', true)
+					.col-6.mb-4
+						+header__link('14', 'Лет на рынке', false)
+					.col-6.mb-4
+						+header__link('100', 'Человек в штате', true)
+					.col-6.mb-4
+						+header__link('200+', 'клиентов', true)
+				button.btn.btn-dark.px-5.py-3.d-none.d-lg-block.data-scroll(data-scroll="form-content") Обсудить проект
+			.offset-xl-1.col-xl-5.col-lg-6.position-relative.z-index-2
+				a(href="https://youtu.be/mPymRFeTJa4" data-fancybox).d-block.b2b__header__video.mb-4.mb-lg-0
+					img(src="picture/upload/b2b__video.jpg", alt="").b2b__header__video-img
+					.b2b__header__video-img-btn-container
+						img(src="picture/upload/play-btn-b2b.png", alt="").b2b__header__video-img-btn
+				button.btn.btn-dark.px-5.py-3.d-block.d-lg-none.b2b__header__btn-full.data-scroll(data-scroll="form-content") Обсудить проект

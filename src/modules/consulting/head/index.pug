@@ -1,0 +1,26 @@
+mixin razrabotka-icon(img, text)
+	.d-flex.align-items-center.primary-head-item.primary-head-item-large
+		.primary-head-item-num
+			img(src="picture/upload/"+img, alt="").primary-head-item-num-icon
+		.primary-head-item-text.text-white!= text
+.primary-head
+	.container-fluid.primary-head-container.h-100
+		.row.h-100.align-items-center
+			.col-lg-4.col-md-4.d-none.d-md-block
+					+razrabotka-icon('piggy-bank.svg', 'За 50 000 рублей и 14 дней')
+					+razrabotka-icon('note-icon.svg', 'Дадим набор практических рекомендаций')
+					+razrabotka-icon('factory.svg', 'Компаниям со сложным продуктом и работающим в сфере B2B')
+			.offset-xl-1.col-md-8.col-xl-6
+				.h1.main-title.primary-head__title.primary-head__title-big Бизнес-консалтинг 
+					br
+					| вашего 
+					br 
+					| Digital-маркетинга 
+				.d-md-none
+					.pb-2
+						+razrabotka-icon('piggy-bank.svg', 'За 50 000 рублей и 14 дней')
+						+razrabotka-icon('note-icon.svg', 'Дадим набор практических рекомендаций')
+						+razrabotka-icon('factory.svg', 'Компаниям со сложным продуктом и работающим в сфере B2B')
+				button.btn.btn-warning.data-scroll.mt-4.mb-4.d-block(data-scroll="form-content") Заказать консультацию
+	.primary-head-video
+		img(src="picture/backgrounds/consulting-bg.jpg", alt="")

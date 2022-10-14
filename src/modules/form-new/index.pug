@@ -1,0 +1,59 @@
+.col-md-12
+    form.form.validate.form-new-before.p-4(id="new-form-min" method="post" novalidate="novalidate" data-form="127" data-formtype="180")
+        .row
+            .col-md-6.mb-4
+                .form-group
+                    label(for="text-01") Как вас зовут
+                    input#text-01(type="text" placeholder="Введите ваше имя" required name="name")
+            .col-md-6.mb-4
+                .form-group
+                    label(for="text-03") Электронная почта
+                    input#text-03(type="email" placeholder="Введите ваш E-mail" name="email" required)
+            .col-lg-4.col-xl-3.mb-4
+                button.btn.btn-warning.w-100(data-modal='#modal-email')
+                    i.icon.icon-black-back-closed-envelope-shape.icon-min-new-form
+                    span.ml-3 Отправить на E-mail
+            .col-lg-4.col-xl-3.mb-4
+                button.btn.btn-warning.w-100(data-modal='#modal-other')
+                    i.icon.icon-Vector-vk-min.icon-min-new-form
+                    span.ml-3 Отправить в VK
+            .col-lg-4.col-xl-3.mb-4
+                button.btn.btn-warning.w-100(data-modal='#modal-other')
+                    i.icon.icon-Group_430-tg.icon-min-new-form
+                    span.ml-3 Отправить в Telegram
+            .col-md-12.mb-4.pt-md-2
+                .form-group
+                    input(type="checkbox" id="modal-subscribe-checkbox-item" name="subscribeCheck").system-modules-container__form-input-radio
+                    label(for="modal-subscribe-checkbox-item").d-flex.align-items-center
+                        span.system-modules-container__form-input-checkbox.system-modules-container__form-input-checkbox-new
+                        span.system-modules-container__form-input-checkbox-text.system-modules-container__form-input-checkbox-text-new.ml-3 Согласен присылать мне полезный и интересный контент
+            .col-md-12.col-lg-8.d-flex.align-items-center
+                p.mb-4 Нажимая кнопку "Отправить", я соглашаюсь на
+                    a(href="https://completo.ru/privacy_policy.rtf").text-warning
+                        u обработку персональных данных
+.modal.fade(tabindex="-1" role="dialog")#modal-email
+    .modal-dialog.modal-dialog-centered(role="document")
+        .modal-content
+            .modal-header
+                .modal-title
+                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                    span.modal__close-btn(aria-hidden="true")
+            .modal-body.text-center.py-lg-5
+                h2.mb-4.form-h2 Спасибо за интерес!
+                p.mb-4.font-weight-bold Чтобы получить еще больше полезного <br> контента, переходите в наши
+                    a(href="#").text-warning чат-боты
+                .d-flex.justify-content-center.align-items-center
+                    a(href="#").form-new-icon-connect
+                        img(src="picture/upload/Vector-vk-white.svg", alt="")
+                    a(href="#").form-new-icon-connect
+                        img(src="picture/upload/vector-tg-white.svg", alt="")
+
+.modal.fade(tabindex="-1" role="dialog")#modal-other
+    .modal-dialog.modal-dialog-centered(role="document")
+        .modal-content
+            .modal-header
+                .modal-title
+                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                    span.modal__close-btn(aria-hidden="true")
+            .modal-body.text-center.py-lg-5
+                h2.mb-4.form-h2 Спасибо за интерес!

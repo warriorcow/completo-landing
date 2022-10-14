@@ -1,0 +1,963 @@
+mixin scheme-item(name, img, num, text)
+	.big-slick__children
+		.big-slick__children-line.big-slick__children-line-white
+			p= name
+		.big-slick__children-line.big-slick__children-line-last.big-slick__children-line-white
+			h2!= num
+			p!= text
+		img.big-slick__img(src='picture/upload/'+img alt)
+header.header.header-xl.fixed.d-none.d-lg-block.animated.delay-2s.fadeIn
+	.container
+		.row
+			.container-fluid.container-fluid-max
+				nav.navbar.navbar-expand-lg.justify-content-start.p-0.d-flex
+					a.navbar-brand.mr-0.p-0.col-2(href='https://www.completo.ru')
+						img(src='picture/upload/Completo_logoNEW_white_08-10-2018.png' alt='Completo')
+					button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent1' aria-controls='navbarSupportedContent1' aria-expanded='false' aria-label='Toggle navigation')
+						span
+						span
+						span
+						span
+					#navbarSupportedContent1.collapse.col-8.navbar-collapse.justify-content-end1
+						ul.navbar-nav
+							li.nav-item.dropdown-element
+								a.nav-link.dropdown-link.mr-2(href='#')
+									span Completo
+									i.arrow-down
+										span
+										span
+								//
+								.nav-link-dropdown(style='display: none;')
+									.container
+										.col-12.justify-content-start
+											.col-8.offset-2
+												ul.dropdown.list-unstyled
+													li
+														a(href='https://www.completo.ru/about/' target='_blank') About the company
+													li
+														a(href='http://school.completo.ru' target='_blank') Internship
+													li
+														a(href='https://www.completo.ru/vacancy/' target='_blank') Vacancy
+													li
+														a(href='https://www.completo.ru/checklist-for-agencies/' target='_blank') Checklist for agencies
+													li
+														a(href='https://club.completo.ru') Completo Club
+							li.nav-item.dropdown-element.no-relative
+								a.nav-link.dropdown-link.mr-2(href='#')
+									span Services
+									i.arrow-down
+										span
+										span
+								.nav-link-dropdown(style='display: none;')
+									.container
+										.row.cases__row.mt-3.justify-content-start(style='display: none;')
+											.col-12.col-lg-12
+												ul.columns.columns--3.services-row__dropdown.dropdown.list-unstyled.header__big-list.pt-0.custom-dropdown-item.columns
+													li.pt-0
+														a.text-white.h4.services-row__title
+															span Marketing
+														ul.list-unstyled.pl-0.mb-4
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru/projects') Performance - context and targeting
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru/projects') SEO optimization
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru/projects') Promotion to linkedIN
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru/projects') Email Marketing
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru/projects') CRM marketing
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru/projects') SMM
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru/projects') End-to-end analytics
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru/projects') Online events hosting
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru/projects') Customer heating system
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru/projects') Account Based Marketing
+													li.pt-0
+														a.text-white.h4.services-row__title
+															span Complex projects
+														ul.list-unstyled.pl-0.mb-4
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru/projects') Digital strategy
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru/projects') Companies with b2b products
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru/projects') Companies with dealer networks
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru/projects' disabled) Quick launch - landing + advertising
+													li.pt-0
+														a.text-white.h4.services-row__title
+															span Development
+														ul.list-unstyled.pl-0.mb-4
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru') Website development
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru') System of dealer sites / sites clones
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru') B2B portals
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru') Technical support
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru') Mobile applications development
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru' disabled) Online services development
+													li.pt-0
+														a.text-white.h4.services-row__title
+															span Research
+														ul.list-unstyled.pl-0.mb-4
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru') Research of competitors
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru') Customer Journey Map
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru' disabled) Custom research
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru' disabled) Demand research
+													li.pt-0
+														a.text-white.h4.services-row__title
+															span Sales
+														ul.list-unstyled.pl-0.mb-4
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru' disabled) CRM Integration
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru') Sales department Building
+													li.pt-0
+														a.text-white.h4.services-row__title
+															span Design
+														ul.list-unstyled.pl-0.mb-4
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru' disabled) Product Development
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='https://www.completo.ru' disabled) Branding
+								//
+							li.nav-item.dropdown-element
+								a.nav-link.dropdown-link.mr-2(href='#')
+									span Software
+									i.arrow-down
+										span
+										span
+								//
+								.nav-link-dropdown(style='display: none;')
+									.container
+										.col-12.justify-content-start
+											.col-8.offset-2
+												ul.dropdown.list-unstyled
+													li
+														a(href='http://goaudit.ru' target='_blank') GoAudit
+													li
+														a(href='http://phonetrack.ru' target='_blank') PhoneTrack
+													li
+														a(href='https://salespilot.ru' target='_blank') SalesPilot
+													li
+														a(href='https://socsale.ru' target='_blank') Socsale
+													li
+														a(href='http://setuper.ru' target='_blank') Setuper
+													li
+														a(href='https://contrack.ru' target='_blank') Contrack
+													li
+														a(href='https://kursbox.ru/' target='_blank') Course aggregator
+							li.nav-item.dropdown-element.no-relative
+								a.nav-link.dropdown-link.mr-2(href='#')
+									span We train
+									i.arrow-down
+										span
+										span
+								//
+								.nav-link-dropdown(style='display: none;')
+									.container
+										.col-12.justify-content-start
+											.col-8.offset-2
+												ul.dropdown.list-unstyled.custom-dropdown-item.columns
+													li.flex-ul-li
+														a(href='https://www.completo.ru/email-marketing/' target='_blank') Sign up to receive our newsletter
+													li.flex-ul-li
+														a(href='https://www.completo.ru/edu/' target='_blank') Knowledge-boosting system
+													li.flex-ul-li
+														a(href='https://maed.ru/' target='_blank') Learning center MAED.RU
+													li.flex-ul-li
+														a(href='https://www.completo.ru/sem/' target='_blank') SEM in 6 steps
+													li.flex-ul-li
+														a(href='https://www.completo.ru/white-paper/seo/' target='_blank') SEO manual book
+													li.flex-ul-li
+														a(href='https://www.completo.ru/white-paper/kak-razrabotat-site/' target='_blank') Site development manual book
+													li.flex-ul-li
+														a(href='https://www.completo.ru/white-paper/competitor-analysis/' target='_blank') Competitor analysis manual book
+													li.flex-ul-li
+														a(href='https://www.completo.ru/checklist-strategy-online-marketing/' target='_blank') Digital strategy checklist
+													li.flex-ul-li
+														a(href='https://www.completo.ru/videocourse/' target='_blank') Internet marketing video course
+													li.flex-ul-li
+														a(href='https://www.completo.ru/videocourse-for-managers/' target='_blank') Video Course for CEO
+													li.flex-ul-li
+														a(href='https://www.completo.ru/research-finance/' target='_blank') Banks research
+													li.flex-ul-li
+														a(href='https://www.completo.ru/research-medicine/' target='_blank') Medical centres research
+													li.flex-ul-li
+														a(href='https://www.completo.ru/research-estate/' target='_blank') Real estate research
+													li.flex-ul-li
+														a(href='https://www.completo.ru/research-dealers/' target='_blank') Manufacturers research
+													li.flex-ul-li
+														a(href='https://stratosessia.maed.ru/' target='_blank') Digital marketing prakticum
+													li.flex-ul-li
+														a(href='https://book.completo.ru/' target='_blank') Hand book for Completo digital marketing manager
+							li.nav-item.dropdown-element.no-relative
+								a.nav-link.dropdown-link.mr-2(href='#')
+									span Cases
+									i.arrow-down
+										span
+										span
+								//
+								.nav-link-dropdown(style='display: none;')
+									.container
+										.row.cases__row.mt-3.justify-content-start(style='display: none;')
+											.col-7.col-lg-7
+												ul.columns.services-row__dropdown.dropdown.list-unstyled.header__big-list.pt-0
+													li.pt-0
+														a.text-white.h4.services-row__title
+															span Cases by service
+														ul.list-unstyled.pl-0.mb-4
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/service/kontekstnaya-reklama/' target='_blank') Сontext advertising
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/service/seo/' target='_blank') SEO
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/service/targetirovannaya-reklama/' target='_blank') Targeted advertising
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/service/email-marketing/' target='_blank') Email marketing
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/service/razrabotka-sayta/' target='_blank') Site development
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/service/razrabotka-lichnykh-kabinetov/' target='_blank') Personal accounts development
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/service/tekhnicheskaya-podderzhka/' target='_blank') Support
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/service/smm/' target='_blank') SMM(Content marketing)
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/service/progrev-klientov-salesfarm/' target='_blank') Warming of customers (chat bots, auto sales funnel)
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/service/crm-marketing/' target='_blank') CRM Marketing
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/service/skvoznaya-analitika/' target='_blank') Analytics
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/service/digital-strategy/' target='_blank') Internet Marketing Strategy
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/service/issledovaniya-konkurentov/' target='_blank') Competitor research
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/service/serm/' target='_blank') SERM (work with reviews)
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/service/razrabotka-mobilnykh-prilozheniy/' target='_blank') Mobile applications Development
+													li.pt-0
+														a.text-white.h4.services-row__title
+															span Cases by industry
+														ul.list-unstyled.pl-0.mb-4
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/branch/b2c-marketing/' target='_blank') B2C marketing
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/branch/b2b-marketing/' target='_blank') B2B marketing
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/branch/banki/' target='_blank') Banks
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/branch/promyshlennost-i-energetika/' target='_blank') Industry and energy
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/branch/riteyl-i-b2c-tovary/' target='_blank') Retail and B2C products
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/branch/it/' target='_blank') IT
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/branch/meditsina-i-zdorove/' target='_blank') Medicine and health
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/branch/proizvodstvo-i-distribyutey/' target='_blank') Manufacturing and distributors
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/branch/uslugi-i-konsalting/' target='_blank') Services and consulting
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/branch/internet-proekty-i-startapy/' target='_blank') Internet projects and startups
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/branch/avtorynok-i-logistika/' target='_blank') Car market and logistics
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/branch/nedvizhimost-i-stroitelstvo/' target='_blank') Real estate and construction
+													li.pt-0
+														p.text-white.h4 Cases by company
+														//
+													li.pt-0.d-lg-none
+														a.text-white.h4.services-row__title(href='#')
+															span Popular cases
+														ul.list-unstyled.pl-0.mb-4
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/kontekstnaya-reklama-dlya-finansovoj-kompanii/' target='_blank') Contextual advertising for a financial company
+															li.list__smallchild.nav-items.pt-2
+																a.services-row__smallLink(href='/cases/smm-stroimateriali/' target='_blank') How to reach 1 million people on social networks for building materials
+											.col-4.col-lg-4.p-0.offset-1
+												.cases__row-title.text-white.mb-3.mt-0 Popular cases
+												a.header__cases-card.header__cases-card-1.mb-4(href='/cases/kontekstnaya-reklama-dlya-finansovoj-kompanii/')
+													.header__cases-card-tag.bg-warning.mb-2 Case
+													.header__cases-card-text.font-weight-bold.text-white.mb-1 Contextual advertising for a financial company
+												a.header__cases-card.header__cases-card-2(href='/cases/smm-stroimateriali/')
+													.header__cases-card-tag.bg-warning.mb-2 Case
+													.header__cases-card-text.font-weight-bold.text-white.mb-1 How to reach 1 million people on social networks for building materials
+							li.nav-item
+								a.nav-link(href='https://blog.completo.ru/') Blog
+							li.nav-item.pr-0.mr-0
+								a.nav-link.pr-0.mr-0(href='https://www.completo.ru/contacts/') Contacts
+					a.btn.btn-warning.data-scroll.header__tenderBtn(data-scroll='new-form-main' href='#new-form-main') Invite to tender
+.header.fixed.d-none.d-md-block.d-lg-none
+	.container
+		.row
+			.col-md-12
+				nav.navbar.navbar-expand-lg.justify-content-between
+					a.navbar-brand(href='https://www.completo.ru')
+						img(src='https://www.completo.rupicture/upload/Completo_logoNEW_white_08-10-2018.png' alt='Completo')
+					button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent2' aria-controls='navbarSupportedContent2' aria-expanded='false' aria-label='Toggle navigation')
+						span
+						span
+						span
+						span
+					#navbarSupportedContent2.collapse.navbar-collapse
+						.row.mt-4.ml-0.mr-0
+							.col-md-3.pl-0
+								ul.navbar-nav
+									li.nav-item.dropdown-element__md
+										a.nav-link.dropdown-link.mr-2.dropdown-link_md.dropdown-link_md-1(href='#')
+											span Completo
+											i.arrow-down
+												span
+												span
+									li.nav-item.dropdown-element__md
+										a.nav-link.dropdown-link.mr-2.dropdown-link_md.dropdown-link_md-2(href='#')
+											span Services
+											i.arrow-down
+												span
+												span
+									li.nav-item.dropdown-element__md
+										a.nav-link.dropdown-link.mr-2.dropdown-link_md.dropdown-link_md-3(href='#')
+											span Software
+											i.arrow-down
+												span
+												span
+									li.nav-item.dropdown-element__md
+										a.nav-link.dropdown-link.mr-2.dropdown-link_md.dropdown-link_md-4(href='#')
+											span We train
+											i.arrow-down
+												span
+												span
+									li.nav-item.dropdown-element__md
+										a.nav-link.dropdown-link.mr-2.dropdown-link_md.dropdown-link_md-5(href='#')
+											span Cases
+											i.arrow-down
+												span
+												span
+									li.nav-item
+										a.nav-link(href='https://blog.completo.ru/') Blog
+									li.nav-item
+										a.nav-link(href='https://www.completo.ru/contacts/') Contacts
+							.col-md-9
+								div
+									ul.dropdown_md.list-unstyled.dropdown_md-1
+										li
+											a(href='https://www.completo.ru/about/' target='_blank') About the company
+										li
+											a(href='http://school.completo.ru' target='_blank') Internship
+										li
+											a(href='https://www.completo.ru/vacancy/' target='_blank') Vacancy
+										li
+											a(href='https://www.completo.ru/checklist-for-agencies/' target='_blank') Checklist for agencies
+										li
+											a(href='https://club.completo.ru') Completo Club
+								div
+									ul#casesTabs.dropdown_md.list-unstyled.cases__tab.dropdown_md-2
+										li
+											p.text-white.h4.d-inline-block.position-relative.cases__tab-title(data-target='#collapseHeader0' data-toggle='collapse' aria-expanded='false' aria-controls='collapseHeader')
+												span Marketing
+												i.arrow-down
+													span.bg-white
+													span.bg-white
+											#collapseHeader0.collapse(data-parent='#casesTabs')
+												ul.list-unstyled.mb-4
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects') Performance - context and targeting
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects') SEO optimization
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects') Promotion to linkedIN
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects') Email Marketing
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects') CRM marketing
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects') SMM
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects') End-to-end analytics
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects') Online events hosting
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects') Customer heating system
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects') Account Based Marketing
+										li
+											p.text-white.h4.d-inline-block.position-relative.cases__tab-title(data-target='#collapseHeader1' data-toggle='collapse' aria-expanded='false' aria-controls='collapseHeader')
+												span Complex projects
+												i.arrow-down
+													span.bg-white
+													span.bg-white
+											#collapseHeader1.collapse(data-parent='#casesTabs')
+												ul.list-unstyled.mb-4
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects') Digital strategy
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects') Companies with b2b products
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects') Companies with dealer networks
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects' disabled) Quick launch - landing + advertising
+										li
+											p.text-white.h4.d-inline-block.position-relative.cases__tab-title(data-target='#collapseHeader2' data-toggle='collapse' aria-expanded='false' aria-controls='collapseHeader')
+												span Development
+												i.arrow-down
+													span.bg-white
+													span.bg-white
+											//
+											#collapseHeader2.collapse(data-parent='#casesTabs')
+												ul.list-unstyled.mb-4
+													li
+														a.services-row__smallLink(href='https://www.completo.ru') Website development
+													li
+														a.services-row__smallLink(href='https://www.completo.ru') System of dealer sites / sites clones
+													li
+														a.services-row__smallLink(href='https://www.completo.ru') B2B portals
+													li
+														a.services-row__smallLink(href='https://www.completo.ru') Technical support
+													li
+														a.services-row__smallLink(href='https://www.completo.ru') Mobile applications development
+													li
+														a.services-row__smallLink(href='https://www.completo.ru' disabled) Online services development
+										li
+											p.text-white.h4.d-inline-block.position-relative.cases__tab-title(data-target='#collapseHeader3' data-toggle='collapse' aria-expanded='false' aria-controls='collapseHeader')
+												span Research
+												i.arrow-down
+													span.bg-white
+													span.bg-white
+											//
+											#collapseHeader3.collapse(data-parent='#casesTabs')
+												ul.list-unstyled.mb-4
+													li
+														a.services-row__smallLink(href='https://www.completo.ru') Research of competitors
+													li
+														a.services-row__smallLink(href='https://www.completo.ru') Customer Journey Map
+													li
+														a.services-row__smallLink(href='https://www.completo.ru' disabled) Custom research
+													li
+														a.services-row__smallLink(href='https://www.completo.ru' disabled) Demand research
+										li
+											p.text-white.h4.d-inline-block.position-relative.cases__tab-title(data-target='#collapseHeader4' data-toggle='collapse' aria-expanded='false' aria-controls='collapseHeader')
+												span Sales
+												i.arrow-down
+													span.bg-white
+													span.bg-white
+											//
+											#collapseHeader4.collapse(data-parent='#casesTabs')
+												ul.list-unstyled.mb-4
+													li
+														a.services-row__smallLink(href='https://www.completo.ru' disabled) CRM Integration
+													li
+														a.services-row__smallLink(href='https://www.completo.ru') Sales department Building
+										li
+											p.text-white.h4.d-inline-block.position-relative.cases__tab-title(data-target='#collapseHeader5' data-toggle='collapse' aria-expanded='false' aria-controls='collapseHeader')
+												span Design
+												i.arrow-down
+													span.bg-white
+													span.bg-white
+											//
+											#collapseHeader5.collapse(data-parent='#casesTabs')
+												ul.list-unstyled.mb-4
+													li
+														a.services-row__smallLink(href='https://www.completo.ru' disabled) Product Development
+													li
+														a.services-row__smallLink(href='https://www.completo.ru' disabled) Branding
+									//
+								div
+									//
+									ul.dropdown_md.list-unstyled.dropdown_md-3
+										li
+											a(href='http://goaudit.ru' target='_blank') GoAudit
+										li
+											a(href='http://phonetrack.ru' target='_blank') PhoneTrack
+										li
+											a(href='https://salespilot.ru' target='_blank') SalesPilot
+										li
+											a(href='https://socsale.ru' target='_blank') Socsale
+										li
+											a(href='http://setuper.ru' target='_blank') Setuper
+										li
+											a(href='https://contrack.ru' target='_blank') Contrack
+										li
+											a(href='https://kursbox.ru/' target='_blank') Course aggregator
+								div
+									//
+									ul.dropdown_md.list-unstyled.dropdown_md-4
+										li.flex-ul-li
+											a(href='https://www.completo.ru/email-marketing/' target='_blank') Sign up to receive our newsletter
+										li.flex-ul-li
+											a(href='https://www.completo.ru/edu/' target='_blank') Knowledge-boosting system
+										li.flex-ul-li
+											a(href='https://maed.ru/' target='_blank') Learning center MAED.RU
+										li.flex-ul-li
+											a(href='https://www.completo.ru/sem/' target='_blank') SEM in 6 steps
+										li.flex-ul-li
+											a(href='https://www.completo.ru/white-paper/seo/' target='_blank') SEO manual book
+										li.flex-ul-li
+											a(href='https://www.completo.ru/white-paper/kak-razrabotat-site/' target='_blank') Site development manual book
+										li.flex-ul-li
+											a(href='https://www.completo.ru/white-paper/competitor-analysis/' target='_blank') Competitor analysis manual book
+										li.flex-ul-li
+											a(href='https://www.completo.ru/checklist-strategy-online-marketing/' target='_blank') Digital strategy checklist
+										li.flex-ul-li
+											a(href='https://www.completo.ru/videocourse/' target='_blank') Internet marketing video course
+										li.flex-ul-li
+											a(href='https://www.completo.ru/videocourse-for-managers/' target='_blank') Video Course for CEO
+										li.flex-ul-li
+											a(href='https://www.completo.ru/research-finance/' target='_blank') Banks research
+										li.flex-ul-li
+											a(href='https://www.completo.ru/research-medicine/' target='_blank') Medical centres research
+										li.flex-ul-li
+											a(href='https://www.completo.ru/research-estate/' target='_blank') Real estate research
+										li.flex-ul-li
+											a(href='https://www.completo.ru/research-dealers/' target='_blank') Manufacturers research
+										li.flex-ul-li
+											a(href='https://stratosessia.maed.ru/' target='_blank') Digital marketing prakticum
+										li.flex-ul-li
+											a(href='https://book.completo.ru/' target='_blank') Hand book for Completo digital marketing manager
+								div
+									//
+									ul#casesTabs.dropdown_md.list-unstyled.cases__tab.dropdown_md-5
+										li
+											p.text-white.h4.d-inline-block.position-relative.cases__tab-title(data-target='#collapseHeader0' data-toggle='collapse' aria-expanded='false' aria-controls='collapseHeader')
+												span Cases by service
+												i.arrow-down
+													span.bg-white
+													span.bg-white
+											//
+											#collapseHeader0.collapse(data-parent='#casesTabs')
+												ul.list-unstyled.mb-4
+													li
+														a(href='/cases/service/kontekstnaya-reklama/' target='_blank') Сontext advertising
+													li
+														a(href='/cases/service/seo/' target='_blank') SEO
+													li
+														a(href='/cases/service/targetirovannaya-reklama/' target='_blank') Targeted advertising
+													li
+														a(href='/cases/service/email-marketing/' target='_blank') Email marketing
+													li
+														a(href='/cases/service/razrabotka-sayta/' target='_blank') Site development
+													li
+														a(href='/cases/service/razrabotka-lichnykh-kabinetov/' target='_blank') Personal accounts development
+													li
+														a(href='/cases/service/tekhnicheskaya-podderzhka/' target='_blank') Support
+													li
+														a(href='/cases/service/smm/' target='_blank') SMM(Content marketing)
+													li
+														a(href='/cases/service/progrev-klientov-salesfarm/' target='_blank') Warming of customers (chat bots, auto sales funnel)
+													li
+														a(href='/cases/service/crm-marketing/' target='_blank') CRM Marketing
+													li
+														a(href='/cases/service/skvoznaya-analitika/' target='_blank') Analytics
+													li
+														a(href='/cases/service/digital-strategy/' target='_blank') Internet Marketing Strategy
+													li
+														a(href='/cases/service/issledovaniya-konkurentov/' target='_blank') Competitor research
+													li
+														a(href='/cases/service/serm/' target='_blank') SERM (work with reviews)
+													li
+														a(href='/cases/service/razrabotka-mobilnykh-prilozheniy/' target='_blank') Mobile applications Development
+										li
+											p.text-white.h4.d-inline-block.position-relative.cases__tab-title(data-target='#collapseHeader1' data-toggle='collapse' aria-expanded='false' aria-controls='collapseHeader')
+												span Cases by industry
+												i.arrow-down
+													span.bg-white
+													span.bg-white
+											//
+											#collapseHeader1.collapse(data-parent='#casesTabs')
+												ul.list-unstyled.mb-4
+													li
+														a(href='/cases/branch/b2c-marketing/' target='_blank') B2C marketing
+													li
+														a(href='/cases/branch/b2b-marketing/' target='_blank') B2B marketing
+													li
+														a(href='/cases/branch/banki/' target='_blank') Banks
+													li
+														a(href='/cases/branch/promyshlennost-i-energetika/' target='_blank') Industry and energy
+													li
+														a(href='/cases/branch/riteyl-i-b2c-tovary/' target='_blank') Retail and B2C products
+													li
+														a(href='/cases/branch/it/' target='_blank') IT
+													li
+														a(href='/cases/branch/meditsina-i-zdorove/' target='_blank') Medicine and health
+													li
+														a(href='/cases/branch/proizvodstvo-i-distribyutey/' target='_blank') Manufacturing and distributors
+													li
+														a(href='/cases/branch/uslugi-i-konsalting/' target='_blank') Services and consulting
+													li
+														a(href='/cases/branch/internet-proekty-i-startapy/' target='_blank') Internet projects and startups
+													li
+														a(href='/cases/branch/avtorynok-i-logistika/' target='_blank') Car market and logistics
+													li
+														a(href='/cases/branch/nedvizhimost-i-stroitelstvo/' target='_blank') Real estate and construction
+										li
+											//
+											a.cases__row-title.text-white.h4.d-inline-block.position-relative(href='/cases/') Cases by company
+											//
+										li.d-lg-none
+											p.text-white.h4.d-inline-block.position-relative.cases__tab-title(data-target='#collapseHeader3' data-toggle='collapse' aria-expanded='false' aria-controls='collapseHeader')
+												span Popular cases
+												i.arrow-down
+													span.bg-white
+													span.bg-white
+											//
+											#collapseHeader3.collapse(data-parent='#casesTabs')
+												ul.list-unstyled.mb-4
+													li
+														a(href='/cases/kontekstnaya-reklama-dlya-finansovoj-kompanii/' target='_blank') Contextual advertising for a financial company
+													li
+														a(href='/cases/smm-stroimateriali/' target='_blank') How to reach 1 million people on social networks for building materials
+								div
+									//
+									ul.dropdown_md.list-unstyled
+								div
+									//
+									ul.dropdown_md.list-unstyled
+						a.btn.btn-warning.data-scroll.header__tenderBtn.mt-2.mb-3(data-scroll='new-form-main' href='#new-form-main') Invite to tender
+.header.fixed.d-block.d-md-none
+	.container
+		.row
+			.col-md-12
+				nav.navbar.navbar-expand-lg.justify-content-between.pl-0.pr-0
+					a.navbar-brand(href='https://www.completo.ru')
+						img(src='https://www.completo.rupicture/upload/Completo_logoNEW_white_08-10-2018.png' alt='Completo')
+					button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent3' aria-controls='navbarSupportedContent3' aria-expanded='false' aria-label='Toggle navigation')
+						span
+						span
+						span
+						span
+					#navbarSupportedContent3.collapse.navbar-collapse.justify-content-end
+						ul.navbar-nav
+							li.nav-item.dropdown-element.dropdown-element-xs
+								a.nav-link.dropdown-link.mr-2.nav-link-xs(href='#')
+									span Completo
+									i.arrow-down
+										span
+										span
+								//
+								ul.dropdown.list-unstyled.dropdown-xs
+									li
+										a(href='https://www.completo.ru/about/' target='_blank') About the company
+									li
+										a(href='http://school.completo.ru' target='_blank') Internship
+									li
+										a(href='https://www.completo.ru/vacancy/' target='_blank') Vacancy
+									li
+										a(href='https://www.completo.ru/checklist-for-agencies/' target='_blank') Checklist for agencies
+									li
+										a(href='https://club.completo.ru') Completo Club
+							li.nav-item.dropdown-element.dropdown-element-xs
+								a.nav-link.dropdown-link.mr-2.nav-link-xs(href='#')
+									span Services
+									i.arrow-down
+										span
+										span
+								ul#casesTabsMob.dropdown.list-unstyled.dropdown-xs.cases-tab-mob
+									li
+										span
+											p.text-white.h5.d-inline-block.position-relative.cases-tab-mob-title(data-target='#collapseHeaderMob0' data-toggle='collapse' aria-expanded='false' aria-controls='collapseHeaderMob')
+												span Marketing
+												i.arrow-down
+													span.bg-white
+													span.bg-white
+											#collapseHeaderMob0.collapse(data-parent='#casesTabsMob')
+												ul.list-unstyled.mb-4
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects') Performance - context and targeting
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects') SEO optimization
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects') Promotion to linkedIN
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects') Email Marketing
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects') CRM marketing
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects') SMM
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects') End-to-end analytics
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects') Online events hosting
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects') Customer heating system
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects') Account Based Marketing
+										//
+									li
+										span
+											p.text-white.h5.d-inline-block.position-relative.cases-tab-mob-title(data-target='#collapseHeaderMob1' data-toggle='collapse' aria-expanded='false' aria-controls='collapseHeaderMob')
+												span Complex projects
+												i.arrow-down
+													span.bg-white
+													span.bg-white
+											#collapseHeaderMob1.collapse(data-parent='#casesTabsMob')
+												ul.list-unstyled.mb-4
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects') Digital strategy
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects') Companies with b2b products
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects') Companies with dealer networks
+													li
+														a.services-row__smallLink(href='https://www.completo.ru/projects' disabled) Quick launch - landing + advertising
+										//
+									li
+										span
+											p.text-white.h5.d-inline-block.position-relative.cases-tab-mob-title(data-target='#collapseHeaderMob2' data-toggle='collapse' aria-expanded='false' aria-controls='collapseHeaderMob')
+												span Development
+												i.arrow-down
+													span.bg-white
+													span.bg-white
+											#collapseHeaderMob2.collapse(data-parent='#casesTabsMob')
+												ul.list-unstyled.mb-4
+													li
+														a.services-row__smallLink(href='https://www.completo.ru') Website development
+													li
+														a.services-row__smallLink(href='https://www.completo.ru') System of dealer sites / sites clones
+													li
+														a.services-row__smallLink(href='https://www.completo.ru') B2B portals
+													li
+														a.services-row__smallLink(href='https://www.completo.ru') Technical support
+													li
+														a.services-row__smallLink(href='https://www.completo.ru') Mobile applications development
+													li
+														a.services-row__smallLink(href='https://www.completo.ru' disabled) Online services development
+										//
+									li
+										span
+											p.text-white.h5.d-inline-block.position-relative.cases-tab-mob-title(data-target='#collapseHeaderMob3' data-toggle='collapse' aria-expanded='false' aria-controls='collapseHeaderMob')
+												span Research
+												i.arrow-down
+													span.bg-white
+													span.bg-white
+											#collapseHeaderMob3.collapse(data-parent='#casesTabsMob')
+												ul.list-unstyled.mb-4
+													li
+														a.services-row__smallLink(href='https://www.completo.ru') Research of competitors
+													li
+														a.services-row__smallLink(href='https://www.completo.ru') Customer Journey Map
+													li
+														a.services-row__smallLink(href='https://www.completo.ru' disabled) Custom research
+													li
+														a.services-row__smallLink(href='https://www.completo.ru' disabled) Demand research
+										//
+									li
+										span
+											p.text-white.h5.d-inline-block.position-relative.cases-tab-mob-title(data-target='#collapseHeaderMob4' data-toggle='collapse' aria-expanded='false' aria-controls='collapseHeaderMob')
+												span Sales
+												i.arrow-down
+													span.bg-white
+													span.bg-white
+											#collapseHeaderMob4.collapse(data-parent='#casesTabsMob')
+												ul.list-unstyled.mb-4
+													li
+														a.services-row__smallLink(href='https://www.completo.ru' disabled) CRM Integration
+													li
+														a.services-row__smallLink(href='https://www.completo.ru') Sales department Building
+										//
+									li
+										span
+											p.text-white.h5.d-inline-block.position-relative.cases-tab-mob-title(data-target='#collapseHeaderMob5' data-toggle='collapse' aria-expanded='false' aria-controls='collapseHeaderMob')
+												span Design
+												i.arrow-down
+													span.bg-white
+													span.bg-white
+											#collapseHeaderMob5.collapse(data-parent='#casesTabsMob')
+												ul.list-unstyled.mb-4
+													li
+														a.services-row__smallLink(href='https://www.completo.ru' disabled) Product Development
+													li
+														a.services-row__smallLink(href='https://www.completo.ru' disabled) Branding
+										//
+								ul.dropdown.list-unstyled.dropdown-xs
+									li
+										a Marketing
+									li
+										a Complex projects
+									li
+										a Development
+									li
+										a Research
+									li
+										a Sales
+									li
+										a Design
+							li.nav-item.dropdown-element.dropdown-element-xs
+								a.nav-link.dropdown-link.mr-2.nav-link-xs(href='#')
+									span Software
+									i.arrow-down
+										span
+										span
+								//
+								ul.dropdown.list-unstyled.dropdown-xs
+									li
+										a(href='http://goaudit.ru' target='_blank') GoAudit
+									li
+										a(href='http://phonetrack.ru' target='_blank') PhoneTrack
+									li
+										a(href='https://salespilot.ru' target='_blank') SalesPilot
+									li
+										a(href='https://socsale.ru' target='_blank') Socsale
+									li
+										a(href='http://setuper.ru' target='_blank') Setuper
+									li
+										a(href='https://contrack.ru' target='_blank') Contrack
+									li
+										a(href='https://kursbox.ru/' target='_blank') Course aggregator
+							li.nav-item.dropdown-element.dropdown-element-xs
+								a.nav-link.dropdown-link.mr-2.nav-link-xs(href='#')
+									span We train
+									i.arrow-down
+										span
+										span
+								//
+								ul.dropdown.list-unstyled.dropdown-xs
+									li.flex-ul-li
+										a(href='https://www.completo.ru/email-marketing/' target='_blank') Sign up to receive our newsletter
+									li.flex-ul-li
+										a(href='https://www.completo.ru/edu/' target='_blank') Knowledge-boosting system
+									li.flex-ul-li
+										a(href='https://maed.ru/' target='_blank') Learning center MAED.RU
+									li.flex-ul-li
+										a(href='https://www.completo.ru/sem/' target='_blank') SEM in 6 steps
+									li.flex-ul-li
+										a(href='https://www.completo.ru/white-paper/seo/' target='_blank') SEO manual book
+									li.flex-ul-li
+										a(href='https://www.completo.ru/white-paper/kak-razrabotat-site/' target='_blank') Site development manual book
+									li.flex-ul-li
+										a(href='https://www.completo.ru/white-paper/competitor-analysis/' target='_blank') Competitor analysis manual book
+									li.flex-ul-li
+										a(href='https://www.completo.ru/checklist-strategy-online-marketing/' target='_blank') Digital strategy checklist
+									li.flex-ul-li
+										a(href='https://www.completo.ru/videocourse/' target='_blank') Internet marketing video course
+									li.flex-ul-li
+										a(href='https://www.completo.ru/videocourse-for-managers/' target='_blank') Video Course for CEO
+									li.flex-ul-li
+										a(href='https://www.completo.ru/research-finance/' target='_blank') Banks research
+									li.flex-ul-li
+										a(href='https://www.completo.ru/research-medicine/' target='_blank') Medical centres research
+									li.flex-ul-li
+										a(href='https://www.completo.ru/research-estate/' target='_blank') Real estate research
+									li.flex-ul-li
+										a(href='https://www.completo.ru/research-dealers/' target='_blank') Manufacturers research
+									li.flex-ul-li
+										a(href='https://stratosessia.maed.ru/' target='_blank') Digital marketing prakticum
+									li.flex-ul-li
+										a(href='https://book.completo.ru/' target='_blank') Hand book for Completo digital marketing manager
+							li.nav-item.dropdown-element.dropdown-element-xs
+								a.nav-link.dropdown-link.mr-2.nav-link-xs(href='#')
+									span Cases
+									i.arrow-down
+										span
+										span
+								//
+								ul#casesTabsMob.dropdown.list-unstyled.dropdown-xs.cases-tab-mob
+									li
+										span
+											p.text-white.h5.d-inline-block.position-relative.cases-tab-mob-title(data-target='#collapseHeaderMob0' data-toggle='collapse' aria-expanded='false' aria-controls='collapseHeaderMob')
+												span Cases by service
+												i.arrow-down
+													span.bg-white
+													span.bg-white
+											#collapseHeaderMob0.collapse(data-parent='#casesTabsMob')
+												ul.list-unstyled.mb-4
+													li
+														a(href='/cases/service/kontekstnaya-reklama/' target='_blank') Сontext advertising
+													li
+														a(href='/cases/service/seo/' target='_blank') SEO
+													li
+														a(href='/cases/service/targetirovannaya-reklama/' target='_blank') Targeted advertising
+													li
+														a(href='/cases/service/email-marketing/' target='_blank') Email marketing
+													li
+														a(href='/cases/service/razrabotka-sayta/' target='_blank') Site development
+													li
+														a(href='/cases/service/razrabotka-lichnykh-kabinetov/' target='_blank') Personal accounts development
+													li
+														a(href='/cases/service/tekhnicheskaya-podderzhka/' target='_blank') Support
+													li
+														a(href='/cases/service/smm/' target='_blank') SMM(Content marketing)
+													li
+														a(href='/cases/service/progrev-klientov-salesfarm/' target='_blank') Warming of customers (chat bots, auto sales funnel)
+													li
+														a(href='/cases/service/crm-marketing/' target='_blank') CRM Marketing
+													li
+														a(href='/cases/service/skvoznaya-analitika/' target='_blank') Analytics
+													li
+														a(href='/cases/service/digital-strategy/' target='_blank') Internet Marketing Strategy
+													li
+														a(href='/cases/service/issledovaniya-konkurentov/' target='_blank') Competitor research
+													li
+														a(href='/cases/service/serm/' target='_blank') SERM (work with reviews)
+													li
+														a(href='/cases/service/razrabotka-mobilnykh-prilozheniy/' target='_blank') Mobile applications Development
+										//
+									li
+										span
+											p.text-white.h5.d-inline-block.position-relative.cases-tab-mob-title(data-target='#collapseHeaderMob1' data-toggle='collapse' aria-expanded='false' aria-controls='collapseHeaderMob')
+												span Cases by industry
+												i.arrow-down
+													span.bg-white
+													span.bg-white
+											#collapseHeaderMob1.collapse(data-parent='#casesTabsMob')
+												ul.list-unstyled.mb-4
+													li
+														a(href='/cases/branch/b2c-marketing/' target='_blank') B2C marketing
+													li
+														a(href='/cases/branch/b2b-marketing/' target='_blank') B2B marketing
+													li
+														a(href='/cases/branch/banki/' target='_blank') Banks
+													li
+														a(href='/cases/branch/promyshlennost-i-energetika/' target='_blank') Industry and energy
+													li
+														a(href='/cases/branch/riteyl-i-b2c-tovary/' target='_blank') Retail and B2C products
+													li
+														a(href='/cases/branch/it/' target='_blank') IT
+													li
+														a(href='/cases/branch/meditsina-i-zdorove/' target='_blank') Medicine and health
+													li
+														a(href='/cases/branch/proizvodstvo-i-distribyutey/' target='_blank') Manufacturing and distributors
+													li
+														a(href='/cases/branch/uslugi-i-konsalting/' target='_blank') Services and consulting
+													li
+														a(href='/cases/branch/internet-proekty-i-startapy/' target='_blank') Internet projects and startups
+													li
+														a(href='/cases/branch/avtorynok-i-logistika/' target='_blank') Car market and logistics
+													li
+														a(href='/cases/branch/nedvizhimost-i-stroitelstvo/' target='_blank') Real estate and construction
+										//
+									li
+										//
+										span
+											a.text-white.h5.d-inline.position-relative.cases-tab-mob-title(href='/cases/') Cases by company
+									li.d-lg-none
+										span
+											p.text-white.h5.d-inline-block.position-relative.cases-tab-mob-title(data-target='#collapseHeaderMob3' data-toggle='collapse' aria-expanded='false' aria-controls='collapseHeaderMob')
+												span Popular cases
+												i.arrow-down
+													span.bg-white
+													span.bg-white
+											#collapseHeaderMob3.collapse(data-parent='#casesTabsMob')
+												ul.list-unstyled.mb-4
+													li
+														a(href='/cases/kontekstnaya-reklama-dlya-finansovoj-kompanii/' target='_blank') Contextual advertising for a financial company
+													li
+														a(href='/cases/smm-stroimateriali/' target='_blank') How to reach 1 million people on social networks for building materials
+							li.nav-item
+								a.nav-link(href='https://blog.completo.ru/') Blog
+							li.nav-item.pr-0.mr-0
+								a.nav-link.pr-0.mr-0(href='https://www.completo.ru/contacts/') Contacts
+						a.btn.btn-warning.data-scroll.header__tenderBtn.mt-2.mb-3(data-scroll='new-form-main' href='#new-form-main') Invite to tender

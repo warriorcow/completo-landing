@@ -1,0 +1,474 @@
+.videocourse-cert-block {
+	position: relative;
+	padding-bottom: 150px;
+	@include media-breakpoint-down(md) {
+		padding-bottom: 100px;
+	}
+	@include media-breakpoint-down(sm) {
+		padding-bottom: 60px;
+	}
+	&-cert-link {
+		pointer-events: none;
+		color: #6c757d;
+		text-decoration: none !important;
+		max-width: 125px;
+		&-active {
+			color: $dark;
+			pointer-events: initial;
+			i {
+				color: $yellow;
+			}
+			&:hover {
+				color: $primary;
+			}
+		}
+		
+	}
+	&__modal {
+		background-color: #F9F9F9;
+		padding: 40px 50px;
+		width: calc(100% + 60px);
+		position: relative;
+		@include media-breakpoint-down(lg) {
+			padding: 30px 15px;
+		}
+		@include media-breakpoint-down(md) {
+			padding: 30px 20px;
+			width: 100%;
+		}
+		@include media-breakpoint-down(xs) {
+			padding: 0;
+			background-color: $white;
+		}
+		&:before {
+			content: '';
+			top: 100%;
+			width: 0;
+			height: 0;
+			position: absolute;
+			right: 0;
+			border-left: 0 solid transparent;
+			border-right: 28px solid transparent;
+			border-top: 40px solid #9A9A9A;
+			@include media-breakpoint-down(md) {
+				display: none;
+			}
+		}
+		&-share {
+			@include media-breakpoint-down(md) {
+				justify-content: center;
+			}
+		}
+		&-maed {
+			width: 120px;
+			min-width: 120px;
+			margin-right: 15px;
+			@include media-breakpoint-down(lg) {
+				min-width: 80px;
+				width: 80px;
+			}
+		}
+		&-nav {
+			flex-wrap: nowrap;
+		}
+		&-tab-content {
+			max-height: 400px;
+			.mCSB_inside>.mCSB_container {
+				margin-right: 10px;
+				div {
+					padding-right: 20px;
+				}
+			}
+		}
+		&-btn {
+			@include media-breakpoint-down(xs) {
+				font-size: 12px;
+			}
+		}
+		&-link {
+			text-decoration: none !important;
+			&-img {
+				min-width: 120px;
+				width: 120px;
+				height: 90px;
+				object-position: cover;
+				margin-right: 20px;
+				@include media-breakpoint-down(xs) {
+					min-width: 80px;
+					width: 80px;
+					margin-right: 10px;
+				}
+			}
+			&-title {
+				color: $dark;
+				transition: 0.2s ease all;
+				&:hover {
+					color: $primary;
+				}
+				@include media-breakpoint-down(lg) {
+					font-size: 20px;
+				}
+				@include media-breakpoint-down(xs) {
+					font-size: 16px;
+				}
+			}
+			&-text {
+				@include media-breakpoint-down(lg) {
+					font-size: 12px;
+				}
+				@include media-breakpoint-down(xs) {
+					font-size: 12px;
+				}
+			}
+		}
+		&-tab {
+			display: block;
+			border: 1px solid $yellow;
+			background-color: $white;
+			padding: 16px;
+			text-decoration: none !important;
+			color: $dark;
+			text-align: center;
+			transition: 0.2s ease all;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&:hover {
+				color: $primary;
+				border-color: #D0D0D0;
+			}
+			&.active {
+				background-color: $yellow;
+				color: $white;
+				border-color: $yellow;
+			}
+			@include media-breakpoint-down(lg) {
+				font-size: 10px;
+			}
+			@include media-breakpoint-down(xs) {
+				padding: 16px 8px;
+			}
+		}
+	}
+	&__card {
+		position: relative;
+		padding: 24px;
+		border-radius: 4px;
+		height: 350px;
+		display: flex;
+		align-items: flex-end;
+		cursor: pointer;
+		overflow: hidden;
+		&_btn {
+			@include media-breakpoint-down(xs) {
+				width: 100%;
+			}
+		}
+		@include media-breakpoint-down(lg) {
+			height: 290px;
+		}
+		@include media-breakpoint-down(md) {
+			height: 330px;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+			background-color: rgba(0,0,0,0.3);
+			transition: 0.2s ease all;
+			border-radius: 4px;
+		}
+		&-modal-title {
+			@include media-breakpoint-down(lg) {
+				font-size: 36px;
+			}
+			@include media-breakpoint-down(xs) {
+				font-size: 20px;
+			}
+		}
+		&-input-radio {
+			opacity: 0;
+			pointer-events: none;
+			position: absolute;
+		}
+		&-radio {
+			width: 24px;
+			height: 24px;
+			background-color: $yellow;
+			border-radius: 100%;
+			margin-right: 15px;
+			position: relative;
+			min-width: 24px;
+			cursor: pointer;
+			&-text {
+				cursor: pointer;
+			}
+			&:before {
+				content: '';
+				width: 8px;
+				height: 8px;
+				border-radius: 100%;
+				background-color: #333333;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				opacity: 0;
+				transition: 0.2s ease all;
+			}
+		}
+		&-nav {
+			cursor: pointer;
+			&-text {
+				transition: 0.2s ease all;
+			}
+			&-item {
+				width: 0;
+				height: 0;
+				border-top: 15px solid transparent;
+				border-bottom: 15px solid transparent;
+				position: relative;
+				&:after {
+					content: '';
+					top: -16px;
+					width: 3px;
+					height: 30px;
+					background-color: black;
+					position: absolute;
+					transition: 0.2s ease all;
+				}
+				&:before {
+					content: '';
+					position: absolute;
+					top: -19px;
+					width: 0;
+					height: 0;
+					border-top: 15px solid transparent;
+					border-bottom: 15px solid transparent;
+				}
+			}
+			&:hover {
+				.videocourse-cert-block__card-nav-text {
+					color: $primary;
+				}
+				.videocourse-cert-block__card-nav-item {
+					&:after {
+						background-color: $yellow;
+					}
+				}
+			}
+		}
+		&-prev {
+			border-right: 20px solid black;
+			&:after {
+				right: 100%;
+			}
+			&:before {
+				border-right: 20px solid $yellow;
+				left: 0;
+			}
+		}
+		&-next {
+			border-left: 20px solid black;
+			&:after {
+				left: 100%;
+			}
+			&:before {
+				border-left: 20px solid $yellow;
+				left: -22px;
+			}
+		}
+		&-content {
+			position: relative;
+			z-index: 4;
+		}
+		&-num {
+			font-weight: bold;
+			font-size: 68px;
+			line-height: 1;
+			color: transparent;
+			-webkit-text-stroke: 2px $white;
+			text-stroke: 2px $white;
+		}
+		&-video {
+			width: 100%;
+			height: 400px;
+			@include media-breakpoint-down(xs) {
+				height: 200px;
+			}
+		}
+		&-text {
+			height: 70px;
+			font-size: 18px;
+			font-weight: bold;
+			color: $white;
+			margin-top: 5px;
+		}
+		&-play-btn {
+			width: 70px;
+			height: 70px;
+			background-color: $yellow;
+			border: 2px solid $white;
+			border-radius: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: 3;
+			transition: 0.2s ease all;
+			&-angle {
+				width: 0; 
+				height: 0; 
+				border-top: 15px solid transparent;
+				border-bottom: 15px solid transparent;
+				border-left: 20px solid $white;
+				transform: translateX(2px);
+				transition: 0.2s ease all;
+			}
+		}
+		&:hover {
+			&:before {
+				opacity: 0.7;
+			}
+			.videocourse-cert-block__card-play-btn {
+				background-color: $white;
+				border-color: $yellow;
+				.videocourse-cert-block__card-play-btn-angle {
+					border-left-color: $yellow;
+				}
+			}
+		}
+		&-bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			z-index: 1;
+			border-radius: 4px;
+		}
+	}
+	&-text {
+		text-transform: uppercase;
+		font-weight: bold;
+    font-size: 288px;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 2px #fecc2f;
+    text-stroke: 2px #fecc2f;
+		position: absolute;
+		bottom: -75px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		z-index: 3;
+		text-align: center;
+		@include media-breakpoint-down(md) {
+			font-size: 220px;
+		}
+		@include media-breakpoint-down(sm) {
+			font-size: 92px;
+			bottom: -30px;
+		}
+	}
+	&-orange-text {
+		display: inline;
+    padding: 0 0 0 7px;
+    color: white;
+    white-space: pre-wrap;
+    line-height: 1.4;
+    background-color: #E16D01;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+		&-block {
+			max-width: 240px;
+			margin-left: auto;
+		}
+	}
+	&-card {
+		border: 4px solid white;
+		position: relative;
+		min-height: 208px;
+		&-cont {
+			max-width: 300px;
+		}
+		@include media-breakpoint-down(md) {
+			padding-top: 40px !important;
+			min-height: initial;
+		}
+		.dealers-expert__card-icon-block {
+			@include media-breakpoint-down(lg) {
+				left: -25px;
+				&-right {
+					left: auto;
+				}
+			}
+		}
+		.dealers-expert__card-icon-block-right,
+		.dealers-expert__card-icon-block-left {
+			@include media-breakpoint-down(md) {
+				left: 0;
+				right: 0;
+				margin: auto;
+				top: -50px;
+			}
+			@include media-breakpoint-down(xs) {
+				top: -30px;
+			}
+		}
+	}
+	&-bg {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: auto;
+	}
+	&-img-cert {
+		max-width: 171px;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+
+.videocourse-cert-block__card-input-radio:checked+label .videocourse-cert-block__card-radio::before {
+	opacity: 1;
+}
+
+.system-modules-container__form-video-cert {
+	transform: translateX(30px);
+	@include media-breakpoint-down(sm) {
+		transform: none;
+	}
+}
+.system-modules-container__form-container-video-cert {
+	@include media-breakpoint-down(xs) {
+		&:before {
+			border-bottom-left-radius: 8px;
+			border-bottom-right-radius: 8px;
+		}
+	}
+}
+
+.form-certificate-modal-container-link {
+	display: none;
+}
+.system-modules-container__list-icon-new {
+	transform: translate(-20px, -17px);
+}

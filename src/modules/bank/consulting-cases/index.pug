@@ -1,0 +1,29 @@
+mixin case-block-1(img, text, logo)
+	a(href="#").case__card.mx-2(style=img)
+		.case__card-container
+			.case__card-container-logo
+				img(src="picture/upload/"+logo, alt="").case__card-container-logo-img
+			small.bg-warning.rounded.px-2.py-1.text-dark.case__card-title.font-weight-bold Кейс
+			p.text-white.mt-3.h4.case__card-text= text
+mixin case-block-2(img, text, bg)
+	a(href="#").case__card.case__card-notebook.mx-2.text-center(class=bg)
+		.text-white.case__card-notebook-title.mb-4= text
+		img(src="picture/upload/"+img, alt="").case__card-notebook-img
+.py-5.overflow-hidden
+	.container.mt-md-4
+		.row
+			.col-md-12
+				h2.h2.mb-5.form-h2
+					span.yellow-border У нас большой
+						span.border-container.animation.visible.animated(data-animate='newline')
+					span 
+					span опыт в digital-маркетинге для финансовых организаций:
+	.owl-right.owl-carousel.owl-theme
+		+case-block-1('background-image:url("picture/upload/case-img-1.jpg");', 'Как сделать охват в соцсетях 1 млн человек для стройматериалов',  'alta-2.png')
+		+case-block-2('case-img-3.png', 'Сайт Ступинского химического завода', 'cases-bg-red')
+		+case-block-1('background-image:url("picture/upload/case-img-2.jpg");', 'Системный электронный маркетинг для музыкальной школы', 'Lafarge_(Unternehmen)_logo.svg')
+		+case-block-2('case-img-3.png', 'Сайт Ступинского химического завода', 'cases-bg-red')
+		+case-block-1('background-image:url("picture/upload/case-img-1.jpg");', 'Как сделать охват в соцсетях 1 млн человек для стройматериалов', 'Motorola_new_logo.svg')
+		+case-block-2('case-img-4.png', 'Сайт для производителя стройматериалов', 'cases-bg-blue')
+		+case-block-1('background-image:url("picture/upload/case-img-1.jpg");', 'Как сделать охват в соцсетях 1 млн человек для стройматериалов', 'logo_site.svg')
+		+case-block-2('case-img-4.png', 'Сайт для производителя стройматериалов', 'cases-bg-blue')

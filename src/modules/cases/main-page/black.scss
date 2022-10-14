@@ -1,0 +1,106 @@
+.cases-container-page {
+	padding-top: 100px;
+	background-color: #f3f3f3;
+	&__black {
+		background-image: url(/picture/upload/line_3.png);
+		background-color: #343434;
+		background-position: 200% 30%;
+		background-repeat: no-repeat;
+		padding: 90px 0 30px;
+		@include media-breakpoint-down(lg){
+			background-position: center;
+		}
+		@include media-breakpoint-down(sm){
+			background-image: none;
+			&-words {
+				font-size: 10px;
+			}
+		}
+		@include media-breakpoint-down(xs){
+			&-title {
+				p {
+					font-size: 0.7rem;
+				}
+			}
+		}
+		.h2 {
+			@include media-breakpoint-down(lg){
+				font-size: 2.5rem;
+			}
+			@include media-breakpoint-down(sm){
+				font-size: 1.9rem;
+			}
+			@include media-breakpoint-down(xs){
+				font-size: 1.2rem;
+			}
+		}
+		&-right {
+			max-width: 250px;
+			margin: 30px auto;
+			&-absolute-img {
+				position: absolute;
+				top: -13px;
+				left: -80px;
+				width: 120px;
+				@include media-breakpoint-down(xs) {
+					width: 50px;
+					left: -8px;
+					top: 9px;
+				}
+			}
+			&-link {
+				color: #00B3FF;
+				text-decoration: none !important;
+				transition: 0.2s ease all;
+				border-bottom: 1px solid #00B3FF;
+				&-item {
+					text-decoration: none !important;
+					position: relative;
+					padding-left: calc(35px + 1rem);
+				}
+				&:hover {
+					border-bottom-color: transparent;
+				}
+			}
+		}
+		&-num {
+			font-size: 58px;
+			line-height: 1;
+		}
+		&-absolute-text {
+			position: absolute;
+			right: -10px;
+			top: -10px;
+			a {
+				color: #00B3FF;
+				text-decoration: none !important;
+				transition: 0.2s ease all;
+				border-bottom: 1px solid #00B3FF;
+				&:hover {
+					border-bottom-color: transparent;
+				}
+			}
+		}
+		&-list {
+			li {
+				position: relative;
+				&:before {
+					content: '— ';
+				}
+			}
+		}
+		&-absolute-img {
+			position: absolute;
+			bottom: -30px;
+			left: 0;
+			width: 240px;
+			@include media-breakpoint-down(sm){
+				left: auto;
+				right: 0;
+			}
+			@include media-breakpoint-down(xs){
+				display: none;
+			}
+		}
+	}
+}

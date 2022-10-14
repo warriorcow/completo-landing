@@ -1,0 +1,47 @@
+mixin videocourse-card-advantages(icon,title)
+	.videocourse-card-advantages.videocourse-card-advantages-b2b
+		.videocourse-card-advantages-head.videocourse-card-advantages-head-b2b
+			i.icon(class="icon-"+icon)
+		.videocourse-card-advantages-body
+			p.mb-4!= title
+mixin b2b-num-card(num, title, text)
+	.pt-4.b2b-courses__card.mb-4
+		.mb-4.d-flex.align-items-center.justify-content-center
+			.whitepapers__trust-big-carousel-num= num 
+		.h3.text-secondary.text-uppercase.mb-2.text-center= title
+		p.mb-0.text-center= text
+
+.py-5.position-relative.internet-system-dealers.internet-system-dealers-new
+	.container
+		.row
+			.col-md-12
+				nav.breadcrumb
+					ol.breadcrumb
+						li.breadcrumb-item
+							a(href="/").text-secondary Главная
+						li.breadcrumb-item.active.text-dark(aria-current="page") Система интернет-продаж
+		.row
+			.col-md-12
+				h2.h2.mb-4.mb-md-5.position-relative.z-index-2.form-h2
+					span.yellow-border Инструкция,
+						span.border-container.animation.visible.animated(data-animate="newline")
+					span 
+					span как создать систему
+		.row
+			.col-md-12
+				.custom-scrollbar
+					.d-flex.justify-content-between
+						+b2b-num-card('1', 'Инструменты-', 'Возьмите отдельные инструменты интернет-маркетинга')
+						+b2b-num-card('2', 'СТРОЙТЕ СИСТЕМУ-', 'С учётом специфики B2B, складывайте их в пирамиду')
+						+b2b-num-card('3', 'ПОБЕЖДАЙТЕ-', 'Получившаяся система должна прочно стоять, даже если убрать несколько блоков.')
+		.row
+			.col-md-12.mt-md-3
+				.b2b-shadow-block.mt-4
+					.custom-scrollbar
+						.d-flex.justify-content-between
+							+videocourse-card-advantages('conversation-consulting', '<span class="font-weight-bold">Участники:</span><br><span>B2B компании</span>')
+							+videocourse-card-advantages('dealers-finish', '<span class="font-weight-bold">Выигрывает тот, </span><span>чья система даёт максимальные продажи</span>')
+							+videocourse-card-advantages('dealers-bad-review', '<span class="font-weight-bold">Опасайтесь</span><br><span>потоковых агентств</span>')
+							+videocourse-card-advantages('dealers-learning', '<span class="font-weight-bold">Конкуренты </span><span>не смогут скопировать систему менее чем за 1.5-2 лет</span>')
+			.col-md-12.d-flex.justify-content-center.pt-md-4
+				button.btn.btn-warning.data-scroll.my-4.d-block(data-scroll="form-content") Запросить предложение

@@ -1,0 +1,10 @@
+.whitepapers-evolution {
+	background-image: url('../picture/backgrounds/whitepapers-evolution-bg.svg');
+	background-size: cover;
+	background-size: contain;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	@include media-breakpoint-down(md) {
+		background-image: none;
+	}
+}

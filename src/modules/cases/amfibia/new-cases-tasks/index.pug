@@ -1,0 +1,79 @@
+mixin tasks(num, text)
+	.cases-task.animation.visible(data-animate="big_shadow")
+		.cases-task-num= num
+		.cases-task-text= text
+.new-cases-task
+	.container
+		.row
+			.col-md-12.mt-5
+				nav.breadcrumb
+					ol.breadcrumb
+						li.breadcrumb-item
+							a(href="/").text-warning Главная
+						li.breadcrumb-item
+							a(href="/cases/").text-warning Кейсы
+						li.breadcrumb-item.active.text-dark(aria-current="page") Как повысить в&nbsp;18&nbsp;раз количество заявок и&nbsp;загрузить производство на&nbsp;год вперёд
+			.col-md-12
+				h2.h1.mt-3.mb-4 Задачи
+			.col-md-12
+				.row.d-none.d-md-flex
+					.col-lg-4.col-md-6.col.mb-4
+						+tasks('1','Увеличение продаж аэросаней «Патруль»')
+					.col-lg-4.col-md-6.col.mb-4
+						+tasks('2','Разработка Уникального Торгового Предложения')
+					.col-lg-4.col-md-6.col.mb-4
+						+tasks('3','Разработка стратегии интернет-маркетинга')
+					.col-lg-4.col-md-6.col.mb-4
+						+tasks('4','Разработка лучшего сайта в отрасли')
+					.col-lg-4.col-md-6.col.mb-4
+						+tasks('5','Настройка сквозной аналитики до продаж')
+					.col-lg-4.col-md-6.col.mb-4
+						+tasks('6','Запуск и ведение рекламных кампаний')
+
+
+
+
+				.d-md-none.d-sm-block
+					.custom-scrollbar
+						.row.m-0.cases-task__row
+							.col-lg-4.col-md-6.col.mb-4.cases-task__container
+								+tasks('1','Увеличение продаж аэросаней «Патруль»')
+							.col-lg-4.col-md-6.col.mb-4.cases-task__container
+								+tasks('2','Разработка Уникального Торгового Предложения')
+							.col-lg-4.col-md-6.col.mb-4.cases-task__container
+								+tasks('3','Разработка стратегии интернет-маркетинга')
+							.col-lg-4.col-md-6.col.mb-4.cases-task__container
+								+tasks('4','Разработка лучшего сайта в отрасли')
+							.col-lg-4.col-md-6.col.mb-4.cases-task__container
+								+tasks('5','Настройка сквозной аналитики до продаж')
+							.col-lg-4.col-md-6.col.mb-4.cases-task__container
+								+tasks('6','Запуск и ведение рекламных кампаний')
+.new-cases-tasks
+	.container
+		.row
+			.col-md-12
+				h2.h1.mt-5.mb-4 Сложности проекта
+		.row.justify-content-center
+			.col-md-10
+				.bg-white.new-cases-tasks__container.animation.visible(data-animate="big_shadow")
+					h5.new-cases-tasks__title Малый спрос на аэросани
+					p.mb-5.new-cases-tasks__list-text Аэросани - это штучный товар и конкретно их ищет очень мало людей.
+					h5.new-cases-tasks__title Долгий цикл сделки
+					p.mb-5.new-cases-tasks__list-text Решение принимается не спонтанно, продавать в лоб не получится. Нужно много касаний с клиентом.
+.new-cases-tasks
+	.container
+		.row
+			.col-md-12
+				.new-cases-we-do__quote.new-cases-tasks__quote.mt-4
+					.new-cases-tasks__quote-left
+						.new-cases-tasks__quote-avatar
+							.new-cases-tasks__quote-avatar-img
+								img(src="../../picture/upload/roman.png", alt="")
+						.new-cases-tasks__quote-under-text
+							h6.mb-0.mt-2 Роман Цветков
+							p.mb-0
+								small руководитель проекта
+					.new-cases-tasks__quote-right.new-cases-tasks__quote-right-big
+						p «​Интересно, что когда клиент только пришел, единственное его желание было продавать &laquo;немного больше лодок&raquo;, ведь это было стороннее направление бизнеса. Но далее все пошло &laquo;не по плану&raquo;...»
+
+

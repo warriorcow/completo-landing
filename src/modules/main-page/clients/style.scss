@@ -1,0 +1,55 @@
+.clients {
+	margin-bottom: 40px;
+	background-image: url('../picture/backgrounds/clients.svg');
+	background-size: contain;
+	background-position: left center;
+	background-repeat: no-repeat;
+	&-md {
+		@include media-breakpoint-down(xs) {
+			background-image: none;
+		}
+	}
+	&-xs {
+		@include media-breakpoint-down(xs) {
+			margin-bottom: 0;
+		}
+	}
+	&__btn {
+		@include media-breakpoint-down(sm) {
+			width: calc(100% - 10px);
+		}
+	}
+	&-container {
+		&__custom-scrollbar {
+			margin: 0 -15px;
+			@include media-breakpoint-down(sm) {
+				//margin: 0;
+			}
+		}
+		&__scrollbar {
+			padding: 60px 0;
+			min-width: 3920px;
+		}
+	}
+	&__card {
+		background-image: url('../picture/upload/pattern.png');
+		width: 166px;
+		height: 190px;
+		border-radius: 2px;
+		margin: 0 15px;
+		&-img {
+			width: 120px;
+			height: 50px;
+			object-fit: contain;
+			margin: 30px auto 25px;
+			display: block;
+		}
+		&-text {
+			color: rgba(0,0,0,0.5);
+			font-size: 0.8rem;
+			text-align: center;
+			max-width: 140px;
+			margin: auto;
+		}
+	}
+}

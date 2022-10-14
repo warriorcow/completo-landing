@@ -1,0 +1,67 @@
+.make-sites {
+	padding: 80px 0 65px;
+	position: relative;
+	overflow: hidden;
+	@include media-breakpoint-down(sm) {
+		padding: 40px 0;
+	}
+	&__card {
+		box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .2);
+		.h3 {
+			font-size: 2rem;
+			@include media-breakpoint-down(sm) {
+				font-size: 1.4rem;
+			}
+		}
+	}
+	&__video {
+		position: relative;
+		&:hover:before {
+			border-left-color: #E5AE00;
+		}
+		&:before,
+		&:after {
+			content: '';
+			width: 0;
+			height: 0;
+			border-top: 22.5px solid transparent;
+			border-bottom: 22.5px solid transparent;
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			margin: auto;
+			transition: 0.3s ease all;
+		}
+		&:before {
+			border-left: 34px solid #FECC2F;
+			z-index: 2;
+		}
+		&:after {
+			border-left: 34px solid black;
+			z-index: 1;
+			top: 4px;
+			left: 4px;
+		}
+	}
+}
+// .form-h2 .yellow-border {
+// 	z-index: 1;
+// }
+.breadcrumbs {
+	margin-bottom: 25px;
+	font-size: 12px;
+	&__link {
+		color: $yellow !important;
+		text-decoration: none !important;
+		transition: 0.2s ease all;
+		border-bottom: 1px dashed transparent;
+		&:hover {
+			border-bottom-color: $yellow;
+		}
+	}
+	&__separate {
+		margin: 0 3px;
+	}
+}

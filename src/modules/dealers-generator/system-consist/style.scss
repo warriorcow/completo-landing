@@ -1,0 +1,234 @@
+.system-consist {
+	padding: 60px 0;
+	background-color: #f2f6fa;
+	&-end {
+		background-image: linear-gradient(to top, white 50%, #f2f6fa 50% 100%);
+		&__card {
+			border-right: 1px solid white;
+			@include media-breakpoint-down(sm) {
+				border-right: none;
+			}
+			&-num {
+				text-shadow: -1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;
+				color: $yellow;
+				font-size: 50px;
+				font-weight: bold;
+				text-align: center;
+				margin-bottom: 10px;
+				@include media-breakpoint-down(lg) {
+					font-size: 44px;
+				}
+				@include media-breakpoint-down(md) {
+					font-size: 30px;
+				}
+			}
+		}
+	}
+	&-bad-dealers {
+		.mobile_slider .slick-next {
+			left: 135px;
+		}
+	}
+	.gradient-text {
+		@include media-breakpoint-down(lg) {
+			font-size: 50px;
+		}
+	}
+	h2 {
+		font-size: 2.7rem;
+		@include media-breakpoint-down(sm) {
+			font-size: 2.5rem;
+		}
+	}
+	&__img {
+		&-container {
+			border: 1px solid $yellow;
+			position: relative;
+			border-radius: 6px;
+			padding: 5px;
+			margin-bottom: 20px;
+			margin-top: 10px;
+			img {
+				box-shadow: 0 3px 15px rgba(0,0,0,.25);
+				width: 100%;
+			}
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+				border-radius: 6px;
+				border: 1px solid $yellow;
+			}
+			&:before {
+				width: calc(100% + 16px);
+				height: calc(100% + 16px);
+				top: -8px;
+				left: -8px;
+				opacity: 0.4;
+			}
+			&:after {
+				width: calc(100% + 30px);
+				height: calc(100% + 30px);
+				top: -15px;
+				left: -15px;
+				opacity: 0.2;
+			}
+		}
+	}
+	&__modules {
+		background-image: url(../picture/backgrounds/spiral.png);
+		background-position: center;
+		background-repeat: repeat-x;
+		padding: 0;
+		.mobile_slider .slick-next {
+			left: 295px;
+			@include media-breakpoint-down(xs) {
+				left: 289px;
+			}
+		}
+		.slick-dots {
+			left: 15px;
+		}
+	}
+	&__card {
+		border: 1px solid $yellow;
+		position: relative;
+		padding: 25px 20px;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		height: 100%;
+		box-shadow: 0 3px 15px rgba(0,0,0,.25);
+		background-color: white;
+		@include media-breakpoint-down(sm) {
+			height: 215px;
+		}
+		&-text {
+			width: calc(100% - 60px);
+		}
+		&.bg-warning {
+			padding-bottom: 70px;
+			border: none;
+			&:before {
+				content: 'Базовая комплектация';
+				padding: 10px;
+				color: $yellow;
+				background-color: black;
+				position: absolute;
+				left: 0;
+				bottom: 13px;
+			}
+		}
+		&-container {
+			margin-bottom: 20px;
+			@include media-breakpoint-down(sm) {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__link {
+		color: #0082f9;
+		text-decoration: none !important;
+		transition: 0.3s ease all;
+		border-bottom: 1px solid #0082f9;
+		&:hover {
+			color: #00519c;
+			border-bottom-color: transparent;
+		}
+	}
+	&__absolute {
+		display: flex;
+		align-items: center;
+		position: relative;
+		@include media-breakpoint-down(sm) {
+			margin-top: 120px;
+		}
+		&:before {
+			content: '';
+			width: 312px;
+			height: 147px;
+			background-image: url(../picture/backgrounds/bubble-02.png);
+			position: absolute;
+			bottom: 100%;
+			left: 0;
+			padding: 18px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			@include media-breakpoint-down(md) {
+				width: 250px;
+				height: 115px;
+			}
+		}
+		&-1 {
+			@include media-breakpoint-down(md) {
+				margin-top: 60px;
+			}
+			@include media-breakpoint-down(sm) {
+				margin-top: 120px;
+			}
+		}
+		&-container {
+			&-3 {
+				display: flex;
+				justify-content: flex-end;
+				@include media-breakpoint-down(lg){
+					justify-content: flex-start;
+				}
+			}
+			&-4 {
+				display: flex;
+				justify-content: flex-end;
+				@include media-breakpoint-down(md){
+					justify-content: flex-start;
+				}
+			}
+		}
+		&-1:before {
+			content: 'И что с того, что я не успел взять трубку? Кому надо — перезвонит';
+		}
+		&-2:before {
+			content: 'Я не повышаю голос! Люди сами не знают, чего хотят, я-то тут при чем!';
+			@include media-breakpoint-down(md){
+				left: -15px;
+			}
+			@include media-breakpoint-down(sm){
+				left: 0;
+			}
+		}
+		&-3:before {
+			content: 'В моем магазине двери пяти производителей. И какие из них будут продаваться — мне в общем-то все равно';
+			left: -95px;
+			background-image: url(../picture/backgrounds/bubble-01.png);
+			height: 175px;
+			@include media-breakpoint-down(lg){
+				left: 0;
+				background-image: url(../picture/backgrounds/bubble-02.png);
+				height: 145px;
+			}
+			@include media-breakpoint-down(md){
+				width: 275px;
+				height: 125px;
+				left: -35px;
+			}
+			@include media-breakpoint-down(sm){
+				left: 0;
+			}
+		}
+		&-4:before {
+			content: 'Отправлю продукцию дилерам. Они сами всё продадут.';
+			left: 50px;
+			bottom: 80%;
+			@include media-breakpoint-down(sm){
+				left: 0;
+				bottom: 100%;
+			}
+		}
+	}
+}
+
+.animation {
+	visibility: hidden;
+	&.visible {
+		visibility: visible !important;
+	}
+}

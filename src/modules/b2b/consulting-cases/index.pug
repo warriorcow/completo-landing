@@ -1,0 +1,28 @@
+mixin case-block-1(img, text)
+	a(href="#").case__card.mx-2(style=img)
+		.case__card-container
+			small.bg-warning.rounded.px-2.py-1.text-dark.case__card-title.font-weight-bold Кейс
+			p.text-white.mt-3.h4.case__card-text= text
+mixin case-block-2(img, text, bg)
+	a(href="#").case__card.case__card-notebook.mx-2.text-center(class=bg)
+		.text-white.case__card-notebook-title.mb-4= text
+		img(src="picture/upload/"+img, alt="").case__card-notebook-img
+.py-5.overflow-hidden.price-consulting
+	.container.mt-md-4
+		.row
+			.col-md-12
+				.sub-title.text-uppercase.pt-0 кейсы
+				h2.h2.mb-5.form-h2
+					span.yellow-border Добиваемся
+						span.border-container.animation.visible.animated(data-animate='newline')
+					span 
+					span реальных результатов
+	.owl-right.owl-carousel.owl-theme.mb-md-5
+		+case-block-1('background-image:url("picture/upload/case-img-1.jpg");', 'Как сделать охват в соцсетях 1 млн человек для стройматериалов')
+		+case-block-2('case-img-3.png', 'Сайт Ступинского химического завода', 'cases-bg-red')
+		+case-block-1('background-image:url("picture/upload/case-img-2.jpg");', 'Системный электронный маркетинг для музыкальной школы')
+		+case-block-2('case-img-3.png', 'Сайт Ступинского химического завода', 'cases-bg-red')
+		+case-block-1('background-image:url("picture/upload/case-img-1.jpg");', 'Как сделать охват в соцсетях 1 млн человек для стройматериалов')
+		+case-block-2('case-img-4.png', 'Сайт для производителя стройматериалов', 'cases-bg-blue')
+		+case-block-1('background-image:url("picture/upload/case-img-1.jpg");', 'Как сделать охват в соцсетях 1 млн человек для стройматериалов')
+		+case-block-2('case-img-4.png', 'Сайт для производителя стройматериалов', 'cases-bg-blue')

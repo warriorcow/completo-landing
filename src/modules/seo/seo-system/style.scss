@@ -1,0 +1,107 @@
+.seo-system {
+	padding: 80px 0 65px;
+	position: relative;
+	overflow: hidden;
+	background-color: #f3f3f3;
+	background-image: url('../picture/upload/line_3.png');
+	background-size: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	&-dark {
+		background-color: #343434;
+		background-position: center top;
+		background-size: cover;
+	}
+	@include media-breakpoint-down(md) {
+		padding-top: 0;
+	}
+	@include media-breakpoint-down(sm) {
+		padding: 40px 0;
+		.h2 {
+			font-size: 2.2rem;
+		}
+	}
+	&__card {
+		box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .2);
+		background-color: #121111;
+		color: white;
+		&-traffic {
+			text-decoration: none !important;
+			transition: 0.3s ease all;
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			&:hover {
+				box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .2);
+				.seo-system__card-traffic-img:before {
+					opacity: 0;
+				}
+				.seo-system__card-traffic-text {
+					text-decoration: none;
+				}
+			}
+			&-text {
+				text-decoration: underline;
+				transition: 0.2s ease all;
+			}
+			&-img {
+				position: relative;
+				&:before {
+					content:'';
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					background-color: rgba(25, 110, 105, 0.5);
+					transition: 0.3s ease all;
+				}
+			}
+			&-foot {
+				background-color: black;
+				padding: 15px 20px;
+				height: 100%;
+				display: flex;
+				justify-content: space-between;
+				flex-direction: column;
+				.h2 {
+					@include media-breakpoint-down(lg) {
+						font-size: 2rem;
+					}
+				}
+				p {
+					color: white;
+				}
+			}
+		}
+		&-white {
+			padding: 35px 20px 20px;
+			background-color: white;
+			box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .2);
+			&-img {
+				margin-right: 10px;
+			}
+			p {
+				margin-bottom: 0;
+			}
+		}
+		&-img {
+			width: 80%;
+			border-bottom: 1px solid rgba(255,255,255,0.1);
+			margin: auto;
+			padding: 20px 0;
+			margin-bottom: 15px;
+			img {
+				width: 67px;
+				height: 67px;
+				object-fit: contain;
+			}
+		}
+		.h3 {
+			font-size: 2rem;
+			@include media-breakpoint-down(sm) {
+				font-size: 1.4rem;
+			}
+		}
+	}
+}

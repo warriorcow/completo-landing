@@ -1,0 +1,101 @@
+.case-cost {
+	$parent: &;
+
+	&__time {
+		margin-bottom: 113px;
+
+		&:last-child {
+			margin: 0;
+		}
+
+		&-header {
+			display: flex;
+			position: relative;
+		}
+
+		&-icon {
+		    position: absolute;
+		    right: 0;
+		    top: -2px;
+
+			img{
+				display: block;
+			}
+		}
+
+		&-title {
+			margin-right: 28px;
+
+			#{$parent}__line {
+				background-size: 8.1em 0.3125em;
+			}
+		}
+
+		&-content {
+			display: flex;
+			align-items: flex-end;
+		}
+
+		&-value {
+			font-weight: bold;
+			font-size: 130px;
+			line-height: 124px;
+			border: 1px solid #000;
+			background: #fff;
+			margin-top: -6px;
+			padding: 0 10px;
+			margin-right: 11px;
+		}
+
+		&-label {
+			font-weight: bold;
+			font-size: 24px;
+			line-height: 18px;
+			text-transform: uppercase;
+		}
+
+		@media (max-width : $breakpoint-md-max) {
+			margin-bottom: 103px;
+
+			&-header {
+				display: block;
+			}
+
+			&-icon {
+				top: -21px;
+			}
+
+			&-title {
+				margin-right: 120px;
+			}
+
+			&-content {
+				justify-content: center;
+				margin-top: 62px;
+			}
+		}
+
+		@media (max-width : $breakpoint-sm-max) {
+			margin-bottom: 73px;
+			
+			&-icon {
+				position: static;
+				display: block;
+				margin-bottom: 32px;
+			}
+
+			&-title {
+				margin-right: 0;
+
+				#{$parent}__line {
+					background-size: 7.8em 0.3125em;
+				}
+			}
+
+			&-content {
+			    justify-content: flex-start;
+			    margin-top: 43px;
+			}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+mixin dealers-head-card(icon, text, text2)
+	.col-sm-6.col-lg-3.pt-lg-4.mb-sm-4.dealers__head-secondary-card
+		.mb-2.text-center
+			i.icon.dealers__head-secondary-card-icon(class="icon-"+icon)
+		p.mb-4.text-center
+			span.font-weight-bold= text
+			span= text2
+
+.py-5.position-relative.dealers__head-secondary
+	.container.my-md-4.position-relative
+		.absolute-circle.digital-transformation__circle.dealers__head-secondary__circle.d-none.d-sm-block
+			span.digital-transformation__circle-child-1
+			span.digital-transformation__circle-child-2
+			span.digital-transformation__circle-child-3
+			span.digital-transformation__circle-child-4
+			span.digital-transformation__circle-child-5
+			span.digital-transformation__circle-child-6
+			span.digital-transformation__circle-child-7
+		.row
+			.col-md-12
+				nav.breadcrumb
+					ol.breadcrumb
+						li.breadcrumb-item
+							a(href="/").text-secondary Главная
+						li.breadcrumb-item.active.text-dark(aria-current="page") Продажи для производителей и поставщиков
+			.col-md-12.col-lg-10.col-xl-8
+				h1.h2.mb-4.form-h2.form-h2-new Система продаж для  
+					span.yellow-border производителей
+						span.border-container.animation.visible.animated(data-animate="newline")
+					span 
+					span состоит из:
+		.row.d-none.d-sm-flex
+			+dealers-head-card('dealers-strategy', 'Интеллектуального ', 'головного сайта компании для приёма и распределения заказов.')
+			+dealers-head-card('dealers-netural', 'Специальных сайтов дилеров, ', ' объединёных в сеть с централизованным продвижением и единой аналитикой продаж.')
+			+dealers-head-card('dealers-smartphone', 'Системы CRM, связанной с IP-телефонией, ', 'объединяющие всю сеть, состыкованные с интернет-рекламой для анализа эффективности до продаж.')
+			+dealers-head-card('dealers-web-page', 'Личного кабинета дилеров, ', 'состыкованного с 1С для приёмаи обработки заказов продукции в режиме онлайн.')
+		.row.d-sm-none
+			.col-md-12
+				.custom-scrollbar
+					.d-flex
+						+dealers-head-card('dealers-strategy', 'Интеллектуального ', 'головного сайта компании для приёма и распределения заказов.')
+						+dealers-head-card('dealers-netural', 'Специальных сайтов дилеров, ', ' объединёных в сеть с централизованным продвижением и единой аналитикой продаж.')
+						+dealers-head-card('dealers-smartphone', 'Системы CRM, связанной с IP-телефонией, ', 'объединяющие всю сеть, состыкованные с интернет-рекламой для анализа эффективности до продаж.')
+						+dealers-head-card('dealers-web-page', 'Личного кабинета дилеров, ', 'состыкованного с 1С для приёмаи обработки заказов продукции в режиме онлайн.')

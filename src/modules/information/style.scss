@@ -1,0 +1,62 @@
+.information {
+	padding-top: 70px;
+	background-color: #f3f3f3;
+	@include media-breakpoint-down(md) {
+		padding-top: 40px;
+		.h2 {
+			font-size: 2.2rem;
+		}
+	}
+	&__card {
+		border: 1px solid #FECC2F;
+		height: 100%;
+		padding: 15px 25px;
+		overflow: hidden;
+		position: relative;
+		background-color: white;
+		img {
+			position: absolute;
+			bottom: -80px;
+			right: 20px;
+			width: 160px;
+			@include media-breakpoint-down(md) {
+				position: initial;
+				position: inherit;
+				right: 0;
+				bottom: 0;
+				margin-bottom: -80px;
+				margin-left: auto;
+				display: block;
+			}
+		}
+	}
+}
+.message-box {
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+	&__dialog {
+		border: 1px solid #FECC2F;
+		border-radius: 35px;
+		padding: 15px 10px;
+		display: flex;
+		align-items: center;
+		margin-bottom: 8px;
+		.malevich {
+			width: 40px;
+			height: 21px;
+			background-color: black;
+			display: inline-block;
+			margin: 0 3px;
+		}
+	}
+	&__from {
+		align-self: flex-start;
+		border-bottom-left-radius: 5px;
+	}
+	&__to {
+		align-self: flex-end;
+		border-bottom-right-radius: 5px;
+		background-color: #fefdf3;
+	}
+}

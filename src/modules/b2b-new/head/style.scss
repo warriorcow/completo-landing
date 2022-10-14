@@ -1,0 +1,143 @@
+.b2b__header {
+	padding: 120px 0;
+	overflow: hidden;
+	background-image: linear-gradient(108.32deg, #ffde5a 7.38%, #ffe16a 115.49%);
+	position: relative;
+	display: flex;
+	align-items: center;
+	min-height: 100vh;
+	@include media-breakpoint-down(xs) {
+		padding: 80px 0;
+	}
+	&__btn-full {
+		@include media-breakpoint-down(xs) {
+			width: calc(100% - 10px);
+		}
+	}
+	&__video {
+		height: 100%;
+		position: relative;
+		&-img {
+			height: 100%;
+			max-height: 613px;
+			object-fit: cover;
+			max-width: calc((100vw - 1170px) / 2 + 100% + 30px);
+			@media (min-width: 1920px) {
+				max-width: 850px;
+			}
+			@media (max-width: 1280px) {
+				max-width: 100%;
+			}
+			&-btn {
+				object-fit: contain;
+				height: 100%;
+				transition: 0.3s ease all;
+				&-container {
+					width: 100%;
+					position: absolute;
+					left: 0;
+					right: 0;
+					top: 0;
+					bottom: 0;
+					margin: auto;
+					height: 80px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					@media (min-width: 1920px) {
+						width: 850px;
+					}
+					@include media-breakpoint-down(md) {
+						height: 40px;
+						width: 100%;
+					}
+				}
+				&:hover {
+					opacity: 0.8;
+				}
+			}
+		}
+		@include media-breakpoint-down(md) {
+			width: 100%;
+			height: initial;
+			&-img {
+				height: initial;
+				width: 100%;
+				&-btn {
+					width: 40px;
+					height: 40px;
+				}
+			}
+		}
+	}
+	&__text {
+		@include media-breakpoint-down(sm) {
+			font-size: 14px;
+		}
+	}
+	&-absolute-img {
+		position: absolute;
+		right: calc(100% - 75px);
+		width: 100%;
+		top: -60px;
+		@include media-breakpoint-down(md) {
+			width: 400px;
+		}
+		@include media-breakpoint-down(sm) {
+			right: 50%;
+			opacity: 0.3;
+		}
+	}
+	&__link {
+		text-decoration: none !important;
+		&__title {
+			font-size: 60px;
+			line-height: 1;
+			font-weight: bold;
+			@include media-breakpoint-down(sm) {
+				font-size: 36px;
+			}
+		}
+		&-circle {
+			min-width: 28px;
+			width: 28px;
+			height: 28px;
+			border-radius: 100%;
+			background-color: #212121;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 10px;
+		}
+		&:hover {
+			i {
+				animation: goToLink 0.8s linear infinite alternate;
+			}
+		}
+	}
+	&__yellow-dark {
+		color: rgba(33, 33, 33, 0.6);
+		line-height: 28px;
+		font-weight: bold;
+		@include media-breakpoint-down(sm) {
+			font-size: 14px;
+		}
+	}
+	&__title {
+		@include media-breakpoint-up(xl) {
+			font-size: 84px;
+		}
+	}
+}
+
+@keyframes goToLink {
+	0% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(2px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}

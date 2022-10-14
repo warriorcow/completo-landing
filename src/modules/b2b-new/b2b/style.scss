@@ -1,0 +1,347 @@
+.b2b__absolute-hand {
+	position: absolute;
+	right: 0;
+	top: 80px;
+	width: 400px;
+	@media (max-width: 1600px) {
+		display: none;
+	}
+}
+.b2b__tab-item--new {
+	min-width: initial;
+	width: calc(33.333% - 6px);
+	margin: 0 3px 6px !important;
+	@include media-breakpoint-down(xs){
+		width: calc(50% - 6px);
+	}
+}
+.b2b__tab-item__icon {
+	display: block;
+	width: 50px;
+	height: 50px;
+	object-fit: contain;
+	margin: 0 auto 10px;
+}
+
+.w-200-px {
+	width: 200px;
+}
+
+.img-fix-height-b2b-hub {
+	height: 50px;
+	object-fit: contain;
+}
+
+.b2b__card-hub-1 {
+	background-size: cover;
+	display: block;
+	padding: 20px 20px 30px 20px;
+	position: relative;
+	height: 243px;
+	border-radius: 4px;
+	overflow: hidden;
+	text-decoration: none !important;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(0,0,0, .5);
+	}
+	p, small {
+		position: relative;
+		z-index: 1;
+	}
+	&-min {
+		width: 175px;
+		min-width: 175px;
+		margin-right: 10px;;
+		min-height: 136px;
+		height: 100%;
+		padding: 15px 15px 25px 15px;
+		max-height: 136px;
+		overflow: hidden;
+	}
+	&__foot {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 147px;
+		height: 25px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom-left-radius: 4px;
+		border-top-right-radius: 10px;
+		background-color: #EDEDED;
+		padding: 0 7px;
+		color: #737373;
+		z-index: 1;
+		i {
+			color: $dark;
+		}
+	}
+}
+div.b2b__card-hub-1 {
+	&:before {
+		display: none;
+	}
+}
+
+.pt-xl-b2b-hub {
+	padding-top: 100px;
+}
+
+.b2b__card-hub-2 {
+	background-color: #212121;
+	border-radius: 7px;
+	padding: 5px 10px;
+	width: 175px;
+	min-width: 175px;
+	height: 136px;
+	margin-right: 10px;
+	text-decoration: none !important;
+	position: relative;
+	&__img {
+		width: 100px;
+		position: absolute;
+		bottom: 5px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		height: 60%;
+		margin-right: 10px;
+		object-fit: contain;
+	}
+}
+.b2b__card-hub-3 {
+	min-height: 138px;
+	height: 100%;
+	display: block;
+	border-radius: 4px;
+	overflow: hidden;
+	background-size: cover;
+	text-decoration: none !important;
+	background-position: center;
+	position: relative;
+	small {
+		font-size: 14px;
+	}
+	p {
+		position: relative;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(0,0,0,.5);
+
+	}
+}
+.b2b__card-hub-4 {
+	min-height: 138px;
+	height: 100%;
+	min-width: 230px;
+	margin-right: 10px;
+	width: 230px;
+	padding: 10px 15px;
+	display: block;
+	border-radius: 4px;
+	overflow: hidden;
+	background-size: cover;
+	text-decoration: none !important;
+	position: relative;
+	&:before {
+		content: '';
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		right: 10px;
+		bottom: 10px;
+		background-image: url(../picture/upload/bx_bx-left-arrow-alt-yellow.svg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		z-index: 1;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(0,0,0, .5);
+	}
+	&.b2b__card-button {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		&:before {
+			display: none;
+		}
+	}
+	p {
+		z-index: 1;
+		position: relative;
+	}
+}
+div.b2b__card-hub-4 {
+	&:after {
+		display: none;
+	}
+}
+
+.b2b__card-hub-5 {
+	min-height: 138px;
+	height: 100%;
+	min-width: 230px;
+	margin-right: 10px;
+	width: 230px;
+	padding: 10px 15px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	border-radius: 4px;
+	overflow: hidden;
+	background-size: cover;
+	text-decoration: none !important;
+	position: relative;
+	background-position: center;
+	&:before {
+		content: '';
+		width: 20px;
+		height: 14px;
+		position: absolute;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		top: 0;
+		margin: auto;
+		background-image: url(../picture/upload/fontisto_youtube-play.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	small {
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: block;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+	}
+}
+
+.b2b-card-xl-soon {
+	display: flex;
+	align-items: flex-end;
+	background-image: url(../picture/upload/Rectangle_2768.jpg);
+	background-size: cover;
+	height: 220px;
+	padding: 10px 30px;
+	position: relative;
+	text-decoration: none !important;
+	box-shadow: 7px 7px 0 0 $warning;
+	&:before {
+		content: '';
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		right: 15px;
+		bottom: 15px;
+		background-image: url(../picture/upload/bx_bx-left-arrow-alt.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		z-index: 1;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(0,0,0, .5);
+	}
+	&__container {
+		z-index: 1;
+		position: relative;
+	}
+}
+
+.b2b__hub-icon {
+	border-right: 1px solid #BEBEBE;
+	text-decoration: none !important;
+	display: block;
+	@include media-breakpoint-down(md) {
+		border: none;
+	}
+	&-no-border {
+		border-right: none;
+	}
+	&-img {
+		width: 70px;
+		transition: 0.2s ease all;
+		display: block;
+		margin: 0 auto 10px;
+		@include media-breakpoint-down(xs) {
+			width: 40px;
+		}
+	}
+	&:hover {
+		.b2b__hub-icon-img {
+			transform: rotate(-15deg);
+		}
+	}
+}
+
+.w-36-b2b-hub {
+	width: 30px;
+}
+
+.b2b__tab-item--ho-hover {
+	&:hover,
+	&.active {
+		background-color: transparent !important;
+	}
+}
+
+.b2b {
+	&-magazine__right {
+		max-width: 100%;
+		overflow: hidden;
+	}
+	@include media-breakpoint-down(md) {
+		&-magazine.active {
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+		}
+		&-magazine__left {
+			width: 70%;
+			.b2b__card-hub-1 {
+				height: 202px;
+			}
+		}
+		&-magazine__right {
+			width: 30%;
+			max-height: 430px;
+		}
+		&-magazine__nav {
+			flex-direction: column;
+			.b2b__card-hub-1-min {
+				margin-right: 0;
+				margin-bottom: 10px;
+				height: auto;
+				min-width: auto;
+				width: 100%;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,82 @@
+.crm-setup {
+	&__head {
+		@include media-breakpoint-down(md) {
+			margin-bottom: 25px;
+			height: 140px;
+		}
+	}
+	&__body {
+		background-color: white;
+		border: 1px solid $yellow;
+		padding: 12px 10px;
+		box-shadow: 0 5px 5px rgba(0,0,0,.15);
+		position: relative;
+		@include media-breakpoint-down(md) {
+			margin-bottom: 25px;
+		}
+		@include media-breakpoint-down(xl) {
+			font-size: 14px;
+		}
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: calc(50% - 30px);
+			width: 0;
+			height: 0;
+		}
+		&:before {
+			border: 14px solid transparent;
+			border-bottom-color: $yellow;
+			border-top: 0;
+			border-left: 0;
+			margin-left: -4px;
+			margin-top: -15px;
+		}
+		&:after {
+			border: 12px solid transparent;
+			border-bottom-color: #fff;
+			border-top: 0;
+			border-left: 0;
+			margin-left: -3px;
+			margin-top: -12px;
+		}
+		&-green {
+			border-color: #00D97E;
+			&:before {
+				border-bottom-color: #00D97E;
+			}
+		}
+	}
+	&__icon {
+		position: relative;
+		z-index: 2;
+		// transform: translate(-20px, -20px);
+		margin: -20px 0 20px -20px;
+		width: 75px;
+		&-block {
+			position: relative;
+			width: 80px;
+			&:before {
+				content: '';
+				width: 80px;
+				height: 80px;
+				border-radius: 100%;
+				background-color: $yellow;
+				z-index: 1;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			&-green {
+				&:before {
+					background-color: #00D97E;
+				}
+			}
+		}
+	}
+}
+.text-green-crm {
+	color: #00D97E;
+}

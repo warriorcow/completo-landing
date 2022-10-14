@@ -1,0 +1,254 @@
+mixin video-card(img, num, title)
+	.col-lg-4.col-md-6.mb-5.z-index-5
+		.videocourse-cert-block__card.mb-4(data-toggle="modal" data-target='#videocourses-video-'+num)
+			img(src="picture/upload/"+img, alt="").videocourse-cert-block__card-bg
+			.videocourse-cert-block__card-play-btn
+				.videocourse-cert-block__card-play-btn-angle
+			.videocourse-cert-block__card-content
+				.videocourse-cert-block__card-num= num
+				.videocourse-cert-block__card-text
+					.videocourse-cert-block__card-text-content= title
+		.text-muted.text-center Продолжительность: 
+			span.videocourse-cert-block__card-time 00:59:17
+		button.btn.btn-warning.mt-4.mx-auto.d-block.mb-4.videocourse-cert-block__card_btn(data-toggle="modal" data-target='#videocourses-video-'+num) Посмотреть занятие
+	.modal.fade.videocourse-modal(tabindex="-1" role="dialog" id="videocourses-video-"+num data-link="https://www.youtube.com/embed/RbVBupfxVHI")
+		.modal-dialog.modal-xl.modal-dialog-centered(role="document")
+			.modal-content.rounded-lg.border-grey.border
+				.modal-header
+					button.close(type="button" data-dismiss="modal" aria-label="Close")
+						span.modal__close-btn(aria-hidden="true")
+				.modal-body
+					.container
+						.row
+							.col-md-12.col-lg-11.col-xl-10 
+								.h2.mb-4.videocourse-cert-block__card-modal-title
+									span.text-secondary= num
+										span . 
+									span= title
+						.row.justify-content-center
+							.col-xl-6.col-lg-7.pt-sm-4.pt-lg-5.col-md-10.mb-4
+								.mb-4
+									//- img(src="picture/upload/videocourses-2-video-2.jpg", alt="").videocourse-cert-block__card-video
+									iframe(width='560' height='315' src='' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen).videocourse-cert-block__card-video
+								.row.mb-sm-4.mb-lg-5.align-items-center 
+									.col-xl-6.col-lg-5.col-md-6.col-sm-5.mb-4.order-2.order-sm-1
+										.videocourse-cert-block__card-radio-block
+											input(type="checkbox" id="video-card-checked-"+num required name="checked-video").videocourse-cert-block__card-input-radio
+											label(for="video-card-checked-"+num).d-flex.align-items-center.mb-0
+												span.videocourse-cert-block__card-radio
+												span.videocourse-cert-block__card-radio-text Отметить как <br> просмотренное
+									if num === '1'
+										.col-xl-6.col-lg-7.col-md-6.col-sm-7.mb-4.d-flex.justify-content-end.align-items-center.order-1.order-sm-2
+											.d-flex.align-items-center.videocourse-cert-block__card-nav(data-next=Number(num) + 1 data-current=num)
+												span.videocourse-cert-block__card-nav-text.mr-2 Следующее <br> занятие
+												.videocourse-cert-block__card-next.videocourse-cert-block__card-nav-item 
+									else if num === '13'
+										.col-xl-6.col-lg-7.col-md-6.col-sm-7.mb-4.d-flex.justify-content-between.align-items-center.order-1.order-sm-2
+											.d-flex.align-items-center.videocourse-cert-block__card-nav.mr-2(data-next=Number(num) - 1 data-current=num)
+												.videocourse-cert-block__card-prev.videocourse-cert-block__card-nav-item 
+												span.videocourse-cert-block__card-nav-text.ml-2 Предыдущее <br> занятие
+											a(href='#videocourses-cert-modal').d-flex.align-items-center.videocourse-cert-block-cert-link
+												span.videocourse-cert-block__card-nav-text.mr-2 Получить сертификат
+												i.icon.icon-video-certificate.h3.mb-0
+									else
+										.col-xl-6.col-lg-7.col-md-6.col-sm-7.mb-4.d-flex.justify-content-between.align-items-center.order-1.order-sm-2
+											.d-flex.align-items-center.videocourse-cert-block__card-nav.mr-2(data-next=Number(num) - 1 data-current=num)
+												.videocourse-cert-block__card-prev.videocourse-cert-block__card-nav-item 
+												span.videocourse-cert-block__card-nav-text.ml-2 Предыдущее <br> занятие
+											.d-flex.align-items-center.videocourse-cert-block__card-nav(data-next=Number(num) + 1 data-current=num)
+												span.videocourse-cert-block__card-nav-text.mr-2 Следующее <br> занятие
+												.videocourse-cert-block__card-next.videocourse-cert-block__card-nav-item 
+								.row
+									.col-md-12.mb-sm-2.mb-md-0
+										.d-flex.align-items-center.videocourse-cert-block__modal-share
+											p.mb-0.mr-3 Поделиться знаниями: 
+											ul.footer__social-link.d-flex.justify-content-center.pl-0.list-unstyled.mb-0
+												li.mr-3
+													+social-link('https://www.facebook.com/completo.ru/', 'facebook-svgrepo-com.svg')
+												li.mr-3
+													+social-link('https://vk.com/completoru', 'iconmonstr-vk-1.svg')
+												li.mr-3
+													+social-link('https://www.instagram.com/completo.ru/', 'iconmonstr-instagram-11.svg')
+							.col-xl-6.col-lg-5.col-md-12.mb-4
+								.videocourse-cert-block__modal
+									.row 
+										.col-md-12
+											ul.nav.nav-pills.nav-justified.videocourse-cert-block__modal-nav.mb-2(role="tablist")
+												li.nav-item.mb-4 
+													a(href="#more-show-"+num id="more-show-tab-"+num data-toggle="tab" role="tab" aria-controls="more-show-"+num aria-selected="true").videocourse-cert-block__modal-tab.active Что еще посмотреть?
+												li.nav-item.mb-4.mx-2.mx-sm-3
+													a(href="#more-read-"+num id="more-read-tab-"+num data-toggle="tab" role="tab" aria-controls="more-read-"+num aria-selected="false").videocourse-cert-block__modal-tab Что еще почитать?
+												li.nav-item.mb-4 
+													a(href="#more-links-"+num id="more-links-tab-"+num data-toggle="tab" role="tab" aria-controls="more-links-"+num aria-selected="false").videocourse-cert-block__modal-tab Полезные ссылки
+											.tab-content(id="ModalTabContent-"+num)
+												.tab-pane.fade.show.active(role="tabpanel" aria-labelledby="more-show-tab-"+num id="more-show-"+num)
+													.custom-scrollbar-y.videocourse-cert-block__modal-tab-content
+														a(href="#" target="_blank").d-flex.mb-4.videocourse-cert-block__modal-link
+															img(src="picture/upload/image_52.jpg", alt="").videocourse-cert-block__modal-link-img
+															.d-block
+																.h4.mb-2.videocourse-cert-block__modal-link-title Как правильно поставить цели перед интернет-маркетингом Вашего бизнеса?
+																.text-muted.videocourse-cert-block__modal-link-text Продолжительность видео 01:05:19
+														a(href="#" target="_blank").d-flex.mb-4.videocourse-cert-block__modal-link
+															img(src="picture/upload/image_52.jpg", alt="").videocourse-cert-block__modal-link-img
+															.d-block
+																.h4.mb-2.videocourse-cert-block__modal-link-title Как правильно поставить цели перед интернет-маркетингом Вашего бизнеса?
+																.text-muted.videocourse-cert-block__modal-link-text Продолжительность видео 01:05:19
+														a(href="#" target="_blank").d-flex.mb-4.videocourse-cert-block__modal-link 
+															img(src="picture/upload/image_52.jpg", alt="").videocourse-cert-block__modal-link-img
+															.d-block
+																.h4.mb-2.videocourse-cert-block__modal-link-title Как правильно поставить цели перед интернет-маркетингом Вашего бизнеса?
+																.text-muted.videocourse-cert-block__modal-link-text Продолжительность видео 01:05:19
+														a(href="#").btn.btn-warning.mb-4.d-inline-block.videocourse-cert-block__modal-btn Скачать презентацию урока
+														.pr-3
+															a(href="#").btn.btn-warning.mb-3.d-inline-block.videocourse-cert-block__modal-btn.videocourse-cert-block__card_btn Шаблон бизнес-модели
+												.tab-pane.fade(role="tabpanel" aria-labelledby="more-read-tab-"+num id="more-read-"+num)
+													.custom-scrollbar-y.videocourse-cert-block__modal-tab-content
+														.mb-4 
+															a(href="#" target="_blank").h4.mb-2.videocourse-cert-block__modal-link-title.videocourse-cert-block__modal-link.d-block Правильная постановка целей перед интернет-маркетингом
+															.text-muted.videocourse-cert-block__modal-link-text Андрей Гавриков
+														.mb-4 
+															a(href="#" target="_blank").h4.mb-2.videocourse-cert-block__modal-link-title.videocourse-cert-block__modal-link.d-block Правильная постановка целей перед интернет-маркетингом
+															.text-muted.videocourse-cert-block__modal-link-text Андрей Гавриков
+														.mb-4 
+															a(href="#" target="_blank").h4.mb-2.videocourse-cert-block__modal-link-title.videocourse-cert-block__modal-link.d-block Правильная постановка целей перед интернет-маркетингом
+															.text-muted.videocourse-cert-block__modal-link-text Андрей Гавриков
+														.mb-4 
+															a(href="#" target="_blank").h4.mb-2.videocourse-cert-block__modal-link-title.videocourse-cert-block__modal-link.d-block Правильная постановка целей перед интернет-маркетингом
+															.text-muted.videocourse-cert-block__modal-link-text Андрей Гавриков
+														.mb-4 
+															a(href="#" target="_blank").h4.mb-2.videocourse-cert-block__modal-link-title.videocourse-cert-block__modal-link.d-block Правильная постановка целей перед интернет-маркетингом
+															.text-muted.videocourse-cert-block__modal-link-text Андрей Гавриков
+												.tab-pane.fade(role="tabpanel" aria-labelledby="more-links-tab-"+num id="more-links-"+num)
+													.custom-scrollbar-y.videocourse-cert-block__modal-tab-content
+														.mb-4 
+															a(href="#" target="_blank").h4.mb-2.videocourse-cert-block__modal-link-title.videocourse-cert-block__modal-link.d-block Конструктор бизнес-модели
+															a(href="#" target="_blank").text-primary.videocourse-cert-block__modal-link-text.videocourse-cert-block__modal-link http://www.ozon.ru/context/detail/id/7285474/
+														.mb-4 
+															a(href="#" target="_blank").h4.mb-2.videocourse-cert-block__modal-link-title.videocourse-cert-block__modal-link.d-block Основы маркетинга, Филип Котлер
+															a(href="#" target="_blank").text-primary.videocourse-cert-block__modal-link-text.videocourse-cert-block__modal-link http://www.ozon.ru/context/detail/id/7285474/
+														.mb-4 
+															a(href="#" target="_blank").h4.mb-2.videocourse-cert-block__modal-link-title.videocourse-cert-block__modal-link.d-block Дифференцируйся или умирай! Джек Траут
+															a(href="#").text-primary.videocourse-cert-block__modal-link-text.videocourse-cert-block__modal-link http://www.ozon.ru/context/detail/id/7285474/
+														.mb-4 
+															a(href="#" target="_blank").h4.mb-2.videocourse-cert-block__modal-link-title.videocourse-cert-block__modal-link.d-block Построение бизнес-моделей. Александр Остервальдер
+															a(href="#" target="_blank").text-primary.videocourse-cert-block__modal-link-text.videocourse-cert-block__modal-link http://www.ozon.ru/context/detail/id/7285474/
+														.mb-4 
+															a(href="#" target="_blank").h4.mb-2.videocourse-cert-block__modal-link-title.videocourse-cert-block__modal-link.d-block Бери и делай! 77 максимально полезных инструментов маркетинга
+															a(href="#" target="_blank").text-primary.videocourse-cert-block__modal-link-text.videocourse-cert-block__modal-link http://www.ozon.ru/context/detail/id/7285474/
+								.row.mt-lg-5.mt-4 
+									.col-md-12.col-xl-9.d-flex.align-items-start
+										img(src="picture/upload/video-2-maed.png", alt="").videocourse-cert-block__modal-maed
+										p
+											span Хотите знать интернет- маркетинг на профессио- нальном уровне? 
+											br
+											a(href="#") Пройдите курс «Электронный маркетинг для B2B и сложных рынков»
+.pt-5.videocourse-cert-block
+	.videocourse-cert-block-text видео
+	img(src="picture/backgrounds/video-cert-bg.jpg", alt="").videocourse-cert-block-bg
+	.container.my-md-4
+		.row.justify-content-center
+			.col-lg-11.col-xl-10
+				.row
+					.col-md-6.mb-4.mb-lg-3.pt-4.pt-lg-0
+						.p-4.d-flex.justify-content-center.videocourse-cert-block-card.h-100
+							.dealers-expert__card-icon-block.dealers-expert__card-icon-block-left
+								i.icon.dealers-expert__card-icon.icon-conversation-consulting.text-secondary
+							.d-block 
+								p.mb-4
+									span.font-weight-bold.text-secondary Сертификат 
+									span.text-white по итогам курса
+								img(src="picture/upload/video-image_28.jpg", alt="").videocourse-cert-block-img-cert
+					.col-md-6.mb-4.mb-lg-3.pt-4.pt-lg-0
+						.p-4.d-flex.justify-content-center.videocourse-cert-block-card.h-100
+							.dealers-expert__card-icon-block.dealers-expert__card-icon-block-right
+								i.icon.dealers-expert__card-icon.icon-dealers-note.text-secondary
+							.d-flex.flex-column.align-items-center.justify-content-center.videocourse-cert-block-card-cont
+								p.mb-4.text-center
+									span.h4.text-white.mb-0 Обязательно 
+									span.font-weight-bold.text-secondary отмечайте видео <br> галочкой после просмотра! 
+								.text-right.videocourse-cert-block-orange-text-block
+									p.videocourse-cert-block-orange-text Только после того, как вы отметите все видео - вы сможете получить сертификат! 
+					.col-md-6.mb-4.mb-lg-3.pt-4.pt-lg-0
+						.p-4.d-flex.justify-content-center.videocourse-cert-block-card.h-100
+							.dealers-expert__card-icon-block.dealers-expert__card-icon-block-left
+								i.icon.dealers-expert__card-icon.icon-dealers-tap.text-secondary
+							.d-flex.flex-column.justify-content-center.videocourse-cert-block-card-cont 
+								p.mb-4.text-center
+									span.font-weight-bold.text-secondary Поделитесь  
+									span.text-white нашим курсом <br> с друзьями!
+								ul.footer__social-link.d-flex.justify-content-center.pl-0.list-unstyled.mb-0
+									li.mr-3
+										+social-link('https://www.facebook.com/completo.ru/', 'facebook-svgrepo-com.svg')
+									li.mr-3
+										+social-link('https://vk.com/completoru', 'iconmonstr-vk-1.svg')
+									li.mr-3
+										+social-link('https://www.instagram.com/completo.ru/', 'iconmonstr-instagram-11.svg')
+					.col-md-6.mb-4.mb-lg-3.pt-4.pt-lg-0
+						.p-4.d-flex.justify-content-center.videocourse-cert-block-card.h-100
+							.dealers-expert__card-icon-block.dealers-expert__card-icon-block-right
+								i.icon.dealers-expert__card-icon.icon-dealers-knowledge.text-secondary
+							.d-flex.flex-column.align-items-center.justify-content-center.videocourse-cert-block-card-cont
+								p.mb-4.text-center
+									span.font-weight-bold.text-secondary Нет времени учиться?
+									br  
+									span.text-white Результат нужен уже сейчас? Запросите предложение!
+								button.btn.btn-warning.data-scroll.mx-auto.d-block.mb-2(data-scroll="form-content") Запросить предложение
+.pt-5 
+	.container.my-md-4 
+		.row 
+			+video-card('videocourses-2-video-1.jpg', '1', 'Что такое цифровая трансформация бизнеса')
+			+video-card('videocourses-2-video-2.jpg', '2', 'Как рекламные каналы объединить в стратегию по пути клиента')
+			+video-card('videocourses-2-video-2.jpg', '3', 'Что такое стратегия интернет-маркетинга и продаж (digital-стратегия) и как её собрать')
+			+video-card('videocourses-2-video-2.jpg', '4', 'Куда расти в интернете: как понять ваши digital-перспективы')
+			+video-card('videocourses-2-video-2.jpg', '5', 'Зачем нужен интернет-маркетинг, если у вас работают холодные продажи')
+			+video-card('videocourses-2-video-2.jpg', '6', 'Как работать с агентством по KPI')
+			+video-card('videocourses-2-video-2.jpg', '7', 'Уровни специалистов по и-маркетингу: кто вам нужен и что требовать')
+			+video-card('videocourses-2-video-2.jpg', '8', 'Как эффективно проводить планёрку и ничего не забыть сделать')
+			+video-card('videocourses-2-video-2.jpg', '9', 'Тепловая карта проекта. Как контролировать реализацию проекта')
+			+video-card('videocourses-2-video-2.jpg', '10', 'Работа с дилерами: как увеличить продажи дистрибьюторов (централизованные рекламные кампании, личный кабинет дилеров)')
+			+video-card('videocourses-2-video-2.jpg', '11', 'Работа с дилерами: Как контролировать заявки и продажи дилеров')
+			+video-card('videocourses-2-video-2.jpg', '12', 'Работа с дилерами: рейтинг дилеров и сквозная аналитика до продаж')
+			+video-card('videocourses-2-video-2.jpg', '13', 'Работа с дилерами: как искать новых партнеров и сократить цепочку поставки')
+
+
+	.modal.fade(tabindex="-1" role="dialog" id="videocourses-cert-modal")
+		.modal-dialog.modal-xl.modal-dialog-centered(role="document")
+			.modal-content.rounded-lg.border-secondary.border
+				.modal-header
+					button.close(type="button" data-dismiss="modal" aria-label="Close")
+						span.modal__close-btn(aria-hidden="true")
+				.modal-body.pb-0.pb-sm-3
+					.container
+						.row
+							.col-md-12.col-lg-10.col-xl-8
+								.h2.position-relative.z-index-2.form-h2.mb-4
+									span.videocourse-certificate-title Вы успешно прошли 
+									span.yellow-border 
+										span.videocourse-certificate-title-yellow видеокурс!
+										span.border-container.animation.visible.animated(data-animate="newline")
+						.row.align-items-center.mb-md-5.mt-md-4.form-certificate-modal-container
+							.col-md-6.mb-4.col-lg-7.text-center.form-certificate-modal-container-link
+								a(href="#" target="_blank") Сертификат доступен по ссылке
+								.system-modules-container__list-icon-block.system-modules-container__list-icon-block-big.mt-5.mx-auto
+									i.icon.system-modules-container__list-icon.system-modules-container__list-icon-big.system-modules-container__list-icon-new.icon-dealers-tap
+							.col-md-6.col-sm-10.mb-4.col-lg-5
+								.px-md-4
+									img(src="picture/upload/videocourse-form.png", alt="").w-100
+							.col-md-6.mb-sm-4.col-lg-7.form-certificate-modal-block
+								.bg-warning.pt-4.p-sm-4.system-modules-container__form-container.system-modules-container__form-container-video-cert
+									form.form.validate.bg-warning.system-modules-container__form.system-modules-container__form-video-cert.pt-4.form-certificate-modal(method="post" id="new-form-video" novalidate="novalidate")
+										.form-group
+											input(type="text" placeholder="Фамилия" required name="surname" id="modal-text-video-1").system-modules-container__form-input
+										.form-group
+											input(type="text" placeholder="Имя" required name="name" id="modal-text-video-11").system-modules-container__form-input
+										.form-group
+											input(type="email" placeholder="E-mail" required name="email" id="modal-text-video-3").system-modules-container__form-input
+										.form-group
+											input(type="checkbox" id="modal-text-video-4" required checked name="agree").system-modules-container__form-input-radio
+											label(for="modal-text-video-4").d-flex.align-items-center
+												span.system-modules-container__form-input-checkbox
+												span.system-modules-container__form-input-checkbox-text Я согласен с 
+													a(href="https://www.completo.ru/privacy_policy.rtf" target="_blank")
+														u правилами обработки персональных данных
+										.form-group.pr-2.mb-0
+											button.btn.btn-white.form_btn.w-100 Получить сертификат

@@ -1,0 +1,226 @@
+mixin dealers-level-card(icon, text, text2)
+	.col-md-6.mb-4
+		.dealers-level__card.bg-white
+			.dealers-level__card-icon-block
+				i.icon.dealers-level__card-icon(class='icon-'+icon)
+			p.mb-0
+				span.font-weight-bold= text
+				span= text2
+mixin dealers-level-card-dark(icon, text, text2)
+	.col-md-6.mb-4
+		.dealers-level__card.dealers-level__card-dark.bg-white
+			.dealers-level__card-icon-block
+				i.icon.dealers-level__card-icon(class='icon-'+icon)
+			p.mb-0
+				span.font-weight-bold= text
+				span= text2
+mixin dealers-level-card-small(icon, text, text2)
+	.col-md-6.mb-4.col-lg-4
+		.dealers-level__card.dealers-level__card-new.bg-white
+			.dealers-level__card-icon-block
+				i.icon.dealers-level__card-icon(class='icon-'+icon)
+			p.mb-0
+				span.font-weight-bold= text
+				span= text2
+.dealers-level
+	.container.my-md-4
+		.row.align-items-center.mb-4
+			.col-sm-8.col-lg-6
+				.dealers-level__title Уровень 1.
+				h2.h2.mb-0.form-h2.form-h2-new Управление партнерами 
+					span.yellow-border сети
+						span.border-container.animation.visible.animated(data-animate="newline")
+			.col-sm-4.col-lg-6.d-none.d-sm-block
+				img(src="picture/upload/dealers-Group_425.png", alt="").w-100
+		.row.d-none.d-md-flex
+			+dealers-level-card('dealers-cooperation', 'Вы ищете ', 'конкретное отработанное маркетингово-рекламное решение, которое поможет гарантированно увеличить продажи в вашей сети?')
+			+dealers-level-card('dealers-star', 'Вы понимаете, ', 'что если бы все дилеры активно участвовали в продвижении, про- дажи бы значительно выросли.   Но как всех скоординировать и проконтролировать?')
+			+dealers-level-card('dealers-piggy-bank', 'Вы вкладываете ', 'или хотели бы вкладывать деньги в маркетинг и рекламу для всей сети, но не понимаете, как измерять её эффективность, ведь продаёте не вы, а дилеры?')
+			+dealers-level-card('dealers-thinking', 'Вы понимаете, ', 'что разные дилеры работают с разной эффективностью и обрабатывают заказы совершенно по-разному. Но как вычислить лучших и отдавать заказы им, а худших заменить?')
+			+dealers-level-card('dealers-discontent-boy-face', 'Дилеры, ', 'не отвечающие на звонки, хамящие, не поставляющие клиентам товар вовремя, подрывают репутацию всей сети и разрушают ваш бренд?')
+		.row.d-md-none
+			.col-md-12
+				.custom-scrollbar
+					.row.flex-nowrap.pr-2
+						+dealers-level-card('dealers-cooperation', 'Вы ищете ', 'конкретное отработанное маркетингово-рекламное решение, которое поможет гарантированно увеличить продажи в вашей сети?')
+						+dealers-level-card('dealers-star', 'Вы понимаете, ', 'что если бы все дилеры активно участвовали в продвижении, про- дажи бы значительно выросли.   Но как всех скоординировать и проконтролировать?')
+						+dealers-level-card('dealers-piggy-bank', 'Вы вкладываете ', 'или хотели бы вкладывать деньги в маркетинг и рекламу для всей сети, но не понимаете, как измерять её эффективность, ведь продаёте не вы, а дилеры?')
+						+dealers-level-card('dealers-thinking', 'Вы понимаете, ', 'что разные дилеры работают с разной эффективностью и обрабатывают заказы совершенно по-разному. Но как вычислить лучших и отдавать заказы им, а худших заменить?')
+						+dealers-level-card('dealers-discontent-boy-face', 'Дилеры, ', 'не отвечающие на звонки, хамящие, не поставляющие клиентам товар вовремя, подрывают репутацию всей сети и разрушают ваш бренд?')
+		.row.mt-4
+			.col-md-6.mb-4.order-2.order-md-1
+				.h4.mb-4.pb-3 Выгоды для менеджеров компании:
+				.row
+					.col-md-8
+						ul.dealers-level__list
+							li.mb-4
+								span.h4 1. 
+								span Вы получаете инструмент управления всей рекламой, маркетинговыми активностями и самими дилерами
+							li.mb-4
+								span.h4 2. 
+								span Вам больше не будут вешать лапшу на уши агентства, продавая вам SEO, контекст и другие рекламные каналы
+							li.mb-4
+								span.h4 3. 
+								span Вы сами сможете узнать, какая рекламная активность, какой доход принесла (при выполнении банальных правил измерения рекламы) и окупилась ли
+							li.mb-4
+								span.h4 4. 
+								span Сами руками делаем весь интернет-маркетинг для головного сайта и для всех дилеров: все рекламные каналы и технологии в одном окне
+					.col-md-4.d-none.d-md-block
+						img(src="picture/upload/dealers-Group_293.png", alt="").w-100
+			.col-md-6.mb-4.dealers-level__translate-block.order-1.order-md-2
+				.row.justify-content-center
+					.col-lg-10
+						.d-flex.justify-content-center.mb-4
+							.dealers-level__title-small Есть решение!
+						.dealers-level__bloquote.mb-4 Для решения всех этих проблем мы предлагаем уникальную для России, полностью рабочую систему построения продаж через интернет для компаний, торгующих через сеть дилеров, филиалов или дистрибьютеров.
+						.d-flex.justify-content-center
+							button.btn.btn-warning.data-scroll.my-4.d-block(data-scroll='form-content') Запросить предложение
+.position-relative.dealers-level-2.py-md-5.py-4
+	img(src="picture/upload/dealers__grop-29412.png", alt="").dealers-level-absolute-img
+	img(src="picture/upload/cube.png", alt="").dealers-level-absolute-img-2
+	.container.my-md-4
+		.row.align-items-center.mb-4
+			.col-sm-8.col-lg-6
+				.dealers-level__title Уровень 2.
+				h2.h2.mb-lg-5.mb-4.form-h2.form-h2-new.dealers-level-2-title Инструменты для 
+					span.yellow-border дилеров
+						span.border-container.animation.visible.animated(data-animate="newline")
+		.row.d-none.d-md-flex
+			+dealers-level-card-small('dealers-webpage', 'Дилеры делают заказ на продукцию по почте, ', 'в Excel-файлах или даже по телефону, тратя много времени и допуская ошибки в заказах?')
+			+dealers-level-card-small('dealers-analysis', 'Дилеры не участвуют ', 'в продвижении вашей продукции единым фронтом? Вы не используете региональный ресурс и теряете продажи.')
+			+dealers-level-card-small('dealers-eye', 'Работа дилеров по телефону и через сайты централизованно не контролируется? ', 'Дилеры могут позволять себе низкое качество обслуживания, пропуск звонков и заявок и даже продажу продукции конкурентов.')
+		.row.d-md-none
+			.col-md-12
+				.custom-scrollbar
+					.row.flex-nowrap.pr-2
+						+dealers-level-card-small('dealers-webpage', 'Дилеры делают заказ на продукцию по почте, ', 'в Excel-файлах или даже по телефону, тратя много времени и допуская ошибки в заказах?')
+						+dealers-level-card-small('dealers-analysis', 'Дилеры не участвуют ', 'в продвижении вашей продукции единым фронтом? Вы не используете региональный ресурс и теряете продажи.')
+						+dealers-level-card-small('dealers-eye', 'Работа дилеров по телефону и через сайты централизованно не контролируется? ', 'Дилеры могут позволять себе низкое качество обслуживания, пропуск звонков и заявок и даже продажу продукции конкурентов.')
+.container.mt-5
+	.row
+		.col-md-6.mb-4
+			.px-md-5
+				img(src="picture/upload/dealers-origami.png", alt="").w-100.mb-5.dealers-level__origami
+			.dealers-level__bloquote.mb-4 Сами 
+				span.font-weight-bold.text-secondary руками делаем 
+				span весь интернет-маркетинг для головного сайта и для всех дилеров: все рекламные каналы и технологии в одном окне
+			.d-flex.justify-content-center
+				button.btn.btn-warning.data-scroll.my-4.d-block(data-scroll='form-content') Запросить предложение
+		.col-md-6.mb-4
+			.row
+				.col-xl-9.col-lg-10
+					.h4.mb-4.pb-3 Готовые решения, которые сделают работу дилеров эффективной:
+					ul.dealers-level__list
+						li.mb-4
+							span.h4 1. 
+							span В нашей системе используется двойной механизм распределения заказов по дилерам:
+							.mt-3
+								a(data-toggle="modal" href='#dealers-modules-modal-2')
+									u - единый центр обработки звонков
+								span 
+								span и заказов: если вы готовы принимать звонки самостоятельно колл-центром.
+							.mt-3
+								a(data-toggle="modal" href='#dealers-modules-modal-3')
+									u - единая система распределения
+								span 
+								span электронных заказов: если вы не готовы делать единый колл-центр.
+						li.mb-4
+							span.h4 2. 
+							span В нашей системе есть 
+							a(data-toggle="modal" href='#dealers-modules-modal-4')
+								u онлайн-система бронирования остатков. 
+							.mt-3
+								span Все ваши дилеры смогут заказывать позиции с завода или склада онлайн, а вы - получать данные по продажам со всей сети.
+						li.mb-4
+							span.h4 3. 
+							span Мы настроим подсистему
+							a(data-toggle="modal" href='#dealers-modules-modal-6')
+								u контроля работы и рейтинга дилеров, 
+							span реализованную у нас, специально под вашу сеть. 
+							.mt-3
+								span Это позволит полность контролировать каждого дилера и даже распределять заказы в соответствии с рейтингом.
+.position-relative.dealers-level-3.overflow-hidden
+	img(src="picture/upload/dealers-level-3-hand.png", alt="").dealers-level-3__absolute-img
+	.container
+		.row.align-items-center
+			.col-sm-12
+				.dealers-level__title.dealers-level__title-dark Уровень 3.
+				h2.h2.mb-lg-5.mb-4.form-h2.form-h2-new.dealers-level-2-title.d-md-none
+					span.yellow-border Увеличьте
+						span.border-container.animation.visible.animated(data-animate="newline")
+					span 
+					span интернет-продажи
+				h2.h2.mb-lg-5.mb-4.form-h2.form-h2-new.d-none.d-md-block
+					span.yellow-border.yellow-border-white Увеличьте интернет-продажи
+						span.border-container.animation.visible.animated(data-animate="newline")
+		.row.dealers-level-3__bottom.d-none.d-md-flex
+			+dealers-level-card-dark('dealers-global', 'Ваш головной сайт ', 'является просто визиткой с контактами, не принимая участия в продажах?')
+			+dealers-level-card-dark('dealers-bad-review', 'Все ваши дилеры в интернете ', 'делают кто во что горазд, мешая друг другу в поисковых системах и не работая на синхронное повышение прибыли всей сети?')
+			+dealers-level-card-dark('dealers-complaint', 'Каталог продукции на сайтах у всех дилеров ', 'не актуальный, наличие товара не обновляется, что в итоге приводит к оттоку покупателей и появлению негатива?')
+			+dealers-level-card-dark('dealers-bad', 'Эффективность рекламных бюджетов ', 'в интернет-маркетинге не может быть измерена, так как сайты дилеров не подключены к единой аналитике и потому не контролируются?')
+		.row.d-md-none
+			.col-md-12.mb-5
+				.custom-scrollbar
+					.row.flex-nowrap.pr-2
+						+dealers-level-card-dark('dealers-global', 'Ваш головной сайт ', 'является просто визиткой с контактами, не принимая участия в продажах?')
+						+dealers-level-card-dark('dealers-bad-review', 'Все ваши дилеры в интернете ', 'делают кто во что горазд, мешая друг другу в поисковых системах и не работая на синхронное повышение прибыли всей сети?')
+						+dealers-level-card-dark('dealers-complaint', 'Каталог продукции на сайтах у всех дилеров ', 'не актуальный, наличие товара не обновляется, что в итоге приводит к оттоку покупателей и появлению негатива?')
+						+dealers-level-card-dark('dealers-bad', 'Эффективность рекламных бюджетов ', 'в интернет-маркетинге не может быть измерена, так как сайты дилеров не подключены к единой аналитике и потому не контролируются?')
+		.row
+			.col-md-6.mb-4
+				.row
+					.col-md-12.d-sm-none
+						img(src="picture/upload/dealers-Group_460.png", alt="").w-100.mb-4
+					.col-xl-9.col-lg-10
+						.h4.mb-4.pb-3 Готовые решения, которые сделают работу дилеров эффективной:
+						ul.dealers-level__list
+							li.mb-4
+								span.h4 1. 
+								a(data-toggle="modal" href='#dealers-modules-modal-1')
+									u Интеллектуальный головной сайт:
+								.mt-3
+									span - умеет собирать весь спрос в вашей тематике и конвертировать его в заказы (скорее всего, сейчас вы собираете только 2-3% возможного трафика в тематике);
+								.mt-3
+									span - умеет отслеживать, по какому источнику рекламы пришёл заказ, и не важно, поступил он через форму на сайте или по телефону;
+								.mt-3
+									span - умеет собирать полную аналитику по всем действиям людей на сайте, фильтрам выбора товара - даёт вам обратную связь для маркетинга.
+							li.mb-4
+								span.h4 2. 
+								a(data-toggle="modal" href='#dealers-modules-modal-5')
+									u Сетевые сайты дилеров:
+								.mt-3
+									span - система позволяет снабдить всех дилеров классными сайтами, которые будут создаваться автоматически;
+								.mt-3
+									span - на всех сайтах единая веб-аналитика и отслеживание звонков;
+								.mt-3
+									span - все заказы с сайтов собираются в единой системе;
+								.mt-3
+									span - полный контроль за дилерами.
+							li.mb-4
+								span.h4 3. 
+								span Система интернет-маркетинга, включающая в себя полное продвижение головного сайта и всех сайтов дилеров:
+								.mt-3
+									a(href="https://blog.completo.ru/kak-vyibrat-agentstvo-dlya-kompleksnogo-marketinga-v-internete/" target="_blank")
+										u - полный комплекс интернет-рекламы
+									span 
+									span и маркетинга от компании Комплето -
+								.mt-3
+									span - единственной компании в России, работающий только с B2B компаниями, российскими производителями и поставщиками сложных решений. 
+								.mt-3
+									span Ни у одного другого агентства в России нет такого опыта интернет-маркетинга для этих типов компаний.
+			.col-md-6.mb-4
+				.h4.dealers-level-3__title Демонстрация системы для производителей с сетями дилеров: 
+				.dealers-level-3__block
+					img(src="picture/upload/dealers-Group_309.png", alt="").dealers-level-3__block-img
+					.dealers-level-3__block-video
+						iframe(width='560' height='315' src='https://www.youtube.com/embed/PJXLw_R3z9Q' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen).dealers-level-3__block-video-item
+				.row
+					.col-sm-6.mb-4
+						img(src="picture/upload/dealers-case-1.png", alt="").w-100.mb-4.dealers-level-3__case-logo
+						p.font-weight-bold.dealers-level-3__text Сеть из 500 дилеров и 3000 торговых точек по России.
+					.col-sm-6.mb-4
+						img(src="picture/upload/dealers-case-2.png", alt="").w-100.mb-4.dealers-level-3__case-logo
+						p.font-weight-bold.dealers-level-3__text Сеть из 150 дилеров и сотен субдилеров по всей России.
+				.row
+					.col-md-12.d-flex.justify-content-center
+						button.btn.btn-warning.data-scroll.my-4.d-block(data-scroll='form-content') Запросить предложение

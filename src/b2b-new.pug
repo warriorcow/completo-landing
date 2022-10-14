@@ -1,0 +1,31 @@
+- var title = "B2B";
+doctype html
+html(lang="ru")
+	head
+		include modules/head/index.pug
+	body
+		include modules/header/index.pug
+		include modules/b2b-new/head/index.pug
+		include modules/b2b-new/strategy/index.pug
+		include modules/b2b-new/applications/index.pug
+		include modules/b2b-new/sites/index.pug
+		include modules/b2b-new/clients/index.pug
+		//- include modules/b2b-new/sales/index.pug
+		include modules/b2b-new/cases/index.pug
+		include modules/b2b-new/crew/index.pug
+		include modules/b2b-new/b2b/index.pug
+		include modules/b2b-new/book/index.pug
+		include modules/b2b-new/community/index.pug
+		include modules/b2b-new/work/index.pug
+		include modules/b2b-new/employees/index.pug
+		.form-container
+			.container#new-form-main
+				.row.pt-5.pb-5#form-content
+					.col-md-12
+						.h2.mb-4.form-h2
+							span Обсудим 
+							span.yellow-border задачи?
+								span.border-container.animation.visible.animated(data-animate="newline")
+					include modules/form/index.pug
+		include modules/footer/index.pug
+		include modules/foot/index.pug

@@ -1,0 +1,464 @@
+mixin form-new(title, title_white, text)
+    .bg-warning.py-4.form-container-modal-new-style
+        form.form.form-container-modal-new.validate.bg-warning.my-3(method="post" id="new-form-44" novalidate="novalidate")
+            .row.align-items-center
+                .col-lg-4.col-xl-3.text-center
+                    .h4.mb-1= title
+                        span.text-white= title_white
+                    p= text
+                .col-lg-8.col-xl-9.px-xl-5.pt-4.pt-lg-0
+                    .row
+                        .col-md-6.pb-4.pb-md-0
+                            .form-group
+                                input(type="text" placeholder="Фамилия, Имя" required name="name" id="modal-text-414").system-modules-container__form-input.w-100
+                            .form-group.mb-lg-0
+                                input(type="email" placeholder="Email" required name="email" id="modal-text-424").system-modules-container__form-input.w-100
+                        .col-md-6
+                            .form-group.pr-2.mb-4
+                                button.btn.btn-white.form_btn-new.w-100.form-container-modal-new-btn Подписаться
+                            .form-group.mb-lg-0
+                                input(type="checkbox" id="modal-text-1454" required checked name="agree").system-modules-container__form-input-radio
+                                label(for="modal-text-1454").d-flex.align-items-center
+                                    span.system-modules-container__form-input-checkbox
+                                    span.system-modules-container__form-input-checkbox-text Я согласен с
+                                        a(href="https://www.completo.ru/privacy_policy.rtf" target="_blank")
+                                            u правилами обработки персональных данных
+mixin social-link(link, img)
+    a(href=link target='_blank')
+        span.rounded-circle.circle.d-flex.align-items-center.justify-content-center
+            img(src="picture/upload/" + img, alt="").footer_social-img
+mixin bloquote(name, titile_bloquote, image, text, type)
+    .container.bloquote-container
+        .row.align-items-center
+            .col-lg-3.col-md-4.mb-3
+                if type === true || type === 'white'
+                    img(src="picture/upload/" + image, alt="").bloquote-container-img.bg-white
+                else
+                    img(src="picture/upload/" + image, alt="").bloquote-container-img-blue
+                if type === 'white'
+                    p.font-weight-bold.mb-0.text-center.text-white= name
+                    p.text-center.mb-0.text-white!= titile_bloquote
+                else
+                    p.font-weight-bold.mb-0.text-center= name
+                    p.text-center.mb-0!= titile_bloquote
+            .col-xl-7.col-md-8.mb-3
+                .bloquote-container-block-container
+                    .bloquote-container-block-item
+                        if type === true || type === 'white'
+                            .bloquote-container-block.bg-warning=text
+                        else
+                            .bloquote-container-block= text
+mixin bloquoteFull(name, titile_bloquote, image, text)
+    .container.bloquote-container
+        .row.align-items-center
+            .col-lg-3.col-md-4.mb-3
+                img(src="picture/upload/" + image, alt="").bloquote-container-img.bg-white
+                p.font-weight-bold.mb-0.text-center= name
+                p.text-center.mb-0!= titile_bloquote
+            .col-md-8.mb-3
+                .bloquote-container-block-container
+                    .bloquote-container-block-item
+                        .bloquote-container-block.bg-warning=text
+mixin slick-example(...images)
+    .slick-example-container
+        .slick-example
+            each img in images
+                img(src="picture/upload/" + img, alt="")
+mixin steps-graph(percent1, name1, percent2, name2, percent3, name3)
+    .how-we-make__step
+        .how-we-make__step-item.how-we-make__step-item-top
+            .how-we-make__step-item-text
+                .h1= percent1
+                p.font-weight-bold!= name1
+        .how-we-make__step-item.how-we-make__step-item-middle
+            .how-we-make__step-item-text
+                .h1= percent2
+                p.font-weight-bold!= name2
+        .how-we-make__step-item.how-we-make__step-item-bottom
+            .how-we-make__step-item-text
+                .h1= percent3
+                p.font-weight-bold!= name3
+mixin blog-link(link, img, name)
+    a(href=link target="_blank").d-block
+        img(src="picture/upload/" + img, alt="").w-100.mb-2.blog-img-big
+        u= name
+mixin blog-link-min(link, img, name)
+    a(href=link target="_blank").d-block
+        img(src="picture/upload/" + img, alt="").w-100.mb-2.blog-img-min
+        u.text-dark= name
+mixin scheme-item(name, img, num, text)
+    .big-slick__children
+        .big-slick__children-line.big-slick__children-line-white
+            p= name
+        .big-slick__children-line.big-slick__children-line-last.big-slick__children-line-white
+            h2!= num
+            p!= text
+        img.big-slick__img(src='picture/upload/' + img alt)
+mixin video-item(link, img)
+    a(href=link data-fancybox).video-item__block.d-block
+        img(src="picture/upload/" + img, alt="").w-100
+mixin case-block-menu(img, text, name)
+    a.case-menu__item(href="#")
+        .case-menu__wrapper
+            .case-menu__bg(style=img)
+            .case-menu__content
+                .case-menu__title=name
+                .case-menu__content
+                    .case-menu__tag Кейс
+                    .case-menu__case=text
+mixin b2b-case(img, logo, text)
+    a(href="#").b2b-case__card
+        img(src="picture/upload/"+img, alt="").b2b-case__card__bg
+        .case__card-container.p-3
+            .bg-white.position-absolute.right-0.font-weight-bold.px-3.py-2.b2b-case__logo
+                img(src="picture/upload/"+logo, alt="").b2b-case__logo_img
+            small.bg-warning.rounded.px-2.py-1.text-dark.case__card-title.font-weight-bold Кейс
+            p.text-white.mt-2.font-weight-bold.relative.z-index-2.mb-0= text
+
+header.header
+    .header__wrapper
+        .header__container.container
+            .header__logo
+                a(href='/')
+                    img(src='picture/upload/logo-completo-dark.png' alt='Completo' width=129 height=45)
+                a(href='/' class='header__logo_white')
+                    img(src='picture/upload/Completo_logoNEW_white_08-10-2018.png' alt='Completo' width=129 height=45)
+            .header__menu
+                ul.menu
+                    li.menu__item.menu__item-dropdown
+                        a.menu__link._dropdownMenu(href='#')
+                            span Комплето
+                            i.arrow-down
+                                span
+                                span
+                        .menu__dropdown
+                            .container
+                                .menu__dropdown-list
+                                    a.menu__dropdown-item(href='#') О компании
+                                    a.menu__dropdown-item(href='#') Школа стажеров
+                                    a.menu__dropdown-item(href='#') Вакансии
+                                    a.menu__dropdown-item(href='#') Комплето клуб
+                                    a.menu__dropdown-item(href='#') Тест агенств
+                                    a.menu__dropdown-item(href='#') Контакты
+                                .menu__socials
+                                    .menu__social
+                                        +social-link('https://www.facebook.com/completo.ru/', 'facebook-svgrepo-com.svg')
+                                    .menu__social
+                                        +social-link('https://vk.com/completoru', 'iconmonstr-vk-1.svg')
+                                    .menu__social
+                                        +social-link('https://www.youtube.com/user/Completoru/videos', 'iconmonstr-youtube-1.svg')
+                                    .menu__social
+                                        +social-link('https://www.linkedin.com/company/completo/', 'iconmonstr-linkedin-1.svg')
+                                    .menu__social
+                                        +social-link('https://www.instagram.com/completo.ru/', 'iconmonstr-instagram-11.svg')
+                    li.menu__item.menu__item-dropdown
+                        a.menu__link._dropdownMenu(href='#')
+                            span Услуги
+                            i.arrow-down
+                                span
+                                span
+                        .menu__dropdown.menu__dropdown_v2
+                            .container
+                                .menu__dropdown-list
+                                    .menu__dropdown-col
+                                        a.menu__dropdown-item._dropdownMenuItem(href='#')
+                                            span Разработка стратегии
+                                                i.arrow-down
+                                                    span
+                                                    span
+                                        ul
+                                            li
+                                                a(href="#")
+                                                    span Digital-стратегия
+                                            li
+                                                a(href="#")
+                                                    span Исследование спроса
+                                            li
+                                                a(href="#")
+                                                    span Исследование конкурентов
+                                            li
+                                                a(href="#")
+                                                    span Digital-консалтинг
+                                    .menu__dropdown-col
+                                        a.menu__dropdown-item._dropdownMenuItem(href='#')
+                                            span Лидогенерация
+                                                i.arrow-down
+                                                    span
+                                                    span
+                                        ul
+                                            li
+                                                a(href="#")
+                                                    span Performance (контекст+таргет)
+                                            li
+                                                a(href="#")
+                                                    span Быстрый запуск (посадочная+трафик)
+                                            li
+                                                a(href="#")
+                                                    span Продвижение в LinkedIn
+                                            li
+                                                a(href="#")
+                                                    span SEO-продвижение
+
+
+                                    .menu__dropdown-col
+                                        a.menu__dropdown-item._dropdownMenuItem(href='#')
+                                            span Разработка сайтов
+                                                i.arrow-down
+                                                    span
+                                                    span
+                                        ul
+                                            li
+                                                a(href="#")
+                                                    span Разработка сайтов
+                                            li
+                                                a(href="#")
+                                                    span Разработка мобильных приложений
+                                            li
+                                                a(href="#")
+                                                    span Система дилерских сайтов
+                                            li
+                                                a(href="#")
+                                                    span Быстрый запуск (посадочная+трафик)
+                                            li
+                                                a(href="#")
+                                                    span Техническая поддержка
+                                            li
+                                                a(href="#")
+                                                    span B2B-порталы
+
+
+                                    .menu__dropdown-col
+                                        a.menu__dropdown-item._dropdownMenuItem(href='#')
+                                            span Прогрев клиентов
+                                                i.arrow-down
+                                                    span
+                                                    span
+                                        ul
+                                            li
+                                                a(href="#")
+                                                    span SalesFarm - система подогрева клиентов
+                                            li
+                                                a(href="#")
+                                                    span Account Based Marketing
+                                            li
+                                                a(href="#")
+                                                    span Social Media Marketing
+                                            li
+                                                a(href="#")
+                                                    span Проведение онлайн-мероприятий
+                                            li
+                                                a(href="#")
+                                                    span Online Reputation Marketing
+                                            li
+                                                a(href="#")
+                                                    span Контент-маркетинг
+                                            li
+                                                a(href="#")
+                                                    span CRM-маркетинг
+                                            li
+                                                a(href="#")
+                                                    span Email-маркетинг
+
+
+                    li.menu__item.menu__item-dropdown
+                        a.menu__link._dropdownMenu(href='#')
+                            span Кейсы
+                            i.arrow-down
+                                span
+                                span
+                        .menu__dropdown.menu__dropdown_v3
+                            .menu__dropdown-wrapper.container
+                                .menu__dropdown-left
+                                    .menu__dropdown-list
+                                        .menu__dropdown-col
+                                            a.menu__dropdown-item._dropdownMenuItem(href='#')
+                                                span Кейсы по направлениям
+                                                    i.arrow-down
+                                                        span
+                                                        span
+                                            ul
+                                                li
+                                                    a(href="#")
+                                                        span Разработка стратегии
+                                                li
+                                                    a(href="#")
+                                                        span Лидогенерация
+                                                li
+                                                    a(href="#")
+                                                        span Разработка сайтов
+                                                li
+                                                    a(href="#")
+                                                        span Прогрев клиентов
+                                                li
+                                                    a(href="#")
+                                                        span Отделы продаж
+                                        .menu__dropdown-col
+                                            a.menu__dropdown-item._dropdownMenuItem(href='#')
+                                                span Кейсы по отраслям
+                                                    i.arrow-down
+                                                        span
+                                                        span
+                                            ul
+                                                li
+                                                    a(href="#")
+                                                        span IT и телекоммуникации
+                                                li
+                                                    a(href="#")
+                                                        span Стройматериалы и девелопмент
+                                                li
+                                                    a(href="#")
+                                                        span Производители с сетями дилеров
+
+                                    a.header__menu-btn.btn.btn-warning(href="/cases") Все кейсы Комплето
+                                .menu__dropdown-right
+                                    .menu__dropdown-title
+                                        span Популярные кейсы
+                                    .menu__dropdown-cases
+                                        +b2b-case('Rectangle_2875.jpg', 'alta-2.png', 'Как сделать охват в соцсетях 1 млн. человек для стройматериалов')
+                                        +b2b-case('Rectangle_2875.jpg', 'alta-2.png', 'Как сделать охват в соцсетях 1 млн. человек для стройматериалов')
+                                        +b2b-case('Rectangle_2875.jpg', 'alta-2.png', 'Как сделать охват в соцсетях 1 млн. человек для стройматериалов')
+                                    .menu__dropdown-button
+                                        a.btn.btn-warning.px-4.d-inline-block(href="#") Все кейсы Комплето
+
+                    li.menu__item.menu__item-dropdown
+                        a.menu__link._dropdownMenu(href='#')
+                            span Мы обучаем
+                            i.arrow-down
+                                span
+                                span
+                        .menu__dropdown.menu__dropdown_v4
+                            .menu__dropdown-wrapper.container
+                                .menu__dropdown-left
+                                    .menu__dropdown-list
+                                        a.menu__dropdown-item(href='#') Блог Комплето
+                                        a.menu__dropdown-item(href='#') Подписаться на рассылку
+                                        a.menu__dropdown-item(href='#') Учебный центр MAED
+                                        a.menu__dropdown-item(href='#') Книга для digital-маркетолога
+                                        a.menu__dropdown-item(href='#') Курс digital-маркетолога
+                                        a.menu__dropdown-item(href='#') Мероприятия Комплето
+                                .menu__dropdown-right
+                                    .menu__dropdown-list
+                                        .menu__dropdown-col
+                                            a.menu__dropdown-item._dropdownMenuItem(href='#')
+                                                span Исследования
+                                                    i.arrow-down
+                                                        span
+                                                        span
+                                            ul
+                                                li
+                                                    a(href="#")
+                                                        span Исследование банков
+                                                li
+                                                    a(href="#")
+                                                        span Исследование медцентров
+                                                li
+                                                    a(href="#")
+                                                        span Исследование недвижимости
+                                                li
+                                                    a(href="#")
+                                                        span Исследование производителей
+                                                li
+                                                    a(href="#")
+                                                        span Исследование транспортных компаний
+                                        .menu__dropdown-col
+                                            a.menu__dropdown-item._dropdownMenuItem(href='#')
+                                                span Материалы по стратегиям
+                                                    i.arrow-down
+                                                        span
+                                                        span
+                                            ul
+                                                li
+                                                    a(href="#")
+                                                        span Инструкция по стратегии за 6 шагов
+                                                li
+                                                    a(href="#")
+                                                        span Мануал Анализ конкурентов
+                                                li
+                                                    a(href="#")
+                                                        span Инструкция Как создать отдел маркетинга
+                                                li
+                                                    a(href="#")
+                                                        span Чек-лист digital-стратегии
+                                                li
+                                                    a(href="#")
+                                                        span Видеокурс по digital-трансформации
+
+
+                                        .menu__dropdown-col
+                                            a.menu__dropdown-item._dropdownMenuItem(href='#')
+                                                span Материалы по разработке сайтов
+                                                    i.arrow-down
+                                                        span
+                                                        span
+                                            ul
+                                                li
+                                                    a(href="#")
+                                                        span Мануал Разработка сайтов
+                                        .menu__dropdown-col
+                                            a.menu__dropdown-item._dropdownMenuItem(href='#')
+                                                span Материалы по лидогенерации
+                                                    i.arrow-down
+                                                        span
+                                                        span
+                                            ul
+                                                li
+                                                    a(href="#")
+                                                        span Мануал по SEO
+                                                li
+                                                    a(href="#")
+                                                        span Гайд по созданию креативов
+                                                li
+                                                    a(href="#")
+                                                        span Справочник веб-аналитика
+                                                li
+                                                    a(href="#")
+                                                        span Инструкция по Google Мой бизнес
+
+                                        .menu__dropdown-col
+                                            a.menu__dropdown-item._dropdownMenuItem(href='#')
+                                                span Материалы по прогреву
+                                                    i.arrow-down
+                                                        span
+                                                        span
+                                            ul
+                                                li
+                                                    a(href="#")
+                                                        span Гайд 40 типов постов для SMM
+                                                li
+                                                    a(href="#")
+                                                        span Лидмагнит по лидмагнитам
+                                                li
+                                                    a(href="#")
+                                                        span Гайд Полезные сервисы по SMM
+                                                li
+                                                    a(href="#")
+                                                        span Мануал Триггеры доверия
+                                                li
+                                                    a(href="#")
+                                                        span Шаблон отчета по SMM
+                                                li
+                                                    a(href="#")
+                                                        span Курс по Account-Based Marketing
+
+
+
+
+                a.header__menu-btn.data-scroll.btn.btn-warning(data-scroll="new-form-main" href="#new-form-main") Оставить заявку
+            .header__contact
+                a(href='tel:+79804500060') +7 (980) 450-00-60
+            .header__buttons
+                .header__send
+                    .header__send-btn Напишите нам
+                    .header__send-socials
+                        a.header__send-social(href="#")
+                            img(src='picture/upload/icon-social-whatsapp.png')
+                        //a.header__send-social(href="#")
+                        //    img(src='picture/upload/icon-social-telegram.png')
+                        a.header__send-social.d-none.d-lg-block(href="#")
+                            img(src='picture/upload/icon-social-main.png')
+                        a.header__send-social.d-lg-none.d-sm-flex(href="#")
+                            img(src='picture/upload/icon-social-phone.png')
+                .header__callback
+                    a.data-scroll(data-scroll='new-form-main' href='#new-form-main') Оставить заявку
+                .header__mobileButton._toggleMobileMenu.d-lg-none.d-md-flex
+                    span

@@ -1,0 +1,358 @@
+.step {
+	&__mark {
+		padding: 3px 8px;
+		background-color: #9A9A9A;
+		border-radius: 2px;
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		font-size: 14px;
+		font-weight: bold;
+		&-text {
+			font-size: 14px;
+			font-weight: bold;
+		}
+		small {
+			font-size: 12px;
+			line-height: 1.425;
+		}
+	}
+	&__container {
+		display: none;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
+		height: 100%;
+		&-active {
+			display: flex;
+		}
+	}
+	&__next {
+		&-icon {
+			font-size: 12px;
+			transform: translateY(1px);
+		}
+	}
+	&__carousel {
+		box-shadow: 0 3px 20px 1px rgba(0, 0, 0, .15);
+		padding-bottom: 0 !important;
+		background-color: #F7EAD1;
+		padding-top: 25px;
+		margin-bottom: 0 !important;
+		border-top-right-radius: 15px;
+		border-top-left-radius: 15px;
+		&-child {
+			height: 415px;
+			display: flex !important;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 0 40px;
+			&-card {
+				margin-bottom: 24px;
+				&-item {
+					display: flex !important;
+					padding: 23px !important;
+					min-height: initial !important;
+					margin-top: 0 !important;
+				}
+				&-block {
+					@include media-breakpoint-down(md) {
+						width: 40px !important;
+						min-width: 40px !important;
+						height: 40px !important;
+						position: initial !important;
+						margin-right: 18px !important;
+						margin-left: 0 !important;
+						&-icon {
+							font-size: 40px !important;
+						}
+					}
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			@include media-breakpoint-down(lg) {
+				height: 600px;
+			}
+			@include media-breakpoint-down(md) {
+				font-size: 10px;
+				height: 500px;
+			}
+			@include media-breakpoint-down(sm) {
+				height: 420px;
+			}
+			&-img {
+				max-height: 92px;
+				max-width: 95px;
+				object-fit: contain;
+				display: block;
+				margin: 0 auto;
+			}
+		}
+		&-video {
+			width: 100%;
+			height: 412px;
+			@include media-breakpoint-down(lg) {
+				height: 300px;
+			}
+			@include media-breakpoint-down(md) {
+				height: 200px;
+			}
+			@include media-breakpoint-down(sm) {
+				height: 300px;
+			}
+			@include media-breakpoint-down(xs) {
+				height: 200px;
+			}
+		}
+		&-container {
+			position: relative;
+			&-dot {
+				width: 8px;
+				height: 8px;
+				position: absolute;
+				left: 15px;
+				top: 11px;
+				z-index: 2;
+				border-radius: 100%;
+				background-color: #ddd6ca;
+				&:nth-child(2) {
+					left: 30px;
+				}
+				&:nth-child(3) {
+					left: 45px;
+				}
+			}
+		}
+		&-img {
+			height: 373px;
+			vertical-align: bottom;
+			transform: translateY(4px);
+			@include media-breakpoint-down(lg){
+				height: 273px;
+			}
+			@include media-breakpoint-down(md){
+				height: 190px;
+			}
+			@include media-breakpoint-down(sm) {
+				height: 300px;
+			}
+			@include media-breakpoint-down(xs) {
+				height: 200px;
+			}
+		}
+		@include media-breakpoint-down(sm) {
+			margin-top: 30px;
+		}
+	}
+	&__heading {
+		position: relative;
+		display: flex;
+		align-items: center;
+		padding: 20px 10px;
+		text-transform: uppercase;
+		margin-right: 15px;
+		&-name {
+			@include media-breakpoint-down(xs) {
+				font-size: 1rem;
+			}
+		}
+		> * {
+			position: relative;
+			z-index: 2;
+		}
+		&:before {
+			content: '';
+			height: 100%;
+			width: 100vw;
+			right: 0;
+			top: 0;
+			position: absolute;
+			background-color: #FECC2F;
+			z-index: 1;
+		}
+	}
+	&__list {
+		position: relative;
+		padding-left: 30px;
+		margin-top: 30px;
+		margin-bottom: 70px;
+		&:before {
+			content: '';
+			width: 100%;
+			border-top: 1px solid $yellow;
+			height: 1px;
+			z-index: 0;
+			position: absolute;
+			left: 0;
+			bottom: -1px;
+		}
+		&-item {
+			position: relative;
+			margin-bottom: 20px;
+			// min-width: 190px;
+			flex-basis: 0;
+			flex-grow: 1;
+			padding-right: 10px;
+			@include media-breakpoint-down(lg) {
+				min-width: 160px;
+			}
+			@include media-breakpoint-down(md) {
+				min-width: 120px;
+			}
+			&-link {
+				display: inline-flex;
+				align-items: center;
+				transform: translateX(-30px);
+				height: 64px;
+				transition: 0.2s ease all;
+				color: #0082F9 !important;
+				text-decoration: none !important;
+				transition: 0.3s ease all;
+				@include media-breakpoint-down(lg) {
+					font-size: 14px;
+				}
+				@include media-breakpoint-down(md) {
+					font-size: 12px;
+					transform: translateX(-26px);
+				}
+				&:hover {
+					opacity: 0.8;
+				}
+				&-num {
+					font-size: 36px;
+					line-height: 1;
+					font-weight: bold;
+					color: black;
+					transition: 0.2s ease all;
+					margin-right: 20px;
+					@include media-breakpoint-down(md) {
+						font-size: 20px;
+						margin-right: 7px;
+					}
+				}
+			}
+			&:before,
+			&:after {
+				content: '';
+				width: 18px;
+				height: 18px;
+				left: -30px;
+				bottom: -31px;
+				position: absolute;
+				border-radius: 100%;
+				transition: 0.3s ease all;
+			}
+			&:before {
+				background-color: $yellow;
+				z-index: 2;
+			}
+			&:after {
+				background-color: black;
+				z-index: 1;
+				margin-left: 2px;
+				margin-top: 2px;
+			}
+			&.active {
+				&:before,
+				&:after {
+					width: 25px;
+					height: 25px;
+					left: -33px;
+					bottom: -31px;
+				}
+				.step__list-item-link-num {
+					font-size: 64px;
+					@include media-breakpoint-down(md) {
+						font-size: 30px;
+					}
+				}
+				.step__list-item-link {
+					color: black !important;
+					transform: translateX(-38px);
+					@include media-breakpoint-down(md) {
+						transform: translateX(-28px);
+					}
+				}
+			}
+		}
+	}
+}
+.custom-step {
+	overflow: hidden;
+	height: 373px;
+	transform: translateY(4px);
+	@include media-breakpoint-down(lg){
+		height: 273px;
+	}
+	@include media-breakpoint-down(md){
+		height: 190px;
+	}
+	@include media-breakpoint-down(sm) {
+		height: 300px;
+	}
+	@include media-breakpoint-down(xs) {
+		height: 200px;
+	}
+	&-video {
+		height: 373px;
+		overflow: hidden;
+		transform: translateY(4px);
+		@include media-breakpoint-down(lg){
+			height: 273px;
+		}
+		@include media-breakpoint-down(md){
+			height: 190px;
+		}
+		@include media-breakpoint-down(sm) {
+			height: 300px;
+		}
+		@include media-breakpoint-down(xs) {
+			height: 200px;
+		}
+		video {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	img {
+		animation: 70s page infinite linear;
+		background-size: cover;
+		height: 4200px;
+		@include media-breakpoint-down(lg) {
+			height: 3000px;
+		}
+		@include media-breakpoint-down(md) {
+			height: 1900px;
+		}
+	}
+}
+@keyframes page {
+	0%, 100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-90%);
+	}
+}
+
+.list-lower-alpha {
+	list-style-type: lower-alpha;
+}
+.step__btn-mobile {
+	@include media-breakpoint-down(xs) {
+		font-size: 13px;
+		height: 59px;
+	}
+}
+.step__btn-desktop {
+	@include media-breakpoint-down(lg) {
+		font-size: 12px;
+	}
+	@include media-breakpoint-down(md) {
+		font-size: 10px;
+	}
+}

@@ -1,0 +1,17 @@
+mixin subscribe-card-block(text, text2, ...lists)
+	.subscribe__card
+		.text-center
+			.subscribe__card-title= text
+			.h1.mb-4= text2
+		ul.dealers-level__list
+			each list in lists
+				li.mb-4= list
+
+.position-relative.pb-md-5.pt-md-5.contact-us__map.mt-lg-5
+	img(src="picture/upload/dealers-hand.png", alt="").dealers-fast__absolute-img
+	.container.my-md-4
+		.row.justify-content-center
+			.col-md-6.col-lg-5.col-xl-4.mb-4
+				+subscribe-card-block('Получите', 'сразу:', '15 кейсов и 5 видео по интернет-маркетингу', 'Видеокурс по Системному Электронному Маркетингу (сертификат!)', 'Самый полный чек-лист по SEO-оптимизации', 'Инструкцию по анализу конкурентов (с шаблонами)')
+			.col-md-6.col-lg-5.col-xl-4.mb-4
+				+subscribe-card-block('Далее', 'в эфире:', 'Уникальные кейсы для b2b', 'Чек-листы и лайфхаки', 'Практические инструкции', 'Анонсы вебинаров и мастер-классов')

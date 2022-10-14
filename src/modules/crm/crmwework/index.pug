@@ -1,0 +1,58 @@
+mixin crm-card(icon, text)
+	.form__alarm.d-flex.align-items-start.bg-white
+		.form__alarm__icon
+			img(src="picture/upload/"+icon, alt="").form__alarm__icon-img
+		p.mb-3.text-dark.ml-0!= text
+mixin carousel-list-block(...lists)
+	ul.carousel__list-block.carousel__list-block-seo.carousel__list-block-crm.d-flex.align-items-center.justify-content-between.mb-4.mt-0
+		each list, index in lists
+			if index == 0
+				li.carousel__list-block-item.active.carousel__list-block-item-seo.mx-2.text-center.px-3
+					a(href="#" data-link=index).carousel__list-block-item-link= list
+			else
+				li.carousel__list-block-item.carousel__list-block-item-seo.mx-2.text-center.px-3
+					a(href="#" data-link=index).carousel__list-block-item-link= list
+mixin carousel-list-main(...images)
+	.carousel__list-carousel.carousel__list-carousel-seo.carousel__list-carousel-crm.pb-0.mb-0
+		each img in images
+			img(src="picture/upload/"+img, alt="").w-100
+mixin btn-plus
+	button.btn.btn-warning.data-scroll.d-block(data-scroll='form-content') Узнать плюсы
+.py-5.bg-lightyellow.border-secondary.border-top.border-bottom.overflow-hidden
+	.container.my-md-4
+		.row
+			.col-md-12
+				h2.mb-4.mb-md-5.form-h2
+					span.yellow-border.z-index-2 С какими
+						span.border-container.animation.visible.animated(data-animate="newline")
+					span 
+					span CRM мы работаем:
+		.row
+			.col-lg-4.order-2.order-lg-1
+				.crm-block.crm-block-active(data-show="0")
+					p.mb-4 Одна из самых простых и популярных CRM систем на российском рынке. Отлично подходит для малого и среднего бизнеса.
+					p.mb-4 Её основное преимущество в простоте настройки и использования. Идеально подойдет для построения отдела продаж.
+					+crm-card('internet-black.svg', 'Главное преимущество <span class="font-weight-bold">AmoCRM </span> - быстрая и легкая интеграция с большим количеством сервисов.')
+					+btn-plus
+				.crm-block(data-show="1")
+					p.mb-4 Bitrix24 - идеально подойдет вам, если экосистема вашей компании завязана на продуктах 1C.
+					p.mb-4 Большая и функциональная - это именно те слова, которые хорошо описывают возможности CRM Bitrix24. В ней есть возможность управлять соцсетями, документами, файлами, календарем, почтой, бизнес процессами и так далее...
+					+crm-card('analysis-black.svg', '<span class="font-weight-bold">Bitrix24 </span> подойдет тем, кто хочет “вживить” CRM в уже настроенные процессы 1С и с её помощью не только увеличивать продажи, но и управлять смежными процессами.')
+					+btn-plus
+				.crm-block(data-show="2")
+					p.mb-4 Сейчас на рынке появилось огромное количество отраслевых CRM систем, которые упрощают работу в сфере недвижимости, туризма, банковской сфере, транспорта, производства и так далее.
+					p.mb-4 Наши специалисты помогут в них разобраться и подберут то решение, которое лучше всего подойдет вашему бизнесу.
+					+crm-card('thumb-up-black.svg', '<span class="font-weight-bold">Иные коробочные решения </span> подойдут ряду узких бизнес-систем со специфическим циклом сделки.')
+					+btn-plus
+				.crm-block(data-show="3")
+					p.mb-4 Если у вас сложный, многоуровневый бизнес процесс, с помощью CRM вы хотите контролировать не только отдел продаж, но и дилеров, подрядчиков, работу заводов доставку до конечного потребителя - мы разработаем уникальную CRM именно под ваши нужды и свяжем её с любыми бизнес процессами.
+					+crm-card('profit-black.svg', '<span class="font-weight-bold">Индивидуальная CRM </span> подойдет сложному бизнесу и дилерским сетям. <span class="d-block mt-3"> Наши специалисты качественно проработают её под все ваши требования.</span>')
+					+btn-plus
+			.col-lg-8.order-1.order-lg-2
+				+carousel-list-block('AmoCRM', 'Bitrix24', 'Другие коробочные решения', 'Индивидуальная CRM')
+				.px-md-5
+					.carousel__list-carousel-notebook.carousel__list-carousel-notebook-no-dots.mb-5
+						+carousel-list-main('crm-slide_1.jpg', 'crm-slide_2.jpg', 'crm-slide_3.jpg', 'crm-slide_4.jpg')
+			.col-md-12.order-3
+				.bg-warning.p-3.text-center.mt-5
+					.h3.mb-0 Мы способны создать или настроить любую версию CRM системы которая понадобится вашему бизнесу

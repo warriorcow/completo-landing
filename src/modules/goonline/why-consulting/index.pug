@@ -1,0 +1,32 @@
+mixin why-consulting-card(icon, text)
+	.col-lg-4.col-md-6.why-consulting__card-container
+		.why-consulting__card.h-100
+			.why-consulting__card-icon-block
+				img(src="picture/upload/"+icon, alt="").why-consulting__card-icon
+			p.font-weight-bold.text-center.why-consulting__card-title= text
+.py-5
+	.container.my-md-4
+		.row
+			.col-md-12
+				h2.mb-5.pb-4
+					span.yellow-border Почему именно
+						span.border-container.animation.visible.animated(data-animate="newline")
+					span 
+					span консалтинг?
+		.row.d-none.d-md-flex
+			+why-consulting-card('fast-delivery.svg', 'Всего за 14 дней покажем, куда идти дальше')
+			+why-consulting-card('complect.svg', 'Даём только практические рекомендации, без воды')
+			+why-consulting-card('conversation-consulting.svg', 'Консалтинг проводит команда из трех специалистов с практическим опытом ')
+			+why-consulting-card('customer-service-consulting.svg', 'В консалтинге учавствует один из директоров Completo')
+			+why-consulting-card('finish-line.svg', 'Вы можете сами к этому прийти, но ваши конкуренты сделают это бытрее.')
+			+why-consulting-card('cooperation-consulting.svg', 'Поможем в обосновании идей перед руководством')
+		.row.d-md-none
+			.col-md-12
+				.custom-scrollbar
+					.d-flex.why-consulting__card-container-mobile
+						+why-consulting-card('fast-delivery.svg', 'Всего за 14 дней покажем, куда идти дальше')
+						+why-consulting-card('complect.svg', 'Даём только практические рекомендации, без воды')
+						+why-consulting-card('conversation-consulting.svg', 'Консалтинг проводит команда из трех специалистов с практическим опытом ')
+						+why-consulting-card('customer-service-consulting.svg', 'В консалтинге учавствует один из директоров Completo')
+						+why-consulting-card('finish-line.svg', 'Вы можете сами к этому прийти, но ваши конкуренты сделают это бытрее.')
+						+why-consulting-card('cooperation-consulting.svg', 'Поможем в обосновании идей перед руководством')

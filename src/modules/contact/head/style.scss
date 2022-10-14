@@ -1,0 +1,73 @@
+.contact-us {
+	&__head {
+		background-image: url('../picture/backgrounds/contact-us-bg.svg');
+		background-color: #F0B91E;
+		height: initial;
+		padding-top: 80px;
+		padding-bottom: 0;
+		&-left-img {
+			width: 100%;
+			max-height: 500px;
+			object-fit: contain;
+			object-position: bottom center;
+		}
+		&-img {
+			max-width: 400px;
+			position: relative;
+			z-index: 2;
+			display: block;
+			margin: auto;
+			&-min {
+				@include media-breakpoint-down(md) {
+					max-width: 207px;
+				}
+				@include media-breakpoint-down(sm) {
+					max-width: 400px;
+				}
+			}
+		}
+		&-small-img {
+			width: 77px;
+			@include media-breakpoint-down(xs) {
+				width: 50px;
+			}
+		}
+		&:before {
+			background-color: rgba(255,255,255,0.3);
+		}
+		&-title {
+			@include media-breakpoint-up(xl){
+				font-size: 72px;
+			}
+			@include media-breakpoint-down(xs){
+				font-size: 40px;
+			}
+			&-min {
+				font-size: 24px;
+			}
+			&-block {
+				position: relative;
+				> * {
+					position: relative;
+					z-index: 2;
+				}
+				&:before {
+					content: '';
+					position: absolute;
+					left: 40px;
+					top: -40px;
+					z-index: 1;
+					width: 252px;
+					height: 279px;
+					background-image: url('../picture/upload/phone-frame.svg');
+					background-size: contain;
+					background-repeat: no-repeat;
+					@include media-breakpoint-down(lg) {
+						width: 200px;
+						height: 200px;
+					}
+				}
+			}
+		}
+	}
+}

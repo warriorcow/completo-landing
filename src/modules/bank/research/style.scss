@@ -1,0 +1,13 @@
+.bank-research {
+	&__img {
+		height: 55px;
+		object-fit: contain;
+		object-position: center;
+		&-absolute {
+			top: 100px;
+		}
+	}
+	&__btn {
+		max-width: 270px;
+	}
+}

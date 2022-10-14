@@ -1,0 +1,185 @@
+mixin b2b__tab-item-mob-crew(title, link)
+	.b2b__tab-item.b2b__tab-item--ho-hover
+		a(data-toggle="collapse" href="#collapseOneB2b-" + link aria-expanded="false" aria-controls="collapseOneB2b-" + link id="headingOne-" + link)
+			.h5.text-uppercase.mb-0
+				u.text-dark= title
+			.b2b__tab-item__arrow.b2b__tab-item__arrow-center
+				i.icon.icon-bx_bx-left-arrow-alt
+mixin b2b-crew-el(img, num, dep, name, text)
+	img(src="picture/upload/b2b-vector-1312sdf.svg", alt="").mobile-b2b-vector.d-sm-none
+	.b2b-crew__item.mb-5.mb-md-0
+		.position-relative.z-index-2.d-flex.d-md-block.flex-column
+			img(src="picture/upload/sq-b2b.svg", alt="").b2b-crew__item-img-sq
+			img(src="picture/upload/"+img, alt="").b2b-crew__item-img
+			p.h4
+				span.text-white= num 
+				span.text-white 
+				span.text-white человек 
+				span.text-warning в отделе 
+				span.text-warning= dep
+			.row.align-items-center.order-md-1.order-2
+				.col-md-4.b2b-crew__item-mob-absolute
+					.h5.text-uppercase.mb-2.text-warning team leader 
+					p.h4.text-uppercase.mb-4.text-white= name
+				.col-md-8
+					.b2b-crew__item-text-block.mb-4= text 
+			if dep === 'прогрева'
+				.row.pt-sm-4.order-md-2.order-1 
+					.col-md-12.mb-4.mb-md-0
+						.h5.text-white.mb-4 Компетенции:
+						ul.d-flex.flex-wrap.pl-0.list-check-b2b.text-white
+							li Контент-маркетинг
+							li Direct-маркетинг
+							li SMM
+							li PR
+							li ORM
+							li ORMABM
+			if dep === 'аккаунтинга'
+				.row.pt-sm-4.order-md-2.order-1
+					.col-12.d-md-none 
+						.slick-slider-mob.b2b__slider-mob.mb-4.pt-4
+							.col-md-4.px-1
+								a(href="picture/upload/dip-4-full-acc.png" data-fancybox).d-block.mr-2
+									img(src="picture/upload/akk-dip-1.jpg", alt="").w-100.trafic-dip-b2b.trafic-dip-b2b-min
+							.col-md-4.px-1
+								a(href="picture/upload/dip-3-full-acc.png" data-fancybox).d-block.mr-2
+									img(src="picture/upload/akk-dip-2.jpg", alt="").w-100.trafic-dip-b2b.trafic-dip-b2b-min
+							.col-md-4.px-1
+								a(href="picture/upload/dip-2-full-acc.jpg" data-fancybox).d-block.mr-2
+									img(src="picture/upload/akk-dip-3.jpg", alt="").w-100.trafic-dip-b2b.trafic-dip-b2b-min
+							.col-md-4.px-1
+								a(href="picture/upload/dip-1-full-acc.jpg" data-fancybox).d-block.mr-2
+									img(src="picture/upload/akk-dip-4.jpg", alt="").w-100.trafic-dip-b2b.trafic-dip-b2b-min
+					.col-lg-6.col-md-8.d-none.d-md-block
+						.d-flex.flex-wrap 
+							a(href="picture/upload/dip-4-full-acc.png" data-fancybox).d-block.mr-2.mb-3
+								img(src="picture/upload/akk-dip-1.jpg", alt="").w-100.trafic-dip-b2b.trafic-dip-b2b-min
+							a(href="picture/upload/dip-3-full-acc.png" data-fancybox).d-block.mr-2.mb-3
+								img(src="picture/upload/akk-dip-2.jpg", alt="").w-100.trafic-dip-b2b.trafic-dip-b2b-min
+							a(href="picture/upload/dip-2-full-acc.jpg" data-fancybox).d-block.mr-2.mb-3
+								img(src="picture/upload/akk-dip-3.jpg", alt="").w-100.trafic-dip-b2b.trafic-dip-b2b-min
+							a(href="picture/upload/dip-1-full-acc.jpg" data-fancybox).d-block.mr-2.mb-3
+								img(src="picture/upload/akk-dip-4.jpg", alt="").w-100.trafic-dip-b2b.trafic-dip-b2b-min
+			if dep === 'разработки'
+				.row.pt-sm-4.order-md-2.order-1 
+					.col-md-12.mb-4.mb-md-0
+						.h5.text-white.mb-4 Используемые технологии:
+						.d-flex.flex-wrap.b2b-pr-frameworks-container
+							img(src="picture/upload/pr-1.png", alt="").b2b-pr-frameworks
+							img(src="picture/upload/pr-2.png", alt="").b2b-pr-frameworks
+							img(src="picture/upload/pr-3.png", alt="").b2b-pr-frameworks
+							img(src="picture/upload/pr-4.png", alt="").b2b-pr-frameworks
+							img(src="picture/upload/pr-5.png", alt="").b2b-pr-frameworks
+							img(src="picture/upload/pr-6.png", alt="").b2b-pr-frameworks
+			if dep === 'трафика'
+				.row.pt-sm-4.order-md-2.order-1
+					.col-md-12.d-md-none 
+						.slick-slider-mob.b2b__slider-mob.mb-4.pt-4
+							.col-md-4.px-1
+								a(href="picture/upload/tr1.png" data-fancybox).d-block
+									img(src="picture/upload/tr-b2b-1.png", alt="").w-100.trafic-dip-b2b
+							.col-md-4.px-1
+								a(href="picture/upload/tr2.png" data-fancybox).d-block
+									img(src="picture/upload/tr-b2b-2.png", alt="").w-100.trafic-dip-b2b
+							.col-md-4.px-1
+								a(href="picture/upload/tr3.png" data-fancybox).d-block
+									img(src="picture/upload/tr-b2b-3.png", alt="").w-100.trafic-dip-b2b
+					.col-lg-6.col-md-8.d-none.d-md-block
+						.row.no-gutters
+						
+							.col-md-3.px-1
+								a(href="picture/upload/tr1.png" data-fancybox).d-block
+									img(src="picture/upload/tr-b2b-1.png", alt="").w-100.trafic-dip-b2b
+							.col-md-4.px-1
+								a(href="picture/upload/tr2.png" data-fancybox).d-block
+									img(src="picture/upload/tr-b2b-2.png", alt="").w-100.trafic-dip-b2b
+							.col-md-3.px-1
+								a(href="picture/upload/tr3.png" data-fancybox).d-block
+									img(src="picture/upload/tr-b2b-3.png", alt="").w-100.trafic-dip-b2b
+			if dep === 'стратегий'
+				.row.pt-sm-4.order-md-2.order-1
+					.col-md-12.d-md-none 
+						.slick-slider-mob.b2b__slider-mob.mb-4.pt-4
+							.col-md-4.px-1
+								a(href="picture/upload/dip-2-full.jpg" data-fancybox).d-block.sm-w47-img
+									img(src="picture/upload/diploma-1-b2b.jpg", alt="").w-100
+							.col-md-4.px-1
+								a(href="picture/upload/dip-3-full.jpg" data-fancybox).d-block.sm-w47-img
+									img(src="picture/upload/diploma-2-b2b.jpg", alt="").w-100
+							.col-md-4.px-1
+								a(href="picture/upload/dip-1-full.jpg" data-fancybox).d-block.sm-w47-img
+									img(src="picture/upload/diploma-3-b2b.jpg", alt="").w-100
+					.col-lg-6.col-md-8.d-none.d-md-block
+						.row.no-gutters
+							.col-md-4.px-1
+								a(href="picture/upload/dip-2-full.jpg" data-fancybox).d-block
+									img(src="picture/upload/diploma-1-b2b.jpg", alt="").w-100
+							.col-md-4.px-1
+								a(href="picture/upload/dip-3-full.jpg" data-fancybox).d-block
+									img(src="picture/upload/diploma-2-b2b.jpg", alt="").w-100
+							.col-md-4.px-1
+								a(href="picture/upload/dip-1-full.jpg" data-fancybox).d-block
+									img(src="picture/upload/diploma-3-b2b.jpg", alt="").w-100
+.overflow-hidden.position-relative 
+	.b2b-new-sq-absolute.d-none.d-md-block
+	.container.py-5.my-4.position-relative.z-index-2
+		.row 
+			.col-lg-6
+				h2.h2__b2b.form-h2.text-uppercase.mb-3
+					span Команда
+				.h4.mb-0.mb-5
+					span.yellow-border.nowrap-text 97 человек
+						span.border-container.animation.visible.animated(data-animate="newline")
+					span 
+					span в команде. Умеем собирать кроссфункциональные команды под каждый 
+					span.yellow-border.nowrap-text проект для достижения
+						span.border-container.animation.visible.animated(data-animate="newline")
+					span 
+					span кратного роста
+		.row.d-md-none#b2b__accordion-crew
+			.col-md-12 
+				+b2b__tab-item-mob-crew('Отдел стратегий', 'dep-1')
+				.collapse.b2b--collapse(aria-labelledby="headingOne-dep-1" data-parent="#b2b__accordion-crew" id="collapseOneB2b-dep-1")
+					+b2b-crew-el('Group_24176.png', '10', 'стратегий', 'Артем Елисов', 'Ядро любой digital-кампании. Использование самых современных рекламных технологий обернется сливом бюджета без системного подхода и маркетинговых исследований. Чтобы гарантировать результат, мы изучаем рынок, сегментируем целевую аудиторию, прорабатываем позиционирование и УТП, детально проектируем клиентский путь.')
+				+b2b__tab-item-mob-crew('Отдел трафика', 'dep-2')
+				.collapse.b2b--collapse(aria-labelledby="headingOne-dep-2" data-parent="#b2b__accordion-crew" id="collapseOneB2b-dep-2")
+					+b2b-crew-el('Group2124177.png', '10', 'трафика', 'Сергей Сухоплюев', 'Специалисты отдела умеют работать со всеми источниками платного трафика, разбираютстя в работе алгоритмов и в специфике каждого канала продвижения. Мы не только приведем самый качественный трафик, но и оптимизируем всю воронку продаж, чтобы вы получали клиентов, а не лиды.')
+				+b2b__tab-item-mob-crew('Отдел разработки', 'dep-3')
+				.collapse.b2b--collapse(aria-labelledby="headingOne-dep-3" data-parent="#b2b__accordion-crew" id="collapseOneB2b-dep-3")
+					+b2b-crew-el('Group_24179.png', '9', 'разработки', 'Максим Питирянинов', 'Делаем сайты, порталы и приложения, которые дружат с поисковыми системами, просты в поддержке и решают задачи бизнеса. Для этого используем современные фреймворки и гибкие подходы к управлению проектами.')
+				+b2b__tab-item-mob-crew('Отдел прогрева', 'dep-4')
+				.collapse.b2b--collapse(aria-labelledby="headingOne-dep-4" data-parent="#b2b__accordion-crew" id="collapseOneB2b-dep-4")
+					+b2b-crew-el('Group+24170.png', '6', 'прогрева', 'Алена Бирюкова', 'Прогрев – нетъемлемый элемент системы маркетинга и продаж для B2B-сегмента. Мы сочетаем разработку и дистрибуцию контента с различными вовлекающими механиками, которые превращают холодных пользователей в горячих клиентов.')
+				+b2b__tab-item-mob-crew('Отдел аккаунтинга', 'dep-5')
+				.collapse.b2b--collapse(aria-labelledby="headingOne-dep-5" data-parent="#b2b__accordion-crew" id="collapseOneB2b-dep-5")
+					+b2b-crew-el('Group_24181-cr.png', '18', 'аккаунтинга', 'Даниил Нестеров', 'Мы собрали сильную команду, которая умеет добиваться высоких результатов и выстраивать доверительные отношения с клиентами. Повышение квалификации в учебном центре MAED – обязательный этап в карьере менеджера проектов Комплето')
+		.row.d-none.d-md-flex
+			.col-md-4
+				ul.border-0.mb-0.pl-0.nav.d-block.nav-tabs#myTab-b2b-new(role='tablist')
+					li.d-block.mb-3.nav-item
+						a.b2b-new-tab-link.active#dep-1-tab(data-toggle='tab' href='#dep-1' role='tab' aria-controls='dep-1' aria-selected='true')
+							span.font-weight-bold Отдел стратегий
+					li.d-block.mb-3.nav-item
+						a.b2b-new-tab-link#dep-2-tab(data-toggle='tab' href='#dep-2' role='tab' aria-controls='dep-2' aria-selected='false')
+							span.font-weight-bold Отдел трафика
+					li.d-block.mb-3.nav-item
+						a.b2b-new-tab-link#dep-3-tab(data-toggle='tab' href='#dep-3' role='tab' aria-controls='dep-3' aria-selected='false')
+							span.font-weight-bold Отдел разработки
+					li.d-block.mb-3.nav-item
+						a.b2b-new-tab-link#dep-4-tab(data-toggle='tab' href='#dep-4' role='tab' aria-controls='dep-4' aria-selected='false')
+							span.font-weight-bold Отдел прогрева
+					li.d-block.mb-3.nav-item
+						a.b2b-new-tab-link#dep-5-tab(data-toggle='tab' href='#dep-5' role='tab' aria-controls='dep-5' aria-selected='false')
+							span.font-weight-bold Отдел аккаунтинга
+			.col-md-8
+				.tab-content#myTabContent
+					.tab-pane.fade.show.active#dep-1(role='tabpanel' aria-labelledby='dep-1-tab') 
+						+b2b-crew-el('Group_24176.png', '10', 'стратегий', 'Артем Елисов', 'Стратегия – это ядро любой digital-кампании. Использование самых современных рекламных технологий обернется сливом бюджета без системного подхода и маркетинговых исследований. Чтобы гарантировать результат, мы изучаем рынок, сегментируем целевую аудиторию, прорабатываем позиционирование и УТП, детально проектируем клиентский путь.')
+					.tab-pane.fade#dep-2(role='tabpanel' aria-labelledby='dep-2-tab')
+						+b2b-crew-el('Group2124177.png', '10', 'трафика', 'Сергей Сухоплюев', 'Специалисты отдела умеют работать со всеми источниками платного трафика, разбираютстя в работе алгоритмов и в специфике каждого канала продвижения. Мы не только приведем самый качественный трафик, но и оптимизируем всю воронку продаж, чтобы вы получали клиентов, а не лиды.')
+					.tab-pane.fade#dep-3(role='tabpanel' aria-labelledby='dep-2-tab')
+						+b2b-crew-el('Group_24179.png', '9', 'разработки', 'Максим Питирянинов', 'Делаем сайты, порталы и приложения, которые дружат с поисковыми системами, просты в поддержке и решают задачи бизнеса. Для этого используем современные фреймворки и гибкие подходы к управлению проектами.')
+					.tab-pane.fade#dep-4(role='tabpanel' aria-labelledby='dep-2-tab')
+						+b2b-crew-el('Group+24170.png', '6', 'прогрева', 'Алена Бирюкова', 'Прогрев – нетъемлемый элемент системы маркетинга и продаж для B2B-сегмента. Мы сочетаем разработку и дистрибуцию контента с различными вовлекающими механиками, которые превращают холодных пользователей в горячих клиентов.')
+					.tab-pane.fade#dep-5(role='tabpanel' aria-labelledby='dep-2-tab')
+						+b2b-crew-el('Group_24181.png', '18', 'аккаунтинга', 'Даниил Нестеров', 'Мы собрали сильную команду, которая умеет добиваться высоких результатов и выстраивать доверительные отношения с клиентами. Повышение квалификации в учебном центре MAED – обязательный этап в карьере менеджера проектов Комплето')

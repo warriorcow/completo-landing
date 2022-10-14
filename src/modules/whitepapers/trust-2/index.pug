@@ -1,0 +1,32 @@
+mixin videocourse-img-whitepapers(img, link)
+	a(data-fancybox data-type="iframe" data-src=link href="javascript:;").videocourse__sert-img
+		img(src="picture/upload/"+img, alt="").w-100
+.position-relative.pt-5
+	.container.my-md-4
+		.row
+			.col-md-12.col-lg-10.col-xl-8
+				h2.h2.mb-4.mb-md-5.position-relative.z-index-2.form-h2
+					span.yellow-border Почему
+						span.border-container.animation.visible.animated(data-animate="newline")
+					span 
+					span стоит нам доверять?
+		.row.justify-content-center
+			.col-md-10.col-lg-8.mb-5
+				.videocourse__review-carousel-title-block
+					p.videocourse__review-carousel-title Посмотрите 
+						span.font-weight-bold.text-warning наши кейсы, 
+						span как мы увеличивали трафик ресурсов и прибыль своих клиентов
+.whitepapers__trust-2.py-5
+	.container.my-md-4
+		.row
+			.col-md-12
+				.custom-scrollbar
+					.d-flex.justify-content-center
+						+videocourse-img-whitepapers('whitepapers-cases-01.jpg', 'https://drive.google.com/file/d/0B9Eq4ucSYbGjSVgwMkZ5OFBvdjg/preview')
+						+videocourse-img-whitepapers('whitepapers-cases-02.jpg', 'https://drive.google.com/file/d/0B9Eq4ucSYbGjb1NCUGVUSV9jWFE/preview')
+						+videocourse-img-whitepapers('whitepapers-cases-03.jpg', 'https://drive.google.com/file/d/0B9Eq4ucSYbGjZUVNOWhMZ0tncTA/preview')
+						+videocourse-img-whitepapers('whitepapers-cases-04.jpg', 'https://drive.google.com/file/d/0By6T936ia7vUbkV4YzE1VGVlbTQ/preview')
+						+videocourse-img-whitepapers('whitepapers-cases-05.jpg', 'https://drive.google.com/file/d/0By6T936ia7vUb0JzWVNmbXh5WXM/preview')
+						+videocourse-img-whitepapers('whitepapers-cases-06.jpg', 'https://drive.google.com/file/d/0By6T936ia7vUdUc0a0dhbFNoek0/preview')
+						+videocourse-img-whitepapers('whitepapers-cases-07.jpg', 'https://drive.google.com/file/d/0By6T936ia7vUSDhObllZMW5TRWM/preview')
+						+videocourse-img-whitepapers('whitepapers-cases-08.jpg', 'https://drive.google.com/file/d/0B9Eq4ucSYbGjOGZ2NVNrakVfbTA/preview')

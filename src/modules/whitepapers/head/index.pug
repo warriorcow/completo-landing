@@ -1,0 +1,101 @@
+.primary-head.subscribe__head#whitepapershead
+	.container-fluid.primary-head-container.h-100
+		.row.h-100.align-items-center
+			.col-lg-4.col-md-5.d-none.d-md-block.z-index-3
+				.mb-5.system-modules-container__form-container.subscribe__head-form
+					.subscribe__head-form-block.bg-warning.pt-4.p-sm-4
+						.h4.text-center.mb-2.pt-md-2 Напишите 
+							span.text-white Вашу почту
+						p.mb-4.text-center на которую мы отправим вам <br> Справочник по SEO-оптимизации
+						form.form.form-container-modal.validate.bg-warning.system-modules-container__form(method="post" id="new-form-1" novalidate="novalidate")
+							.form-group
+								input(type="text" placeholder="Фамилия, Имя" required name="name" id="modal-text-11").system-modules-container__form-input
+							.form-group
+								input(type="email" placeholder="Email" required name="emaisfl" id="modal-text-13").system-modules-container__form-input
+							.form-group
+								input(type="checkbox" id="modal-text-14" required checked name="agree").system-modules-container__form-input-radio
+								label(for="modal-text-14").d-flex.align-items-center
+									span.system-modules-container__form-input-checkbox
+									span.system-modules-container__form-input-checkbox-text Я согласен с 
+										a(href="https://www.completo.ru/privacy_policy.rtf" target="_blank")
+											u правилами обработки персональных данных
+							.form-group.pr-2.mb-0
+								button.btn.btn-white.form_btn.w-100 Скачать PDF
+			.ml-lg-5.col-md-7.col-lg-6.col-xl-6.pb-5.pl-lg-3.pl-md-5
+				.row
+					.col-md-12.d-flex.justify-content-end 
+						img(src="picture/upload/phone-frame-min.svg", alt="").contact-us__head-small-img
+				.row.align-items-center
+					.col-lg-8.col-xl-7.contact-us__head-title-block.mb-4 
+						.h1.main-title.primary-head__title.mb-3.contact-us__head-title Используй <br>SEO на всю <br>мощь! 
+						.mb-lg-5.mb-4
+							.primary-title.contact-us__head-title-min.mt-lg-2 Ultimate справочник <br>по&nbsp;SEO-оптимизации 
+						.d-none.align-items-center.d-lg-flex 
+							p.mb-0.mr-3 Расскажите друзьям:
+							ul.footer__social-link.d-flex.pl-0.list-unstyled.mb-0
+								li.mr-3
+									+social-link('https://www.facebook.com/completo.ru/', 'facebook-svgrepo-com.svg')
+								li.mr-3
+									+social-link('https://vk.com/completoru', 'iconmonstr-vk-1.svg')
+								li.mr-3
+									+social-link('https://www.linkedin.com/company/completo/', 'iconmonstr-linkedin-1.svg')
+								li.mr-3
+									+social-link('https://www.instagram.com/completo.ru/', 'iconmonstr-instagram-11.svg')
+					.col-lg-4.col-xl-5.mb-4
+						img(src="picture/upload/whitepaper-img-head.png", alt="").w-100.contact-us__head-img.contact-us__head-img-min
+						.d-md-none 
+							button.btn.btn-white.data-scroll.mt-5.mb-4.d-block.dealers__block-head-btn.w-100(data-toggle="modal" data-target="#myModalForm") Скачать PDF
+						.d-block.d-lg-none.text-center.mt-4.mt-md-3
+							p.mb-3.mr-3.pt-4.d-md-none Расскажите друзьям:
+							.d-flex.align-items-center.justify-content-center
+								p.mb-3.mr-3.mt-4.d-none.d-md-block Расскажите друзьям:
+								ul.footer__social-link.d-flex.pl-0.list-unstyled.mb-0.justify-content-center
+									li.mr-3
+										+social-link('https://www.facebook.com/completo.ru/', 'facebook-svgrepo-com.svg')
+									li.mr-3
+										+social-link('https://vk.com/completoru', 'iconmonstr-vk-1.svg')
+									li.mr-3
+										+social-link('https://www.linkedin.com/company/completo/', 'iconmonstr-linkedin-1.svg')
+									li.mr-3
+										+social-link('https://www.instagram.com/completo.ru/', 'iconmonstr-instagram-11.svg')
+
+
+.modal.fade(tabindex="-1" role="dialog")#myModalForm
+	.modal-dialog.modal-dialog-centered(role="document")
+		.modal-content.bg-secondary
+			.modal-header
+				button.close(type="button" data-dismiss="modal" aria-label="Close")
+					span.modal__close-btn(aria-hidden="true")
+			.modal-body
+				.system-modules-container__form-container.subscribe__head-form
+					.h4.text-center.mb-3 Напишите  
+						span.text-white Вашу почту
+					p.mb-4.text-center на которую мы отправим вам <br> Справочник по SEO-оптимизации
+					form.form.form-container-modal-2.validate.bg-warning.system-modules-container__form(method="post" id="new-form-2" novalidate="novalidate")
+						.form-group
+							input(type="text" placeholder="Фамилия, Имя" required name="name" id="modal-text-21").system-modules-container__form-input
+						.form-group
+							input(type="email" placeholder="Email" required name="email" id="modal-text-23").system-modules-container__form-input
+						.form-group
+							input(type="checkbox" id="modal-text-245" required checked name="agree").system-modules-container__form-input-radio
+							label(for="modal-text-245").d-flex.align-items-center
+								span.system-modules-container__form-input-checkbox
+								span.system-modules-container__form-input-checkbox-text Я согласен с 
+									a(href="https://www.completo.ru/privacy_policy.rtf" target="_blank")
+										u правилами обработки персональных данных
+						.form-group.pr-2.mb-0
+							button.btn.btn-white.form_btn.w-100 Скачать PDF
+
+
+.modal.fade(tabindex="1" role="dialog")#subscribe-modal-done
+	.modal-dialog.modal-dialog-centered.subscribe__head-form-modal-block(role="document")
+		.modal-content.border-secondary.border
+			.modal-header
+				button.close(type="button" data-dismiss="modal" aria-label="Close")
+					span.modal__close-btn(aria-hidden="true")
+			.modal-body
+				.container
+					.row
+						.col-md-12
+							.subscribe__head-form-modal.text-center
+								p.mb-4 Спасибо! <br> Справочник по SEO-оптимизации от Комплето уже в пути!

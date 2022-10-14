@@ -1,0 +1,23 @@
+- var title = "Кейс Подробно";
+doctype html
+html(lang="ru")
+	head
+		include modules/head/index.pug
+	body
+		include modules/header/index.pug
+		include modules/cases/amfibia/new-cases-main/index.pug
+		include modules/cases/amfibia/new-cases-tasks/index.pug
+		include modules/cases/amfibia/new-cases-results/index.pug
+		include modules/cases/amfibia/new-cases-we-do/index.pug
+		include modules/cases/amfibia/new-cases-crew/index.pug
+		include modules/cases/amfibia/new-cases-see/index.pug
+		include modules/cases/amfibia/new-cases-blog/index.pug
+		.container#new-form-main
+			.row.pt-5.pb-5#form-content
+				.col-md-12
+					.h2.mb-4.form-h2
+						span.yellow-border Обсудите с нами ваши задачи
+							span.border-container.animation.visible.animated(data-animate="newline")
+				include modules/form/index.pug
+		include modules/footer/index.pug
+		include modules/foot/index.pug

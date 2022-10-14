@@ -1,0 +1,55 @@
+- var title = "Онлайн мероприятия";
+doctype html
+html(lang="ru")
+	head
+		include modules/head/index.pug
+	body
+		include modules/header/index.pug
+		include modules/goonline/head/index.pug
+		include modules/goonline/marketing-consulting/index.pug
+		include modules/goonline/how-we-make/index.pug
+		include modules/goonline/advantages/index.pug
+		include modules/goonline/steps/index.pug
+		include modules/goonline/example-zavod/index.pug
+		.about__wrapper-razrabotka.py-5 
+			.container.mt-md-4
+				.row 
+					.col-md-12
+						h2.h2.mb-5.form-h2.text-white.position-relative.z-index-2
+							span.yellow-border Сколько
+								span.border-container.animation.visible.animated(data-animate='newline')
+							span 
+							span стоит организация онлайн-события?
+				.row 
+					.col-md-6
+						.row 
+							.col-xl-10
+								p.text-white.mb-4 В зависимости от сложности проекта и времени, которое будет затрачено на разработку онлайн платформы и продвижение, стоимость составляет от 
+									span.font-weight-bold 250 000 руб.
+					.col-md-6
+						.row 
+							.col-xl-10
+								p.text-white.font-weight-bold.mb-4 Если начнем работу прямо сейчас, то ваши майские конференции уже будут в онлайне.
+					.col-md-6
+						.row 
+							.col-lg-6.col-md-9
+								button.btn.btn-warning.data-scroll.mt-4.mb-4.d-block.w-100(data-scroll="form-content") Обсудить все срочно!
+		.py-5 
+			.container.my-md-5.my-4
+				.row 
+					.col-md-12.my-md-4
+						+bloquoteFull('Андрей Гавриков,', 'вождь маркетинговой группы «Комплето»', 'andrey.png', 'Мы с 2011 года проводим вебинары и онлайн-конференции, на которых рассказываем про системный электронный маркетинг, благодаря чему мы смогли обучить рынок и, как следствие, получить клиентов и партнеров')
+		.about__wrapper-razrabotka
+			include modules/about/index.pug
+		.form-container
+			.container#new-form-main
+				.row.pt-5.pb-5#form-content
+					.col-md-12
+						.h2.mb-4.form-h2
+							span.yellow-border Найдите точки
+								span.border-container.animation.visible.animated(data-animate="newline")
+							span 
+							span роста бизнеса вместе с Комплето
+					include modules/form/index.pug
+		include modules/footer/index.pug
+		include modules/foot/index.pug

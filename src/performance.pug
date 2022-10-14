@@ -1,0 +1,34 @@
+- var title = "Performance based маркетинг | Заказать в агенстве digital маркетинга Комплето";
+doctype html
+html(lang="ru")
+	head
+		include modules/head/index.pug
+	body
+		include modules/header/index.pug
+		include modules/performance/head/index.pug
+		include modules/performance/crmhead/index.pug
+		include modules/performance/audience/index.pug
+		include modules/performance/ad/index.pug
+		include modules/performance/schema/index.pug
+		include modules/performance/steps/index.pug
+		include modules/performance/crmimplement/index.pug
+		include modules/performance/report/index.pug
+		.py-5
+			.container
+				.row
+					.col-md-12.col-lg-8
+						.h2.mb-3.form-h2 Хотите вести Performance сами?
+						p.mb-5 Начните со стратегии! Обучающие статьи от наших специалистов по разработке digital-стратегии.
+			include modules/performance/blog/index.pug
+		.about__wrapper-razrabotka
+			include modules/about/index.pug
+		.form-container
+			.container#new-form-main
+				.row.pt-5.pb-5#form-content
+					.col-md-12
+						.h2.mb-4.form-h2 Сделайте Performance маркетинг инструментом бизнеса вместе с 
+							span.yellow-border Комплето
+								span.border-container.animation.visible.animated(data-animate="newline")
+					include modules/form/index.pug
+		include modules/footer/index.pug
+		include modules/foot/index.pug

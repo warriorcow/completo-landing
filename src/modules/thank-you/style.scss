@@ -1,0 +1,64 @@
+.thank-you-page {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-image: url('../picture/backgrounds/thank-you-bg.png');
+  background-size: 55%;
+  background-position: right center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  @include media-breakpoint-down(md) {
+    background-size: 45%;
+  }
+  @include media-breakpoint-down(sm) {
+    background-image: none;
+    padding-top: 0;
+  }
+  &-absolute-img {
+    &-1 {
+      width: 109px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    &-2 {
+      width: 119px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+    &-3 {
+      width: 80px;
+      position: absolute;
+      right: -30px;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+    }
+  }
+  &-case-card {
+    min-width: 220px;
+    height: 220px;
+    &-img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: auto;
+    }
+    .case__card-container-logo {
+      width: 106px;
+      height: 41px;
+    }
+    .case__card-container-logo-img {
+      width: 62px;
+      height: 32px;
+    }
+  }
+  &-logo {
+    max-width: 155px;
+    margin-bottom: 58px;
+  }
+}

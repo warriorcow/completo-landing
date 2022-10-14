@@ -1,0 +1,30 @@
+mixin videocourse-card-advantages(icon,title, text)
+	.video-adv__card.text-center 
+		i.icon.video-adv__card-icon(class="icon-"+icon)
+		.video-adv__card-title= title
+		p.font-weight-bold= text
+.position-relative.py-5
+	.container.my-md-4.position-relative
+		.row
+			.col-md-12.col-lg-9.col-xl-9
+				h2.h2.mb-4.mb-md-5.position-relative.z-index-2.form-h2
+					span.yellow-border Преимущества
+						span.border-container.animation.visible.animated(data-animate="newline")
+					span 
+					span курса «Директор по Digital-маркетингу»
+		.row
+			.col-md-12
+				.custom-scrollbar
+					.d-flex.justify-content-center.pt-2
+						+videocourse-card-advantages('video-2-clock', '80 часов', 'практики + 30 часов теории')
+						+videocourse-card-advantages('video-2-graduated', 'Диплом', 'об окончании')
+						+videocourse-card-advantages('video-2-teacher', 'Консультация', 'с преподователем')
+						+videocourse-card-advantages('video-2-plan', 'План', 'действий для внедрения в компании')
+						+videocourse-card-advantages('video-2-recording', 'Дистанционное', 'обучение и просмотр лекций в записи')
+			.col-md-12.d-flex.justify-content-center 
+				button.btn.btn-warning.data-scroll.mt-sm-5.mt-4.mb-4.d-block.px-xl-5(data-scroll="form-content") Узнать больше про курс
+.position-relative.videocourse__advantages-middle.videocourse__advantages-middle-big
+	.container.my-md-4.position-relative
+		.row
+			.col-md-12
+				+form-new('Подпишитесь ', 'на рассылку', 'полезного контента от Комплето!')

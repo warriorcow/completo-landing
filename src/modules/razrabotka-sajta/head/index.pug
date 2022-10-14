@@ -1,0 +1,49 @@
+mixin razrabotka-icon(img, text)
+	.d-flex.align-items-center.primary-head-item.primary-head-item-large
+		.primary-head-item-num
+			img(src="picture/upload/"+img, alt="").primary-head-item-num-icon
+		.primary-head-item-text.text-white!= text
+.primary-head-slider-block.primary-head-slider-block-razrabotka
+	.primary-head-slider
+		.primary-head
+			.container-fluid.primary-head-container.h-100
+				.row.h-100.align-items-center
+					.col-lg-4.col-md-4.d-none.d-md-block
+						+razrabotka-icon('outsourcing.svg', 'Производителям с дистрибьюторскими сетями')
+						+razrabotka-icon('factory.svg', 'Промышленным и производственным предприятиям')
+						+razrabotka-icon('Group-razrabotka.svg', 'Компаниям со сложным продуктом или услугой')
+					.offset-xl-1.col-md-8.col-xl-6
+						.h1.main-title.primary-head__title Разрабатываем и развиваем коммерческие сайты
+						button.btn.btn-warning.data-scroll.mt-4.mb-4.d-block(data-scroll="form-content") Заказать эффективный сайт
+			.primary-head-video
+				video(autoplay="autoplay" muted playsinline loop poster="picture/upload/slide_1-razrabotka.jpg")
+					source(src="picture/upload/Sites-1.mp4" type="video/mp4")
+		.primary-head
+			.container-fluid.primary-head-container.h-100
+				.row.h-100.align-items-center
+					.col-lg-4.col-md-4.d-none.d-md-block
+						+razrabotka-icon('shopping.svg', 'Повысить повторные продажи')
+						+razrabotka-icon('discount.svg', 'Выполнить план по дополнительным продажам')
+						+razrabotka-icon('funnel.svg', 'Снизить количество нецелевых обращений и повысить конверсию из заявки в сделку')
+					.offset-xl-1.col-md-8.col-xl-6
+						.h1.main-title.primary-head__title Выполняем финансовые цели и считаем окупаемость сайта
+						button.btn.btn-warning.data-scroll.mt-4.mb-4.d-block(data-scroll="form-content") Заказать эффективный сайт
+			.primary-head-video
+				video(autoplay="autoplay" muted playsinline loop poster="picture/upload/slide_2-razrabotka.jpg")
+					source(src="picture/upload/Sites-2.mp4" type="video/mp4")
+		.primary-head
+			.container-fluid.primary-head-container.h-100
+				.row.h-100.align-items-center
+					.col-lg-4.col-md-4.d-none.d-md-block
+						p.text-white.primary-head-item-large.mx-auto Качественный дизайн — не гарантия того, что сайт будет продавать. Поэтому мы:
+						+razrabotka-icon('research.svg', 'Изучаем, что нужно вашим потенциальным клиентам')
+						+razrabotka-icon('seo.svg', 'Прорабатываем весь маркетинг')
+						p.text-white.mt-3.primary-head-item-large.mx-auto И только потом приступаем к дизайну.
+					.offset-xl-1.col-md-8.col-xl-6
+						.h1.main-title.primary-head__title Наши сайты решают задачи бизнеса
+						button.btn.btn-warning.data-scroll.mt-4.mb-4.d-block(data-scroll="form-content") Заказать эффективный сайт
+			.primary-head-video
+				video(autoplay="autoplay" muted playsinline loop poster="picture/upload/slide_3-razrabotka.jpg")
+					source(src="picture/upload/Sites-3.mp4" type="video/mp4")
+	.paralax-item.paralax-item-1
+		img(src="picture/upload/dotted_box.png", alt="")

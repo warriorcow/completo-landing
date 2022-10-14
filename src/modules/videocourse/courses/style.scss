@@ -1,0 +1,29 @@
+.videocourse__sert {
+	background-image: url('../picture/backgrounds/videocourse-fon-2.jpg');
+	background-size: cover;
+	position: relative;
+	padding: 70px 0 46px;
+	&-img {
+		display: block;
+		width: 257px;
+		margin: 0 15px;
+		min-width: 200px;
+		&:first-child {
+			margin-left: 0;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&-absolute-img {
+		width: 620px;
+		position: absolute;
+		left: 0;
+		top: -130px;
+		z-index: auto;
+	}
+}
+
+.nowrap-text {
+	white-space: nowrap;
+}

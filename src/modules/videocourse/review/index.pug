@@ -1,0 +1,33 @@
+mixin videocourse-carousel-head(name, img)
+	.d-flex.justify-content-center.flex-column.align-items-center
+		.videocourse__review-carousel-icon.mb-2
+			img(src="picture/upload/"+img, alt="")
+		p.font-weight-bold.text-white.text-center= name
+mixin videocourse-carousel-bottom(title)
+	.videocourse__review-carousel-title-block
+		p.videocourse__review-carousel-title= title
+.position-relative.py-5.videocourse__review
+	img(src="picture/upload/videocourse-review-frame.png", alt="").videocourse__review-absolute-img-2
+	.container.my-md-4
+		.row
+			.col-md-12 
+				img(src="picture/upload/videocourse-review-cube.png", alt="").videocourse__review-absolute-img
+			.col-md-12.col-lg-10.col-xl-8
+				h2.h2.mb-4.mb-md-5.position-relative.z-index-2.form-h2.text-white
+					span.yellow-border Отзывы
+						span.border-container.animation.visible.animated(data-animate="newline")
+					span 
+					span о курсе
+			.col-md-12
+				.videocourse__review-carousel-big
+					+videocourse-carousel-head('Николай Васильев', 'n_vasilev.png')
+					+videocourse-carousel-head('Александр Минаков', 'a_minakov.png')
+					+videocourse-carousel-head('Сергей Голиков', 's_golikov.png')
+			.col-md-12.mt-5
+				.videocourse__review-carousel-small
+					+videocourse-carousel-bottom('Спасибо. Очень достойный уровень. Радует, что подобный подход к маркетингу появился в России.')
+					+videocourse-carousel-bottom('Спасибо за видео, навели на большое количество мыслей!')
+					+videocourse-carousel-bottom('Как же приятно и интересно смотреть на профессионалов! Парни, вы просто красавчики! Радует то, что с вашей помощью развивается отрасль и качество услуг и продаж на выходе. Спасибо за столь полезный контент!')
+			.col-md-12.mt-5.d-flex.justify-content-center
+				.videocourse__review-carousel-arrow.videocourse__review-carousel-arrow-left
+				.videocourse__review-carousel-arrow.videocourse__review-carousel-arrow-right

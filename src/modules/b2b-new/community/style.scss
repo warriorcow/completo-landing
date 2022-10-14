@@ -1,0 +1,11 @@
+.b2b__community-card  {
+	background-image: url('../picture/upload/Group_24175.jpg');
+	background-size: cover;
+	padding: 40px;
+	@include media-breakpoint-down(xs) {
+		padding: 20px;
+		.h3 {
+			font-size: 24px;
+		}
+	}
+}

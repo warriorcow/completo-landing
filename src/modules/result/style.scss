@@ -1,0 +1,53 @@
+.by-marketing {
+	padding: 50px 0;
+	&__link {
+		color: #0082F9;
+		text-decoration: none !important;
+		transition: 0.2s ease all;
+		span {
+			border-bottom: 1px solid #0082F9;
+			transition: 0.2s ease all;
+		}
+		svg {
+			width: 12px;
+			path {
+				fill: #0082F9;
+				transition: 0.2s ease all;
+			}
+		}
+		&:hover,
+		&:focus {
+			color: #00519C;
+			text-decoration: none;
+			span {
+				border-bottom-color: transparent;
+			}
+			svg path {
+				fill: #00519C;
+			}
+		}
+	}
+	&__num {
+		font-size: 46px;
+		line-height: 1;
+		margin-bottom: 15px;
+		font-weight: bold;
+		@include media-breakpoint-up(xl) {
+			font-size: 56px;
+		}
+	}
+	&__border {
+		&-1 {
+			border-right: 1px solid $yellow;
+			@include media-breakpoint-down(sm) {
+				border-right-color: transparent;
+			}
+		}
+		&-2 {
+			border-right: 1px solid $yellow;
+			@include media-breakpoint-down(md) {
+				border-right-color: transparent;
+			}
+		}
+	}
+}

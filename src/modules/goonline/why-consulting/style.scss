@@ -1,0 +1,51 @@
+.why-consulting {
+	&__card {
+		border: 1px solid $yellow;
+		box-shadow: 7px 7px 0 0 $yellow;
+		min-height: 270px;
+		padding: 86px 27px 50px;
+		@include media-breakpoint-down(sm) {
+			min-height: 220px;
+			min-width: 220px;
+		}
+		&-container {
+			margin-bottom: 60px;
+			&-mobile {
+				padding-top: 30px;
+			}
+			@include media-breakpoint-down(sm) {
+				margin-bottom: 20px;
+			}
+		}
+		&-title {
+			font-size: 18px;
+		}
+		&-icon {
+			width: 82px;
+			position: relative;
+			z-index: 2;
+			transform: translateX(-20px);
+			&-block {
+				position: absolute;
+				top: -32px;
+				left: 0;
+				right: 0;
+				margin: auto;
+				text-align: center;
+				&:before {
+					content: '';
+					width: 80px;
+					height: 80px;
+					top: 5px;
+					left: 0;
+					right: 0;
+					margin: auto;
+					position: absolute;
+					background-color: $yellow;
+					border-radius: 100%;
+					z-index: 1;
+				}
+			}
+		}
+	}
+}

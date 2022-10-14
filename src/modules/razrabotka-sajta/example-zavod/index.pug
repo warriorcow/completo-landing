@@ -1,0 +1,16 @@
+.bg-warning.py-5
+	.container
+		.row
+			.col-lg-3.d-flex.flex-column.justify-content-between
+				.d-block
+					.h4.text-white.mb-2 Пример сайта.
+					.h4.mb-2 Ступинский Химический Завод
+					a(href="https://www.behance.net/gallery/70731049/sajt-dlja-stupinskogo-himicheskogo-zavoda/" target="_blank").h4.text-underline Кейс
+				.d-flex.slick-example-margin
+					img(src="picture/upload/el_black_graph.svg", alt="").mr-2.slick-example-margin-img
+					.d-block
+						.h6.mb-0 Низкий показатель отказов по сайту
+						p.mb-0.slick-example-text
+							span.h1 33%
+			.col-lg-9
+				+slick-example('cxz1.jpg', 'cxz2.jpg', 'cxz3.jpg')

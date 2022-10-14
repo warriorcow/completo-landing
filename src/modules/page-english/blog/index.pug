@@ -1,0 +1,74 @@
+.blog
+	.container
+		.row
+			.col-lg-8.mb-4
+				.blog__card.h-100
+					.blog__card-text-container
+						.h3.text-white Training articles and cases
+						.h1.text-white.blog__title #UareMarketingManager
+						p.text-white
+							small Training articles and cases
+					a(href="https://blog.completo.ru/" target="_blank").btn.btn-white.pl-5.pr-5 Read the articles
+					.blog__paralax
+						img(src="picture/upload/Screenshot_1.png", alt="").blog__paralax-img
+						img(src="picture/upload/Screenshot_2.png", alt="").blog__paralax-img.mt-4
+						img(src="picture/upload/Screenshot_3.png", alt="").blog__paralax-img
+						img(src="picture/upload/Screenshot_5.png", alt="").blog__paralax-img.mt-4
+						img(src="picture/upload/Screenshot_7.png", alt="").blog__paralax-img
+						img(src="picture/upload/Screenshot_8.png", alt="").blog__paralax-img.mt-4
+						img(src="picture/upload/Screenshot_9.png", alt="").blog__paralax-img
+						img(src="picture/upload/Screenshot_10.png", alt="").blog__paralax-img.mt-4
+						img(src="picture/upload/Screenshot_11.png", alt="").blog__paralax-img
+						img(src="picture/upload/Screenshot_1.png", alt="").blog__paralax-img.mt-4
+			.col-lg-4.mb-4
+				form.blog__form.form.validate.p-4(id="depesha" method="post"  novalidate="novalidate")
+					.h4 Subscribe
+						span.font-weight-normal Follow useful articles and cases
+					p
+						small Our newsletter is read by 70 000 specialists
+					.row
+						.col-lg-12.mb-3.col-md-6
+							.form-group.mb-0
+								input#blog-text-01(type="text" placeholder="Name" required name="firstname").blog__form-input
+							input(type='hidden' name='referer' data-placeholder)
+							input(type='hidden' name='mmerge4' value='Digital-маркетинг' data-placeholder)
+							input(type='hidden' value='https://www.completo.ru' name='fromsite' data-placeholder)
+						.col-lg-12.mb-3.col-md-6
+							.form-group.mb-0
+								input#blog-text-02(type="email" placeholder="E-mail" required name="email").blog__form-input
+						input#source(type='hidden' name='source' data-placeholder)
+						.col-lg-12.mb-3
+							p.blog__form-text.mb-0
+								small By clicking on the button you agree to
+									a(href="https://completo.ru/privacy_policy.rtf")
+										u the Terms and Conditions of the processing of personal data
+						.col-lg-12.mb-3
+							button.btn.btn-warning.pl-5.pr-5.blog__btn Subscribe
+				script.
+					var ScmParams_depeshaMain = {
+						'onFormSent': function (callback) {
+						},
+						'onFormSentAfter': function (callback) {
+							if (callback['data']['result_id'] && callback['data']['mailchimp_id']) {
+								dataLayer.push({'event': 'send_successful_podpiska_depesha'});
+
+								email = callback['data']['fields']['email'];
+								var carrotvalue = getMyHashNow(email),
+									interval = setInterval(function () {
+										if (carrotvalue) {
+											var response = JSON.parse(carrotvalue.responseText);
+											clearInterval(interval);
+											dataLayer.push({
+												'UserID': response['userId'],
+												'event': 'setUserID'
+											});
+											carrotquest.auth(response['userId'], response['hash']);
+										}
+									}, 500);
+							}
+						}
+					};
+							
+
+
+

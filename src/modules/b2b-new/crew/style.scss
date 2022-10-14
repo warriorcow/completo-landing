@@ -1,0 +1,232 @@
+.b2b-new-tab-link {
+	background-image: url(../picture/upload/bg-b2b-case.png);
+	background-size: 100%;
+	color: rgba(33, 33, 33, 0.7);
+	text-decoration: underline;
+	padding: 20px 30px;
+	font-size: 20px;
+	transition: 0.2s ease all;
+	display: block;
+	text-transform: uppercase;
+	border: 1px solid $warning;
+	position: relative;
+	span {
+		position: relative;
+		z-index: 2;
+	}
+	&:hover,
+	&.active {
+		background-color: rgba(247,208,51,.51);
+		color: rgba(33, 33, 33, 1);
+		&::before {
+			content: '';
+			position: absolute;
+			left: 10px;
+			top: 10px;
+			width: 0; 
+			height: 0; 
+			border-left: 25px solid transparent;
+			border-right: 25px solid transparent;
+			border-bottom: 25px solid $white;
+			transform: rotate(-20deg);
+			z-index: auto;
+		}
+	}
+}
+
+.b2b-new-sq-absolute {
+	width: 930px;
+	height: 530px;
+	right: -500px;
+	position: absolute;
+	top: 50px;
+	background-color: $warning;
+	z-index: auto;
+	transform: rotate(-15deg);
+	@include media-breakpoint-up(xl) {
+		right: -200px;
+		top: 100px;
+	}
+}
+
+.b2b-crew__item {
+	position: relative;
+	padding: 37px 30px;
+	.h4 {
+		@include media-breakpoint-down(lg) {
+			font-size: 20px;
+		}
+	}
+	@include media-breakpoint-down(xs) {
+		padding: 50px 15px 30px;
+		.h4 {
+			font-size: 18px;
+		}
+	}
+	&:before {
+		content: '';
+		width: 50%;
+		height: 100%;
+		background-color: #212121;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+	}
+	&:after {
+		content: '';
+		width: 50%;
+		height: 100%;
+		background-color: #212121;
+		position: absolute;
+		right: 0;
+		border-top-right-radius: 100%;
+		top: 0;
+		z-index: 0;
+		@include media-breakpoint-down(md) {
+			border-top-right-radius: 0;
+		}
+	}
+	&-text-block {
+		background-color: white;
+		padding: 10px;
+		font-size: 14px;
+		transform: rotate(0);
+		position: relative;
+		z-index: 0;
+		width: 100%;
+		padding-right: 140px;
+		@include media-breakpoint-down(md) {
+			padding-right: 40px;
+		}
+		@include media-breakpoint-down(sm) {
+			padding-right: 10px;
+			transform: none;
+			margin-bottom: 135px !important;
+			width: 100%;
+		}
+		@include media-breakpoint-down(xs) {
+			margin-bottom: 155px !important;
+		}
+	}
+	&-img {
+		position: absolute;
+		width: 40%;
+		right: -90px;
+		bottom: -37px;
+		z-index: 2;
+		@include media-breakpoint-down(sm) {
+			width: 270px;
+			max-height: 245px;
+			object-fit: contain;
+		}
+		@include media-breakpoint-down(xs) {
+			right: -40px;
+			bottom: -60px;
+			max-height: 200px;
+			object-fit: contain;
+			object-position: right;
+		}
+		&-sq {
+			position: absolute;
+			width: 88px;
+			bottom: 10px;
+			right: 25%;
+			@include media-breakpoint-down(md) {
+				display: none;
+			}
+		}
+	}
+
+}
+
+.b2b-crew__item-mob-absolute {
+	@include media-breakpoint-down(sm) {
+		position: absolute;
+		bottom: 30px;
+		max-width: 160px;
+	}
+}
+.trafic-dip-b2b {
+	height: 108px;
+	object-fit: cover;
+	&-min {
+		height: 75px;
+		max-width: 60px;
+		margin-left: auto;
+		margin-right: auto;
+		@include media-breakpoint-down(sm) {
+			max-width: 100px;
+			height: 200px;
+		}
+	}
+	@include media-breakpoint-down(sm) {
+		object-fit: contain;
+	}
+}
+
+.sm-w47-img {
+	@include media-breakpoint-down(sm) {
+		width: 200px;
+		height: 150px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.mobile-b2b-vector {
+	width: 100%;
+	margin-bottom: -20px;
+	z-index: 2;
+	position: relative;
+}
+
+.b2b-pr-frameworks {
+	height: 38px;
+	max-width: 68px;
+	object-fit: contain;
+	margin: 0 3px;
+	&-container {
+		@include media-breakpoint-down(lg) {
+			max-width: 270px;
+		}
+	}
+}
+
+.list-check-b2b {
+	list-style-type: none;
+	max-width: 390px;
+	li {
+		position: relative;
+		padding-left: 25px;
+		margin-right: 10px;
+		font-weight: bold;
+		margin-bottom: 10px;
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 18px;
+			height: 18px;
+			background-color: $yellow;
+			border-radius: 100%;
+			background-image: url('../picture/upload/v-check-b2b.svg');
+			background-repeat: no-repeat;
+			background-size: 80%;
+			background-position: center;
+		}
+	}
+}
+.b2b__tab-item__arrow-center {
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.w47 {
+	width: 47px;
+	@include media-breakpoint-down(xs) {
+		width: 42px;
+	}
+}

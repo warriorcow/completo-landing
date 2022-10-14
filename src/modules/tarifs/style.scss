@@ -1,0 +1,233 @@
+.tarif-card {
+  background: #ffffff;
+  border: 1px solid #fecc2f;
+  padding: 24px 12px 24px;
+
+  &__arrow {
+    width: 21px !important;
+    height: 15px;
+    @media (min-width: 992px) {
+      display: none !important;
+    }
+  }
+
+  &__next {
+    margin-left: 15px;
+    transform: rotate(180deg);
+  }
+  &__prev {
+    margin-right: 15px;
+  }
+
+  &.sale {
+    border: none;
+    box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.15);
+  }
+
+  &__inner {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #fecc2f;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0 20px;
+  }
+
+  &__tooltip {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    background: #fecc2f;
+    padding: 0 15px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    margin: -1px auto 0;
+  }
+
+  &__icon {
+    width: 50px !important;
+    height: 50px;
+    display: inline !important;
+    margin-right: 15px;
+    object-fit: contain;
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 26px;
+    height: 50px;
+  }
+
+  &__price {
+    padding: 25px 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    &-value {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 31px;
+    }
+    .btn {
+      max-width: 220px;
+      margin: 30px 10px 0 0;
+    }
+  }
+}
+
+.tarif-table {
+  border-collapse: collapse;
+  width: 100%;
+  height: max-content;
+  font-size: 10px;
+  @media (min-width: 992px) {
+    font-size: 16px;
+  }
+  td {
+    padding: 5px 11px;
+    height: 30px;
+  }
+  &__stage {
+    &:nth-child(odd) {
+      background-color: #f9f9f9;
+    }
+  }
+
+  &__stage-name {
+    width: 100%;
+    @media (min-width: 992px) {
+      font-size: 12px;
+    }
+    @media (min-width: 1280px) {
+      font-size: 14px;
+    }
+  }
+  &__stage-value {
+    width: 80px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 700;
+    @media (min-width: 992px) {
+      font-size: 16px;
+      text-align: left;
+    }
+  }
+  &__stage-title {
+    background-color: #fff;
+    writing-mode: vertical-lr;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1;
+    font-size: 12px;
+    @media (min-width: 992px) {
+      font-size: 14px;
+      padding: 8px !important;
+      border-right: 1px solid #fecc2f;
+    }
+
+    span {
+      display: block;
+      transform: rotate(180deg);
+    }
+
+    &.active {
+      background-color: #f9f9f9;
+    }
+  }
+}
+
+.owl-tarifs {
+  @media (min-width: 992px) {
+    max-width: 650px;
+  }
+
+  @media (min-width: 1280px) {
+    max-width: 780px;
+  }
+
+  .owl-stage-outer {
+    padding: 20px 0;
+
+    @media (min-width: 992px) {
+       overflow: visible;
+    }
+  }
+
+  .owl-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0 !important;
+    .owl-dot {
+      span {
+        width: 6px;
+        height: 6px;
+        background: #fecc2f !important;
+      }
+
+      &.active span {
+        width: 16px;
+        height: 16px;
+        border-radius: 100%;
+        border: 4px #fecc2f solid;
+        background: transparent !important;
+      }
+    }
+  }
+
+  .tarif-table__stage-title {
+    @media (min-width: 992px) {
+      display: none;
+    }
+  }
+  .tarif-table__stage-name {
+    @media (min-width: 992px) {
+      display: none;
+    }
+  }
+}
+
+.stages {
+  display: none;
+  margin-top: 125px;
+  margin-right: 17px;
+  @media (min-width: 992px) {
+    display: block;
+  }
+}
+
+.tarif-container {
+  margin-bottom: 25px;
+  @media (min-width: 992px) {
+    max-width: 960px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (min-width: 1280px) {
+    max-width: 1140px;
+  }
+
+  &__title {
+    margin-left: 30px;
+  }
+}
+
+.tarif-container-fluid {
+  width: 100%;
+}

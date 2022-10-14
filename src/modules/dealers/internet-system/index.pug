@@ -1,0 +1,23 @@
+mixin internet-system-card(text, text2)
+	.col-md-6.col-lg-3.mb-4
+		.d-flex
+			.bg-warning.internet-system-dealers__img-block.d-flex.align-items-center.justify-content-center.mr-2
+				img(src="picture/upload/dealers-check.svg", alt="").internet-system-dealers__img
+			p.mb-0.mt-2
+				span.internet-system-dealers__text.text-warning= text
+				span= text2
+.position-relative.internet-system-dealers.overflow-hidden
+	img(src="picture/upload/Group__287.svg", alt="").internet-system-dealers__absolute-img
+	.container.my-md-4
+		.row
+			.col-md-12.col-lg-10.col-xl-8
+				h2.h2.mb-4.form-h2.form-h2-new Что дает система интернет-продаж 
+					span.yellow-border производителям
+						span.border-container.animation.visible.animated(data-animate="newline")
+					span 
+					span и поставщикам:
+		.row.mt-lg-5.mt-4
+			+internet-system-card('Вы ', 'получаете инструмент управления всей рекламой и маркетинговыми активностями, а также самими дилерами во всей сети.')
+			+internet-system-card('Вам ', 'больше не будут вешать лапшу на уши агентства, продавая SEO, контекст и другие рекламные каналы, обещая "результат".')
+			+internet-system-card('Вы ', 'сами сможете наглядно увидеть, какая рекламная активность какой доход у какого дилера принесла и окупилась ли.')
+			+internet-system-card('Мы ', 'в Комплето сами руками делаем весь интернет-маркетинг для головного сайта и всех дилеров: вы получаете рекламные каналы и технологии в одном окне.')

@@ -1,0 +1,115 @@
+.marathon__banner.primary-head.subscribe__head
+	.container-fluid.primary-head-container.h-100
+		.marathon__banner-wrapper.row.h-100.align-items-center
+			.marathon__banner-left.d-none.d-md-block.z-index-3
+				.mb-5.system-modules-container__form-container.subscribe__head-form
+					.timerBlock.bg-warning
+						.timerBlock__title
+							.h4.text-center
+								span= 'До окончания '
+								br
+								span.text-white= 'бесплатной '
+								| регистрации
+							p.mb-4.text-center на ближайший поток
+						.timerBlock__wrapper
+							.timerBlock__block.timerBlock__hourse
+								.timerBlock__item 0
+								.timerBlock__item 1
+							.timerBlock__block.timerBlock__minuts
+								.timerBlock__item 0
+								.timerBlock__item 2
+							.timerBlock__block.timerBlock__seconds
+								.timerBlock__item 0
+								.timerBlock__item 3
+						.timerBlock__info
+							span часов
+							span минут
+							span секунд
+						.timerBlock__socials
+							.h4.text-center
+								span.text-white= 'Регистрация '
+								| через удобный мессенджер
+							.timerBlock__socials-list
+								a(href="#")
+									i.icon.icon-vk
+								a(href="#")
+									i.icon.icon-tg
+			.marathon__banner-right
+				.row
+					.col-md-12.d-flex.justify-content-end 
+						img(src="picture/upload/phone-frame-min.svg", alt="").contact-us__head-small-img
+				.row.align-items-center
+					.col-lg-7.col-xl-6.contact-us__head-title-block.mb-4 
+						.h1.main-title.primary-head__title.mb-3.contact-us__head-title Performance-&#160;<br>маркетинг&#160;
+						.mb-lg-5.mb-4
+							.primary-title.contact-us__head-title-min марафон полезного контента в вашем мессенджере
+						.d-none.align-items-center.d-lg-flex
+							p.mb-0.mr-3 Расскажите друзьям:
+							ul.footer__social-link.d-flex.pl-0.list-unstyled.mb-0
+								li.mr-3
+									+social-link('https://www.facebook.com/completo.ru/', 'facebook-svgrepo-com.svg')
+								li.mr-3
+									+social-link('https://vk.com/completoru', 'iconmonstr-vk-1.svg')
+								li.mr-3
+									+social-link('https://www.linkedin.com/company/completo/', 'iconmonstr-linkedin-1.svg')
+								li.mr-3
+									+social-link('https://www.instagram.com/completo.ru/', 'iconmonstr-instagram-11.svg')
+					.marathon__banner-vector
+						img(src="picture/upload/marathon-vector.png", alt="").w-100
+					.col-md-12.d-md-none 
+						button.btn.btn-white.mt-4.mb-4.d-block.dealers__block-head-btn(data-toggle="modal" data-target="#myModalForm") Получить доступ к курсу
+
+
+.modal.fade(tabindex="-1" role="dialog")#myModalForm
+	.modal-dialog.modal-dialog-centered(role="document")
+		.modal-content.bg-secondary
+			.modal-header
+				button.close(type="button" data-dismiss="modal" aria-label="Close")
+					span.modal__close-btn(aria-hidden="true")
+			.modal-body
+				.system-modules-container__form-container.subscribe__head-form
+					.timerBlock.bg-warning
+						.timerBlock__title
+							.h4.text-center
+								span= 'До окончания '
+								br
+								span.text-white= 'бесплатной '
+								| регистрации
+							p.mb-4.text-center на ближайший поток
+						.timerBlock__wrapper
+							.timerBlock__block.timerBlock__hourse
+								.timerBlock__item 0
+								.timerBlock__item 1
+							.timerBlock__block.timerBlock__minuts
+								.timerBlock__item 0
+								.timerBlock__item 2
+							.timerBlock__block.timerBlock__seconds
+								.timerBlock__item 0
+								.timerBlock__item 3
+						.timerBlock__info
+							span часов
+							span минут
+							span секунд
+						.timerBlock__socials
+							.h4.text-center
+								span.text-white= 'Регистрация '
+								| через удобный мессенджер
+							.timerBlock__socials-list
+								a(href="#")
+									i.icon.icon-vk
+								a(href="#")
+									i.icon.icon-tg
+
+
+.modal.fade(tabindex="1" role="dialog")#subscribe-modal-done
+	.modal-dialog.modal-dialog-centered.subscribe__head-form-modal-block(role="document")
+		.modal-content.border-secondary.border
+			.modal-header
+				button.close(type="button" data-dismiss="modal" aria-label="Close")
+					span.modal__close-btn(aria-hidden="true")
+			.modal-body
+				.container
+					.row
+						.col-md-12
+							.subscribe__head-form-modal.text-center
+								p.mb-4 Спасибо! <br> Курс отправился на указанную почту!

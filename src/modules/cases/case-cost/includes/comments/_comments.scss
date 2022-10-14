@@ -1,0 +1,57 @@
+.case-cost {
+	&__comment {
+		margin-bottom: 100px;
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+	
+	&__quote {
+		font-size: 30px;
+		line-height: 1.423;
+		color: #000;
+		position: relative;
+		max-width: 882px;
+		padding: 3px 50px 13px 60px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 40px;
+			height: 46px;
+			background: url('../assets/images/case-cost/case-cost-quote-left.svg');
+			background-size: 100% 100%;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 40px;
+			height: 46px;
+			background: url(../assets/images/case-cost/case-cost-quote-right.svg);
+			background-size: 100% 100%;
+		}
+	}
+
+	@media (max-width : $breakpoint-md-max) {
+		&__quote {
+			margin: 0 auto;
+    		max-width: 540px;
+		}
+	}
+
+	@media (max-width : $breakpoint-sm-max) {
+		&__comment {
+			margin-bottom: 70px;
+		}
+
+		&__quote {
+			padding: 54px 0px 58px 38px;
+		}
+	}
+}

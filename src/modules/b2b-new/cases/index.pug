@@ -1,0 +1,134 @@
+mixin b2b__tab-item(title, text1, text2, link, active = false)
+	if active
+		a(href="#" data-href=link).b2b__tab-item.b2b__tab-item-active.js-tab-b2b
+			.h5.text-uppercase.mb-0
+				u.text-dark= title
+			.b2b__tab-item-bottom.text-uppercase
+				span= text1
+				span= text2
+	else
+		a(href="#" data-href=link).b2b__tab-item.js-tab-b2b
+			.h5.text-uppercase.mb-0
+				u.text-dark= title
+			.b2b__tab-item-bottom.text-uppercase
+				span= text1
+				span= text2
+mixin b2b__tab-item-mob(title, text1, text2, link)
+	.b2b__tab-item.b2b__tab-item-active
+		a(data-toggle="collapse" href="#collapseOneB2b-" + link aria-expanded="false" aria-controls="collapseOneB2b-" + link id="headingOne-" + link)
+			.h5.text-uppercase.mb-0
+				u.text-dark= title
+			.b2b__tab-item__arrow 
+				i.icon.icon-bx_bx-left-arrow-alt
+			.b2b__tab-item-bottom.text-uppercase
+				span= text1
+				span= text2
+	.collapse.b2b--collapse(aria-labelledby="headingOne-" + link data-parent="#b2b__accordion" id="collapseOneB2b-" + link)
+		.slick-slider-mob.b2b__slider-mob.mb-4.pt-4
+			+b2b-case('Rectangle_2875.jpg', 'alta-2.png', 'Как сделать охват в соцсетях 1 млн. человек для стройматериалов')
+			+b2b-case('Rectangle_2876.jpg', 'logo_site.svg', 'Как сделать охват в соцсетях 1 млн. человек для стройматериалов')
+			+b2b-case('Rectangle_2877.jpg', 'Motorola_new_logo.svg', 'Разработка landing-page для сбора заявок в России заявок в России и Европе для СИБУР')
+		a(href="#").btn.btn-warning.px-4.b2b__header__btn-full.mb-5.text-warning
+			span.text-dark Все кейсы для 
+				span= title
+		.bg-dark-yellow.p-3.h5.mb-4
+			span.font-weight-normal Маркетинг технологически сложных продуктов 
+			span требует глубокого погружения 
+			span.font-weight-normal исполнителя. Часто видение продукта не совпадает у тех, кто его создает, и тех, кто его покупает. 
+			span Задача маркетинга - выстроить эффективную коммуникацию 
+			span.font-weight-normal между этими группами.
+		button.btn.btn-warning.px-4.b2b__header__btn-full.data-scroll.mb-5(data-scroll="form-content")
+			span Начать сотрудничество
+.bg-light-yellow.mobile-dark-theme.overflow-hidden.tab-container-resist
+	//- .container.py-5.my-4.position-relative
+	.container.pb-5.mb-4.position-relative
+		.row 
+			.col-lg-9
+				h2.h2__b2b.text-uppercase.mb-3
+					span Кейсы по отраслям
+				.h4.mb-0.mb-4
+					span Мы - эксперты в digital  
+					span.yellow-border.nowrap-text для B2B и сложных рынков
+						span.border-container.animation.visible.animated(data-animate="newline")
+				.d-lg-none.d-block#b2b__accordion 
+					+b2b__tab-item-mob('IT и Телекоммуникации', '10+ клиентов', '20+ кейсов', '1')
+					+b2b__tab-item-mob('производители с сетями дилеров', '10+ клиентов', '20+ кейсов', '2')
+					+b2b__tab-item-mob('Стройматериалы и Девелопмент', '10+ клиентов', '20+ кейсов', '3')
+				.d-lg-block.d-none
+					.custom-scrollbar.mb-3
+						.d-flex.justify-content-between.b2b__tabs-container
+							+b2b__tab-item('IT и Телекоммуникации', '10+ клиентов', '20+ кейсов', '1', true)
+							+b2b__tab-item('производители с сетями дилеров', '10+ клиентов', '20+ кейсов', '2')
+							+b2b__tab-item('Стройматериалы и Девелопмент', '10+ клиентов', '20+ кейсов', '3')
+					.tab-el--container
+						.tab-el.active(data-id="1")
+							.py-4.h4.text-uppercase IT и телекоммуникации
+							.bg-dark-yellow.p-3.h5.mb-0
+								span.font-weight-normal Маркетинг технологически сложных продуктов 
+								span требует глубокого погружения 
+								span.font-weight-normal исполнителя. Часто видение продукта не совпадает у тех, кто его создает, и тех, кто его покупает. 
+								span Задача маркетинга - выстроить эффективную коммуникацию 
+								span.font-weight-normal между этими группами
+						.tab-el(data-id="2")
+							.py-4.h4.text-uppercase производители с сетями дилеров
+							.bg-dark-yellow.p-3.h5.mb-0
+								span.font-weight-normal Маркетинг технологически сложных продуктов 
+								span требует глубокого погружения 
+								span.font-weight-normal исполнителя. Часто видение продукта не совпадает у тех, кто его создает, и тех, кто его покупает. 
+								span Задача маркетинга - выстроить эффективную коммуникацию 
+								span.font-weight-normal между этими группами
+						.tab-el(data-id="3")
+							.py-4.h4.text-uppercase Стройматериалы и Девелопмент
+							.bg-dark-yellow.p-3.h5.mb-0
+								span.font-weight-normal Маркетинг технологически сложных продуктов 
+								span требует глубокого погружения 
+								span.font-weight-normal исполнителя. Часто видение продукта не совпадает у тех, кто его создает, и тех, кто его покупает. 
+								span Задача маркетинга - выстроить эффективную коммуникацию 
+								span.font-weight-normal между этими группами
+			.col-lg-3.col-md-4.d-none.d-lg-flex.align-items-end.position-relative.pb-2
+				img(src="picture/upload/rocket__b2b.svg", alt="").rocket__absolute
+				button.btn.btn-warning.px-4.b2b__header__btn-full.data-scroll.mb-1(data-scroll="form-content")
+					span Начать сотрудничество
+		.row.pt-5.tab-el--container.d-none.d-lg-flex
+			.col-md-12.tab-el.active(data-id="1")
+				.row.align-items-end
+					.col-lg-3.mb-3.pb-3
+						.h4.mb-md-4.mb-0 Как мы это делаем, читайте в наших кейсах:
+						a(href="#").btn.btn-warning.px-4.d-none.d-md-inline-block.text-warning
+							span.text-dark Все кейсы для IT и телекоммуникаций
+					.col-lg-9
+						.row.justify-content-end
+							.col-md-4.mb-4
+								+b2b-case('Rectangle_2875.jpg', 'alta-2.png', 'Как сделать охват в соцсетях 1 млн. человек для стройматериалов')
+							.col-md-4.mb-4
+								+b2b-case('Rectangle_2876.jpg', 'logo_site.svg', 'Как сделать охват в соцсетях 1 млн. человек для стройматериалов')
+							.col-md-4.mb-4
+								+b2b-case('Rectangle_2877.jpg', 'Motorola_new_logo.svg', 'Разработка landing-page для сбора заявок в России заявок в России и Европе для СИБУР')
+			.col-md-12.tab-el(data-id="2")
+				.row.align-items-end
+					.col-lg-3.mb-3.pb-3
+						.h4.mb-md-4.mb-0 Как мы это делаем, читайте в наших кейсах:
+						a(href="#").btn.btn-warning.px-4.d-none.d-md-inline-block.text-warning
+							span.text-dark Все кейсы для производителей
+					.col-lg-9
+						.row.justify-content-end
+							.col-md-4.mb-4
+								+b2b-case('Rectangle_2875.jpg', 'alta-2.png', 'Как сделать охват в соцсетях 1 млн. человек для стройматериалов')
+							.col-md-4.mb-4
+								+b2b-case('Rectangle_2876.jpg', 'logo_site.svg', 'Как сделать охват в соцсетях 1 млн. человек для стройматериалов')
+							.col-md-4.mb-4
+								+b2b-case('Rectangle_2877.jpg', 'Motorola_new_logo.svg', 'Разработка landing-page для сбора заявок в России заявок в России и Европе для СИБУР')
+			.col-md-12.tab-el(data-id="3")
+				.row.align-items-end
+					.col-lg-3.mb-3.pb-3
+						.h4.mb-md-4.mb-0 Как мы это делаем, читайте в наших кейсах:
+						a(href="#").btn.btn-warning.px-4.d-none.d-md-inline-block.text-warning
+							span.text-dark Все кейсы для девелопмента
+					.col-lg-9
+						.row.justify-content-end
+							.col-md-4.mb-4
+								+b2b-case('Rectangle_2875.jpg', 'alta-2.png', 'Как сделать охват в соцсетях 1 млн. человек для стройматериалов')
+							.col-md-4.mb-4
+								+b2b-case('Rectangle_2876.jpg', 'logo_site.svg', 'Как сделать охват в соцсетях 1 млн. человек для стройматериалов')
+							.col-md-4.mb-4
+								+b2b-case('Rectangle_2877.jpg', 'Motorola_new_logo.svg', 'Разработка landing-page для сбора заявок в России заявок в России и Европе для СИБУР')

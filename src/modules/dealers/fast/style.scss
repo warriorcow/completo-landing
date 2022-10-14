@@ -1,0 +1,82 @@
+.dealers-fast {
+	background-image: url('../picture/backgrounds/dealers-pattern.png');
+	background-size: contain;
+	background-color: #FFFDE6;
+	position: relative;
+	@include media-breakpoint-down(sm) {
+		border: 1px dashed #949292;
+		&:before {
+			content: '';
+			background-image: url('../picture/upload/dealers-plane.png');
+			width: 74px;
+			height: 66px;
+			position: absolute;
+			left: 0;
+			bottom: -30px;
+			right: 0;
+			margin: auto;
+			background-size: cover;
+		}
+	}
+	&__absolute-img {
+		position: absolute;
+		top: -170px;
+		right: 0;
+		width: 378px;
+		@include media-breakpoint-down(xl) {
+			width: 270px;
+		}
+		@include media-breakpoint-down(sm) {
+			display: none;
+		}
+	}
+	&__card {
+		border-left: 1px solid $yellow;
+		border-right: 1px solid $yellow;
+		&-right-border {
+			border-left: none;
+		}
+		@include media-breakpoint-down(sm) {
+			border: none;
+		}
+		&-top-border {
+			@include media-breakpoint-down(sm) {
+				border-top: 1px solid $yellow;
+			}
+		}
+		&-no-border {
+			border: none;
+			@include media-breakpoint-down(md) {
+				border-right: 1px solid $yellow;
+				padding-right: 15px;
+			}
+			@include media-breakpoint-down(sm) {
+				border-right: none;
+				padding-right: 0;
+				border-top: 1px solid $yellow;
+				border-bottom: 1px solid $yellow;
+				padding-bottom: 15px;
+			}
+		}
+		&-head {
+			height: 87px;
+			display: flex;
+			align-items: center;
+			margin-bottom: 10px;
+			justify-content: center;
+			text-align: center;
+			&-num {
+				font-size: 65px;
+				text-shadow: 4px 4px $yellow;
+				font-weight: bold;
+				&-min {
+					font-size: 52px;
+				}
+			}
+		}
+	}
+}
+
+.form-h2-new .yellow-border {
+	display: inline-block;
+}

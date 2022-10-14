@@ -1,0 +1,52 @@
+- var title = "Разработка digital-стратегии развития маркетинга и продаж";
+- var information = "Заказать демонстрацию";
+- var result_title = "Какие результаты дает digital-стратегия";
+- var result_btn = "Хочу стратегию!";
+doctype html
+html(lang="ru")
+	head
+		include modules/head/index.pug
+	body
+		include modules/header/index.pug
+		include modules/digital-strategy/head/index.pug
+		include modules/digital-strategy/digital-strategy/index.pug
+		include modules/digital-strategy/how-we-make/index.pug
+		include modules/digital-strategy/marketing-strategy/index.pug
+		include modules/result/index.pug
+		include modules/digital-strategy/example/index.pug
+		include modules/digital-strategy/expert/index.pug
+		include modules/digital-strategy/steps/index.pug
+		include modules/digital-strategy/strategy-steps/index.pug
+		include modules/digital-strategy/steps-plan/index.pug
+		include modules/digital-strategy/example2/index.pug
+		include modules/digital-strategy/best/index.pug
+		include modules/digital-strategy/marketing/index.pug
+		include modules/digital-strategy/payback/index.pug
+		.information.bg-white
+			.container
+				.row
+					.col-xl-6
+						.h2.mb-5 Собираете информацию
+							br
+							span для руководства?
+				include modules/information/index.pug
+		.py-5
+			.container
+				.row
+					.col-md-12
+						.h2.mb-5.form-h2 Обучающие статьи от наших специалистов по разработке digital-стратегии
+			include modules/digital-strategy/blog/index.pug
+		.about__wrapper-razrabotka
+			include modules/about/index.pug
+		.form-container
+			.container#new-form-main
+				.row.pt-5.pb-5#form-content
+					.col-md-12
+						.h2.mb-4.form-h2 Разработайте digital-стратегию развития бизнеса 
+							br
+							| вместе с 
+							span.yellow-border Комплето
+								span.border-container.animation.visible.animated(data-animate="newline")
+					include modules/form/index.pug
+		include modules/footer/index.pug
+		include modules/foot/index.pug

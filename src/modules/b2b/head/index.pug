@@ -1,0 +1,26 @@
+mixin razrabotka-icon(img, text)
+	.d-flex.align-items-center.primary-head-item.primary-head-item-large
+		.primary-head-item-num
+			img(src="picture/upload/"+img, alt="").primary-head-item-num-icon
+		.primary-head-item-text.text-white!= text
+.primary-head.dealers__block-head
+	.container-fluid.primary-head-container.h-100
+		.row.h-100.align-items-center
+			.col-lg-4.col-md-4.d-none.d-md-block
+				.mb-4.mb-md-5
+					+razrabotka-icon('fabrica.svg', 'Мы специализируемся на B2B-рынках и точно знаем, какие инструменты продаж b2b лучше всего работают в интернете и офлайн.')
+				+razrabotka-icon('piggy-bank.svg', 'Система b2b продаж от Комплето - это гарантированный рост прибыли без «экспериментов» над вашим бизнесом.')
+			.offset-xl-1.col-md-8.col-xl-6
+				.mb-4.mb-md-5 
+					.h1.main-title.primary-head__title.primary-head__title-big Система интернет-
+
+						br
+						| продаж 
+				.h4.text-white.mb-4.mb-md-5 для В2В компаний, инструменты для B2B продаж
+				.d-md-none
+					.pb-2
+						+razrabotka-icon('fabrica.svg', 'Мы специализируемся на B2B-рынках и точно знаем, какие инструменты продаж b2b лучше всего работают в интернете и офлайн.')
+						+razrabotka-icon('piggy-bank.svg', 'Система b2b продаж от Комплето - это гарантированный рост прибыли без «экспериментов» над вашим бизнесом.')
+				button.btn.btn-warning.data-scroll.mt-4.mb-4.d-block(data-scroll="form-content") Запросить предложение
+	.primary-head-video
+		img(src="picture/backgrounds/b2b-background.jpg", alt="")

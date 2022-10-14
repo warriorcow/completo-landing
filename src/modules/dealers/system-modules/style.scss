@@ -1,0 +1,257 @@
+.system-modules-container {
+	background-image: url('../picture/backgrounds/Group_265-2.jpg');
+	background-size: cover;
+	position: relative;
+	&__form {
+		max-width: 260px;
+		margin: auto;
+		&-container {
+			position: relative;
+			@include media-breakpoint-down(sm) {
+				> * {
+					position: relative;
+					z-index: 2;
+				}
+			}
+			&:before {
+				content: '';
+				right: -60px;
+				width: 60px;
+				top: 0;
+				height: 100%;
+				background-color: $yellow;
+				position: absolute;
+				@include media-breakpoint-down(sm) {
+					width: calc(100% + 60px);
+					left: -30px;
+					right: auto;
+					z-index: 1;
+				}
+			}
+			&:after {
+				content: '';
+				top: 100%;
+				width: 0;
+				height: 0;
+				position: absolute;
+				right: -60px;
+				border-left: 0 solid transparent;
+				border-right: 28px solid transparent;
+				border-top: 40px solid #a98208;
+				@include media-breakpoint-down(sm) {
+					display: none;
+				}
+			}
+		}
+		&-input {
+			height: 32px;
+			padding: 4px 14px;
+			&-checkbox {
+				width: 15px;
+				height: 15px;
+				min-width: 15px;
+				margin-right: 10px;
+				background-color: $white;
+				border-radius: 100%;
+				position: relative;
+				&-text {
+					color: #626262;
+					font-size: 9px;
+					font-weight: normal;
+					a {
+						color: #626262;
+						transition: 0.2s ease all;
+						&:hover {
+							color: $primary;
+						}
+					}
+				}
+				&:before {
+					content: '';
+					width: 5px;
+					height: 5px;
+					position: absolute;
+					left: 0;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					margin: auto;
+					background-color: black;
+					border-radius: 100%;
+					transition: 0.2s ease all;
+					opacity: 0;
+				}
+			}
+			&-radio {
+				position: absolute;
+				pointer-events: none;
+				opacity: 0;
+			}
+		}
+	}
+	&__arrow {
+		width: 40px;
+		object-fit: contain;
+		object-position: center;
+		margin-left: 15px;
+		margin-bottom: 30px;
+		&-normal {
+			width: 16px;
+			// margin-top: 20px;
+			margin-left: 28px;
+		}
+	}
+	&__absolute-img {
+		position: absolute;
+		left: 300px;
+		top: -100px;
+		right: 0;
+		margin: auto;
+		width: 576px;
+		&-mob {
+			position: absolute;
+			left: 0;
+			top: -20px;
+			right: 0;
+			margin: auto;
+			width: 50px;
+		}
+		&-cube {
+			position: absolute;
+			top: 180px;
+			right: 10%;
+			width: 115px;
+			@include media-breakpoint-down(md) {
+				top: auto;
+				bottom: 100px;
+				right: auto;
+				left: 75%;
+			}
+		}
+	}
+	&__list {
+		display: flex;
+		position: relative;
+		list-style-type: none;
+		padding-left: 0;
+		&-dot {
+			width: 100%;
+			height: 100%;
+			background-color: $white;
+			border-radius: 100%;
+			position: relative;
+			z-index: 2;
+			&-block {
+				position: relative;
+				width: 15px;
+				height: 15px;
+				transform: translateX(8px);
+				&:after {
+					content: '';
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					left: 3px;
+					top: 3px;
+					background-color: black;
+					border-radius: 100%;
+					z-index: 1;
+				}
+			}
+		}
+		&-button {
+			width: 35px;
+			height: 35px;
+			color: white;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 36px;
+			font-weight: bold;
+			border: 1px solid $yellow;
+			border-radius: 100%;
+			transition: 0.2s ease all;
+			margin-top: 12px;
+		}
+		&-icon {
+			color: $yellow;
+			font-size: 48px;
+			line-height: 1;
+			transform: translate(-10px, -8px);
+			display: block;
+			transition: 0.2s ease all;
+			&-big {
+				color: $dark;
+				font-size: 82px;
+			}
+			&-block {
+				width: 50px;
+				min-width: 50px;
+				height: 50px;
+				background-color: #847134;
+				border-radius: 100%;
+				margin-right: 16px;
+				transition: 0.2s ease all;
+				&-big {
+					background-color: $yellow;
+					width: 80px;
+					min-width: 80px;
+					height: 80px;
+				}
+			}
+		}
+		&-item {
+			flex-basis: 0;
+			flex-grow: 1;
+			cursor: pointer;
+			&-flex {
+				@include media-breakpoint-down(xs) {
+					height: 56px;
+				}
+			}
+			.h5 {
+				@include media-breakpoint-down(xs) {
+					font-size: 14px;
+				}
+			}
+			&:hover {
+				.system-modules-container__list-icon {
+					color: $white;
+				}
+				.system-modules-container__list-icon-block {
+					background-color: $yellow;
+				}
+				.system-modules-container__list-button {
+					background-color: $yellow;
+				}
+			}
+		}
+		&:before {
+			content: '';
+			width: calc(100% - 10px);
+			height: 22px;
+			background-image: url('../picture/upload/list-line.svg');
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			left: 10px;
+			bottom: 42px;
+			@include media-breakpoint-down(sm) {
+				background-image: url('../picture/upload/dealers-line-medium.svg');
+			}
+		}
+		&-medium {
+			&:before {
+				background-image: url('../picture/upload/dealers-line-medium.svg');
+			}
+		}
+	}
+}
+
+.system-modules-container__form-input-radio:checked+label .system-modules-container__form-input-checkbox::before {
+	opacity: 1;
+}
+
+.system-modules-container__form-input-radio.error+label .system-modules-container__form-input-checkbox {
+	border: 1px solid red;
+}

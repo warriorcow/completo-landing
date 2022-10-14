@@ -1,0 +1,286 @@
+mixin modal-form(id)
+	.bg-warning.pt-4.p-sm-4.mb-5.system-modules-container__form-container
+		.h4.text-center.mb-3 Не понимаете как 
+			span.text-white работает система?
+		p.mb-4.text-center Оставьте свои контакты, и мы объясним лично!
+		form.form.form-container-modal.validate.bg-warning.system-modules-container__form(method="post" id="new-form-"+id novalidate="novalidate")
+			.form-group
+				input(type="text" placeholder="Фамилия, Имя" required name="name" id="modal-text-"+id + "1").system-modules-container__form-input
+			.form-group
+				input(type="text" placeholder="Контактный телефон" required name="phone" id="modal-text-"+id + "2").phone.system-modules-container__form-input
+			.form-group
+				input(type="email" placeholder="Email" required name="emaisfl" id="modal-text-"+id + "3").system-modules-container__form-input
+			.form-group
+				input(type="checkbox" id="modal-text-"+id + "4" required checked name="agree").system-modules-container__form-input-radio
+				label(for="modal-text-"+id + "4").d-flex.align-items-center
+					span.system-modules-container__form-input-checkbox
+					span.system-modules-container__form-input-checkbox-text Я согласен с 
+						a(href="https://www.completo.ru/privacy_policy.rtf" target="_blank")
+							u правилами обработки персональных данных
+			.form-group.pr-2.mb-0
+				button.btn.btn-white.form_btn.w-100 Получить консультацию
+mixin modal-icon(icon, text, text2)
+	.d-flex.pr-xl-3.pr-2.mb-4
+		.system-modules-container__list-icon-block.system-modules-container__list-icon-block-big
+			i.icon.system-modules-container__list-icon.system-modules-container__list-icon-big(class="icon-"+icon)
+		p.mb-4
+			span.font-weight-bold= text
+			if text2 !== false
+				span 
+				span= text2
+mixin system-modules-list(icon, text, link, className)
+	li.system-modules-container__list-item(data-toggle="modal" data-target='#dealers-modules-modal-'+link class=className)
+		.d-flex.pr-xl-3.pr-2.system-modules-container__list-item-flex
+			.system-modules-container__list-icon-block
+				i.icon.system-modules-container__list-icon(class="icon-"+icon)
+			p.h5.text-white!= text
+		.system-modules-container__list-dot-block
+			.system-modules-container__list-dot
+		.system-modules-container__list-button +
+.py-5.position-relative.system-modules-container
+	img(src="picture/upload/Group_277.png", alt="").system-modules-container__absolute-img.d-none.d-lg-inline
+	img(src="picture/upload/dealers-expert-img.png", alt="").system-modules-container__absolute-img-mob.d-inline.d-lg-none
+	img(src="picture/upload/cube.png", alt="").system-modules-container__absolute-img-cube.d-none.d-md-inline
+	.container.my-md-4
+		.row
+			.col-md-12.col-lg-10.col-xl-8
+				h2.h2.mb-4.form-h2.form-h2-new.text-white Модули системы продаж для 
+					span.yellow-border производителей
+						span.border-container.animation.visible.animated(data-animate="newline")
+					span 
+					span и поставщиков:
+				p.text-white.mb-4 Система интернет-продаж состоит из 6 модулей: (1) сайт производителя, (2) колл-центр с CRM, (3) личного кабинета дилера, (4) сети дилерских сайтов, (5) система бронирования заказов, (6) система контроля офлайн-специалистов (монтажников, курьеров и пр.).
+				p.text-white.mb-4 Нажмите на значок «плюса», чтобы изучить подробности.
+		.row
+			.col-md-12.mt-4
+				ul.system-modules-container__list
+					+system-modules-list('dealers-growth', 'Головной сайт компании', '1', '')
+					+system-modules-list('dealers-support', 'Колл- <br> центр <br> с CRM', '2', '')
+					+system-modules-list('dealers-note', 'Система обработки заявок', '3', 'd-none d-sm-inline-block')
+					+system-modules-list('dealers-network', 'Сеть дилерских сайтов', '5', 'd-none d-md-inline-block')
+					+system-modules-list('dealers-home', 'Система брони со склада', '4', 'd-none d-lg-inline-block')
+					+system-modules-list('dealers-tap', 'Контроль работы дилеров', '6', 'd-none d-lg-inline-block')
+				.d-lg-none
+					.row
+						.col-md-6
+							ul.system-modules-container__list.system-modules-container__list-medium.mt-5
+								+system-modules-list('dealers-note', 'Система обработки заявок', '3', 'd-sm-none')
+								+system-modules-list('dealers-network', 'Сеть дилерских сайтов', '5', 'd-md-none')
+								+system-modules-list('dealers-home', 'Система брони со склада', '4', 'd-none d-sm-block')
+								+system-modules-list('dealers-tap', 'Контроль работы дилеров', '6', 'd-none d-sm-block')
+				.d-sm-none
+					.row
+						.col-md-6
+							ul.system-modules-container__list.system-modules-container__list-medium.mt-5
+								+system-modules-list('dealers-home', 'Система брони со склада', '4', '')
+								+system-modules-list('dealers-tap', 'Контроль работы дилеров', '6', '')
+
+
+.modal.fade(tabindex="-1" role="dialog")#dealers-modules-modal-1
+	.modal-dialog.modal-lg.modal-dialog-centered(role="document")
+		.modal-content.rounded-lg.border-secondary.border
+			.modal-header
+				button.close(type="button" data-dismiss="modal" aria-label="Close")
+					span.modal__close-btn(aria-hidden="true")
+			.modal-body
+				.container
+					.row
+						.col-md-12.d-md-none
+							.h2.mb-4.form-h2.form-h2-new Головной сайт
+								br
+								span.yellow-border компании
+									span.border-container.animation.visible.animated(data-animate="newline")
+						.col-md-5
+							+modal-icon('dealers-team', 'Увеличиваем трафик ', 'с ваших текущих 2-3% от интернет-спроса до полного захвата тематики')
+							img(src="picture/upload/Group-459.svg", alt="").system-modules-container__arrow
+							+modal-icon('dealers-webpage', 'Полностью ', 'модернизируем головной сайт')
+							img(src="picture/upload/Group-28313.svg", alt="").system-modules-container__arrow.system-modules-container__arrow-normal
+							+modal-icon('dealers-speed', 'Измеряем рубли продаж, ', 'даже если они идут через дилеров!')
+						.col-md-7
+							.h2.mb-4.form-h2.form-h2-new.d-none.d-md-block Головной сайт
+								br
+								span.yellow-border компании
+									span.border-container.animation.visible.animated(data-animate="newline")
+							p.mb-3 Основной сайт компании, как правило, брендовый, рассказывает о продуктах и услугах. 
+							p.mb-3 В зависимости от типа бизнеса сайт может являться интернет-магазином с возможностью напрямую купить у производителя, или же (что гораздо чаще) сайт является именно демонстрационной витриной, которая не продаёт. 
+							p.mb-3 В лучшем случае головной сайт может иметь телефон и форму предзаказа продукции. 
+							p.mb-3 Непосредственные продажи конечным потребителям делаются дилерами / филиалами / дистрибьютерами. 
+							p.mb-4.pb-2 В нашей системе головной сайт является машиной продаж, заточенный под конвертацию различных градаций спроса и целевых аудиторий.
+							+modal-form('1')
+
+.modal.fade(tabindex="-1" role="dialog")#dealers-modules-modal-2
+	.modal-dialog.modal-lg.modal-dialog-centered(role="document")
+		.modal-content.rounded-lg.border-secondary.border
+			.modal-header
+				button.close(type="button" data-dismiss="modal" aria-label="Close")
+					span.modal__close-btn(aria-hidden="true")
+			.modal-body
+				.container
+					.row
+						.col-md-12.d-md-none
+							.h2.mb-4.form-h2.form-h2-new Колл-центр с 
+								br
+								span.yellow-border CRM
+									span.border-container.animation.visible.animated(data-animate="newline")
+						.col-md-5
+							+modal-icon('dealers-support', 'Звонки и электронные заявки ', 'Операторы колл-цента')
+							img(src="picture/upload/dealers-arrow-medium.svg", alt="").system-modules-container__arrow.system-modules-container__arrow-normal
+							+modal-icon('dealers-crm', 'Вносят всё в CRM ', false)
+							img(src="picture/upload/dealers-arrow-medium.svg", alt="").system-modules-container__arrow.system-modules-container__arrow-normal
+							+modal-icon('dealers-russia', 'Заявки из CRM ', 'распределяются по дилерам в разные города')
+							img(src="picture/upload/dealers-arrow-medium.svg", alt="").system-modules-container__arrow.system-modules-container__arrow-normal
+							+modal-icon('dealers-speed', 'Аналитика до фактических продаж ', 'у дилеров')
+						.col-md-7
+							.h2.mb-4.form-h2.form-h2-new.d-none.d-md-block Колл-центр с 
+								br
+								span.yellow-border CRM
+									span.border-container.animation.visible.animated(data-animate="newline")
+							p.mb-3 Звонки с головного сайта и всех дилерских сайтов поступают в единый колл-центр (наша система может быть построена и без колл-центра - для этого предусмотрена отдельная подсистема электронной работы с заказами). 
+							p.mb-3 В колл-центре настроена наша телефония (если у вас есть своя - свяжемся с ней), которая записывает все разговоры, определяет рекламные каналы, имеет настроенные маршруты переадресации на дилеров. 
+							p.mb-4.pb-2 Все заявки вносятся в нашу единую CRM-систему (если у вас есть своя - свяжемся с ней), после чего идёт сквозной контроль отработки каждой заявки дилером.
+							+modal-form('2')
+
+.modal.fade(tabindex="-1" role="dialog")#dealers-modules-modal-3
+	.modal-dialog.modal-lg.modal-dialog-centered(role="document")
+		.modal-content.rounded-lg.border-secondary.border
+			.modal-header
+				button.close(type="button" data-dismiss="modal" aria-label="Close")
+					span.modal__close-btn(aria-hidden="true")
+			.modal-body
+				.container
+					.row
+						.col-md-12.d-md-none
+							.h2.mb-4.form-h2.form-h2-new Система 
+								br
+								span.yellow-border обработки
+									span.border-container.animation.visible.animated(data-animate="newline")
+								span 
+								span заявок
+						.col-md-5
+							+modal-icon('dealers-global', 'Заказы с головного ', 'или дилерских сайтов')
+							img(src="picture/upload/dealers-arrow-medium.svg", alt="").system-modules-container__arrow.system-modules-container__arrow-normal
+							+modal-icon('dealers-monitor-screen', 'Онлайн-система ', 'приема и обработки заказов')
+							img(src="picture/upload/dealers-arrow-medium.svg", alt="").system-modules-container__arrow.system-modules-container__arrow-normal
+							+modal-icon('dealers-tap', 'Выбор дилером ', 'заказа и закрепление за ним контроля')
+							img(src="picture/upload/dealers-arrow-medium.svg", alt="").system-modules-container__arrow.system-modules-container__arrow-normal
+							+modal-icon('dealers-speed', 'Аналитика до фактических продаж ', 'у дилеров (с системой бронирования со склада)')
+						.col-md-7
+							.h2.mb-4.form-h2.form-h2-new.d-none.d-md-block Система 
+								br
+								span.yellow-border обработки
+									span.border-container.animation.visible.animated(data-animate="newline")
+								span 
+								span заявок
+							p.mb-3 Единая система, в которой могут работать все дилеры. 
+							p.mb-3 Она позволяет видеть все заказы с головного сайта, сайтов дилеров. 
+							p.mb-3 Эти заказы будут распределены по регионам и по дилерам в зависимости от их рейтинга (или по любым другим критериям). 
+							p.mb-3 Каждый дилер сможет принять заказ, после чего за этим дилером и заказом устанавливается сквозной контроль, а после его выполнения у конечного клиента выясняется степень удовлетворённости работой дилера. 
+							p.mb-4.pb-2 Более того, при связке системы с телефонией (мы делаем это) появляется возможность звонить прямо из системы с записью разговора и временем звонка - можно четко видеть, какой дилер как быстро обрабатывает заказы и насколько качественно.
+							+modal-form('3')
+
+
+.modal.fade(tabindex="-1" role="dialog")#dealers-modules-modal-4
+	.modal-dialog.modal-lg.modal-dialog-centered(role="document")
+		.modal-content.rounded-lg.border-secondary.border
+			.modal-header
+				button.close(type="button" data-dismiss="modal" aria-label="Close")
+					span.modal__close-btn(aria-hidden="true")
+			.modal-body
+				.container
+					.row
+						.col-md-12.d-md-none
+							.h2.mb-4.form-h2.form-h2-new Система  
+								br
+								span бронирования со 
+								span.yellow-border склада
+									span.border-container.animation.visible.animated(data-animate="newline")
+						.col-md-5
+							+modal-icon('dealers-home', 'Заказы с сайта дилера, ', 'головного сайта или офлайн магазина')
+							img(src="picture/upload/dealers-arrow-medium.svg", alt="").system-modules-container__arrow.system-modules-container__arrow-normal
+							+modal-icon('dealers-tap', 'Дилер оформляет ', 'в системе заявку, каждому заказу присваивается рекламный канал, с которого пришёл конечный клиент')
+							img(src="picture/upload/dealers-arrow-medium.svg", alt="").system-modules-container__arrow.system-modules-container__arrow-normal
+							+modal-icon('dealers-shipped', 'Завод поставляет ', 'дилеру товары + в системе есть все документы (акты, счета, фактуры)')
+							img(src="picture/upload/dealers-arrow-medium.svg", alt="").system-modules-container__arrow.system-modules-container__arrow-normal
+							+modal-icon('dealers-speed', 'Аналитика до фактических продаж ', 'у дилеров (с системой бронирования со склада)')
+						.col-md-7
+							.h2.mb-4.form-h2.form-h2-new.d-none.d-md-block Система
+								br
+								span бронирования со 
+								span.yellow-border склада
+									span.border-container.animation.visible.animated(data-animate="newline")
+							p.mb-3 Онлайн-система, через которую все дилеры могут заказывать товар со склада производителя или генерального поставщика. 
+							p.mb-3 В системе также выписываются все счета и закрывающие документы. Полная связка с 1С. Интеграция с веб-аналитикой, CRM и телефонией. 
+							p.mb-3 Итого: вы сможете контролировать все продажи у ваших дилеров с привязкой к рекламным активностям. 
+							p.mb-3 Например, вы вложили 500 000 рублей в контекстную рекламу, к вам на головной сайт зашли 3000 человек, а дилеры в итоге продали продукции только 300 людям на определённое количество рублей (аналогично и для заказов на дилерских сайтах). 
+							p.mb-4.pb-2 Всё это вы можете увидеть в любых срезах и фактических цифрах.
+							+modal-form('4')
+
+
+.modal.fade(tabindex="-1" role="dialog")#dealers-modules-modal-5
+	.modal-dialog.modal-lg.modal-dialog-centered(role="document")
+		.modal-content.rounded-lg.border-secondary.border
+			.modal-header
+				button.close(type="button" data-dismiss="modal" aria-label="Close")
+					span.modal__close-btn(aria-hidden="true")
+			.modal-body
+				.container
+					.row
+						.col-md-12.d-md-none
+							.h2.mb-4.form-h2.form-h2-new Сеть дилерских
+								br
+								span.yellow-border сайтов
+									span.border-container.animation.visible.animated(data-animate="newline")
+						.col-md-5
+							+modal-icon('dealers-seo', 'Старые сайты дилеров ', '(все разные, мешающие друг другу продвигаться)')
+							img(src="picture/upload/dealers-arrow-small.svg", alt="").system-modules-container__arrow.system-modules-container__arrow-normal
+							+modal-icon('dealers-gamepad', 'Унифицированные сайты ', 'дилеров + система управления ими')
+							img(src="picture/upload/dealers-arrow-small.svg", alt="").system-modules-container__arrow.system-modules-container__arrow-normal
+							+modal-icon('dealers-star', 'Теперь у каждого дилера ', 'свой классный сайт')
+							img(src="picture/upload/dealers-arrow-small.svg", alt="").system-modules-container__arrow.system-modules-container__arrow-normal
+							+modal-icon('dealers-analysis', 'Мы видим единую аналитику ', 'по всем сайтам дилеров по трафику, заказам и звонкам')
+							img(src="picture/upload/dealers-arrow-small.svg", alt="").system-modules-container__arrow.system-modules-container__arrow-normal
+							+modal-icon('dealers-speed', 'Аналитика до фактических продаж ', 'у дилеров (с системой бронирования со склада)')
+						.col-md-7
+							.h2.mb-4.form-h2.form-h2-new.d-none.d-md-block Сеть дилерских
+								br
+								span.yellow-border сайтов
+									span.border-container.animation.visible.animated(data-animate="newline")
+							p.mb-3 У нас есть полностью рабочее проверенное решение, как сделать так,чтобы все дилеры имели продающие сайты с актуальным каталогом и маркетингом, активно продвигались бы в своих регионах в поисковых системах и при этом не мешали друг другу. 
+							p.mb-3 Более того, такая сеть сайтов имеет единую веб-аналитику, а также аналитику звонков. 
+							p.mb-4.pb-2 Вы можете больше не волноваться на тему того, как дилеры работают через интернет, и быть уверенным в том, что используете региональный потенциал повышения продаж на все 100%.
+							+modal-form('5')
+
+
+.modal.fade(tabindex="-1" role="dialog")#dealers-modules-modal-6
+	.modal-dialog.modal-lg.modal-dialog-centered(role="document")
+		.modal-content.rounded-lg.border-secondary.border
+			.modal-header
+				button.close(type="button" data-dismiss="modal" aria-label="Close")
+					span.modal__close-btn(aria-hidden="true")
+			.modal-body
+				.container
+					.row
+						.col-md-12.d-md-none
+							.h2.mb-4.form-h2.form-h2-new Контроль работы
+								br
+								span.yellow-border дилеров
+									span.border-container.animation.visible.animated(data-animate="newline")
+						.col-md-5
+							+modal-icon('dealers-web-page', 'Онлайн-система обработки заявок', false)
+							img(src="picture/upload/dealers-arrow-small.svg", alt="").system-modules-container__arrow.system-modules-container__arrow-normal
+							+modal-icon('dealers-gift', 'УДилер №1 принимает заказ ', '(если не принимает в нужное время - перевод заказа другому)')
+							img(src="picture/upload/dealers-arrow-small.svg", alt="").system-modules-container__arrow.system-modules-container__arrow-normal
+							+modal-icon('dealers-support', 'Дилер №2 звонит клиенту ', '(с записью разговора)')
+							img(src="picture/upload/dealers-arrow-small.svg", alt="").system-modules-container__arrow.system-modules-container__arrow-normal
+							+modal-icon('dealers-cooperation', 'Если клиент доволен ', '- завершение продажи')
+							img(src="picture/upload/dealers-arrow-small.svg", alt="").system-modules-container__arrow.system-modules-container__arrow-normal
+							+modal-icon('dealers-learning', 'Если клиент не доволен - ', 'заказ переходит другому дилеру')
+						.col-md-7
+							.h2.mb-4.form-h2.form-h2-new.d-none.d-md-block Контроль работы
+								br
+								span.yellow-border дилеров
+									span.border-container.animation.visible.animated(data-animate="newline")
+							p.mb-3 Подсистема контроля удовлетворённости конечных клиентов автоматически проконтролирует то, как сработал дилер, а если нужно - отправит сообщение в колл-центр на обзвон. 
+							p.mb-3 Также можно будет видеть, сколько прошло времени от момента появления заказа у дилера до фактической связи с клиентом. 
+							p.mb-4.pb-2 Система также позволяет присваивать каждому дилеру определённый ранг/балл за работу и распределять новые заказы в зависимости от этого показателя. Повышайте продажи, повышая качество работы дилеров!
+							+modal-form('6')

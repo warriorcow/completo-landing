@@ -1,0 +1,284 @@
+@import "mixin";
+@import "black";
+
+.cases-container-page {
+	padding-top: 100px;
+	background-color: #f3f3f3;
+	&__custom {
+		box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.15);
+		margin: 40px 0;
+		&-body {
+			padding: 0 15px 30px;
+			a {
+				text-decoration: none !important;
+				color: white;
+				border-bottom: 1px solid white;
+				transition: 0.3s ease all;
+				&:hover {
+					border-bottom-color: transparent;
+				}
+			}
+		}
+		&-head {
+			margin-bottom: 30px;
+			padding: 30px 15px 15px;
+		}
+		&-velux {
+			background-color: white;
+			&-head {
+				border-bottom: 1px solid $danger;
+			}
+			&-img {
+				&-container {
+					background-image: url('../picture/upload/velux_bg.png');
+					background-size: cover;
+				}
+			}
+		}
+		&-img {
+			position: absolute;
+			right: 0;
+			left: 0;
+			margin: auto;
+			top: -30px;
+			height: calc(100% + 60px);
+			background-size: contain;
+			@include media-breakpoint-down(sm) {
+				position: initial;
+				display: block;
+				height: initial;
+				margin-bottom: -40px;
+				max-width: 100%;
+			}
+			&-container {
+				position: relative;
+				height: 100%;
+			}
+		}
+		&-torex {
+			background-color: #CF2426;
+			&-img {
+				left: auto;
+				right: -10px;
+				@include media-breakpoint-down(sm) {
+					max-width: 100px;
+				}
+			}
+			&-head {
+				border-bottom: 1px solid white;
+				img {
+					max-width: 100px;
+				}
+			}
+		}
+		&-maria {
+			background-color: #D50000;
+			&-img {
+				left: auto;
+				right: -50px;
+				@include media-breakpoint-down(lg) {
+					height: 100%;
+					top: 0;
+				}
+			}
+		}
+		&-motorola {
+			background-color: rgb(245,242,112);
+			&-head {
+				border-bottom: 1px solid $dark;
+				img {
+					width: 160px;
+				}
+			}
+			&-img {
+				@include media-breakpoint-down(sm) {
+					max-width: 100px;
+				}
+			}
+			a {
+				border-bottom-color: $dark;
+				&:hover {
+					border-bottom-color: transparent;
+				}
+			}
+		}
+		&-ros {
+			background-color: #a9c2f0;
+			&-head {
+				border-bottom: 1px solid $dark;
+				img {
+					width: 110px;
+					transform: translateY(-6px);
+				}
+			}
+			&-img {
+				height: calc(100% - 30px);
+				object-fit: contain;
+				object-position: bottom;
+				@include media-breakpoint-down(md) {
+					height: 100%;
+				}
+				@include media-breakpoint-down(sm) {
+					max-width: 100px;
+					height: initial;
+				}
+			}
+		}
+		&-tavros {
+			background-color: #d9d9d9;
+			overflow: hidden;
+			&-head {
+				border-bottom: 1px solid $dark;
+				img {
+					width: 160px;
+				}
+			}
+			&-img {
+				height: initial;
+				width: 100%;
+				left: auto;
+				right: -35px;
+				top: auto;
+				bottom: 0;
+				@include media-breakpoint-down(sm) {
+					max-width: 100px;
+					margin-right: 0;
+				}
+			}
+			a {
+				border-bottom-color: $dark;
+				&:hover {
+					border-bottom-color: transparent;
+				}
+			}
+		}
+		&-komek {
+			background-color: #EAAA00;
+			&-head {
+				border-bottom: 1px solid $dark;
+				img {
+					width: 120px;
+				}
+			}
+			&-img {
+				left: auto;
+				right: -35px;
+			}
+			a {
+				border-bottom-color: $dark;
+				&:hover {
+					border-bottom-color: transparent;
+				}
+			}
+		}
+		&-stup {
+			background-color: white;
+			background-image: url('../picture/upload/cxz_bg.png');
+			background-size: cover;
+			a {
+				border-bottom-color: $dark;
+				&:hover {
+					border-bottom-color: transparent;
+				}
+			}
+			&-head {
+				border-bottom: 1px solid $danger;
+				img {
+					@include media-breakpoint-down(xs) {
+						width: 100px;
+					}
+				}
+			}
+			&-img {
+				@include media-breakpoint-down(lg) {
+					height: 100%;
+					top: 0;
+					left: auto;
+					right: -30px;
+				}
+			}
+		}
+		&-megaflex {
+			background-color: #008D36;
+			margin: 0;
+			&-head {
+				background-color: white;
+				padding: 15px 30px;
+				img {
+					width: 120px;
+				}
+			}
+			&-img {
+				position: absolute;
+				height: 130%;
+				right: -15px;
+				bottom: 0;
+				left: auto;
+				top: auto;
+				@include media-breakpoint-down(lg) {
+					height: 100%;
+				}
+				@include media-breakpoint-down(sm) {
+					margin-bottom: 0;
+					&-container {
+						height: 300px;
+					}
+
+				}
+			}
+		}
+		&-alta {
+			margin-bottom: 80px;
+			box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.15);
+			&-head {
+				background-color: white;
+				padding: 30px;
+				img {
+					width: 120px;
+				}
+			}
+			&-body {
+				background-color: #0071BB;
+				padding: 20px 30px;
+			}
+			&-row {
+				margin-bottom: -80px;
+				margin-top: 40px;
+				@include media-breakpoint-down(sm) {
+					margin-bottom: -60px;
+				}
+				img {
+					object-fit: contain;
+					height: 100%;
+					max-height: 130px;
+					@include media-breakpoint-down(sm) {
+						min-width: 80px;
+						max-height: 90px;
+					}
+				}
+			}
+		}
+	}
+	.h1 {
+		font-size: 75px;
+		@include media-breakpoint-down(sm) {
+			font-size: 48px;
+		}
+	}
+}
+
+@for $i from 1 through 10 {
+	.cases-container-page__order {
+		@include media-breakpoint-down(md) {
+			&-#{$i} {
+				order: $i;
+			}
+		}
+	}
+}
+.line-height-1 {
+	line-height: 1;
+}
+.bg-black {
+	background-color: black;
+}

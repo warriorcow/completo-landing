@@ -1,0 +1,22 @@
+.follow {
+	padding-bottom: 30px;
+	margin-top: 40px;
+	padding-top: 70px;
+	background-image: url('../picture/backgrounds/Group_30.jpg');
+	background-size: contain;
+	overflow: hidden;
+	@include media-breakpoint-down(sm) {
+		padding-bottom: 0;
+	}
+	&__scrollbar {
+		&-x {
+			width: 100%;
+		}
+		&-y {
+			height: 300px;
+		}
+	}
+	&__title {
+		font-size: 2rem;
+	}
+}

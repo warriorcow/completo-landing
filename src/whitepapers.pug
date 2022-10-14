@@ -1,0 +1,26 @@
+- var title = "Aнализ конкурентов: скачайте бесплатно инструкцию конкурентного анализа от Комплето. Не наломайте дров - используйте опыт конкурентов!";
+doctype html
+html(lang="ru")
+	head
+		include modules/head/index.pug
+	body
+		.header-black-bg
+			include modules/header/index.pug
+		include modules/whitepapers/head/index.pug
+		include modules/whitepapers/courses/index.pug
+		include modules/whitepapers/teachers/index.pug
+		include modules/whitepapers/trust/index.pug
+		include modules/whitepapers/dialog/index.pug
+		include modules/whitepapers/trust-2/index.pug
+		include modules/whitepapers/evolution/index.pug
+		include modules/whitepapers/marketing/index.pug
+		.form-container
+			.container#new-form-main
+				.row.pt-5.pb-5#form-content
+					.col-md-12
+						.h2.mb-4.form-h2
+							span.yellow-border Обсудить ваши задачи!
+								span.border-container.animation.visible.animated(data-animate="newline")
+					include modules/form/index.pug
+		include modules/footer/index.pug
+		include modules/foot/index.pug

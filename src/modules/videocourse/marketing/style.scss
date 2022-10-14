@@ -1,0 +1,20 @@
+.videocourse__marketing-card {
+	background-color: #EEEFF3;
+	position: relative;
+	margin-top: 50px;
+	padding: 18px;
+	padding-top: 125px;
+	box-shadow: 7px 7px 0 0 $yellow;
+	height: calc(100% - 50px);
+	&-img {
+		position: absolute;
+		width: 154px;
+		top: -50px;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+	&-btn {
+		min-width: 140px;
+	}
+}

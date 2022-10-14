@@ -1,0 +1,35 @@
+.new-cases-blog {
+	&__scrollbar {
+		min-width: 1400px;
+	}
+	&__card {
+		background-image: url('../../picture/upload/pattern.png');
+		background-size: cover;
+		width: 260px;
+		min-width: 260px;
+		border-radius: 6px;
+		padding: 25px 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin: 0 10px 30px;
+		&:last-child {
+			margin-right: 0;
+		}
+		&-title {
+			font-size: 24px;
+			font-weight: bold;
+			
+			u {
+				transition: 0.2s ease all;
+				color: black;
+				&:hover {
+					color: $yellow;
+				}
+			}
+		}
+		&-text {
+			font-size: 18px;
+		}
+	}
+}

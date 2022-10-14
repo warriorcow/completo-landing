@@ -1,0 +1,30 @@
+input.valid,
+textarea.error {
+	border-color: green !important;
+	color: green !important;
+	&::placeholder {
+		color: green !important;
+	}
+}
+input.error,
+textarea.error {
+	border-color: red !important;
+	color: red !important;
+	&::placeholder {
+		color: red !important;
+	}
+}
+.form {
+	box-shadow: 0 15px 25px rgba(0,0,0,.15);
+}
+.footer_no-btn .btn {
+	display: none;
+}
+.header-black-bg .header {
+	background: url(../picture/backgrounds/topographic-transparent-02.png);
+	background-position: center;
+	height: initial;
+}
+.header .ul.columns.columns--3 {
+	column-count: 3;
+}

@@ -1,0 +1,28 @@
+- var title = "Система интернет-продаж для В2В компаний";
+doctype html
+html(lang="ru")
+	head
+		include modules/head/index.pug
+	body
+		include modules/header/index.pug
+		include modules/b2b/head/index.pug
+		include modules/b2b/courses/index.pug
+		include modules/b2b/steps/index.pug
+		include modules/b2b/why-consulting/index.pug
+		include modules/b2b/test/index.pug
+		include modules/b2b/why-us/index.pug
+		include modules/b2b/marketing/index.pug
+		include modules/b2b/consulting-cases/index.pug
+		include modules/b2b/clients/index.pug
+		.form-container
+			.container#new-form-main
+				.row.pt-5.pb-5#form-content
+					.col-md-12
+						.h2.mb-4.form-h2
+							span.yellow-border Вы B2B-компания?
+								span.border-container.animation.visible.animated(data-animate="newline")
+							br 
+							span Узнайте, как мы можем вам помочь!
+					include modules/form/index.pug
+		include modules/footer/index.pug
+		include modules/foot/index.pug

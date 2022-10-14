@@ -1,0 +1,17 @@
+[id^="bs-namespace_header"] {
+  @import "bootstrap/functions";
+  @import "bootstrap/variables";
+  @import "bootstrap/mixins";
+  @import "bootstrap/root";
+
+  @import "../modules/header/style";
+
+  .header {
+    z-index: 9999 !important;
+    top: 0;
+    .container {
+      position: static;
+    }
+  }
+}
+

@@ -1,0 +1,38 @@
+mixin whitepaper-dialog-left(img, name, text)
+	.col-md-12.col-lg-10.col-xl-9.mb-4.mb-md-5.pb-md-4
+		.d-flex.whitepapers-dialog__block
+			.whitepapers-dialog__block-icon
+				img(src="picture/upload/"+img, alt="")
+			.whitepapers-dialog__block-item
+				.whitepapers-dialog__block-title= name
+				p.mb-0= text
+mixin whitepaper-dialog-right(img, name, text)
+	.col-md-12.col-lg-10.col-xl-9.mb-4.mb-md-5.pb-md-4.pb-md-4
+		.d-flex.whitepapers-dialog__block.whitepapers-dialog__block-right
+			.whitepapers-dialog__block-icon
+				img(src="picture/upload/"+img, alt="")
+			.whitepapers-dialog__block-item.whitepapers-dialog__block-item-right
+				.whitepapers-dialog__block-title= name
+				p.mb-0= text
+.position-relative.py-5.dealers-fast.whitepapers-dialog
+	img.dealers-fast__absolute-img.whitepapers-dialog__img(src='picture/upload/dealers-hand.png' alt)
+	.container.my-md-4
+		.row
+			.col-md-12.col-lg-10.col-xl-8
+				h2.h2.mb-4.mb-md-0.position-relative.z-index-2.form-h2
+					span.yellow-border из ЖИЗНИ..
+						span.border-container.animation.visible.animated(data-animate="newline")
+		.row
+			.col-md-12.d-none.d-md-flex.justify-content-end
+				img(src="picture/upload/Group_289.png", alt="").whitepapers-dialog__icon
+		.row.justify-content-center.mt-4
+			+whitepaper-dialog-left('vladimir.png', 'Владимир Давыдов', 'Вы с ума сошли такое публиковать! Так даже школьник сможет пилить seo!')
+			+whitepaper-dialog-right('misha.png', 'Михаил Фёдоров', 'Пусть сначала хотя бы прочтут, а то прокрастинирует народ :)')
+			+whitepaper-dialog-left('vladimir.png', 'Владимир Давыдов', 'За такое нехилые бабки просят на курсах, а мы бесплатно инфу выкатываем!')
+			+whitepaper-dialog-right('misha.png', 'Михаил Фёдоров', 'Нормал я считаю, пусть знают, что seo это не только ключевики, тут пахать надо')
+			+whitepaper-dialog-left('andrey.png', 'Андрей Гавриков', 'Выпускайте бычка 😬')
+		.row
+			.col-md-12.d-md-flex.justify-content-center.d-none
+				button.btn.btn-warning.data-scroll.mb-4.mt-4.mt-md-0.d-block.whitepapers-dialog__btn(data-scroll='whitepapershead')  Скачать PDF
+			.col-md-12.d-flex.justify-content-center.d-md-none
+				button.btn.btn-warning.data-scroll.mt-5.mb-4.d-block.dealers__block-head-btn.whitepapers-dialog__btn(data-toggle="modal" data-target="#myModalForm")  Скачать PDF

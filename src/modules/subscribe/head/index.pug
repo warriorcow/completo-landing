@@ -1,0 +1,89 @@
+.primary-head.subscribe__head
+	.container-fluid.primary-head-container.h-100
+		.row.h-100.align-items-center
+			.col-lg-4.col-md-5.d-none.d-md-block.z-index-3
+				.mb-5.system-modules-container__form-container.subscribe__head-form
+					.subscribe__head-form-block.bg-warning.pt-4.p-sm-4
+						.h4.text-center.mb-2.pt-md-2 Куда 
+							span.text-white ОТПРАВИТЬ
+						p.mb-4.text-center годный контент по интернет-маркетингу?
+						form.form.form-container-modal.validate.bg-warning.system-modules-container__form(method="post" id="new-form-1" novalidate="novalidate")
+							.form-group
+								input(type="text" placeholder="Фамилия, Имя" required name="name" id="modal-text-11").system-modules-container__form-input
+							.form-group
+								input(type="email" placeholder="Email" required name="emaisfl" id="modal-text-13").system-modules-container__form-input
+							.form-group
+								input(type="checkbox" id="modal-text-14" required checked name="agree").system-modules-container__form-input-radio
+								label(for="modal-text-14").d-flex.align-items-center
+									span.system-modules-container__form-input-checkbox
+									span.system-modules-container__form-input-checkbox-text Я согласен с 
+										a(href="https://www.completo.ru/privacy_policy.rtf" target="_blank")
+											u правилами обработки персональных данных
+							.form-group.pr-2.mb-0
+								button.btn.btn-white.form_btn.w-100 Подписаться
+			.ml-lg-5.col-md-7.col-lg-6.col-xl-6.pb-5
+				.row
+					.col-md-12.d-flex.justify-content-end 
+						img(src="picture/upload/phone-frame-min.svg", alt="").contact-us__head-small-img
+				.row.align-items-center
+					.col-lg-7.col-xl-6.contact-us__head-title-block.mb-4.mb-xl-0 
+						.subscribe__head-title
+							.h1.main-title.primary-head__title.mb-3.contact-us__head-title Подпишись и получи 
+						.mb-lg-4
+							.primary-title.contact-us__head-title-min волнующую Депешу от&nbsp;Комплето по&nbsp;интернет-маркетингу
+					.col-lg-5.col-xl-6.mb-4.mb-xl-0
+						img(src="picture/upload/sbuscribe-boyar.png", alt="").w-100
+				.row
+					.col-lg-6.mb-2.mb-sm-4 
+						.h4.text-white.mb-1 Обезвоженный контент
+						p по интернет-маркетингу: только кейсы, только суровая практика!
+					.col-lg-6.mb-2.mb-sm-4
+						.h4.text-white.mb-1 Наша рассылка поднимает конверсию
+						p.mb-3  у самых поникших сайтов — зачитаетесь! 
+						p А если нет, гасконец шепнет вашей судьбе интернет-маркетолога: 
+							span.font-weight-bold.text-white "Мерси, боку!" 
+							span  и зарядит на успех!
+					.col-md-12.d-md-none 
+						button.btn.btn-white.data-scroll.mt-4.mb-4.d-block.dealers__block-head-btn(data-toggle="modal" data-target="#myModalForm") Подписаться
+
+
+.modal.fade(tabindex="-1" role="dialog")#myModalForm
+	.modal-dialog.modal-dialog-centered(role="document")
+		.modal-content.bg-secondary
+			.modal-header
+				button.close(type="button" data-dismiss="modal" aria-label="Close")
+					span.modal__close-btn(aria-hidden="true")
+			.modal-body.pt-0
+				.system-modules-container__form-container.subscribe__head-form
+					.h4.text-center.mb-3 Куда 
+						br
+						span.text-white ОТПРАВИТЬ
+					p.mb-4.text-center годный контент <br> по интернет-маркетингу?
+					form.form.form-container-modal-2.validate.bg-warning.system-modules-container__form(method="post" id="new-form-2" novalidate="novalidate")
+						.form-group
+							input(type="text" placeholder="Фамилия, Имя" required name="name" id="modal-text-21").system-modules-container__form-input
+						.form-group
+							input(type="email" placeholder="Email" required name="email" id="modal-text-23").system-modules-container__form-input
+						.form-group
+							input(type="checkbox" id="modal-text-245" required checked name="agree").system-modules-container__form-input-radio
+							label(for="modal-text-245").d-flex.align-items-center
+								span.system-modules-container__form-input-checkbox
+								span.system-modules-container__form-input-checkbox-text Я согласен с 
+									a(href="https://www.completo.ru/privacy_policy.rtf" target="_blank")
+										u правилами обработки персональных данных
+						.form-group.pr-2.mb-0
+							button.btn.btn-white.form_btn.w-100 Подписаться
+
+
+.modal.fade(tabindex="1" role="dialog")#subscribe-modal-done
+	.modal-dialog.modal-dialog-centered.subscribe__head-form-modal-block(role="document")
+		.modal-content.border-secondary.border
+			.modal-header
+				button.close(type="button" data-dismiss="modal" aria-label="Close")
+					span.modal__close-btn(aria-hidden="true")
+			.modal-body
+				.container
+					.row
+						.col-md-12
+							.subscribe__head-form-modal.text-center
+								p.mb-4 Мерси! Письмо счастья уже в пути, дождитесь его!

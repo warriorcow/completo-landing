@@ -1,0 +1,78 @@
+mixin videocourse-card-advantages(icon,title, text, top)
+	.videocourse-card-advantages
+		.videocourse-card-advantages-head
+			i.icon(class="icon-"+icon)
+		if top == true
+			.videocourse-card-advantages-body
+				.videocourse-card-advantages-title= title
+				.font-weight-bold= text
+		else
+			.videocourse-card-advantages-body.videocourse-card-advantages-body-up
+				.font-weight-bold= text
+				.videocourse-card-advantages-title= title
+
+.position-relative.py-5
+	.container.my-md-4.position-relative
+		//- img(src="picture/upload/videocourse-ball.png", alt="").dealers-fast__absolute-img.videocourse__advantages-img
+		.row
+			.col-md-12.col-lg-9.col-xl-9
+				h2.h2.mb-4.mb-md-5.position-relative.z-index-2.form-h2
+					span.yellow-border Преимущества
+						span.border-container.animation.visible.animated(data-animate="newline")
+					span
+					span комплексного курса
+		.row
+			.col-md-12
+				.custom-scrollbar
+					.d-flex
+						+videocourse-card-advantages('dealers-thinking', 'Систематизация', 'знаний по интернет-маркетингу', true)
+						+videocourse-card-advantages('dealers-learning', 'практические знания', 'Только', false)
+						+videocourse-card-advantages('dealers-monitor-screen', 'Дистанционное', 'онлайн-обучение', true)
+						+videocourse-card-advantages('video-certificate', 'Сертификат,', 'подтверждающий прохождение курса', true)
+.marathon__form.position-relative.videocourse__advantages-middle
+	//- img(src="picture/upload/video-Group_428.png", alt="").videocourse__advantages-middle-img
+	.container.my-md-4.position-relative
+		.row
+			.col-md-12
+				+form-messendger('Зарегистрируйтесь ', 'бесплатный', 'В удобном мессенджере')
+		.row.mt-5.pt-xl-5
+			.col-md-12
+				h2.h2.mb-md-5.mb-4.form-h2.form-h2-new
+					span.yellow-border.nowrap-text Почему нам
+						span.border-container.animation.visible.animated(data-animate="newline")
+					span
+					span стоит доверять?
+		.row.d-none.d-md-flex
+			.col-md-6.col-lg-4.mb-4
+				.dealers-fast__card.h-100
+					.dealers-fast__card-head
+						.dealers-fast__card-head-num &gt;350
+					p.mb-0.text-center более 350 реализованных сложных проектов
+			.col-md-6.col-lg-4.mb-4
+				.dealers-fast__card.dealers-fast__card-no-border.h-100
+					.dealers-fast__card-head
+						.dealers-fast__card-head-num.dealers-fast__card-head-num-min 60 млн. р.
+					p.mb-0.text-center 60 млн. руб. совокупно сэкономили на рекламу, увеличив эффективность в 3 раза
+			.col-md-6.col-lg-4.mb-4
+				.dealers-fast__card.h-100
+					.dealers-fast__card-head
+						.dealers-fast__card-head-num &gt;150
+					p.mb-0.text-center более 150 стратегий интернет-маркетинга разработано
+.position-relative.dealers-fast.py-5.d-md-none.mb-5
+	.container
+		.row
+			.col-md-6.col-lg-4.mb-4
+				.dealers-fast__card
+					.dealers-fast__card-head
+						.dealers-fast__card-head-num &gt;350
+					p.mb-0.text-center более 350 реализованных сложных проектов
+			.col-md-6.col-lg-4.mb-4
+				.dealers-fast__card.dealers-fast__card-no-border
+					.dealers-fast__card-head
+						.dealers-fast__card-head-num.dealers-fast__card-head-num-min 60 млн. р.
+					p.mb-0.text-center 60 млн. руб. совокупно сэкономили на рекламу, увеличив эффективность в 3 раза
+			.col-md-6.col-lg-4.mb-4
+				.dealers-fast__card
+					.dealers-fast__card-head
+						.dealers-fast__card-head-num &gt;150
+					p.mb-0.text-center более 150 стратегий интернет-маркетинга разработано

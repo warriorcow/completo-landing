@@ -1,0 +1,25 @@
+mixin razrabotka-icon(img, text)
+	.d-flex.align-items-center.primary-head-item.primary-head-item-large
+		.primary-head-item-num
+			img(src="picture/upload/"+img, alt="").primary-head-item-num-icon
+		.primary-head-item-text.text-white!= text
+.primary-head
+	.container-fluid.primary-head-container.h-100
+		.row.h-100.align-items-center
+			.col-lg-4.col-md-4.d-none.d-md-block
+					+razrabotka-icon('feature.svg', 'Спроектируем CRM-систему под вашу специфику')
+					+razrabotka-icon('market.svg', 'Настроим систему для нетиповых бизнес-процессов')
+					+razrabotka-icon('internet-crm.svg', 'Обучим ваших сотрудников CRM-маркетингу')
+			.offset-xl-1.col-md-8.col-xl-6
+				.h1.main-title.primary-head__title Проектируем,
+					br
+					| внедряем и&nbsp;развиваем
+					br 
+					| CRM и&nbsp;системы
+					br
+					| автоматизации продаж 
+					br
+					| для B2B-компаний
+				button.btn.btn-warning.data-scroll.mt-4.mb-4.d-block(data-scroll="form-content") Обсудить проект
+	.primary-head-video
+		img(src="picture/upload/crm-top-background.png", alt="")

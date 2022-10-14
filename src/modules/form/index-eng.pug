@@ -1,0 +1,67 @@
+.col-md-12
+	form.form.validate.p-4(id="new-form" method="post" novalidate="novalidate" data-form="127" data-formtype="180")
+		.row
+			.col-lg-4.mb-4
+				.form-group
+					label(for="text-01") Full name
+					input#text-01(type="text" placeholder="Enter your name" required name="name")
+			.col-lg-4.mb-4
+				.form-group
+					label(for="text-02") Contact number
+					input#text-02(type="text" placeholder="Telephone number" required name="phone").phone
+			.col-lg-4.mb-4
+				.form-group
+					label(for="text-03") E-mail
+					input#text-03(type="email" placeholder="Enter your E-mail" name="email" required)
+			.col-lg-8.mb-4
+				.form-group
+					label(for="text-04") Enter your company's name or website
+					input#text-04(type="text" placeholder="Enter your company's name or website" name="name-company" required)
+			.col-lg-4.mb-4
+				.form-group
+					label(for="text-05") Marketing budget (per month)
+					input#text-05(type="text" placeholder="Enter your budget (in RUB)" name="money" required)
+			.col-lg-12.mb-4
+				.form-group
+					label(for="text-06") Know more about the tasks
+					textarea#text-06( placeholder="Describe your tasks and questions. Who makes the decision?" name="message" required)
+			.col-md-8.mb-4
+				.form__alarm.form__alarm-razrabotka
+					i.icon.icon-warning
+					p.mb-2  We reserve the right not to reply to the application if it is not filled in detail
+			.col-md-4.mb-4
+				label.file-input
+					input(type="file").file-input-file
+					span.file-input-item
+						img(src="picture/upload/Line_326.svg", alt="").file-input-item-img
+						span.ml-3.file-input-item-text Прикрепить файл
+			.col-lg-12
+				.row
+					.col-md-6.col-lg-4.col-xl-3
+						button.btn.btn-warning.form_btn.w-10 Go
+					.col-md-6.col-lg-8.d-flex.align-items-center
+						p.mb-4 By clicking the button,
+							a(href="https://completo.ru/privacy_policy.rtf")
+								u you agree to the Terms and Conditions of the processing of personal data
+.modal.fade(tabindex="-1" role="dialog")#myModal
+	.modal-dialog.modal-dialog-centered(role="document")
+		.modal-content
+			.modal-header
+				.modal-title
+					h2.text-center.mb-4 Thanks!
+				button.close(type="button" data-dismiss="modal" aria-label="Close")
+					span.modal__close-btn(aria-hidden="true")
+			.modal-body.text-center
+				p.mb-4.text-center We will connect you as soon as it possible.
+					br 
+					| Call us, if you have a task: +7(495) 640-89-97
+				img(src="picture/upload/Completo_logoNEW.jpg", alt="").mb-4.modal__completo-logo
+				p.text-center If you need an effective SEO,
+					br
+					| see our
+					a(href="https://www.completo.ru/seo/")
+						u SEO services 
+					| и 
+					a(href="https://www.completo.ru/salesfarm/")
+						u and client warm-up services
+					| .

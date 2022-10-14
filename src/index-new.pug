@@ -1,0 +1,34 @@
+- var title = "Digital трансформация маркетинга от компании Комплето";
+doctype html
+html(lang="ru")
+	head
+		include modules/head/index.pug
+	body
+		//include modules/header/index.pug
+		include modules/header-new/index.pug
+		include modules/main-page/main-section/index.pug
+		include modules/main-page/what-we-do/index.pug
+		include modules/main-page/digital-transformation/index.pug
+		include modules/main-page/product/index.pug
+		include modules/main-page/power/index.pug
+		include modules/main-page/cases/index.pug
+		include modules/main-page/marketing/index.pug
+		include modules/main-page/remove/index.pug
+		include modules/main-page/research/index.pug
+		include modules/main-page/clients/index.pug
+		include modules/main-page/saas/index.pug
+		include modules/main-page/maed/index.pug
+		include modules/main-page/education/index.pug
+		include modules/main-page/webinar/index.pug
+		include modules/main-page/blog/index.pug
+		include modules/main-page/community/index.pug
+		include modules/main-page/follow/index.pug
+		.container#new-form-main
+			.row.pt-5.pb-5#form-content
+				.col-md-12
+					.h2.mb-4.form-h2
+						span.yellow-border Обсудить задачи!
+							span.border-container.animation.visible.animated(data-animate="newline")
+				include modules/form/index.pug
+		include modules/footer/index.pug
+		include modules/foot/index.pug

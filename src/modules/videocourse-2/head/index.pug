@@ -1,0 +1,66 @@
+mixin razrabotka-icon(img, text)
+	.d-flex.align-items-center.primary-head-item.primary-head-item-large
+		.primary-head-item-num
+			img(src="picture/upload/"+img, alt="").primary-head-item-num-icon
+		.primary-head-item-text.text-white!= text
+mixin razrabotka-icon-mob(img, text)
+	.d-flex.align-items-center.primary-head-item.primary-head-item-large
+		.primary-head-item-num
+			img(src="picture/upload/"+img, alt="").primary-head-item-num-icon
+		.primary-head-item-text!= text
+.primary-head.subscribe__head.subscribe__head-dark
+	.container-fluid.primary-head-container.primary-head-container-dark.h-100
+		.row.h-100.align-items-center
+			.col-lg-4.col-md-5.d-none.d-md-block
+				.mb-4
+					+razrabotka-icon('video-video-marketing.svg', 'Мы подготовили для вас 13 коротких видеолекций по 10-15 минут.')
+				.mb-4
+					+razrabotka-icon('video-learning.svg', 'К каждому видео прилагаются ссылки на дополнительные материалы для самостоятельного изучения.')
+				.mb-4
+					+razrabotka-icon('video-video-marketing.svg', 'Мы подготовили для вас 13 коротких видеолекций по 10-15 минут.')
+				+razrabotka-icon('video-learning.svg', 'К каждому видео прилагаются ссылки на дополнительные материалы для самостоятельного изучения.')
+			.ml-lg-5.col-md-7.col-lg-6.col-xl-6.pb-5
+				.row
+					.col-md-12.d-flex.justify-content-end 
+						img(src="picture/upload/phone-frame-min.svg", alt="").contact-us__head-small-img
+				.row.align-items-center
+					.col-lg-7.col-xl-6.contact-us__head-title-block.mb-4 
+						.h1.main-title.primary-head__title.mb-3.contact-us__head-title Бесплатный<br>видеокурс
+						.mb-lg-4
+							.primary-title.contact-us__head-title-min по интернет-маркетингу
+					.col-lg-5.col-xl-6.mb-4
+						img(src="picture/upload/videocourse-2__head.png", alt="").w-100
+						.d-md-none
+							.mb-4
+								+razrabotka-icon-mob('video-video-marketing-mob.svg', 'Мы подготовили для вас 13 коротких видеолекций по 10-15 минут.')
+							.mb-4
+								+razrabotka-icon-mob('video-learning-mob.svg', 'К каждому видео прилагаются ссылки на дополнительные материалы для самостоятельного изучения.')
+							.mb-4
+								+razrabotka-icon-mob('video-video-marketing-mob.svg', 'Мы подготовили для вас 13 коротких видеолекций по 10-15 минут.')
+							+razrabotka-icon-mob('video-learning-mob.svg', 'К каждому видео прилагаются ссылки на дополнительные материалы для самостоятельного изучения.')
+				.row
+					.col-md-6.mb-4
+						p
+							span.h4.text-white Мы 
+							span подготовили для вас только самые полезные материалы, которые помогут вам создать полноценную систему интернет-маркетинга в вашей компании. 
+					.col-md-6.mb-4
+						p.mb-4
+							span.h4.text-white Курс 
+							span построен таким образом, что по его прохождении (и самостоятельном изучении дополнительных теоретических материалов) вы будете обладать необходимыми практическими знаниями об интернет-маркетинге.
+						p Какие-то проблемы с работой Видеокурса?  <br> Пишите на 
+							a(href="mailto:press-room@completo.ru").text-white.font-weight-bold press-room@completo.ru
+
+
+
+.modal.fade(tabindex="1" role="dialog")#subscribe-modal-done
+	.modal-dialog.modal-dialog-centered.subscribe__head-form-modal-block(role="document")
+		.modal-content.border-secondary.border
+			.modal-header
+				button.close(type="button" data-dismiss="modal" aria-label="Close")
+					span.modal__close-btn(aria-hidden="true")
+			.modal-body
+				.container
+					.row
+						.col-md-12
+							.subscribe__head-form-modal.text-center
+								p.mb-4 Мерси! Письмо счастья уже в пути, дождитесь его!

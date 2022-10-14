@@ -1,0 +1,26 @@
+mixin dealers-expert-card(icon, text, num, position)
+	.col-md-6.mb-4.dealers-expert__card-block
+		.h-100.dealers-expert__card(class="dealers-expert__card-"+ position)
+			.dealers-expert__card-icon-block(class="dealers-expert__card-icon-block-"+ position)
+				i.icon.dealers-expert__card-icon(class="icon-"+icon)
+			p.text-white= text
+			.dealers-expert__card-num(class="dealers-expert__card-num-"+ position)= num
+.py-5.position-relative.dealers-expert
+	img(src="picture/upload/dealers-expert-img-big.png", alt="").dealers-expert__absolute-img.dealers-expert__absolute-img-1.d-none.d-md-inline
+	img(src="picture/upload/dealers-expert-img.png", alt="").dealers-expert__absolute-img.dealers-expert__absolute-img-2
+	.container.my-md-4
+		.row
+			.col-md-12.col-lg-10.col-xl-8
+				h2.h2.mb-4.form-h2.form-h2-new.text-white У нас лучшая экспертиза 
+					span.yellow-border производственных
+						span.border-container.animation.visible.animated(data-animate="newline")
+					span 
+					span компаний
+		.row
+			+dealers-expert-card('dealers-complect', 'Мы уже 5 лет комплексно работаем с дилерскими сетями. Такой опыт есть только у нас.', '1', 'left')
+			+dealers-expert-card('dealers-knowledge', 'Наша система не имеет аналогов в России - нет другого агентства, которое сделает всё то же самое с предсказуемым результатом.', '2', 'right')
+			+dealers-expert-card('dealers-finish', 'Вы сможете наконец-то вырваться из порочного круга, в который вас загнали агентства интернет-маркетинга : SEO + контекстная реклама. Поверьте - это лишь 2-3% от того, что можно сделать.', '3', 'left')
+			+dealers-expert-card('dealers-continuous', 'Мы выстраиваем не только саму систему, но и берём на себя всю интернет-рекламу, веб-аналитику и отчетность. Вы получаете маркетинговые, рекламные и инфраструктурые решения в одном окне и не бегаете за подрядчиками, пытаясь состыковать их между собой.', '4', 'right')
+		.row
+			.col-md-12.d-flex.justify-content-center.mt-4
+				button.btn.btn-warning.data-scroll.my-4.d-block.dealers__block-head-btn(data-scroll="form-content") Запросить предложение

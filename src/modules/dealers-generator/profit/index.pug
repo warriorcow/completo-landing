@@ -1,0 +1,258 @@
+section.profit
+	.profit__title.profit__title-absolute
+		.container
+			.row
+				.col-md-12.profit__title-container
+					.row
+						.col-lg-12.col-xl-9
+							h2.mb-4 Как система дилерских сайтов увеличит прибыль?
+	.profit__list-block
+		.container
+			.row
+				.col-xl-3.col-lg-4.profit__list-container
+					ul.list-unstyled.profit__list.d-none.d-sm-flex.d-lg-block
+						li.profit__list-active
+							a(href="#dealers-site") Создаст дилерские сайты в течении нескольких минут
+						li
+							a(href="#personal-seo") Увеличит региональный SEO-трафик
+						li
+							a(href="#ad-item") Упростит запуск рекламы
+						li
+							a(href="#dealers-control") Поставит дилеров под контроль
+					.d-block.d-sm-none.align-items-center.mt-2.mb-4
+						.profit__select-container
+							select#profit__nav-mobile.profit__select(name='profit__nav-mobile')
+								option(value='#dealers-site') Создаст дилерские сайты в течении нескольких минут
+								option(value='#personal-seo') Увеличит региональный SEO-трафик
+								option(value='#ad-item') Упростит запуск рекламы
+								option(value='#dealers-control') Поставит дилеров под контроль
+	.profit__container
+		.container
+			.row
+				.offset-xl-3.offset-lg-4.col-xl-9.col-lg-8.profit__container-initial
+					#dealers-site.profit__calc-container-item.profit__calc-container-item-active
+						.row
+							.col-xl-8.col-lg-7.mb-4
+								h3.text-uppercase.mb-4 Создаст дилерские сайты в течении нескольких минут
+								p.h5.font-weight-normal Выбор домена, хостинг, дизайн, программинг, наполнение — всё это сделаем мы. Дилерам останется ввести адрес магазина и выгрузить каталог. Следуйте простым инструкциям на экране и жмите «Далее».
+							.col-xl-4.col-lg-5.mb-4
+								.p-3.border.border-warning.bg-white.profit__shadow
+									small
+										em Крутой сайт для дилеров на входе предлагают BMW, Mercedes, KIA и другие крупные автопроизводители. Это — большая редкость и крутое УТП для потенциальных партнёров.
+						.row.mb-4
+							.col-md-12.col-xl-8
+								.system-consist__img-container
+									img(src="picture/upload/do-site.png", alt="")
+						.row
+							.col-md-12.col-xl-8
+								.h5 Посчитать в деньгах
+								p.mb-4 Система генерирует сайты за 10 минут. За новый сайт партнера сети платить не нужно
+						.row.mb-4
+							.col-md-12
+								.profit__calc
+									.profit__calc-container
+										.profit__calc-container-col
+											input(type="text"  value="10" placeholder="10").profit__calc-input.profit__calc-dealers#profit-1
+											span.profit__calc-label Сколько дилеров
+										.profit__calc-container-col.text-center
+											.profit__calc-item ×
+										.profit__calc-container-col
+											input(type="text" maxlength="10" placeholder="80 000 р." value="80000").profit__calc-input.profit__calc-price#profit-2
+											span.profit__calc-label Стоимость сайта
+										.profit__calc-container-col.text-center
+											.profit__calc-item =
+										.profit__calc-container-col
+											.profit__calc-result 
+												span.num 800 000
+												span 
+												span р.
+											p.profit__calc-label.mb-0 вам бы пришлось вложить в сайты вашей партнерской сети
+									.row.align-items-center
+										.col-xl-5.col-lg-6.mb-3
+											button.btn.btn-warning.data-scroll(data-scroll="form-content") Навести порядок у дилеров!
+										.col-xl-7.col-lg-6.mb-3
+											p.text-muted.mb-0
+												small
+													em *Дилеры нашего клиента без «генератора» платили за разработку от 80 тыс. руб. (Екатеринбург) до 200 тыс. (Казань)
+					#personal-seo.profit__calc-container-item
+						.row
+							.col-xl-8.col-lg-7.mb-4
+								h3.text-uppercase.mb-4 Увеличит региональный SEO-трафика
+								p.h5.font-weight-normal Система создаёт сайты с неповторимым кодом, уникальными текстами и региональным номером телефона. Количество вариантов не исчерпается! Такой сайт будет лучше ранжироваться по геозависимым запросам.
+							.col-xl-4.col-lg-5.mb-4
+								.p-3.border.border-warning.bg-white.profit__shadow
+									small
+										em SEO-специалист получит доступ только к отдельному модулю SEO, чтобы сайт не сломался. Сайт сразу будет заточен на продвижение в регионе
+						.row.mb-4
+							.col-md-12.col-xl-8
+								.system-consist__img-container
+									img(src="picture/upload/do-seo.png", alt="")
+						.row
+							.col-md-12.col-xl-8
+								.h5 Посчитать в деньгах
+								p.mb-4 На 26% выросли онлайн-продажи дилеров наших клиентов
+						.row.mb-4
+							.col-md-12
+								.profit__calc
+									.profit__calc-container
+										.profit__calc-container-col
+											input(type="text"  value="10" placeholder="10").profit__calc-input.profit__calc-dealers#profit-3
+											span.profit__calc-label Сколько дилеров
+										.profit__calc-container-col.text-center
+											.profit__calc-item ×
+										.profit__calc-container-col
+											input(type="text" maxlength="10" placeholder="27 850 р." value="27850").profit__calc-input.profit__calc-price#profit-4
+											span.profit__calc-label Средняя сумма чека
+										.profit__calc-container-col.text-center
+											.profit__calc-item ×
+										.profit__calc-container-col
+											input(type="text" maxlength="10" placeholder="10" value="10").profit__calc-input.profit__calc-dealers#profit-5
+											span.profit__calc-label Количество заявок с сайта дилера в месяц
+										.profit__calc-container-col.text-center
+											.profit__calc-item =
+										.profit__calc-container-col
+											.profit__calc-result 
+												span.num 2 785 000
+												span 
+												span р.
+											p.profit__calc-label.mb-0 дохода вы могли бы получать со всей партнерской сети
+									.row.align-items-center
+										.col-xl-5.col-lg-7.mb-3
+											button.btn.btn-warning.data-scroll(data-scroll="form-content") Заказать демонстрацию системы
+					#ad-item.profit__calc-container-item
+						.row
+							.col-xl-8.col-lg-7.mb-4
+								h3.text-uppercase.mb-4 Упростит запуск рекламы
+								p.h5.font-weight-normal Мы запустим тестовые кампании в контекстной рекламе на нескольких субъектах РФ и определим специфические региональные параметры. Шаблон идеальной кампании загрузим в систему. Кампании для новых сайтов будут создаваться автоматически. Останется их только оплатить.
+							.col-xl-4.col-lg-5.mb-4
+								.p-3.border.border-warning.bg-white.profit__shadow
+									small
+										em Дилер охотнее вложится в контекстную рекламу, когда ему не нужно мучительно разбираться в Яндекс.Директе или нанимать контекстолога, а достаточно только оплатить кампании
+						.row.mb-4
+							.col-md-12.col-xl-8
+								.system-consist__img-container
+									img(src="picture/upload/ad.png", alt="")
+						.row
+							.col-md-12.col-xl-8
+								.h5 Посчитать в деньгах
+								p.mb-4 Дилерам достаточно только положить деньги на аккаунт — и принимать звонки
+						.row.mb-4
+							.col-md-12
+								.profit__calc
+									.profit__calc-container
+										.profit__calc-container-col
+											input(type="text"  value="10" placeholder="10").profit__calc-input.profit__calc-dealers#profit-6
+											span.profit__calc-label Сколько дилеров
+										.profit__calc-container-col.text-center
+											.profit__calc-item ×
+										.profit__calc-container-col
+											input(type="text" maxlength="10" placeholder="27 850 р." value="27850").profit__calc-input.profit__calc-price#profit-7
+											span.profit__calc-label Средняя сумма чека
+										.profit__calc-container-col.text-center
+											.profit__calc-item ×
+										.profit__calc-container-col
+											input(type="text" maxlength="4" placeholder="15%*" value="15").profit__calc-input.profit__calc-percent#profit-8
+											span.profit__calc-label Средняя конверсия в заявку*
+										.profit__calc-container-col.text-center
+											.profit__calc-item ×
+										.profit__calc-container-col.text-center
+											.profit__calc-item (
+										.profit__calc-container-col
+											input(type="text" maxlength="10" placeholder="15 000 р." value="15000").profit__calc-input.profit__calc-price#profit-9
+											span.profit__calc-label Рекламный бюджет дилера (мес.)
+										.profit__calc-container-col.text-center
+											.profit__calc-item /
+										.profit__calc-container-col
+											input(type="text" maxlength="4" placeholder="1500" value="1500").profit__calc-input.profit__calc-coast#profit-10
+											span.profit__calc-label Средняя стоимость лида в отрасли
+										.profit__calc-container-col.text-center
+											.profit__calc-item )
+										.profit__calc-container-col.text-center
+											.profit__calc-item =
+									.profit__calc-container
+										.profit__calc-container-col
+											.profit__calc-result.mt-0 
+												span.num 417 750
+												span 
+												span р.
+											p.profit__calc-label.mb-0 вам бы пришлось вложить в сайты вашей партнерской сети
+									.row.align-items-center
+										.col-xl-5.col-lg-7.mb-3
+											button.btn.btn-warning.data-scroll(data-scroll="form-content") Заказать демонстрацию системы
+										.col-xl-7.col-lg-5.mb-3
+											p.text-muted.mb-0
+												small
+													em *расчет сделан на примере реальной компании (оконные профили)
+					#dealers-control.profit__calc-container-item.border-bottom-0.pb-0
+						.row
+							.col-xl-8.col-lg-7.mb-4
+								h3.text-uppercase.mb-4 Поставит дилеров под контроль
+								p.h5.font-weight-normal Система подключит новые сайты к Google Analytics, Google Tag Manager и Яндекс.Метрике. Вы увидите, на что каждый дилер расходует маркетинговый бюджет, как быстро и качественно обрабатывает заявки клиентов и насколько эффективно продаёт.
+							.col-xl-4.col-lg-5.mb-4
+								.p-3.border.border-warning.bg-white.profit__shadow
+									small
+										em Дилеры будут понимать, что не скроют от вас свои косяки. Поэтому работать будут лучше. Если дилер поскупится на контекстную рекламу, покажите ему результаты других в единой дашборде. Может, передумает.
+						.row.mb-4
+							.col-md-12.col-xl-8
+								.system-consist__img-container
+									img(src="picture/upload/control-dealer.png", alt="")
+						.row
+							.col-md-12.col-xl-8
+								.h5 Посчитать в деньгах
+								p.mb-4 До внедрения системы дилерских сайтов каждый третий заказ обрабатывался некачественно и не заканчивался сделкой
+						.row.mb-4
+							.col-md-12
+								.profit__calc
+									.profit__calc-container
+										.profit__calc-container-col
+											input(type="text"  value="10" placeholder="10").profit__calc-input.profit__calc-dealers#profit-11
+											span.profit__calc-label Сколько дилеров
+										.profit__calc-container-col.text-center
+											.profit__calc-item ×
+										.profit__calc-container-col
+											input(type="text" maxlength="4" placeholder="650" value="650").profit__calc-input.profit__calc-coast#profit-12
+											span.profit__calc-label Трафик в месяц
+										.profit__calc-container-col.text-center
+											.profit__calc-item ×
+										.profit__calc-container-col
+											input(type="text" maxlength="10" placeholder="27 850 р." value="27850").profit__calc-input.profit__calc-price#profit-13
+											span.profit__calc-label Средняя сумма чека
+										.profit__calc-container-col.text-center
+											.profit__calc-item ×
+										.profit__calc-container-col.text-center
+											.profit__calc-item (
+										.profit__calc-container-col
+											input(type="text" maxlength="4" placeholder="1.5%" value="1.5").profit__calc-input.profit__calc-percent-2#profit-14
+											span.profit__calc-label Новая конверсия в продажу
+										.profit__calc-container-col.text-center
+											.profit__calc-item -
+										.profit__calc-container-col
+											input(type="text" maxlength="4" placeholder="0.5%" value="0.5").profit__calc-input.profit__calc-percent-2#profit-15
+											span .profit__calc-label Новая конверсия в продажу
+										.profit__calc-container-col.text-center
+											.profit__calc-item )
+										.profit__calc-container-col.text-center
+											.profit__calc-item =
+									.profit__calc-container
+										.profit__calc-container-col
+											.profit__calc-result.mt-0 
+												span.num 1 810 250
+												span 
+												span р.
+											p.profit__calc-label.mb-0 вы можете сэкономить за счет более качественной обработки заявок
+									.row.align-items-center
+										.col-xl-5.col-lg-7.mb-3
+											button.btn.btn-warning.data-scroll(data-scroll="form-content") Заказать демонстрацию системы
+	//.profit__container
+		.container
+			.row
+				.offset-xl-3.offset-lg-4.offset-md-5.col-xl-9.col-lg-8.col-md-7
+					.row
+						.col-xl-9.col-lg-8
+							h3.text-uppercase.mb-4 Создаст дилерские сайты в течении нескольких минут
+							p Выбор домена, хостинг, дизайн, программинг, наполнение — всё это сделаем мы. Дилерам останется ввести адрес магазина и выгрузить каталог. Следуйте простым инструкциям на экране и жмите «Далее».
+						.col-xl-3.col-lg-4
+							.profit__container-card
+								em Крутой сайт для дилеров на входе предлагают BMW, Mercedes, KIA и другие крупные автопроизводители. Это — большая редкость и крутое УТП для потенциальных партнёров.
+
+//						button.btn.btn-warning.data-scroll.mb-4.mt-2(data-scroll="form-content") Навести порядок у дилеров!

@@ -1,0 +1,30 @@
+.b2b-courses__card {
+	width: 330px;
+	min-width: 285px;
+	padding-left: 15px;
+	padding-right: 15px;
+	&:first-child {
+		padding-left: 0;
+	}
+	&:last-child {
+		padding-right: 0;
+	}
+}
+
+.b2b-shadow-block {
+	box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.15);
+	padding: 47px 40px;
+	background-color: $white;
+	@include media-breakpoint-down(xs) {
+		padding: 20px;
+	}
+}
+
+.videocourse-card-advantages-head-b2b {
+	height: 100px;
+}
+
+.videocourse-card-advantages-b2b {
+	margin-right: 0;
+	margin-left: 0;
+}

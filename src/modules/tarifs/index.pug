@@ -1,0 +1,173 @@
+-
+	var tarif = [
+		{
+			name: 'Хлопушка',
+			icon: '',
+			sale: false,
+			price: '140 000',
+			currency: 'руб.'
+		},
+		{
+			name: 'Бомба',
+			icon: 'picture/upload/bomb.png',
+			sale: true,
+			price: '245 000',
+			currency: 'руб.'
+		},
+		{
+			name: 'Ракета',
+			icon: '',
+			sale: false,
+			price: '340 000',
+			currency: 'руб.'
+		},
+	]
+
+	var stagess = [
+		{
+			category: 'Подготовка',
+			stages: [
+				['Подготовка дизайн-идеи', '-', '-', '-'],
+				['Разработка контент-плана на 2 месяц', '+', '+', '+'],
+				['Анализ потенциальной ЦА в соцсетях', '+', '+', '+']
+			],
+		},
+		{
+			category: 'Публикации',
+			stages: [
+				['Публикация тексто-графических постов', '8', '12', '20'],
+				['Публикация Stories', '10', '15', '30'],
+				['Создание анимаций (motion-design)', '1', '2', '5'],
+				['Создание ТЗ на Reels и клипы', '-', '2', '4'],
+				['Работа с комментариями', '-', '+', '+'],
+				['Проведение розыгрышей', '-', '+', '+'],
+				['Проведение опросов и интерактивов', '-', '+', '+'],
+			],
+		},
+		{
+			category: 'Реклама',
+			stages: [
+				['Формирование базы таргетинга', '-', '-', '+'],
+				['Разработка медиаплана', '+', '+', '+'],
+				['Создание промопостов', '3', '3', '3'],
+				['Реклама на тематических площадках', '-', '-', '+'],
+			],
+		},
+		{
+			category: 'Аналитика',
+			stages: [
+				['Мониторинг роста подписчиков', '+', '+', '+'],
+				['Анализ соответсия подписчиков ЦА', '-', '+', '+'],
+				['Анализ эффективности публикаций', '+', '+', '+'],
+				['Анализ трафика из SMM', '+', '+', '+'],
+				['Анализ упоминаний бренда в соцсетях', '-', '-', '+'],
+			],
+		},
+	]
+
+	var tarif2 = [
+		{
+			name: 'Контент',
+			icon: '',
+			sale: false,
+			price: '60 000',
+			currency: 'руб.'
+		},
+		{
+			name: 'Продвижение',
+			icon: '',
+			sale: false,
+			price: '55 000',
+			currency: 'руб.'
+		},
+		{
+			name: 'Комплекс',
+			icon: '',
+			sale: true,
+			price: '90 000',
+			currency: 'руб.'
+		},
+	]
+
+	var stagess2 = [
+		{
+			category: 'Контент',
+			stages: [
+				['Разработка контент-плана на 1 месяц', '+', '-', '+'],
+				['Написание статей (4 статьи в месяц)', '+', '-', '+'],
+				['Публикация статей на канале', '+', '-', '+']
+			],
+		},
+		{
+			category: 'Продвижение',
+			stages: [
+				['Анализ ЦА и конкурентов (из брифинга)', '-', '+', '+'],
+				['Настройка рекламного кабинета', '-', '+', '+'],
+				['Подбор заголовков и креативов', '-', '+', '+'],
+				['Запуск продвижения', '-', '+', '+'],
+				['Контроль и распределение ставок', '-', '+', '+'],
+				['Ежемесячная отчетность', '+', '+', '+']
+			],
+		}
+	]
+
+
+mixin tarifCard(data, index, stages)
+	.tarif-card(class=`${data.sale ? 'sale' : ''}`)
+		.tarif-card__header
+			if data.sale
+				.tarif-card__tooltip Выгодно!
+			img.tarif-card__arrow.tarif-card__prev.nav-btn.prev-slide(src="picture/upload/arrow-carousel.svg")
+			.tarif-card__name
+				if data.icon
+					img.tarif-card__icon(src=`${data.icon}` alt="")
+				span= data.name
+			img.tarif-card__arrow.tarif-card__next.nav-btn.next-slide(src="picture/upload/arrow-carousel.svg")
+		.tarif-card__inner
+			+tarifTableTitles(stages, index, true)
+
+		.tarif-card__price
+			.d-flex.justify-content-between.align-items-center.flex-wrap
+				div Стоимость
+				.tarif-card__price-value= `${data.price} ${data.currency}`
+			.d-flex.justify-content-center
+				button.btn.btn-warning.data-scroll.d-block.w-100 Заказать
+
+mixin tarifTableTitles(stages, index, isCard)
+	table.tarif-table
+		tbody 
+			each s, t_index in stages
+				each i, i_index in s.stages
+					tr.tarif-table__stage
+						if i_index === 0
+							td(rowspan=`${s.stages.length}`, class=`tarif-table__stage-title ${t_index % 2 !== 1 ? 'active' : ''}`)
+								span= s.category
+						td.tarif-table__stage-name
+							span= i[0]
+						if isCard
+							td.tarif-table__stage-value
+								span= i[index + 1]
+
+.tarif-container-fluid.mt-4
+	.tarif-container
+		.h2.tarif-container__title
+			span.yellow-border Стоимость
+				span.border-container.animation.visible.animated(data-animate="newline")
+		.d-flex.w-100
+			.stages
+				+tarifTableTitles(stagess)
+			.owl-tarifs.owl-carousel.owl-theme
+				each t, t_index in tarif
+					+tarifCard(t, t_index, stagess)
+
+.tarif-container-fluid.mt-4
+	.tarif-container
+		.h2.tarif-container__title
+			span.yellow-border Стоимость
+				span.border-container.animation.visible.animated(data-animate="newline")
+		.d-flex.w-100
+			.stages
+				+tarifTableTitles(stagess2)
+			.owl-tarifs.owl-carousel.owl-theme
+				each t, t_index in tarif2
+					+tarifCard(t, t_index, stagess2)

@@ -1,0 +1,313 @@
+.case-cost {
+	$parent: &;
+
+	&__price {
+		$this: &;
+
+		text-align: center;
+		margin-bottom: 61px;
+
+		&:last-child {
+			margin: 0;
+		}
+
+		&-header {
+			text-align: left;
+			position: relative;
+			padding-bottom: 73px;
+			margin-bottom: 30px;
+		}
+
+		&-icon {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+
+			img{
+				display: block;
+			}
+		}
+
+		&-title {
+			#{$parent}__line {
+				background-size: 9.66em 0.3125em;
+			}
+		}
+
+		&-content {
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			font-weight: bold;
+			font-size: 150px;
+			line-height: 150px;
+			white-space: nowrap;
+			text-align: left;
+
+			#{$this}_from & {
+				justify-content: flex-start;
+			}
+		}
+
+		&-dec {
+			position: relative;
+			top: 44px;
+			order: 1;
+			align-self: flex-start;
+
+			&:before {
+				content: '';
+				position: absolute;
+				left: 50%;
+				bottom: 41px;
+				transform: translateX(-37%);
+				width: 74px;
+				height: 66px;
+				background: url('../assets/images/case-cost/case-cost-biplane.svg');
+				background-size: 100% 100%;
+			}
+
+			#{$this}_from & {
+				align-self: center;
+				top: 20px;
+				flex-grow: 1;
+				min-width: 1px;
+				max-width: 384px;
+
+				&:before {
+					bottom: 16px;
+					transform: translateX(-62%);
+				}
+			}
+		}
+
+		&-line {
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			transform: translateX(-50%);
+			width: 248px;
+			height: 34px;
+			background: url('../assets/images/case-cost/case-cost-arrow-1.svg');
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+
+			#{$this}_from & {
+				background-image: url('../assets/images/case-cost/case-cost-arrow-2.svg');
+				background-size: auto 100%;
+				background-position: right center;
+				left: 0;
+				height: 15px;
+				width: 100%;
+				transform: none;
+
+				&:before {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 50%;
+					width: 16px;
+					height: 16px;
+					margin-top: -8px;
+					border-radius: 50%;
+					background: $c-accent;
+				}
+			}
+		}
+
+		&-label {
+			font-weight: bold;
+			font-size: 36px;
+			white-space: nowrap;
+		}
+
+		&-value {
+			margin: 0 9px;
+			text-shadow: 0 2px 0, 0 -2px 0, 2px 0 0, -2px 0 0;
+
+			@supports (-webkit-text-stroke: 3px) {
+				text-shadow: none;
+				-webkit-text-stroke: 3px;
+			}
+		}
+
+		&-from {
+			position: relative;
+		}
+
+		&-to {
+			position: relative;
+			order: 2;
+
+			#{$this}_from & {
+				display: none;
+			}
+		}
+
+		@media (min-width : $breakpoint-lg-min) {
+			&-from {
+				#{$this}-label {
+					&:last-child {
+						position: absolute;
+						left: 100%;
+						bottom: 0;
+					}
+				}
+
+				#{$this}_from & {
+					margin-right: 75px;
+
+					#{$this}-label {
+						position: static !important;
+					}
+				}
+			}
+
+			&-to {
+				#{$this}-label {
+					&:first-child {
+						position: absolute;
+						right: 100%;
+						bottom: 0;
+					}
+				}
+			}
+		}
+
+		@media (max-width : $breakpoint-md-max) {
+			margin-bottom: 77px;
+
+			&-header {
+				padding-bottom: 0;
+				padding-right: 130px;
+				margin-bottom: 63px;
+			}
+
+			&-icon {
+				bottom: auto;
+				top: 2px;
+			}
+
+			&-content {
+				display: inline-flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				position: relative;
+				padding-right: 132px;
+
+				#{$this}_from & {
+					padding-right: 0;
+				}
+			}
+
+			&-to {
+				margin-top: 21px;
+			}
+
+			&-dec {
+				position: absolute;
+				right: 102px;
+				top: 50%;
+				transform: rotateZ(90deg) rotateY(180deg);
+				margin-top: 27px;
+
+				#{$this}_from & {
+					position: relative;
+					margin: 0 0 39px;
+					transform: none;
+					right: auto;
+					width: 384px;
+					height: 83px;
+					max-width: none;
+					order: -1;
+					top: 0;
+					align-self: flex-start;
+				}
+
+				&:before {
+					transform: rotate(14deg) translateX(-46%);
+
+					#{$this}_from & {
+						transform: translateX(-65%);
+					}
+				}
+			}
+		}
+
+		@media (max-width : $breakpoint-sm-max) {
+			margin-bottom: 44px;
+
+			&-header {
+				padding-right: 0;
+				margin-bottom: 37px;
+			}
+
+			&-icon {
+				position: static;
+				display: block;
+				margin-bottom: 26px;
+			}
+
+			&-title {
+				padding-right: 20px;
+
+				#{$parent}__line {
+					background-size: 9.4em 0.3125em;
+				}
+			}
+
+			&-content {
+				padding-right: 0;
+				font-size: 90px;
+				line-height: 90px;
+				text-align: center;
+			}
+
+			&-label {
+				font-size: 22px;
+			}
+
+			&-to {
+				margin-top: 0;
+			}
+
+			&-dec {
+				position: relative;
+				transform: none;
+				right: auto;
+				top: auto;
+				margin: -17px 0 10px 101px;
+				height: 214px;
+
+				#{$this}_from & {
+					width: 225px;
+					margin: 0 auto 31px;
+				}
+
+				&:before {
+					transform: translate(16px, 34px) rotateZ(78deg) rotateY(180deg);
+					left: 0;
+					bottom: 50%;
+
+					#{$this}_from & {
+						transform: translateX(-50%);
+						left: 50%;
+					}
+				}
+			}
+
+			&-line {
+				width: 16px;
+				height: 214px;
+				background-image: url('../assets/images/case-cost/case-cost-arrow-1-1.svg');
+				left: 0;
+				bottom: 50%;
+				transform: translateY(50%);
+
+				#{$this}_from & {
+					bottom: 0;
+				}
+			}
+		}
+	}
+}

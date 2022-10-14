@@ -1,0 +1,16 @@
+//= jquery-3.3.1.min.js
+//= jquery.mask.min.js
+//= jquery.mCustomScrollbar.concat.min.js
+//= jquery.validate.min.js
+//= jquery.validate.accept.js
+//= jquery.waypoints.min.js
+//= js.cookie-2.2.1.min.js
+//= select2.full.js
+//= slick.js
+//= owl.carousel.js
+//= jquery.form.min.js
+//= isMobile.min.js
+/*//= vue.min.js*/
+//= clamp.min.js
+//= jquery.fancybox.js
+//= bootstrap.bundle.js

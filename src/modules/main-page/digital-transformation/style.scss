@@ -1,0 +1,137 @@
+.digital-transformation {
+	padding-top: 3rem;
+	@include media-breakpoint-down(sm) {
+		padding-top: 1rem;
+	}
+	&__container {
+		position: relative;
+	}
+	&__title-text {
+		max-width: 600px;
+		line-height: 1.6;	
+	}
+	&__icon-font {
+		font-size: 50px;
+		height: 65px;
+	}
+	&__card {
+		border: 1px solid $yellow;
+		background-color: white;
+		height: 200px;
+		width: 260px !important;
+		margin: 10px;
+		border-radius: 4px;
+		direction: ltr;
+		&-num {
+			font-size: 3rem;
+			//white-space: nowrap;
+			@include media-breakpoint-down(md) {
+				font-size: 2.7rem;
+			}
+		}
+		&-yellow {
+			background-image: url('../picture/upload/pattern-card.jpg');
+			&__icon {
+				font-size: 66px;
+				color: black;
+			}
+			&__text {
+				font-size: 1.375rem;
+				color: black;
+			}
+		}
+	}
+}
+.newline {
+	animation-name: newline;
+	animation-timing-function: linear;
+}
+@keyframes newline {
+	from {
+			width: 0;
+	}
+	to {
+		width: calc(100% + 7px);
+	}
+}
+.newline_v2 {
+	animation-name: newline_v2;
+	animation-timing-function: linear;
+}
+@keyframes newline_v2 {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+.yellow-border {
+	position: relative;
+	.border-container {
+		
+		left: 0;
+		bottom: 7px;
+		position: absolute;
+		height: 14px;
+		background-color: $yellow;
+		z-index: -1;
+		width: 0;
+	}
+}
+.absolute-circle {
+	position: absolute;
+	/*left: 0;
+	top: 122px;*/
+	left: -80px;
+	top: 70px;
+	span {
+		display: inline-block;
+		position: absolute;
+		border-radius: 100%;
+		border: 1px solid $yellow;
+		transition: 0.2s ease all;
+	}
+	span:first-child {
+		width: 221px;
+		height: 221px;
+		left: -93px;
+		top: -122px;
+	}
+	span:nth-child(2) {
+		width: 204px;
+		height: 204px;
+		left: -70px;
+		top: -108px;
+	}
+	span:nth-child(3) {
+		width: 188px;
+		height: 188px;
+		left: -49px;
+		top: -94px;
+	}
+	span:nth-child(4) {
+		width: 172px;
+		height: 172px;
+		left: -26px;
+		top: -80px;
+	}
+	span:nth-child(5) {
+		width: 156px;
+		height: 156px;
+		left: -5px;
+		top: -66px;
+	}
+	span:nth-child(6) {
+		width: 140px;
+		height: 140px;
+		left: 17px;
+		top: -52px;
+	}
+	span:nth-child(7) {
+		width: 124px;
+		height: 124px;
+		left: 39px;
+		top: -38px;
+	}
+}

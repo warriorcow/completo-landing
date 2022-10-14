@@ -1,0 +1,36 @@
+.webinar.pt-5
+	#webinar
+		.webinar__card.webinar__card-main.pt-4.pb-4
+			//- (v-if="!items.length")
+			.container
+				.row
+					.col-lg-2.col-3
+						img(src="picture/upload/hourglass.png", alt="").webinar__card-main-img
+						.webinar__card-main-circle
+					.col-lg-7.pl-3.col-9
+						.h3.pl-3.text-uppercase.mb-0 The next
+						.webinar__main-title.text-white.text-uppercase.pl-3.mb-0 Webinar
+						.h3.pl-3.text-uppercase.mb-0 will be here soon
+					.col-lg-3.d-lg-flex.d-none.align-items-center
+						a(href="https://completo.timepad.ru/events/" target="_blank").btn.btn-white.w-100.text-dark Calendar of events
+		//- .webinar__card.pt-4.webinar__card-1(v-for='(item,index) in items' :class='item.class' v-else)
+		//- 	.container
+		//- 		.row
+		//- 			.col-lg-2.d-flex.align-items-center.col-3(v-if='item.oneimg')
+		//- 				img(:src="item.oneimg", alt="").w-100.webinar__card-img
+		//- 				.webinar__circle
+		//- 			.col-lg-2.d-flex.align-items-end.col-3(v-if='item.twoimg' v-for='child in item.twoimg')
+		//- 				img(:src="child.one", alt="").w-100.webinar__card-2-img.webinar__card-img
+		//- 				img(:src="child.two", alt="").w-100.webinar__card-2-img.w-100.webinar__card-2-img-2.webinar__card-img
+		//- 				.webinar__circle
+		//- 			.col-lg-2.d-flex.align-items-center.col-3(v-if='item.threeimg' v-for='children in item.threeimg')
+		//- 				.webinar__card-3-content
+		//- 					img(src="picture/upload/4.png", alt="").w-100.webinar__card-img
+		//- 				.webinar__card-3-content.webinar__card-3-content-2
+		//- 					img(src="picture/upload/5.png", alt="").w-100.webinar__card-img
+		//- 			.col-lg-7.pl-3.col-9
+		//- 				.webinar__time.ml-3.d-inline {{item.date}}
+		//- 				.webinar__secondary-title.text-white.mb-0.ml-3 {{item.title}}
+		//- 				.h4.text-uppercase.mb-3.ml-3 {{item.subtitle}}
+		//- 			.col-lg-3.d-lg-flex.d-none.align-items-center
+		//- 				a(:href="item.href").btn.btn-white.w-100.text-dark Take part

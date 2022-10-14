@@ -1,0 +1,404 @@
+mixin subscribe-b2b-hub 
+	p.font-weight-bold.pt-lg-5.pt-4.mb-4 Подпишитесь на рассылку! Только полезные статьи, кейсы, исследования и анонсы мероприятий
+	a(href="#").btn.btn-warning.b2b__header__btn-full.d-flex.align-items-center.justify-content-center.mb-4.text-warning
+		span.h4.mb-0.mr-2.text-dark @
+		span.font-weight-bold.text-dark E-mail News
+	a(href="#").btn.btn-dark.b2b__header__btn-full.d-flex.align-items-center.justify-content-center.mb-4.text-dark
+		i.icon.icon-vk.mr-2.h4.mb-0.text-white
+		span.text-white VK
+	a(href="#").btn.btn-warning.b2b__header__btn-full.d-flex.align-items-center.justify-content-center.mb-4.text-warning
+		i.icon.icon-tg.mr-2.h4.mb-0.text-dark
+		span.text-dark Telegram
+mixin b2b__tab-item-mob-hub(title, iconName, link)
+	.b2b__tab-item.b2b__tab-item-active
+		a(data-toggle="collapse" href="#collapseOneB2b-" + link aria-expanded="false" aria-controls="collapseOneB2b-" + link id="headingOne-" + link).d-flex.align-items-center.collapsed
+			.h5.text-uppercase.mb-0.pr-5
+				img(src="picture/upload/"+ iconName, alt="").w-36-b2b-hub.mr-2
+				u.text-dark= title
+			.b2b__tab-item__arrow.b2b__tab-item__arrow-center
+				i.icon.icon-bx_bx-left-arrow-alt
+mixin b2b-card-5(title, img)
+	a(href="https://www.youtube.com/watch?v=-hrkQ1gFTRc" data-fancybox style="background-image:url(picture/upload/"+ img + ")").px-2.py-3.b2b__card-hub-5
+		p.mb-0.text-center
+			small.text-white.text-uppercase.font-weight-bold= title
+mixin b2b-card-4(title, img)
+	a(href="#" style="background-image:url(picture/upload/"+ img + ")").px-2.py-3.b2b__card-hub-4
+		p.mb-1
+			small.text-white.text-uppercase.font-weight-bold= title
+		p 
+			small.text-white 19.10.2016
+mixin b2b-card-3(title, img)
+	a(href="#" style="background-image:url(picture/upload/"+ img + ")").px-2.py-3.b2b__card-hub-3
+		small.d-block.mb-2
+			small.text-white исследования 2019
+		p 
+			small.text-white.text-uppercase= title
+mixin b2b-card-2(title, img)
+	a(href="#").b2b__card-hub-2
+		small 
+			small.text-white.text-uppercase.font-weight-bold.mb-2= title
+		img(src="picture/upload/"+img, alt="").b2b__card-hub-2__img
+mixin b2b-card-1(title, name, bg)
+	a(href="#" style="background-image:url(picture/upload/"+ bg + ")").b2b__card-hub-1
+		p.text-warning.text-uppercase.font-weight-bold.mb-2= title
+		small.text-white.mb-2.d-block 17 августа 2021
+		p.h6.d-flex.align-items-center
+			i.icon.icon-clarity_avatar-solid.text-warning.mr-2
+			span.text-white= name
+		.b2b__card-hub-1__foot 
+			small.d-flex.aling-items-center 
+				i.icon.icon-akar-icons_eye.mr-2 
+				span.text-grey 820
+			small.d-flex.aling-items-center 
+				i.icon.icon-bi_share-fill.mr-2 
+				span.text-grey 12
+			small.d-flex.aling-items-center 
+				i.icon.icon-bi_chat-square-quote.mr-2 
+				span.text-grey 12
+mixin b2b-card-1-min(title, bg)
+	a(href="#" style="background-image:url(picture/upload/"+ bg + ")").b2b__card-hub-1.b2b__card-hub-1-min
+		small 
+			small.text-warning.text-uppercase.font-weight-bold.mb-2= title
+		.b2b__card-hub-1__foot 
+			small.d-flex.aling-items-center 
+				i.icon.icon-akar-icons_eye.mr-2 
+				span.text-grey 820
+			small.d-flex.aling-items-center 
+				i.icon.icon-bi_share-fill.mr-2 
+				span.text-grey 12
+			small.d-flex.aling-items-center 
+				i.icon.icon-bi_chat-square-quote.mr-2 
+				span.text-grey 12
+mixin b2b_tab-hub(link, icon, text, active = false)
+	if active
+		a(data-toggle="tab" role="tab" href="#collapseOneB2b-" + link aria-selected="true" aria-controls="collapseOneB2b-" + link id="headingOne-" + link).pt-2.d-block.active.b2b__tab-item.b2b__tab-item--new.p-2.nav-item
+			img(src="picture/upload/"+icon, alt="").b2b__tab-item__icon
+			p.font-weight-bold.text-uppercase.mb-0.text-center
+				u.text-dark= text
+	else
+		a(data-toggle="tab" role="tab" href="#collapseOneB2b-" + link aria-selected="false" aria-controls="collapseOneB2b-" + link id="headingOne-" + link).pt-2.d-block.b2b__tab-item.b2b__tab-item--new.p-2.nav-item
+			img(src="picture/upload/"+icon, alt="").b2b__tab-item__icon
+			p.font-weight-bold.text-uppercase.mb-0.text-center
+				u.text-dark= text
+.bg-light-yellow.overflow-hidden.position-relative
+	img(src="picture/upload/Group_24178.svg", alt="").b2b__absolute-hand 
+	.container.py-5.my-4.position-relative.z-index-2
+		h2.h2__b2b.text-uppercase.mb-5
+			span B2B Content Hub
+		.row.d-sm-none#b2b__accordion-hub
+			.col-md-12
+				+b2b__tab-item-mob-hub('Completo B2B Magazine', 'study_2.svg', 'hub-1-mob')
+				.collapse.b2b--collapse(aria-labelledby="headingOne-hub-1-mob" data-parent="#b2b__accordion-hub" id="collapseOneB2b-hub-1-mob")
+					.col-xl-6.mb-4
+						+b2b-card-1('Чат-бот – очередная игрушка маркетологов или убийца e-mail-маркетинга?', 'Ярослав Смирнов', 'Rectangle+2598.jpg')
+					.col-xl-6.mb-4
+						+b2b-card-1('Как маркетологу найти подрядчика и провести проект без проблем', 'Редакция MaEd', 'Rectangle32598.jpg')
+					.custom-scrollbar
+						.d-flex
+							+b2b-card-1-min('Повышаем конверсию. На что обратить внимание, чтобы сайт начал продавать?', 'Rectangle_2764.jpg')
+							+b2b-card-1-min('7 признаков того, что ваш сайт пора менять', 'Rectangle+2598.jpg')
+							+b2b-card-1-min('Зачем вашему бизнесу ABM-маркетинг?', 'Rectangle-2feds.jpg')
+							+b2b-card-1-min('5 диджитал инструментов, которые помогут контролировать дилеров', 'Rectangle+2598.jpg')
+					+subscribe-b2b-hub
+				+b2b__tab-item-mob-hub('бесплатные материалы', 'presentation_1.svg', 'hub-2-mob')
+				.collapse.b2b--collapse(aria-labelledby="headingOne-hub-2-mob" data-parent="#b2b__accordion-hub" id="collapseOneB2b-hub-2-mob")
+					.h4.text-uppercase.mb-3 Методички и чек-листы
+					.custom-scrollbar.mb-4
+						.d-flex 
+							+b2b-card-2('Видеокурс по интернет-маркетингу', 'undraw_Design_notes_re_eklr.png')
+							+b2b-card-2('Видеокурс для руководителей', 'undraw_Pie_chart_re_bgs8.png')
+							+b2b-card-2('Account-Based Marketing', 'undraw_Data_report_re_p4so.png')
+							+b2b-card-2('Регистрация в Google Мой Бизнес', 'undraw_Contrast_re_hc7k.png')
+					.h4.text-uppercase.mb-3 Видеокурсы
+					.custom-scrollbar
+						.d-flex 
+							+b2b-card-2('Видеокурс по интернет-маркетингу', 'undraw_Design_notes_re_eklr.png')
+							+b2b-card-2('Видеокурс для руководителей', 'undraw_Pie_chart_re_bgs8.png')
+							+b2b-card-2('Account-Based Marketing', 'undraw_Data_report_re_p4so.png')
+							+b2b-card-2('Регистрация в Google Мой Бизнес', 'undraw_Contrast_re_hc7k.png')
+					+subscribe-b2b-hub
+				+b2b__tab-item-mob-hub('Исследования', 'search_3.svg', 'hub-3-mob')
+				.collapse.b2b--collapse(aria-labelledby="headingOne-hub-3-mob" data-parent="#b2b__accordion-hub" id="collapseOneB2b-hub-3-mob")
+					.h4.text-uppercase.mb-4 Наши Исследования
+					.row.no-gutters
+						.col-xl-4.col-md-6.mb-4.px-1
+							+b2b-card-3('КАК БАНКИ ПРИВЛЕКАЮТ КЛИЕНТОВ ИЗ ИНТЕРНЕТА?', 'Rectangle_2764+2.jpg')
+						.col-xl-4.col-md-6.mb-4.px-1
+							+b2b-card-3('Как медицинские центры работают с клиентами в интернете?', 'Rectangle_2764_32.jpg')
+						.col-xl-4.col-md-6.mb-4.px-1
+							+b2b-card-3('Как производители и дистрибьюторы работают с клиентами В ИНТЕРНЕТЕ', 'Rectangle_2764_2323.jpg')
+						.col-xl-4.col-md-6.mb-4.px-1
+							+b2b-card-3('КАК БАНКИ ПРИВЛЕКАЮТ КЛИЕНТОВ ИЗ ИНТЕРНЕТА?', 'Rectangle_2764+2.jpg')
+						.col-xl-4.col-md-6.mb-4.px-1
+							+b2b-card-3('Как медицинские центры работают с клиентами в интернете?', 'Rectangle_2764_32.jpg')
+						.col-xl-4.col-md-6.mb-4.px-1
+							+b2b-card-3('Как производители и дистрибьюторы работают с клиентами В ИНТЕРНЕТЕ', 'Rectangle_2764_2323.jpg')
+					+subscribe-b2b-hub
+				+b2b__tab-item-mob-hub('Учебный центр MAED', 'sdfsdfsvfd.svg', 'hub-4-mob')
+				.collapse.b2b--collapse(aria-labelledby="headingOne-hub-4-mob" data-parent="#b2b__accordion-hub" id="collapseOneB2b-hub-4-mob")
+					.h4.mb-4 Учебный центр MaEd 
+					.d-flex.align-items-center.flex-wrap 
+						img(src="picture/upload/logo_maed.png", alt="").w-200-px.mr-3.mb-3
+						.d-block.mb-3
+							p.font-weight-bold.mb-2 Собственный учебный центр
+							p.mb-0 Marketing Education
+					.h5.mb-4.pt-3
+						span.yellow-border Преподаем в ведущих вузах и онлайн-университетах
+							span.border-container.animation.visible.animated(data-animate="newline")
+					.row 
+						.col-md-3.mb-3.col-6
+							img(src="picture/upload/150912.png", alt="").w-100.img-fix-height-b2b-hub
+						.col-md-3.mb-3.col-6
+							img(src="picture/upload/sdfsvfdfv.png", alt="").w-100.img-fix-height-b2b-hub
+						.col-md-3.mb-3.col-6
+							img(src="picture/upload/MYAcademy_logo_green_horizontal.png", alt="").w-100.img-fix-height-b2b-hub
+						.col-md-3.mb-3.col-6
+							img(src="picture/upload/Skillbox_Logo.png", alt="").w-100.img-fix-height-b2b-hub
+						.col-md-3.mb-3.col-6
+							img(src="picture/upload/logo_с_hse_Pantone286.png", alt="").w-100.img-fix-height-b2b-hub
+						.col-md-3.mb-3.col-6
+							img(src="picture/upload/plhe.png", alt="").w-100.img-fix-height-b2b-hub
+						.col-md-3.mb-3.col-6
+							img(src="picture/upload/tild3439-3364-4535.png", alt="").w-100.img-fix-height-b2b-hub
+					+subscribe-b2b-hub
+				+b2b__tab-item-mob-hub('Мероприятия', 'microphone_2.svg', 'hub-5-mob')
+				.collapse.b2b--collapse(aria-labelledby="headingOne-hub-5-mob" data-parent="#b2b__accordion-hub" id="collapseOneB2b-hub-5-mob")
+					.h4.text-uppercase.mb-3 Ближайшее мероприятие:
+					a(href="#").b2b-card-xl-soon.mb-4
+						.b2b-card-xl-soon__container
+							p.text-white.text-uppercase.font-weight-bold.mb-2 Конференция по маркетингу "Re'start"
+							p.mb-1
+								small.text-warning Начало: 
+								small.text-white.text-uppercase 12 января, 2022
+							p.mb-1
+								small.text-warning Спикер: 
+								small.text-white.text-uppercase Андрей Гавриков
+					.h4.text-uppercase.mb-3 прошедшие мероприятия:
+					.custom-scrollbar
+						.d-flex 
+							+b2b-card-4('Бизнес-конференция Tele2 ProDigital', 'Rectangle_276422.jpg')
+							+b2b-card-4('Российский форум маркетинга 2016', 'Rectangle_2764_1.jpg')
+							+b2b-card-4('Бизнес-конференция Tele2 ProDigital', 'Rectangle_2764_2.jpg')
+							+b2b-card-4('Бизнес-конференция Tele2 ProDigital', 'Rectangle_276422.jpg')
+					+subscribe-b2b-hub
+				+b2b__tab-item-mob-hub('Социальные сети', 'share_1.svg', 'hub-6-mob')
+				.collapse.b2b--collapse(aria-labelledby="headingOne-hub-6-mob" data-parent="#b2b__accordion-hub" id="collapseOneB2b-hub-6-mob")
+					.h5.mb-4.text-uppercase
+						span следите за 
+						span.h3.mb-0 completo 
+						span в соц. сетях!
+					.row 
+						.col-4.mb-4 
+							a(href="#" target="_blank").b2b__hub-icon
+								img(src="picture/upload/ic-b2b-instagram.png", alt="").b2b__hub-icon-img
+								p.h5.text-uppercase.text-center.mb-4.text-dark Instagram
+						.col-4.mb-4 
+							a(href="#" target="_blank").b2b__hub-icon
+								img(src="picture/upload/ic-b2b-vk.png", alt="").b2b__hub-icon-img
+								p.h5.text-uppercase.text-center.mb-4.text-dark Вконтакте
+						.col-4.mb-4 
+							a(href="#" target="_blank").b2b__hub-icon.b2b__hub-icon-no-border
+								img(src="picture/upload/ic-b2b-fb.png", alt="").b2b__hub-icon-img
+								p.h5.text-uppercase.text-center.mb-4.text-dark facebook
+					.h5.mb-4.text-uppercase
+						span.h3.mb-0 completo 
+						span в youtube
+					.custom-scrollbar
+						.d-flex 
+							+b2b-card-5('Zoomные новости №7', 'Rectangle2342_2764.jpg')
+							+b2b-card-5('Digital-трансформация HR', 'Rectangle234+2764.jpg')
+							+b2b-card-5('от логистики до HR в компании PERI', 'Rectangle+2764132.jpg')
+							+b2b-card-5('Zoomные новости №7', 'Rectangle2342_2764.jpg')
+					+subscribe-b2b-hub
+		.row.d-none.d-sm-flex#b2b__accordion__hub
+			.col-lg-6
+				.border-0.nav.nav-tabs(role="tablist")#nav-tabs-hub
+					+b2b_tab-hub('hub-1', 'study_2.svg', 'Completo B2B Magazine', true)
+					+b2b_tab-hub('hub-2', 'presentation_1.svg', 'бесплатные материалы')
+					+b2b_tab-hub('hub-3', 'search_3.svg', 'Исследования')
+					+b2b_tab-hub('hub-4', 'sdfsdfsvfd.svg', 'Учебный центр MAED')
+					+b2b_tab-hub('hub-5', 'microphone_2.svg', 'Мероприятия')
+					+b2b_tab-hub('hub-6', 'share_1.svg', 'Социальные сети')
+				p.font-weight-bold.pt-lg-5.pt-4.mb-4 Подпишитесь на рассылку! Только полезные статьи, кейсы, исследования <br> и анонсы мероприятий
+				.row
+					.col-lg-4.col-sm-6.mb-4
+						a(href="#").btn.btn-warning.w-100.h-100.d-flex.align-items-center.justify-content-center.text-warning
+							span.font-weight-bold.text-dark @ E-mail News
+					.col-lg-4.col-sm-6.mb-4
+						a(href="#").btn.btn-dark.w-100.d-flex.align-items-center.justify-content-center.text-dark
+							i.icon.icon-vk.mr-2.h4.mb-0.text-white
+							span.text-white VK
+					.col-lg-4.col-sm-6.mb-4
+						a(href="#").btn.btn-warning.w-100.d-flex.align-items-center.justify-content-center.text-warning
+							i.icon.icon-tg.mr-2.h4.mb-0.text-dark
+							span.text-dark Telegram
+			.col-lg-6.pt-4.pt-lg-0
+				.tab-content#nav-tabContent-hub 
+					.tab-pane.fade.show.active(role="tabpanel" aria-labelledby="headingOne-hub-1" id="collapseOneB2b-hub-1")
+						.row 
+							.col-xl-6.mb-4
+								+b2b-card-1('Чат-бот – очередная игрушка маркетологов или убийца e-mail-маркетинга?', 'Ярослав Смирнов', 'Rectangle+2598.jpg')
+							.col-xl-6.mb-4
+								+b2b-card-1('Как маркетологу найти подрядчика и провести проект без проблем', 'Редакция MaEd', 'Rectangle32598.jpg')
+						.custom-scrollbar
+							.d-flex
+								+b2b-card-1-min('Повышаем конверсию. На что обратить внимание, чтобы сайт начал продавать?', 'Rectangle_2764.jpg')
+								+b2b-card-1-min('7 признаков того, что ваш сайт пора менять', 'Rectangle+2598.jpg')
+								+b2b-card-1-min('Зачем вашему бизнесу ABM-маркетинг?', 'Rectangle-2feds.jpg')
+								+b2b-card-1-min('5 диджитал инструментов, которые помогут контролировать дилеров', 'Rectangle+2598.jpg')
+					.tab-pane.fade(role="tabpanel" aria-labelledby="headingOne-hub-2" id="collapseOneB2b-hub-2")
+						.h4.text-uppercase.mb-3 Методички и чек-листы
+						.custom-scrollbar.mb-4
+							.d-flex 
+								+b2b-card-2('Видеокурс по интернет-маркетингу', 'undraw_Design_notes_re_eklr.png')
+								+b2b-card-2('Видеокурс для руководителей', 'undraw_Pie_chart_re_bgs8.png')
+								+b2b-card-2('Account-Based Marketing', 'undraw_Data_report_re_p4so.png')
+								+b2b-card-2('Регистрация в Google Мой Бизнес', 'undraw_Contrast_re_hc7k.png')
+						.h4.text-uppercase.mb-3 Видеокурсы
+						.custom-scrollbar
+							.d-flex 
+								+b2b-card-2('Видеокурс по интернет-маркетингу', 'undraw_Design_notes_re_eklr.png')
+								+b2b-card-2('Видеокурс для руководителей', 'undraw_Pie_chart_re_bgs8.png')
+								+b2b-card-2('Account-Based Marketing', 'undraw_Data_report_re_p4so.png')
+								+b2b-card-2('Регистрация в Google Мой Бизнес', 'undraw_Contrast_re_hc7k.png')
+					.tab-pane.fade(role="tabpanel" aria-labelledby="headingOne-hub-3" id="collapseOneB2b-hub-3")
+						.h4.text-uppercase.mb-4 Наши Исследования
+						.row.no-gutters
+							.col-xl-4.col-md-6.mb-4.px-1
+								+b2b-card-3('КАК БАНКИ ПРИВЛЕКАЮТ КЛИЕНТОВ ИЗ ИНТЕРНЕТА?', 'Rectangle_2764+2.jpg')
+							.col-xl-4.col-md-6.mb-4.px-1
+								+b2b-card-3('Как медицинские центры работают с клиентами в интернете?', 'Rectangle_2764_32.jpg')
+							.col-xl-4.col-md-6.mb-4.px-1
+								+b2b-card-3('Как производители и дистрибьюторы работают с клиентами В ИНТЕРНЕТЕ', 'Rectangle_2764_2323.jpg')
+							.col-xl-4.col-md-6.mb-4.px-1
+								+b2b-card-3('КАК БАНКИ ПРИВЛЕКАЮТ КЛИЕНТОВ ИЗ ИНТЕРНЕТА?', 'Rectangle_2764+2.jpg')
+							.col-xl-4.col-md-6.mb-4.px-1
+								+b2b-card-3('Как медицинские центры работают с клиентами в интернете?', 'Rectangle_2764_32.jpg')
+							.col-xl-4.col-md-6.mb-4.px-1
+								+b2b-card-3('Как производители и дистрибьюторы работают с клиентами В ИНТЕРНЕТЕ', 'Rectangle_2764_2323.jpg')
+					.tab-pane.fade(role="tabpanel" aria-labelledby="headingOne-hub-4" id="collapseOneB2b-hub-4")
+						.h4.mb-4 Учебный центр MaEd 
+						.d-flex.align-items-center.flex-wrap 
+							img(src="picture/upload/logo_maed.png", alt="").w-200-px.mr-3.mb-3
+							.d-block.mb-3
+								p.font-weight-bold.mb-2 Собственный учебный центр
+								p.mb-0 Marketing Education
+						.h5.mb-4.pt-3
+							span.yellow-border Преподаем в ведущих вузах и онлайн-университетах
+								span.border-container.animation.visible.animated(data-animate="newline")
+						.row 
+							.col-md-3.mb-3.col-6
+								img(src="picture/upload/150912.png", alt="").w-100.img-fix-height-b2b-hub
+							.col-md-3.mb-3.col-6
+								img(src="picture/upload/sdfsvfdfv.png", alt="").w-100.img-fix-height-b2b-hub
+							.col-md-3.mb-3.col-6
+								img(src="picture/upload/MYAcademy_logo_green_horizontal.png", alt="").w-100.img-fix-height-b2b-hub
+							.col-md-3.mb-3.col-6
+								img(src="picture/upload/Skillbox_Logo.png", alt="").w-100.img-fix-height-b2b-hub
+							.col-md-3.mb-3.col-6
+								img(src="picture/upload/logo_с_hse_Pantone286.png", alt="").w-100.img-fix-height-b2b-hub
+							.col-md-3.mb-3.col-6
+								img(src="picture/upload/plhe.png", alt="").w-100.img-fix-height-b2b-hub
+							.col-md-3.mb-3.col-6
+								img(src="picture/upload/tild3439-3364-4535.png", alt="").w-100.img-fix-height-b2b-hub
+					.tab-pane.fade(role="tabpanel" aria-labelledby="headingOne-hub-5" id="collapseOneB2b-hub-5")
+						.h4.text-uppercase.mb-3 Ближайшее мероприятие:
+						a(href="#").b2b-card-xl-soon.mb-4
+							.b2b-card-xl-soon__container
+								p.text-white.text-uppercase.font-weight-bold.mb-2 Конференция по маркетингу "Re'start"
+								p.mb-1
+									small.text-warning Начало: 
+									small.text-white.text-uppercase 12 января, 2022
+								p.mb-1
+									small.text-warning Спикер: 
+									small.text-white.text-uppercase Андрей Гавриков
+						.h4.text-uppercase.mb-3 прошедшие мероприятия:
+						.custom-scrollbar
+							.d-flex 
+								+b2b-card-4('Бизнес-конференция Tele2 ProDigital', 'Rectangle_276422.jpg')
+								+b2b-card-4('Российский форум маркетинга 2016', 'Rectangle_2764_1.jpg')
+								+b2b-card-4('Бизнес-конференция Tele2 ProDigital', 'Rectangle_2764_2.jpg')
+								+b2b-card-4('Бизнес-конференция Tele2 ProDigital', 'Rectangle_276422.jpg')
+					.tab-pane.fade(role="tabpanel" aria-labelledby="headingOne-hub-6" id="collapseOneB2b-hub-6")
+						.h5.mb-4.text-uppercase
+							span следите за 
+							span.h3.mb-0 completo 
+							span в соц. сетях!
+						.row 
+							.col-md-4.col-sm-6.mb-4 
+								a(href="#" target="_blank").b2b__hub-icon
+									img(src="picture/upload/ic-b2b-instagram.png", alt="").b2b__hub-icon-img
+									p.h5.text-uppercase.text-center.mb-4.text-dark Instagram
+							.col-md-4.col-sm-6.mb-4 
+								a(href="#" target="_blank").b2b__hub-icon
+									img(src="picture/upload/ic-b2b-vk.png", alt="").b2b__hub-icon-img
+									p.h5.text-uppercase.text-center.mb-4.text-dark Вконтакте
+							.col-md-4.col-sm-6.mb-4 
+								a(href="#" target="_blank").b2b__hub-icon.b2b__hub-icon-no-border
+									img(src="picture/upload/ic-b2b-fb.png", alt="").b2b__hub-icon-img
+									p.h5.text-uppercase.text-center.mb-4.text-dark facebook
+						.h5.mb-4.text-uppercase
+							span.h3.mb-0 completo 
+							span в youtube
+						.custom-scrollbar
+							.d-flex 
+								+b2b-card-5('Zoomные новости №7', 'Rectangle2342_2764.jpg')
+								+b2b-card-5('Digital-трансформация HR', 'Rectangle234+2764.jpg')
+								+b2b-card-5('от логистики до HR в компании PERI', 'Rectangle+2764132.jpg')
+								+b2b-card-5('Zoomные новости №7', 'Rectangle2342_2764.jpg')
+		//- 		.h4.mb-0.mb-5
+		//- 			span.yellow-border.nowrap-text 97 человек
+		//- 				span.border-container.animation.visible.animated(data-animate="newline")
+		//- 			span 
+		//- 			span в команде. Умеем собирать кроссфункциональные команды под каждый 
+		//- 			span.yellow-border.nowrap-text проект для достижения
+		//- 				span.border-container.animation.visible.animated(data-animate="newline")
+		//- 			span 
+		//- 			span кратного роста
+		//- .row.d-md-none#b2b__accordion-crew
+		//- 	.col-md-12 
+		//- 		+b2b__tab-item-mob-crew('Отдел стратегий', 'dep-1')
+		//- 		.collapse.b2b--collapse(aria-labelledby="headingOne-dep-1" data-parent="#b2b__accordion-crew" id="collapseOneB2b-dep-1")
+		//- 			+b2b-crew-el('Group_24176.png', '10', 'стратегий', 'Артем Елисов', 'Ядро любой digital-кампании. Использование самых современных рекламных технологий обернется сливом бюджета без системного подхода и маркетинговых исследований. Чтобы гарантировать результат, мы изучаем рынок, сегментируем целевую аудиторию, прорабатываем позиционирование и УТП, детально проектируем клиентский путь.')
+		//- 		+b2b__tab-item-mob-crew('Отдел трафика', 'dep-2')
+		//- 		.collapse.b2b--collapse(aria-labelledby="headingOne-dep-2" data-parent="#b2b__accordion-crew" id="collapseOneB2b-dep-2")
+		//- 			+b2b-crew-el('Group_24176.png', '10', 'трафика', 'Сергей Сухоплюев', 'Специалисты отдела умеют работать со всеми источниками платного трафика, разбираютстя в работе алгоритмов и в специфике каждого канала продвижения. Мы не только приведем самый качественный трафик, но и оптимизируем всю воронку продаж, чтобы вы получали клиентов, а не лиды.')
+		//- 		+b2b__tab-item-mob-crew('Отдел разработки', 'dep-3')
+		//- 		.collapse.b2b--collapse(aria-labelledby="headingOne-dep-3" data-parent="#b2b__accordion-crew" id="collapseOneB2b-dep-3")
+		//- 			+b2b-crew-el('Group_24176.png', '9', 'разработки', 'Максим Питирянинов', 'Делаем сайты, порталы и приложения, которые дружат с поисковыми системами, просты в поддержке и решают задачи бизнеса. Для этого используем современные фреймворки и гибкие подходы к управлению проектами.')
+		//- 		+b2b__tab-item-mob-crew('Отдел прогрева', 'dep-4')
+		//- 		.collapse.b2b--collapse(aria-labelledby="headingOne-dep-4" data-parent="#b2b__accordion-crew" id="collapseOneB2b-dep-4")
+		//- 			+b2b-crew-el('Group_24176.png', '6', 'прогрева', 'Михаил Федоров', 'Прогрев – нетъемлемый элемент системы маркетинга и продаж для B2B-сегмента. Мы сочетаем разработку и дистрибуцию контента с различными вовлекающими механиками, которые превращают холодных пользователей в горячих клиентов.')
+		//- 		+b2b__tab-item-mob-crew('Отдел аккаунтинга', 'dep-5')
+		//- 		.collapse.b2b--collapse(aria-labelledby="headingOne-dep-5" data-parent="#b2b__accordion-crew" id="collapseOneB2b-dep-5")
+		//- 			+b2b-crew-el('Group_24176.png', '18', 'аккаунтинга', 'Даниил Нестеров', 'Мы собрали сильную команду, которая умеет добиваться высоких результатов и выстраивать доверительные отношения с клиентами. Повышение квалификации в учебном центре MAED – обязательный этап в карьере менеджера проектов Комплето')
+		//- .row.d-none.d-md-flex
+		//- 	.col-md-4
+		//- 		ul.border-0.mb-0.pl-0.nav.d-block.nav-tabs#myTab-b2b-new(role='tablist')
+		//- 			li.d-block.mb-3.nav-item
+		//- 				a.b2b-new-tab-link.active#dep-1-tab(data-toggle='tab' href='#dep-1' role='tab' aria-controls='dep-1' aria-selected='true')
+		//- 					span Отдел стратегий
+		//- 			li.d-block.mb-3.nav-item
+		//- 				a.b2b-new-tab-link#dep-2-tab(data-toggle='tab' href='#dep-2' role='tab' aria-controls='dep-2' aria-selected='false')
+		//- 					span Отдел трафика
+		//- 			li.d-block.mb-3.nav-item
+		//- 				a.b2b-new-tab-link#dep-3-tab(data-toggle='tab' href='#dep-3' role='tab' aria-controls='dep-3' aria-selected='false')
+		//- 					span Отдел разработки
+		//- 			li.d-block.mb-3.nav-item
+		//- 				a.b2b-new-tab-link#dep-4-tab(data-toggle='tab' href='#dep-4' role='tab' aria-controls='dep-4' aria-selected='false')
+		//- 					span Отдел прогрева
+		//- 			li.d-block.mb-3.nav-item
+		//- 				a.b2b-new-tab-link#dep-5-tab(data-toggle='tab' href='#dep-5' role='tab' aria-controls='dep-5' aria-selected='false')
+		//- 					span Отдел аккаунтинга
+		//- 	.col-md-8
+		//- 		.tab-content#myTabContent
+		//- 			.tab-pane.fade.show.active#dep-1(role='tabpanel' aria-labelledby='dep-1-tab') 
+		//- 				+b2b-crew-el('Group_24176.png', '10', 'стратегий', 'Артем Елисов', 'Ядро любой digital-кампании. Использование самых современных рекламных технологий обернется сливом бюджета без системного подхода и маркетинговых исследований. Чтобы гарантировать результат, мы изучаем рынок, сегментируем целевую аудиторию, прорабатываем позиционирование и УТП, детально проектируем клиентский путь.')
+		//- 			.tab-pane.fade#dep-2(role='tabpanel' aria-labelledby='dep-2-tab')
+		//- 				+b2b-crew-el('Group_24176.png', '10', 'трафика', 'Сергей Сухоплюев', 'Специалисты отдела умеют работать со всеми источниками платного трафика, разбираютстя в работе алгоритмов и в специфике каждого канала продвижения. Мы не только приведем самый качественный трафик, но и оптимизируем всю воронку продаж, чтобы вы получали клиентов, а не лиды.')
+		//- 			.tab-pane.fade#dep-3(role='tabpanel' aria-labelledby='dep-2-tab')
+		//- 				+b2b-crew-el('Group_24176.png', '9', 'разработки', 'Максим Питирянинов', 'Делаем сайты, порталы и приложения, которые дружат с поисковыми системами, просты в поддержке и решают задачи бизнеса. Для этого используем современные фреймворки и гибкие подходы к управлению проектами.')
+		//- 			.tab-pane.fade#dep-4(role='tabpanel' aria-labelledby='dep-2-tab')
+		//- 				+b2b-crew-el('Group_24176.png', '6', 'прогрева', 'Михаил Федоров', 'Прогрев – нетъемлемый элемент системы маркетинга и продаж для B2B-сегмента. Мы сочетаем разработку и дистрибуцию контента с различными вовлекающими механиками, которые превращают холодных пользователей в горячих клиентов.')
+		//- 			.tab-pane.fade#dep-5(role='tabpanel' aria-labelledby='dep-2-tab')
+		//- 				+b2b-crew-el('Group_24176.png', '18', 'аккаунтинга', 'Даниил Нестеров', 'Мы собрали сильную команду, которая умеет добиваться высоких результатов и выстраивать доверительные отношения с клиентами. Повышение квалификации в учебном центре MAED – обязательный этап в карьере менеджера проектов Комплето')

@@ -1,0 +1,267 @@
+- var title = "Кейс Подробно";
+- var otherCasesBgColor1 = "#55499F";
+- var otherCasesBgColor2 = "#FFC900";
+doctype html
+html(lang="ru")
+    head
+        include modules/head/index.pug
+    body
+        .case-detail
+            include modules/header/index.pug
+            include modules/cases/detail/new-cases-main/index.pug
+            .case-detail-video-block
+                a(href="#").case-detail-video-block__content
+                    img(src="../../picture/upload/cases-detail-video-1.png", alt="")
+                    .case-detail-video-block__play-btn
+                        img(src="../../picture/upload/case-detail-video-play-btn.svg", alt="")
+            include modules/cases/detail/new-cases-paralax/index.pug
+            .case-detail-tasks-block
+                img(src="../../picture/upload/cases-detail-tasks-yellow.png", alt="").case-detail-tasks-block__bg-l
+                img(src="../../picture/upload/cases-detail-tasks-white.png", alt="").case-detail-tasks-block__bg-r
+                .container
+                    .case-detail-tasks-block__content
+                        h2.h2.case-detail-tasks-block__title Задачи
+                        .case-detail-tasks-block__list
+                            .case-detail-tasks-block__list-element
+                                h3.case-detail-tasks-block__list-element-title 1. Ускорение сайта
+                                .case-detail-tasks-block__list-element-text Главная задача — увеличение скорости загрузки страниц. Мы произвели рефакторинг сайта, те есть переписали код  на другом стеке технологий, чтобы он стал более простым и понятным. При этом основной функционал сайта остался прежним.
+                            .case-detail-tasks-block__list-element
+                                h3.case-detail-tasks-block__list-element-title 2. Обновление дизайна
+                                .case-detail-tasks-block__list-element-text В 2019 году в компании «Альта-Профиль» прошел ребрендинг.  Необходимо было разработать дизайн, соответствующий новому фирменному стилю. Мы опирались на обновленный брендбук компании, в результате получился современный и понятный сайт.
+                            .case-detail-tasks-block__list-element
+                                h3.case-detail-tasks-block__list-element-title 3. Доработка интерфейса
+                                .case-detail-tasks-block__list-element-text Необходимо было сделать сайт более удобным. Мы проанализировали контент, структуру, интерфейс и сформировали для себя список рекомендаций по улучшению всех элементов.
+            .case-detail-page-present.case-detail-page-present_normal
+                .container
+                    .case-detail-page-present__preview
+                        .case-detail-page-present__preview-left
+                            h2.h2.case-detail-page-present__preview-title Каталог
+                            .case-detail-page-present__preview-text
+                                p Чтобы сделать его более удобным, мы учли опыт, который пользователи получают, совершая заказы на маркетплейсах:
+                                ul
+                                    li Проработали логику фильтрации и отображения ассортимента в меню и каталоге.
+                                    li Добавили всплывающие подсказки для быстрого просмотра характеристик.
+                                    li Оптимизировали систему навигации по страницам сайта, упорядочив товарные категории.
+                                    li Добавили возможность выбора дополнительных опций услуг, которые добавляются в корзину.
+                                    li Добавили предпросмотр товарных категорий и серий продукции. Ориентироваться в ассортименте стало проще.
+                                    li Заложили функционал скидок (перечеркнутая цена), который будет использоваться в будущем.
+                                    li Адаптировали навигацию по категориям и товарам в мобильной версии. Пользователь может оперативно найти  нужный товар и оформить заказ.
+                        .case-detail-page-present__preview-right
+                            .case-detail-page-present__preview-img-main
+                                img(src="../../picture/upload/cases-detail-page-preview-1.png", alt="")
+                                .case-detail-page-present__preview-img-left
+                                    img(src="../../picture/upload/cases-detail-page-preview-3.png", alt="")
+                                .case-detail-page-present__preview-img-right
+                                    img(src="../../picture/upload/cases-detail-page-preview-2.png", alt="")
+                .case-detail-page-present__view
+                    .case-detail-page-present__view-bg
+                        img(src="../../picture/upload/case-detail-page-present-bg-yellow.png", alt="")
+                    .container
+                        .case-detail-page-present__view-content
+                            .case-detail-page-present__view-main
+                                img(src="../../picture/upload/cases-detail-page-present-view-main.png", alt="")
+                            .case-detail-page-present__view-mobile-wrapper
+                                img(src="../../picture/upload/cases-detail-mobile-view-container.png", alt ='').case-detail-page-present__view-mobile-img
+                                .case-detail-page-present__view-mobile
+                                    img(src="../../picture/upload/cases-detail-page-present-view-mobile.png", alt="")
+
+                .case-detail-page-present-separate-present
+                    img(src="../../picture/upload/cases-detail-page-present-bg-yellow-2.png", alt="")
+            .case-detail-page-present.case-detail-page-present_revers
+                .container
+                    .case-detail-page-present__preview
+                        .case-detail-page-present__preview-left
+                            h2.h2.case-detail-page-present__preview-title Посадочные промо-страницы
+                            .case-detail-page-present__preview-text
+                                p Каждый лендинг — лицо целой товарной категории. Промо-страницы приносят основной коммерческий трафик и заказы. Их необходимо было доработать с точки зрения дизайна и юзабилити — добавить конверсионные CTA-элементы, а также актуализировать всю информацию.
+                                br
+                                p Мы хотели показать все возможности, которые компания дает своим клиентам. Для этого мы:
+                                    ul
+                                        li Разработали ~ 15 новых промо-страниц под каждый тип продукции.
+                                        li Актуализировали характеристики продукции, в том числе с учетом опыта ее применения для разных типов строений.
+                                        li Разработали и добавили новые блоки для размещения актуальной информации: брошюр, документации по монтажу и наличие комплектующих. В том числе блоки ремаркетинга для перехода к другим коллекциям и категориям.
+                                        li Продумали скролл-меню для навигации по лендингу.
+
+                        .case-detail-page-present__preview-right
+                            .case-detail-page-present__preview-img-main
+                                img(src="../../picture/upload/cases-detail-page-preview2-1.png", alt="")
+                                .case-detail-page-present__preview-img-left
+                                    img(src="../../picture/upload/cases-detail-page-preview2-3.png", alt="")
+                                .case-detail-page-present__preview-img-right
+                                    img(src="../../picture/upload/cases-detail-page-preview2-2.png", alt="")
+                .case-detail-page-present__view
+                    .case-detail-page-present__view-bg
+                        //img(src="../../picture/upload/case-detail-page-present-bg-yellow.png", alt="")
+                    .container
+                        .case-detail-page-present__view-content
+                            .case-detail-page-present__view-main
+                                img(src="../../picture/upload/cases-detail-page-present-view-main2.png", alt="")
+                            .case-detail-page-present__view-mobile-wrapper
+                                img(src="../../picture/upload/cases-detail-mobile-view-container.png", alt ='').case-detail-page-present__view-mobile-img
+                                .case-detail-page-present__view-mobile
+                                    img(src="../../picture/upload/cases-detail-page-present-view-mobile2.png", alt="")
+                .case-detail-page-present__promo
+                    .case-detail-page-present__promo-bg
+                        img(src="../../picture/upload/case-detail-page-present-bg-yellow.png", alt="")
+                    .container
+                        .case-detail-page-present__promo-list
+                            .case-detail-page-present__promo-element
+                                img(src="../../picture/upload/cases-detail-page-promo1.png", alt="")
+                            .case-detail-page-present__promo-element
+                                img(src="../../picture/upload/cases-detail-page-promo2.png", alt="")
+                            .case-detail-page-present__promo-element
+                                img(src="../../picture/upload/cases-detail-page-promo3.png", alt="")
+                            .case-detail-page-present__promo-element
+                                img(src="../../picture/upload/cases-detail-page-promo4.png", alt="")
+                            .case-detail-page-present__promo-element
+                                img(src="../../picture/upload/cases-detail-page-promo5.png", alt="")
+                            .case-detail-page-present__promo-element
+                                img(src="../../picture/upload/cases-detail-page-promo6.png", alt="")
+            .case-detail-page-present.case-detail-page-present_simple
+                .container
+                    .case-detail-page-present__preview
+                        .case-detail-page-present__preview-left
+                            h2.h2.h2_small.case-detail-page-present__preview-title Раздел «Где купить»
+                            .case-detail-page-present__preview-text
+                                p Покупать продукцию стало проще, так как мы:
+                                ul
+                                    li Добавили удобный фильтр с мгновенной сортировкой количества дилеров.
+                                    li Реализовали выбор города в один клик. Система сама подсказывает нужные варианты.
+                        .case-detail-page-present__preview-right
+                            .case-detail-page-present__preview-img-main
+                                img(src="../../picture/upload/cases-detail-page-preview3-1.png", alt="")
+                                .case-detail-page-present__preview-img-left
+                                    img(src="../../picture/upload/cases-detail-page-preview3-3.png", alt="")
+                                .case-detail-page-present__preview-img-right
+                                    img(src="../../picture/upload/cases-detail-page-preview3-2.png", alt="")
+            .case-detail-video-block
+                .container
+                    .case-detail-video-block__text-container
+                        h2.h2.h2_small.case-detail-video-block__title Увеличили скорость
+                            br
+                            | работы сайта в 10 раз
+                        .case-detail-video-block__text
+                            p.bold В рамках рефакторинга сайта мы отделили серверную часть от публичной за счет реактивного фреймворка vue.js Это позволяет сайту работать без перезагрузок по принципу приложения.
+                            p Таким, образом нам удалось решить сразу несколько задач и во всех смыслах переработать ресурс клиента. Если сайт работает быстро, то вероятность, что пользователь останется и совершит целевое действие — выше. В рамках работы над сайтом мы уделяем внимание всем факторам, которые влияют на его работоспособность и конверсию.
+
+                a(href="#").case-detail-video-block__content
+                    img(src="../../picture/upload/cases-detail-video-1.png", alt="")
+                    .case-detail-video-block__play-btn
+                        img(src="../../picture/upload/case-detail-video-play-btn.svg", alt="")
+            .case-detail-bottom
+                .case-detail-bottom__bg
+                    img(src="../../picture/upload/case-detail-bottom-bg-yellow.png", alt="")
+                .case-detail-bottom__block
+                    .container
+                        h2.h2.h2_small.case-detail-bottom__block-title.text-center Отзыв клиента
+                        .case-detail-bottom__block-content
+                            .case-detail-review
+                                .case-detail-review__text Вместе с Комплето мы инфраструктурно обновили ключевой элемент нашей маркетинговой стратегии – сайт Альта-Профиль. Примененные в ходе работы над проектом новейшие технологии и тренды в веб-дизайне еще долгое количество лет позволят нам оставаться на пике текущих тенденций в сайтостроении и e-commerce.
+                                    .case-detail-review__quot.case-detail-review__quot_top
+                                        img(src="../../picture/upload/cases-detail-quotes-top.png", alt="")
+                                    .case-detail-review__quot.case-detail-review__quot_bottom
+                                        img(src="../../picture/upload/cases-detail-quotes-bot.png", alt="")
+
+                                .case-detail-review__client
+                                    .case-detail-review__client-person
+                                        .case-detail-person
+                                            .case-detail-person__img
+                                                img(src="../../picture/upload/cases-detail-client-photo.png")
+                                            .case-detail-person__info
+                                                .case-detail-person__name Алексей Лавров
+                                                .case-detail-person__position Директор по IT компании «Альта-Профиль»
+                                    .case-detail-review__client-logo
+                                        img(src="../../picture/upload/cases-detail-client-logo.jpg")
+
+                .case-detail-bottom__block
+                    .container
+                        h2.h2.h2_small.case-detail-bottom__block-title.text-center Команда специалистов
+                        .case-detail-bottom__block-content
+                            .case-detail-specialists.case-detail-specialists_desctop
+                                    .case-detail-specialists__element
+                                        .case-detail-person
+                                            .case-detail-person__img
+                                                img(src="../../picture/upload/author-2.png")
+                                            .case-detail-person__info
+                                                .case-detail-person__name Артём Савинов
+                                                .case-detail-person__position Старший менеджер проектов в отделе разработки
+                                    .case-detail-specialists__element
+                                        .case-detail-person
+                                            .case-detail-person__img
+                                                img(src="../../picture/upload/author-3.png")
+                                            .case-detail-person__info
+                                                .case-detail-person__name Андрей Попов
+                                                .case-detail-person__position Fullstack разработчик / Тимлид разработки
+                                    .case-detail-specialists__element
+                                        .case-detail-person
+                                            .case-detail-person__img
+                                                img(src="../../picture/upload/author-2.png")
+                                            .case-detail-person__info
+                                                .case-detail-person__name Андрей Баяндин
+                                                .case-detail-person__position Разработчик
+                                    .case-detail-specialists__element
+                                        .case-detail-person
+                                            .case-detail-person__img
+                                                img(src="../../picture/upload/author-3.png")
+                                            .case-detail-person__info
+                                                .case-detail-person__name Денис Колосовский
+                                                .case-detail-person__position Веб-дизайнер
+                            .custom-scrollbar.case-detail-specialists.case-detail-specialists_mobile
+                                .d-flex
+                                    .case-detail-specialists__element
+                                        .case-detail-person
+                                            .case-detail-person__img
+                                                img(src="../../picture/upload/author-2.png")
+                                            .case-detail-person__info
+                                                .case-detail-person__name Артём Савинов
+                                                .case-detail-person__position Старший менеджер проектов в отделе разработки
+                                    .case-detail-specialists__element
+                                        .case-detail-person
+                                            .case-detail-person__img
+                                                img(src="../../picture/upload/author-3.png")
+                                            .case-detail-person__info
+                                                .case-detail-person__name Андрей Попов
+                                                .case-detail-person__position Fullstack разработчик / Тимлид разработки
+                                    .case-detail-specialists__element
+                                        .case-detail-person
+                                            .case-detail-person__img
+                                                img(src="../../picture/upload/author-2.png")
+                                            .case-detail-person__info
+                                                .case-detail-person__name Андрей Баяндин
+                                                .case-detail-person__position Разработчик
+                                    .case-detail-specialists__element
+                                        .case-detail-person
+                                            .case-detail-person__img
+                                                img(src="../../picture/upload/author-3.png")
+                                            .case-detail-person__info
+                                                .case-detail-person__name Денис Колосовский
+                                                .case-detail-person__position Веб-дизайнер
+            .case-detail-form
+                .container#new-form-main
+                    .row#form-content
+                        .col-md-12
+                            .h2.form-h2
+                                span.yellow-border Обсудите с нами ваши задачи
+                                    span.border-container.animation.visible.animated(data-animate="newline")
+                        .case-detail-form__img
+                            img(src="../../picture/upload/cases-detail-form-bg.png").case-detail-form__img-bg
+                            include modules/form/index.pug
+            .case-detail__other-cases
+                .h2.h2_small.case-detail__other-cases-title Другие кейсы
+                .case-detail__other-cases-list
+                    .case-detail__other-cases-element-container
+                        a(href="#").case-detail__other-cases-element(style='background-color: ' + otherCasesBgColor1 + ';')
+                            canvas(width="961" height="494")
+                            img(src="../../picture/upload/cases-detail-other-cases-logo-1.png", alt="").case-detail__other-cases-element-logo
+                            .case-detail__other-cases-element-name
+                                span Разработка нового сайта ростелеком
+                        .case-detail__other-cases-element-name_mobile Разработка нового сайта ростелеком
+                    .case-detail__other-cases-element-container
+                        a(href="#").case-detail__other-cases-element(style='background-color: ' + otherCasesBgColor2 + ';')
+                            canvas(width="961" height="494")
+                            img(src="../../picture/upload/cases-detail-other-cases-logo-2.png", alt="").case-detail__other-cases-element-logo
+                            .case-detail__other-cases-element-name
+                                span Разработка нового сайта moskva.beeline.ru
+                        .case-detail__other-cases-element-name_mobile Разработка нового сайта moskva.beeline.ru
+        include modules/footer/index.pug
+        include modules/foot/index.pug

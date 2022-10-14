@@ -1,0 +1,25 @@
+mixin razrabotka-icon(img, text)
+	.d-flex.align-items-center.primary-head-item.primary-head-item-large
+		.primary-head-item-num
+			img(src="picture/upload/"+img, alt="").primary-head-item-num-icon
+		.primary-head-item-text.text-white!= text
+.primary-head-slider-block.primary-head-slider-block-digital
+	.primary-head
+		.container-fluid.primary-head-container.h-100
+			.row.h-100.align-items-center
+				.col-lg-4.col-md-4.d-none.d-md-block
+					+razrabotka-icon('discount.svg', 'Работать по системе')
+					+razrabotka-icon('research.svg', 'Улучшить маркетинг')
+					+razrabotka-icon('funnel.svg', 'Получать больше прибыли')
+				.offset-xl-1.col-md-8.col-xl-6
+					.h1.main-title.primary-head__title Разработка
+						br
+						| Digital-стратегии
+						br
+						| развития маркетинга
+					button.btn.btn-warning.data-scroll.mt-4.mb-4.d-block(data-scroll="form-content") Обсудить проект
+		.primary-head-video
+			video(autoplay="autoplay" muted playsinline loop poster="picture/upload/slide_1-digital.jpg")
+				source(src="picture/upload/digital-background-2SC9RXV_1_1.mp4" type="video/mp4")
+	.paralax-item.paralax-item-1
+		img(src="picture/upload/dotted_box.png", alt="")

@@ -1,0 +1,53 @@
+.power {
+	position: relative;
+	overflow: hidden;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	@include media-breakpoint-down(sm) {
+		padding-bottom: 20px;
+		&__btn {
+			width: calc(100% - 10px);
+		}
+	}
+	&-paralax {
+		text-transform: uppercase;
+		position: absolute;
+		left: -30px;
+		//font-size: 26vw;
+		font-size: 330px;
+		line-height: 1.1;
+		font-weight: bold;
+		top: 0;
+		visibility: hidden;
+		font-family: 'Roboto', sans-serif;
+		color:  #F8F8F8;
+		pointer-events: none;
+		@include media-breakpoint-down(sm) {
+			font-size: 30vw;
+			top: 40px;
+		}
+	}
+	&__sub-title {
+		padding: 10px 0;
+		background-color: white; 
+	}
+	&-mouse-paralax {
+		position: relative;
+		&__img {
+			width: 126px;
+			margin-left: auto;
+			display: block;
+			position: relative;
+			z-index: 2;
+		}
+		&__block {
+			width: 60px;
+			height: 85px;
+			background-color: $yellow;
+			position: absolute;
+			top: -16px;
+			right: 0;
+			z-index: 1;
+		}
+	}
+}

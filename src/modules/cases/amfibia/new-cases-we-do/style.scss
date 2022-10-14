@@ -1,0 +1,121 @@
+.new-cases-we-do {
+	background-color: rgba(38,34,34, 0.8);
+	padding-top: 40px;
+	padding-bottom: 120px;
+	overflow: hidden;
+	position: relative;
+	@include media-breakpoint-down(sm) {
+		padding-top: 0;
+		padding-bottom: 30px;
+	}
+	&__container {
+		background-image: url('../../picture/backgrounds/Group_22.5.svg');
+		background-size: 100% 85%;
+		background-repeat: no-repeat;
+		background-position: center center;
+		&-1 {
+			@include media-breakpoint-down(sm) {
+				background-size: 100% 125%;
+				background-position: bottom;
+				background-repeat: repeat-x;
+			}
+		}
+		&-2 {
+			background-image: url('../../picture/backgrounds/Group_26.svg');
+		}
+		&-3 {
+			background-image: url('../../picture/backgrounds/Group_22.6.svg');
+			@include media-breakpoint-down(sm) {
+				background-size: 100% 125%;
+				background-position: bottom;
+				background-repeat: repeat-x;
+			}
+		}
+	}
+	&__tablet {
+		width: 630px;
+		height: 392px;
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 0;
+			height: 180px;
+			width: 260px;
+		}
+	}
+	&__text {
+		max-width: 665px;
+		&-1 {
+			max-width: 625px;
+		}
+	}
+	&__absolute-title {
+		color: rgba(255,255,255,0.2);
+    font-size: 11vw;
+    font-weight: 700;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+    left: 0;
+    white-space: nowrap;
+		visibility: hidden;
+		text-transform: uppercase;
+		width: 100%;
+		text-align: center;
+		@include media-breakpoint-down(sm) {
+			bottom: 20px;
+		}
+	}
+	&__quote {
+		@include media-breakpoint-down(lg) {
+			padding: 49px 40px;
+			@include media-breakpoint-down(md) {
+				padding: 28px 25px;
+				.new-cases-tasks__quote-left {
+					width: 130px;
+					@include media-breakpoint-down(sm) {
+						width: 200px;
+					}
+				}
+			}
+		}
+	}
+	&__content {
+		@include media-breakpoint-down(md) {
+			padding: 0 40px;
+		}
+		@include media-breakpoint-down(sm) {
+			padding: 0 10px;
+		}
+		&__title-main {
+			font-size: 32px;
+			font-weight: bold;
+			@include media-breakpoint-down(sm) {
+				font-size: 28px;
+			}
+		}
+	}
+	&__undertext {
+		font-size: 14px;
+		margin-top: 20px;
+		@include media-breakpoint-down(sm) {
+			font-size: 12px;
+			width: 260px;
+			margin: auto;
+			text-align: center;
+		}
+	}
+	&__card-text {
+		font-size: 24px;
+		max-width: 503px;
+		&-nowrap {
+			white-space: nowrap;
+		}
+		@include media-breakpoint-down(md) {
+			max-width: inherit;
+		}
+		a {
+			background-color: white;
+			color: $blue;
+			text-decoration: underline;
+		}
+	}
+}

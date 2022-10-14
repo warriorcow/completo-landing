@@ -1,0 +1,61 @@
+mixin dealers-level-card(icon, text, text2)
+	.col-lg-6.mb-4
+		.dealers-level__card.bg-white
+			.dealers-level__card-icon-block
+				i.icon.dealers-level__card-icon(class='icon-'+icon)
+			.d-block
+				a(href="mailto:"+text).h4.text-dark= text
+				p.mt-4.mb-0= text2
+.py-5.position-relative.contact-us__office
+	.container.my-md-4.position-relative
+		img(src="picture/upload/Group_421.png", alt="").contact-us__office-img
+		.row
+			.col-md-12
+				nav.breadcrumb
+					ol.breadcrumb
+						li.breadcrumb-item
+							a(href="/").text-secondary Главная
+						li.breadcrumb-item.active.text-dark(aria-current="page") Контакты
+			.col-md-12.col-lg-10.col-xl-8
+				h1.h2.mb-4.form-h2.form-h2-new 
+					span.yellow-border Офис в Москве
+						span.border-container.animation.visible.animated(data-animate="newline")
+		.row.mb-4.contact-us__office-row
+			.col-md-12.d-sm-none 
+				img(src="picture/upload/Group_421.png", alt="").contact-us__office-img-mob.mb-4
+			.col-lg-3.col-md-6.mb-4 
+				.text-center
+					.mb-2.text-center
+						i.icon.icon-contact-maps-and-location.contact-us__office-icon
+					a(href="https://yandex.ru/maps/-/CCUT58mt" target="_blank").font-weight-bold
+						u  115035, г. Москва, ул. Садовническая, дом 54, строение 2
+			.col-lg-3.col-md-6.mb-4 
+				.text-center
+					.mb-2.text-center
+						i.icon.icon-contact-telephone.contact-us__office-icon
+					a(href="tel:84956408997").font-weight-bold
+						u +7 (495) 640-89-97
+			.col-lg-3.col-md-6.mb-4 
+				.text-center
+					.mb-2.text-center
+						i.icon.icon-contact-paper-plane.contact-us__office-icon
+					a(href="https://wa.me/79587091189").font-weight-bold
+						u Пишите нам в WhatsApp!
+			.col-lg-3.col-md-6.mb-4 
+				.text-center
+					.mb-2.text-center
+						i.icon.icon-contact-calendar.contact-us__office-icon
+					p.mb-0.font-weight-bold  Работаем: <br> пн.-пт. с 10:00 до 18:00
+		.row.d-none.d-md-flex
+			+dealers-level-card('dealers-cooperation', 'reception@completo.ru', 'курьерам и поставщикам')
+			+dealers-level-card('dealers-cooperation', 'hr@completo.ru', 'соискателям и стажерам')
+			+dealers-level-card('dealers-cooperation', 'sales@completo.ru', 'отдел продаж')
+			+dealers-level-card('dealers-cooperation', 'contact@completo.ru', 'общие вопросы')
+		.row.d-md-none
+			.col-md-12
+				.custom-scrollbar
+					.row.flex-nowrap.pr-2
+						+dealers-level-card('dealers-cooperation', 'reception@completo.ru', 'курьерам и поставщикам')
+						+dealers-level-card('dealers-cooperation', 'hr@completo.ru', 'соискателям и стажерам')
+						+dealers-level-card('dealers-cooperation', 'sales@completo.ru', 'отдел продаж')
+						+dealers-level-card('dealers-cooperation', 'contact@completo.ru', 'общие вопросы')

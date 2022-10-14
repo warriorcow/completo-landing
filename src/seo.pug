@@ -1,0 +1,46 @@
+- var title = "SEO продвижение сайтов по системе Комплето - получите больше SEO трафика";
+- var information = "Заявка на SEO-аудит";
+doctype html
+html(lang="ru")
+	head
+		include modules/head/index.pug
+	body
+		include modules/header/index.pug
+		include modules/seo/head/index.pug
+		include modules/seo/seo-front/index.pug
+		include modules/seo/seo-system/index.pug
+		include modules/seo/how-we-make/index.pug
+		include modules/seo/steps/index.pug
+		include modules/seo/schema/index.pug
+		include modules/seo/seo-cases/index.pug
+		section.our-cases-seo.bg-lightgrey
+			.container
+				.row
+					.col-xl-12
+						h2.h2.mb-5.our-cases-seo-title
+							span.green-red(data-text="SEO-") SEO-
+							span.green-red(data-text="продвижение") продвижение 
+							span по системе: наши кейсы
+			include modules/seo/blog/index.pug
+		.information
+			.container
+				.row
+					.col-xl-6
+						.h2.mb-5 Собираете информацию
+							br
+							span.green-red(data-text="для") для 
+							span.green-red(data-text="руководства?") руководства?
+				include modules/information/index.pug
+		.about__wrapper-seo
+			include modules/about/index.pug
+		.form-container.form-container-seo
+			.container#new-form-main
+				.row.pt-5.pb-5#form-content
+					.col-md-12
+						.h2.mb-4.form-h2
+							span.green-red(data-text="Оставьте") Оставьте 
+							span.green-red(data-text="заявку") заявку 
+							span на бесплатный SEO-аудит от Комплето!
+					include modules/form/index.pug
+		include modules/footer/index.pug
+		include modules/foot/index.pug

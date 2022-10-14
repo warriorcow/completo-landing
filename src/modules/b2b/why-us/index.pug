@@ -1,0 +1,26 @@
+mixin b2b-why-us(icon, title, text)
+	.b2b-why-us-card
+		.b2b-why-us-icon-head.text-center
+			i.icon.b2b-why-us-icon.text-secondary(class="icon-"+icon)
+		p.mb-0.text-center 
+			span.font-weight-bold= title
+			br
+			span= text
+.py-5.position-relative.clients.clients-md.mb-0
+	.container.my-md-5
+		.row
+			.col-md-12
+				h2.h2.mb-4.mb-xl-5.position-relative.z-index-2.form-h2
+					span.yellow-border Почему
+						span.border-container.animation.visible.animated(data-animate="newline")
+					span 
+					span нужно обратиться именно к нам?
+		.row
+			.col-md-12
+				.b2b-shadow-block.mt-4
+					.custom-scrollbar
+						.d-flex.justify-content-between
+							+b2b-why-us('b2b-factory', '5 лет', 'мы работаем преимущественно с B2B-компаниями. У нас одна из самых сильных экспертиз на рынке для B2B')
+							+b2b-why-us('growth', 'Самая сильная', 'аналитика интернет-маркетинга для длинных циклов принятия решений и множества ЛПР')
+							+b2b-why-us('b2b-teacher', 'Мы делаем', 'все работы в режиме одного окна. Все наши кейсы выполнены целиком и полностью нами')
+							+b2b-why-us('complect', 'Сильная веб-разработка:', 'B2B-сайты, личные кабинеты, внутренние онлайн-системыи всё, что нужно для работы с другими бизнесами')

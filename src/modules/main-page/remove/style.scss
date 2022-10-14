@@ -1,0 +1,60 @@
+.remove {
+	position: relative;
+	overflow: hidden;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	@include media-breakpoint-down(sm) {
+		padding-top: 40px;
+		padding-bottom: 30px;
+		&__btn {
+			width: calc(100% - 10px);
+		}
+	}
+	&-paralax {
+		text-transform: uppercase;
+		position: absolute;
+		left: -30px;
+		visibility: hidden;
+		//font-size: 26vw;
+		font-size: 330px;
+		line-height: 1;
+		font-weight: bold;
+		top: 0;
+		font-family: 'Roboto', sans-serif;
+		color:  #F8F8F8;
+		pointer-events: none;
+		white-space: nowrap;
+		@include media-breakpoint-down(sm) {
+			font-size: 30vw;
+			top: 0px;
+		}
+	}
+	&__sub-title {
+		padding: 10px 0;
+		background-color: white; 
+	}
+	&-mouse-paralax {
+		position: relative;
+		transform: translateX(-50px);
+		@include media-breakpoint-down(lg) {
+			transform: none;
+		}
+		&__img {
+			width: 111px;
+			height: 111px;
+			margin-left: auto;
+			display: block;
+			position: relative;
+			z-index: 2;
+		}
+		&__block {
+			width: 111px;
+			height: 111px;
+			background-color: $yellow;
+			position: absolute;
+			top: -16px;
+			right: -17px;
+			z-index: 1;
+		}
+	}
+}

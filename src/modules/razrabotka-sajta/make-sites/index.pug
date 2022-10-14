@@ -1,0 +1,48 @@
+mixin razrabotka-promo(link, name)
+	.make-sites__promo.p-3
+		a(href=link, target="_blank").make-sites__promo__link= name
+.py-5.overflow-hidden.position-relative.make-sites-section-main
+	.paralax-item.paralax-item-2
+		img(src="picture/upload/dotted-group.png", alt="")
+	.container.my-md-4
+		.row
+			.col-md-12
+				nav.breadcrumb
+					ol.breadcrumb
+						li.breadcrumb-item
+							a(href="/").text-secondary Главная
+						li.breadcrumb-item.active.text-dark(aria-current="page") Разработка сайтов
+				h2.h2.mb-4.form-h2 Создание сайтов под ключ
+					br
+					| для достижения 
+					span.yellow-border бизнес-целей
+						span.border-container.animation.visible.animated(data-animate="newline")
+		.row
+			.col-lg-6.mb-4
+				p.font-weight-normal.h4.mb-5 Создание эффективного сайта — это, в первую очередь, проработка спроса, разработка всех страниц под конечного покупателя и раскрытие УТП продукта под триггеры доверия потребителя. Мы не веб-студия, а маркетинговая компания, поэтому большое внимание при создании сайтов мы уделяем маркетингу клиента.
+				.row
+					.col-md-6.mb-4
+						.h3.text-warning Встраиваем
+						p сайт в систему маркетинга и продаж
+					.col-md-6.mb-4
+						.h3.text-warning Разрабатываем
+						p под ваш спрос и под все сегменты аудитории
+					.col-md-6.mb-4
+						.h3.text-warning Учитываем
+						p как клиенты в вашей отрасли принимают решение покупке
+					.col-md-6.mb-4
+						.h3.text-warning Изучаем
+						p маркетинговые особенности продукта и учитываем их
+			.col-lg-6.mb-4
+				+video-item('https://youtu.be/9VgoDQ7UXG4?t=169', 'razrabotka_sajta_fb.jpg')
+				p.mt-3 Владимир Давыдов рассказывает, как увеличит конверсию сайта
+				a(href="https://drive.google.com/file/d/0BwLfbWp0FYCIUENTT0ttRGdUeDg/view" target="_blank").text-underline Скачать презентацию
+		.row
+			.col-md-12
+				.make-sites__card.bg-warning.p-3.text-center
+					.h3.mb-0 Мы делаем сайты инструментом бизнеса и встраиваем в маркетинговую стратегию — чтобы сайт реально продавал
+		.row
+			.col-md-6
+				+razrabotka-promo('https://www.completo.ru/razrabotka-b2b-saytov/', 'Сайты для b2b')
+			.col-md-6
+				+razrabotka-promo('https://www.completo.ru/razrabotka-saytov-dlya-biznesa/', 'Сайты для бизнеса')

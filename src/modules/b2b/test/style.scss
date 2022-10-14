@@ -1,0 +1,46 @@
+.b2b-test {
+	&__btn {
+		@include media-breakpoint-down(xs) {
+			font-size: 12px;
+		}
+	}
+	&__text {
+		font-weight: bold;
+    font-size: 31px;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1.5px #333333;
+    text-stroke: 1.5px #333333;
+	}
+	&__img {
+		width: 50px;
+	}
+	&__list {
+		list-style-type: none;
+		li {
+			position: relative;
+			&:before {
+				content: '';
+				width: 15px;
+				height: 15px;
+				position: absolute;
+				left: -35px;
+				top: 0;
+				z-index: 1;
+				box-shadow: 1px 1px 1px black;
+				background-color: $yellow;
+				border-radius: 100%;
+			}
+		}
+	}
+	&-card {
+		min-width: 235px;
+		margin: 0 10px 15px;
+	}
+	&-icon {
+		font-size: 80px;
+		&-head {
+			height: 105px;
+		}
+	}
+}

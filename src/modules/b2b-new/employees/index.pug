@@ -1,0 +1,68 @@
+mixin employees2(img, title, ...lists)
+	.b2b__employees-card-item-2.bg-white
+		img(src="picture/upload/"+img, alt="").w-100
+		.p-4
+			.text-center.h4.mb-4= title 
+			ul.pl-0.mb-0.custom-list-items
+				each list, index in lists
+					if img === 'Frame_22956.jpg' && index === lists.length - 1
+						li.mb-3.text-dark
+							span.text-dark= list
+					else
+						li.mb-3.text-warning 
+							span.text-dark= list
+mixin employees1(className)
+	a.p-3.b2b__employees-card(class="b2b__employees-card-"+className href="#")
+		.b2b__employees-card__content.d-flex.flex-column.justify-content-between
+			.text-warning.h5.mt-3 Digital-маркетолог
+			.b2b__employees-card__foot.font-weight-bold.mb-2
+				span.text-white Подробнее на 
+				span.text-warning hh.ru 
+				span.icon-container.d-inline-block.ml-2
+					i.icon.text-white.icon-arrow-right.h5
+.bg-light-yellow.overflow-hidden
+	.container.py-5.my-4.position-relative
+		h2.h2__b2b.mb-4.text-uppercase.mb-lg-5
+			span мы в 
+			span.yellow-border.nowrap-text поисках сотрудников!
+				span.border-container.animation.visible.animated(data-animate="newline")
+		.d-sm-none
+			.slick-slider-mob.b2b__slider-mob.mb-4
+				.d-block
+					+employees1('1')
+				.d-block
+					+employees1('2')
+				.d-block
+					+employees1('3')
+		.row.d-none.d-sm-flex
+			.col-md-4.mb-4.col-sm-6
+				+employees1('1')
+			.col-md-4.mb-4.col-sm-6
+				+employees1('2')
+			.col-md-4.mb-4.col-sm-6
+				+employees1('3')
+		a(href="#").custom-b2b__new-link.h5
+			span.text-dark Все вакансии
+			i.icon.text-dark.icon-arrow-right.h5.ml-3
+		h2.h2__b2b.mb-4.text-uppercase.mb-lg-5.pt-5
+			span Школа 
+			span.yellow-border.nowrap-text стажеров
+				span.border-container.animation.visible.animated(data-animate="newline")
+		.d-sm-none
+			.slick-slider-mob.b2b__slider-mob.mb-4
+				+employees2('Frame_22958.jpg', 'Стажер', 'Пошаговое обучение (1 месяц)', 'Небольшие задачи от команд и отделов', 'Серия аттестаций', 'Дипломная работа')
+				+employees2('Frame_22959.jpg', 'Бегинер', 'Пошаговая адаптация (не более 3 месяцев)', 'Закрепление за командой и реальными клиентами')
+				+employees2('Frame_22957.jpg', 'Менеджер', 'Работа над клиентскими проектами (не более двух)', 'Ответственность за коммуникацию с клиентами, финансы, сроки и целевые показатели')
+				+employees2('Frame_22956.jpg', 'Аккаунт-директор', 'Управляет и обучает 4-5 менеджеров', 'Можно стать после 1-1,5 лет успешной работы менеджером')
+		.row.d-sm-flex.d-none
+			.col-lg-3.col-md-4.mb-4.col-sm-6
+				+employees2('Frame_22958.jpg', 'Стажер', 'Пошаговое обучение (1 месяц)', 'Небольшие задачи от команд и отделов', 'Серия аттестаций', 'Дипломная работа')
+			.col-lg-3.col-md-4.mb-4.col-sm-6
+				+employees2('Frame_22959.jpg', 'Бегинер', 'Пошаговая адаптация (не более 3 месяцев)', 'Закрепление за командой и реальными клиентами')
+			.col-lg-3.col-md-4.mb-4.col-sm-6
+				+employees2('Frame_22957.jpg', 'Менеджер', 'Работа над клиентскими проектами (не более двух)', 'Ответственность за коммуникацию с клиентами, финансы, сроки и целевые показатели')
+			.col-lg-3.col-md-4.mb-4.col-sm-6
+				+employees2('Frame_22956.jpg', 'Аккаунт-директор', 'Управляет и обучает 4-5 менеджеров', 'Можно стать после 1-1,5 лет успешной работы менеджером')
+		.d-flex.justify-content-center.pt-4
+			a(href="#").btn.btn-warning.px-5.b2b__header__btn-full.text-warning
+				span.font-weight-bold.text-dark Школа стажеров

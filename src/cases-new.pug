@@ -1,0 +1,18 @@
+- var title = "Кейсы выполненных проектов от Комплето";
+doctype html
+html(lang="ru")
+	head
+		include modules/head/index.pug
+	body
+		.header-black-bg
+			include modules/header/index.pug
+		include modules/cases-new/index.pug
+		.container#new-form-main
+			.row.pt-5.pb-5#form-content
+				.col-md-12
+					.h2.mb-4.form-h2
+						span.yellow-border Обсудите с нами ваши задачи
+							span.border-container.animation.visible.animated(data-animate="newline")
+				include modules/form/index.pug
+		include modules/footer/index.pug
+		include modules/foot/index.pug

@@ -1,0 +1,20 @@
+mixin case-block-1(img, text, logo)
+	a(href="#").thank-you-page-case-card.case__card.mx-2
+		.case__card-container
+			img(src="picture/upload/"+img, alt="").thank-you-page-case-card-img
+			.case__card-container-logo
+				img(src="picture/upload/"+logo, alt="").case__card-container-logo-img
+			small.bg-warning.rounded.px-2.py-1.text-dark.case__card-title.font-weight-bold Кейс
+			p.text-white.mt-3.h5.case__card-text= text
+mixin social-link(link, img)
+	a(href=link target='_blank')
+		span.rounded-circle.circle.d-flex.align-items-center.justify-content-center
+			img(src="picture/upload/"+img, alt="").footer_social-img
+- var title = "Спасибо за обращение";
+doctype html
+html(lang="ru")
+	head
+		include modules/head/index.pug
+	body
+		include modules/thank-you/index.pug
+		include modules/foot/index.pug

@@ -1,0 +1,44 @@
+.contact-us {
+	&__office {
+		background-image: url('../picture/backgrounds/contact-1920.svg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		&-icon {
+			font-size: 80px;
+		}
+		&-row {
+			margin-top: 170px;
+			@include media-breakpoint-down(md) {
+				margin-top: 100px;
+			}
+			@include media-breakpoint-down(xs) {
+				margin-top: 0;
+			}
+		}
+		&-img {
+			position: absolute;
+			top: -20px;
+			left: 50%;
+			width: 339px;
+			&-new {
+				left: auto;
+				right: 0;
+				@include media-breakpoint-down(md) {
+					display: none;
+				}
+			}
+			&-mob {
+				width: 100%;
+				max-width: 300px;
+				display: block;
+				margin: auto;
+			}
+			@include media-breakpoint-down(md) {
+				width: 200px;
+			}
+			@include media-breakpoint-down(xs) {
+				display: none;
+			}
+		}
+	}
+}

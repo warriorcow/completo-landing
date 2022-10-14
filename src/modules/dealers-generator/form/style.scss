@@ -1,0 +1,53 @@
+.form {
+	&__wrapper {
+		background-color: #FEFDF2;
+	}
+	&-h2 {
+		@include media-breakpoint-down(md) {
+			font-size: 2.2rem;
+		}
+	}
+}
+.radio-text {
+	font-size: 16px;
+	font-weight: normal;
+	strong {
+		font-weight: bold;
+	}
+}
+.newline {
+	animation-name: newline;
+	animation-timing-function: linear;
+}
+@keyframes newline {
+	from {
+			width: 0;
+	}
+	to {
+		width: calc(100% + 7px);
+	}
+}
+.yellow-border {
+	position: relative;
+	.border-container {
+		
+		left: 0;
+		bottom: 7px;
+		position: absolute;
+		height: 14px;
+		background-color: $yellow;
+		z-index: -1;
+		width: 0;
+	}
+	&-white {
+		.border-container {
+			background-color: $white;
+		}
+	}
+}
+.heading-gradient {
+	background-image: linear-gradient(176.3deg,rgba(7,125,151,.83) 21.15%,#205A5E 51.5%);
+	color: white;
+	padding: 0 12px;
+	line-height: 1.5;
+}

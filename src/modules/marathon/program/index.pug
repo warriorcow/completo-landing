@@ -1,0 +1,46 @@
+mixin videocourse-teacher(img, text, text2, title, title2, ...lists)
+	//img(src="picture/upload/"+img, alt="").w-100.subscribe__card-img-teach
+	.subscribe__card.subscribe__card-with-img
+		.text-center
+			.subscribe__card-title= text
+			.h1.mb-4= text2
+		p.text-muted.text-uppercase.mb-3.text-center
+			small!= title
+		p.text-center.mb-4.pb-3= title2
+		p.text-center.font-weight-bold.mb-4 Хайлайты
+		ul.dealers-level__list
+			each list in lists
+				li.mb-4= list
+.marathon__program.position-relative.py-5.videocourse__teach.overflow-hidden
+	img(src="picture/upload/video-Group_335.png", alt="").videocourse__teach-img-big
+	.container.mb-md-4
+		.row
+			.col-md-12
+				h2.h2.mb-5.position-relative.z-index-2.form-h2
+					span.yellow-border Программа
+						span.border-container.animation.visible.animated(data-animate="newline")
+		.marathon__program-list.row.justify-content-center._marathonProgramSlider
+			.marathon__program-item.mb-4
+				+videocourse-teacher('block_04_1-color.png', '20.01.2021', 'День 1', '', 'Теория и практика performance-маркетинга: аудио, статьи и видео', 'Что такое performance?', 'Как настроить контекст', 'Как настроить таргет', 'Как анализировать результаты')
+			.marathon__program-item.mb-4
+				+videocourse-teacher('block_04_2-color.png', '21.01.2021', 'День 2', '', 'Менеджмент и управление performance-маркетингом', 'Команда лидогенерации', 'Как найти подрядчика', 'Как найти директора', 'Как менеджерить проект')
+			.marathon__program-item.mb-4
+				+videocourse-teacher('block_04_3-color.png', '22.01.2021', 'День 3', '', 'Специфика performance для разных отраслей в кейсах', 'Кейсы производителей', 'Кейсы дилеров', 'Кейсы D2C', 'Реклама за рубежом')
+			.marathon__program-item.mb-4
+				+videocourse-teacher('block_04_3-color.png', '23.01.2021', 'День 4', '', 'Вебинар "Как получить поток заявок из интернета в B2B"', 'Реклама в linkedIn', 'Формирование команды', 'Повышение эффективности рекламы')
+
+.videocourse__teach-block-dark.position-relative
+	//- img(src="picture/upload/video-Group_426.png", alt="").videocourse__teach-block-dark-img-main
+	.container
+		.row
+			.col-md-12.col-lg-11
+				//- img(src="picture/upload/video-Group_427.png", alt="").videocourse__teach-block-dark-img-small
+				.d-flex
+					.dealers-level__card-icon-block
+						i.icon.dealers-level__card-icon.icon-complect.text-white
+					.dealers-level__bloquote.dealers-level__bloquote-sm.mt-5.mt-md-0
+						p.mb-3
+							span.text-secondary.font-weight-bold.dealers-level__bloquote-title Мы делаем системный digital-маркетинг
+							span.h4.font-weight-normal.text-white и очень много обучаем специалистов: проводим мастер-классы, выступаем на конференциях и создали свой учебный центр MaEd.ru.
+						p.h4.font-weight-normal.mb-3.text-white С 2015 года мы стали эксклюзивными представителями Нидерландского Института Маркетинга (NIMA) и сертифицируем маркетологов и digital-маркетологов по европейским стандартам.
+						p.h4.font-weight-normal.mb-3.text-white Наши курсы стоят денег, но этот практический курс мы решили распространять бесплатно. Регистрируйтесь, чтоб получить доступ.

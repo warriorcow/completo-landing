@@ -1,0 +1,80 @@
+mixin setup-block-top(icon, title, ...text)
+	.col.col-lg.col-md-4.mb-md-4.consulting-block-item
+		.crm-setup
+			.crm-setup__head
+				.crm-setup__icon-block.mx-auto.mb-2
+					img(src="picture/upload/"+icon, alt="").crm-setup__icon
+				.h5.text-center.mb-0= title
+			.d-none.d-md-block.d-lg-none
+				.crm-setup__body
+					ul.pl-3.mb-0
+						each txt in text
+							li.mb-2= txt
+mixin setup-block-bottom( ...text)
+	.col.col-lg.col-md-4.mb-5.mb-lg-4.d-md-none.d-lg-block.consulting-block-item
+		.px-xl-3.h-100
+			.crm-setup__body.h-100
+				ul.pl-3.mb-0
+					each txt in text
+						li.mb-2= txt
+mixin setup-block-top-green(icon, title, ...text)
+	.col.col-lg.col-md-4.mb-md-4.consulting-block-item
+		.crm-setup
+			.crm-setup__head
+				.crm-setup__icon-block.crm-setup__icon-block-green.mx-auto.mb-2
+					img(src="picture/upload/"+icon, alt="").crm-setup__icon
+				.h5.text-center.text-green-crm.mb-0= title
+			.d-none.d-md-block.d-lg-none
+				.crm-setup__body.crm-setup__body-green
+					ul.pl-3.mb-0
+						each txt in text
+							li.mb-2= txt
+mixin setup-block-bottom-green(...text)
+	.col.col-lg.col-md-4.mb-5.mb-lg-4.d-md-none.d-lg-block.consulting-block-item
+		.px-xl-3.h-100
+			.crm-setup__body.crm-setup__body-green.h-100
+				ul.pl-3.mb-0
+					each txt in text
+						li.mb-2= txt
+.py-5
+	.container.mt-md-4
+		.row
+			.col-md-12
+				h2.mb-5.d-sm-none
+					span.yellow-border Что мы
+						span.border-container.animation.visible.animated(data-animate="newline")
+					span 
+					span исследовали на сайтах банков?
+				h2.mb-5.d-none.d-sm-block
+					span.yellow-border Что мы
+						span.border-container.animation.visible.animated(data-animate="newline")
+					span 
+					span исследовали на сайтах банков?
+		.row.justify-content-center.d-none.d-md-flex
+			+setup-block-top('eye-3221.svg', 'Контент сайтов', 'Полезный и доверительный контент', 'Информация о банке', 'Потребительский кредит', 'Ипотечный кредит', 'Автокредит', 'Рефинансирование', 'Вклады', 'Карты', 'Переводы', 'Акции')
+			+setup-block-top('Group-23433.svg', 'Функционал', 'Поиск', 'Функционал для пользователей', 'Личный кабинет', 'Мобильное приложение', 'Скорость загрузки страниц')
+			+setup-block-top('continuous_121.png', 'Привлечение и конвертация', 'Объем трафика', 'Источники трафика', 'Контекстная реклама', 'Трафик из органического поиска', 'Упоминания в социальных сетях', 'Страница Контакты (отделения и банкоматы)', 'Точки контакта', 'Активные виджеты')
+			+setup-block-top('customer-service-2321.svg', 'Работа с клиентами', 'Голосовое меню', 'Вежливость', 'Профессионализм', 'Запись разговора', 'Группы в социальных сетях', 'Email-рассылка')
+			+setup-block-top-green('analysis_231.svg', 'Поведение на сайте и юзабилити', 'Время нахождения на сайте', 'Глубина просмотра', 'Показатель отказов', 'Доля целевого трафика', 'Мобильность', 'Навигация')
+		.row.d-none.d-md-flex
+			+setup-block-bottom('Полезный и доверительный контент', 'Информация о банке', 'Потребительский кредит', 'Ипотечный кредит', 'Автокредит', 'Рефинансирование', 'Вклады', 'Карты', 'Переводы', 'Акции')
+			+setup-block-bottom('Поиск', 'Функционал для пользователей', 'Личный кабинет', 'Мобильное приложение', 'Скорость загрузки страниц')
+			+setup-block-bottom('Объем трафика', 'Источники трафика', 'Контекстная реклама', 'Трафик из органического поиска', 'Упоминания в социальных сетях', 'Страница Контакты (отделения и банкоматы)', 'Точки контакта', 'Активные виджеты')
+			+setup-block-bottom('Голосовое меню', 'Вежливость', 'Профессионализм', 'Запись разговора', 'Группы в социальных сетях', 'Email-рассылка')
+			+setup-block-bottom-green('Время нахождения на сайте', 'Глубина просмотра', 'Показатель отказов', 'Доля целевого трафика', 'Мобильность', 'Навигация')
+		.row.justify-content-center.d-md-none
+			.col-md-12
+				.custom-scrollbar
+					.px-3.why-consulting__card-container-mobile
+						.row.flex-nowrap
+							+setup-block-top('eye-3221.svg', 'Контент сайтов', 'Полезный и доверительный контент', 'Информация о банке', 'Потребительский кредит', 'Ипотечный кредит', 'Автокредит', 'Рефинансирование', 'Вклады', 'Карты', 'Переводы', 'Акции')
+							+setup-block-top('Group-23433.svg', 'Функционал', 'Поиск', 'Функционал для пользователей', 'Личный кабинет', 'Мобильное приложение', 'Скорость загрузки страниц')
+							+setup-block-top('continuous_121.png', 'Привлечение и конвертация', 'Объем трафика', 'Источники трафика', 'Контекстная реклама', 'Трафик из органического поиска', 'Упоминания в социальных сетях', 'Страница Контакты (отделения и банкоматы)', 'Точки контакта', 'Активные виджеты')
+							+setup-block-top('customer-service-2321.svg', 'Работа с клиентами', 'Голосовое меню', 'Вежливость', 'Профессионализм', 'Запись разговора', 'Группы в социальных сетях', 'Email-рассылка')
+							+setup-block-top-green('analysis_231.svg', 'Поведение на сайте и юзабилити', 'Время нахождения на сайте', 'Глубина просмотра', 'Показатель отказов', 'Доля целевого трафика', 'Мобильность', 'Навигация')
+						.row.flex-nowrap
+							+setup-block-bottom('Полезный и доверительный контент', 'Информация о банке', 'Потребительский кредит', 'Ипотечный кредит', 'Автокредит', 'Рефинансирование', 'Вклады', 'Карты', 'Переводы', 'Акции')
+							+setup-block-bottom('Поиск', 'Функционал для пользователей', 'Личный кабинет', 'Мобильное приложение', 'Скорость загрузки страниц')
+							+setup-block-bottom('Объем трафика', 'Источники трафика', 'Контекстная реклама', 'Трафик из органического поиска', 'Упоминания в социальных сетях', 'Страница Контакты (отделения и банкоматы)', 'Точки контакта', 'Активные виджеты')
+							+setup-block-bottom('Голосовое меню', 'Вежливость', 'Профессионализм', 'Запись разговора', 'Группы в социальных сетях', 'Email-рассылка')
+							+setup-block-bottom-green('Время нахождения на сайте', 'Глубина просмотра', 'Показатель отказов', 'Доля целевого трафика', 'Мобильность', 'Навигация')

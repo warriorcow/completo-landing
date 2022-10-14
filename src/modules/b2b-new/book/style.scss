@@ -1,0 +1,61 @@
+.b2b-new__pattern {
+	background-image: url('../picture/upload/b2b-new-pattern.png');
+	background-size: contain;
+	background-repeat: repeat;
+	overflow: hidden;
+	&__absolute-text {
+		position: absolute;
+		bottom: 100px;
+		right: 0;
+		font-size: 10vw;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: rgba(0,0,0,0.2);
+		pointer-events: none;
+		z-index: auto;
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
+		span {
+			display: block;
+			transform: rotate(7deg);
+		}
+	}
+	&-absolute-img {
+		width: 120px;
+		right: 100%;
+		pointer-events: none;
+		height: 160px;
+		object-fit: contain;
+		top: 0;
+		position: absolute;
+		z-index: auto;
+		@include media-breakpoint-down(xs) {
+			top: -220px;
+			right: 80%;
+			&-2 {
+				position: absolute;
+				max-width: 140px;
+				right: -20px;
+				top: -150px;
+				z-index: auto;
+			}
+		}
+	}
+	&__logo {
+		height: 84px;
+		width: 100%;
+		max-width: 120px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		object-fit: contain;
+		object-position: center;
+	}
+}
+
+.b2b-new-max-width-text {
+	@include media-breakpoint-down(xs) {
+		max-width: 200px;
+	}
+}

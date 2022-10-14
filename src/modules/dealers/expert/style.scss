@@ -1,0 +1,110 @@
+.dealers-expert {
+	background-image: url('../picture/backgrounds/dealers-expert-2.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: black;
+	@include media-breakpoint-down(sm) {
+		background-image: none;
+	}
+	&__card {
+		border: 4px solid $white;
+		padding: 27px 27px 70px 27px;
+		&-left {
+			padding-left: 50px;
+			@include media-breakpoint-down(lg) {
+				padding-left: 70px;
+			}
+		}
+		&-right {
+			padding-right: 50px;
+			@include media-breakpoint-down(lg) {
+				padding-right: 70px;
+			}
+		}
+		&-block {
+			margin-top: 50px;
+		}
+		&-num {
+			font-weight: bold;
+			font-size: 68px;
+			line-height: 1;
+			position: absolute;
+			bottom: 10px;
+			color: transparent;
+			-webkit-text-stroke: 2px $yellow;
+			text-stroke: 2px white;
+			&-left {
+				right: 50px;
+			}
+			&-right {
+				left: 50px;
+			}
+			@include media-breakpoint-down(sm) {
+				color: black;
+			}
+		}
+		&-icon {
+			font-size: 82px;
+			color: white;
+			line-height: 1;
+			transform: translate(-20px, -5px);
+			display: block;
+			@include media-breakpoint-down(xs) {
+				font-size: 40px;
+				transform: none;
+			}
+			&-block {
+				position: absolute;
+				left: -25px;
+				top: -30px;
+				border-radius: 100%;
+				background-color: #8E8E8E;
+				width: 80px;
+				height: 80px;
+				@include media-breakpoint-down(lg) {
+					left: 0;
+					&-right {
+						right: 0;
+						left: auto;
+					}
+				}
+				@include media-breakpoint-down(xs) {
+					width: 60px;
+					height: 60px;
+					left: 10px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+				&-right {
+					left: auto;
+					right: -25px;
+					@include media-breakpoint-down(xs) {
+						right: 10px;
+						left: auto;
+					}
+				}
+			}
+		}
+	}
+	&__absolute-img {
+		position: absolute;
+		&-1 {
+			top: -230px;
+			left: calc(50% + 100px);
+			width: 260px;
+		}
+		&-2 {
+			left: 0;
+			right: 0;
+			margin: auto;
+			bottom: -40px;
+			width: 180px;
+			@include media-breakpoint-down(sm) {
+				top: -21px;
+				width: 70px;
+				bottom: auto;
+			}
+		}
+	}
+}

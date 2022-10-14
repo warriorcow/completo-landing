@@ -1,0 +1,42 @@
+mixin seo-num(num, text)
+	.d-flex.align-items-center.primary-head-item.pb-3
+		.primary-head-item-num.primary-head-item-num-yellow
+			span.primary-head-item-num-text= num
+		.primary-head-item-text.text-white!= text
+.primary-head.dealers__block-head.bg-secondary
+	.container-fluid.primary-head-container.h-100
+		.row.h-100.align-items-center
+			.col-lg-4.col-md-4.d-none.d-md-block
+					.text-center
+						.dealers__text-yellow Если вы:
+					+seo-num('1', 'производитель или крупный поставщик,')
+					+seo-num('2', 'у вас есть сеть дилеров / филиалов / торговых точек в регионах,')
+					+seo-num('3', 'и вам необходимо продвигать вашу марку по всей России, то')
+			.ml-md-5.col-md-7.col-lg-6.col-xl-6
+				.mb-1
+					.primary-title Продажи 
+				.h1.main-title.primary-head__title Для производителей 
+					br
+					| и поставщиков 
+					br 
+					| с дилерской сетью 
+				.dealers__head-bloquote
+					.d-flex.align-items-center.mb-2
+						.dealers__head-bloquote-img-block
+							img(src="picture/upload/andrey-2.png", alt="").dealers__head-bloquote-img
+						.dealers__head-bloquote-block Мы предлагаем единую систему электронного маркетинга, созданную специально для компаний с сетью дилеров. Система не имеет аналогов в России.
+					.d-block
+						span.dealers__head-bloquote-big-text Андрей Гавриков
+						span.dealers__head-bloquote-small-text , генеральный директор «Комплето» 
+				button.btn.btn-white.data-scroll.mt-4.mb-4.d-block.dealers__block-head-btn(data-scroll="form-content") Запросить предложение
+
+	.primary-head-video.d-none.d-sm-block
+		img(src="picture/backgrounds/dealers-background.jpg", alt="")
+	.primary-head-img.primary-head-img-3.d-none.d-md-block
+		img(src="picture/upload/dealers-cube.png", alt="").w-100
+	.dealers__head-absolute.d-none.d-md-flex
+		.d-block
+			span.font-weight-bold.text-secondary наша система может серьезно 
+			span.font-weight-bold.text-dark вам помочь
+		img(src="picture/upload/dealers-arrow-up.svg", alt="").dealers__head-absolute-img.d-none.d-lg-inline
+		img(src="picture/upload/dealers-arrow-up-mobile.svg", alt="").dealers__head-absolute-img.d-inline.d-lg-none

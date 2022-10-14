@@ -1,0 +1,51 @@
+- var title = "Создание сайтов под ключ - заказать разработку сайта в Комплето";
+- var information = "Заказать демонстрацию";
+- var result_title = "Благодаря маркетинговой разработке сайта:";
+- var result_btn = "Хочу эффективный сайт";
+doctype html
+html(lang="ru")
+	head
+		include modules/head/index.pug
+	body
+		include modules/header/index.pug
+		include modules/razrabotka-sajta/head/index.pug
+		include modules/razrabotka-sajta/make-sites/index.pug
+		include modules/razrabotka-sajta/how-we-make/index.pug
+		include modules/result/index.pug
+		include modules/razrabotka-sajta/example-zavod/index.pug
+		include modules/razrabotka-sajta/no-typical/index.pug
+		include modules/razrabotka-sajta/steps/index.pug
+		include modules/razrabotka-sajta/traffic/index.pug
+		include modules/razrabotka-sajta/deadlines/index.pug
+		include modules/razrabotka-sajta/example-komatsu/index.pug
+		include modules/razrabotka-sajta/marketing/index.pug
+		include modules/razrabotka-sajta/payback/index.pug
+		include modules/razrabotka-sajta/coast/index.pug
+		include modules/razrabotka-sajta/how-to-make/index.pug
+		.py-5.border-top.border-secondary.border-bottom.bg-lightyellow
+			.container
+				.row
+					.col-md-12
+						.h2.mb-5 Как создать сайт: <br> обучающие статьи
+			include modules/razrabotka-sajta/blog/index.pug
+		.information.bg-white
+			.container
+				.row
+					.col-xl-6
+						.h2.mb-5 Собираете информацию для руководства?
+					include modules/information/index.pug
+		include modules/razrabotka-sajta/sites/index.pug
+		.about__wrapper-razrabotka
+			include modules/about/index.pug
+		.form-container
+			.container#new-form-main
+				.row.pt-5.pb-5#form-content
+					.col-md-12
+						.h2.mb-4.form-h2 Сделайте сайт инструментом бизнеса
+							br
+							| вместе с 
+							span.yellow-border Комплето
+								span.border-container.animation.visible.animated(data-animate="newline")
+					include modules/form/index.pug
+		include modules/footer/index.pug
+		include modules/foot/index.pug

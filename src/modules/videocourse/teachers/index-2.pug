@@ -1,0 +1,57 @@
+mixin videocourse-teacher-min(img, text, text2, title, title2)
+	img(src="picture/upload/"+img, alt="").w-100.subscribe__card-img-teach
+	.subscribe__card.subscribe__card-with-img
+		.text-center
+			.subscribe__card-title= text
+			.h1.mb-4= text2
+		p.text-muted.text-uppercase.mb-3.text-center
+			small!= title
+		p.text-center.mb-4.pb-3= title2
+.position-relative.py-5.overflow-hidden
+	.container.my-md-4
+		.row.justify-content-center
+			.col-lg-8
+				h2.h2.mb-5.position-relative.z-index-2.form-h2
+					span.yellow-border Какие темы
+						span.border-container.animation.visible.animated(data-animate="newline")
+					span 
+					span разберем на видеокурсе?
+				.row 
+					.col-md-6.mb-4
+						ul.dealers-level__list
+							li.mb-4
+								span.h4 1. 
+								span Что такое цифровая трансформация бизнеса
+							li.mb-4
+								span.h4 2. 
+								span Зачем нужна стратегия интернет-маркетинга и продаж (9 видео)
+							li.mb-4
+								span.h4 3. 
+								span Куда расти в интернете - как понять ваши перспективы в digital-сфере
+							li.mb-4
+								span.h4 4. 
+								span Что делать с интернет-маркетингом, если у вас работают холодные продажи
+							li.mb-4
+								span.h4 5. 
+								span Как работать с агентством по KPI
+							li.mb-4
+								span.h4 6. 
+								span Уровни специалистов по и-маркетингу - кто вам нужен и что требовать
+							li.mb-4
+								span.h4 7. 
+								span Интернет-маркетинг для дистрибьюторов (4 видео)
+							li.mb-4
+								span.h4 8. 
+								span Как контролировать реализацию проекта
+					.col-md-6.mb-4
+						.dealers-level__bloquote.dealers-level__bloquote-min.mb-4
+							p.mb-3 Бизнес — это риск. Как прыжок со скалы в воду. Выживают те, кто перед прыжком проверяет глубину и не плавают ли мусор или акулы поблизости. 
+							p.mb-3 Чтобы в бизнесе не стать жертвой акул-конкурентов и не потонуть, нужно сперва разработать стратегию. 
+							p.mb-3 Если вы продаете в интернете, то — стратегию электронного маркетинга. 
+							p.mb-3 Что в ней необходимо предусмотреть — рассказываю на курсе
+			.col-lg-4.col-md-6
+				.h2.mb-5.position-relative.z-index-2.form-h2.videocourse__teach__title-two
+					span.yellow-border Кто ведет?
+						span.border-container.animation.visible.animated(data-animate="newline")
+				.d-block
+					+videocourse-teacher-min('video-davydov-Group_461.png', 'Владимир', 'Давыдов', 'Совладелец маркетинговой группы «Комплето»', 'Телеведущий, член «Гильдии Маркетологов». Один из разработчиков уникальной для России методики Системного Электронного Маркетинга (СЭМ).')

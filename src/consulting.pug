@@ -1,0 +1,28 @@
+- var title = "Консалтинг";
+doctype html
+html(lang="ru")
+	head
+		include modules/head/index.pug
+	body
+		include modules/header/index.pug
+		include modules/consulting/head/index.pug
+		include modules/consulting/marketing-consulting/index.pug
+		include modules/consulting/consulting/index.pug
+		include modules/consulting/steps/index.pug
+		include modules/consulting/why-consulting/index.pug
+		include modules/consulting/price/index.pug
+		include modules/consulting/consulting-cases/index.pug
+		.about__wrapper-razrabotka
+			include modules/about/index.pug
+		.form-container
+			.container#new-form-main
+				.row.pt-5.pb-5#form-content
+					.col-md-12
+						.h2.mb-4.form-h2
+							span.yellow-border Найдите точки
+								span.border-container.animation.visible.animated(data-animate="newline")
+							span 
+							span роста бизнеса вместе с Комплето
+					include modules/form/index.pug
+		include modules/footer/index.pug
+		include modules/foot/index.pug

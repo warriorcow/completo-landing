@@ -1,0 +1,214 @@
+// stylelint-disable selector-no-qualifying-type
+
+//
+// Base styles
+//
+
+a.btn {
+	text-decoration: none !important;
+}
+
+.btn {
+  display: inline-block;
+  font-family: $btn-font-family;
+  color: $body-color;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+	border: $btn-border-width solid transparent;
+	font-weight: bold;
+	position: relative;
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+	@include transition($btn-transition);
+	box-shadow: none !important;
+	font-size: 1rem;
+	padding: 0.9rem 1.5rem;
+	border-radius: 0 !important;
+	border: none !important;
+	&:hover {
+		opacity: 1;
+		&:before,
+		&:after {
+			border-color: black !important;
+			background-color: black;
+		}
+	}
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		transition: 0.2s ease all;
+	}
+	&:before {
+		bottom: -10px;
+		height: 10px;
+		width: 100%;
+		left: 5px;
+		transform: skewX(45deg);
+		-webkit-transform: skewX(45deg);
+		
+	}
+	&:after {
+		right: -10px;
+		height: 100%;
+		width: 10px;
+		bottom: -5px;
+		transform: skewY(45deg);
+		-webkit-transform: skewY(45deg);
+	}
+	&.btn-warning {
+		&:before {
+			border-bottom: 2px solid $yellow;
+			border-left: 2px solid $yellow;
+		}
+		&:after {
+			border-right: 2px solid $yellow;
+			border-top: 2px solid $yellow;
+		}
+		&:hover {
+			background-color: $yellow;
+		}
+	}
+	&.btn-white {
+		background-color: white;
+		&:hover {
+			background-color: white;
+		}
+		&:before {
+			border-bottom: 2px solid white;
+			border-left: 2px solid white;
+		}
+		&:after {
+			border-right: 2px solid white;
+			border-top: 2px solid white;
+		}
+	}
+	&.btn-dark {
+		background-color: #212529;
+		&:hover {
+			background-color: #212529;
+		}
+		&:before {
+			border-bottom: 2px solid #212529;
+			border-left: 2px solid #212529;
+		}
+		&:after {
+			border-right: 2px solid #212529;
+			border-top: 2px solid #212529;
+		}
+	}
+
+  &:focus,
+  &.focus {
+    outline: 0;
+    box-shadow: $btn-focus-box-shadow;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    opacity: $btn-disabled-opacity;
+    @include box-shadow(none);
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    @include box-shadow($btn-active-box-shadow);
+
+    &:focus {
+      @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+    }
+  }
+}
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset:disabled a.btn {
+  pointer-events: none;
+}
+
+
+//
+// Alternate buttons
+//
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+  }
+}
+
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-link {
+  font-weight: $font-weight-normal;
+  color: $link-color;
+  text-decoration: $link-decoration;
+
+  @include hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:focus,
+  &.focus {
+    text-decoration: $link-hover-decoration;
+    box-shadow: none;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color;
+    pointer-events: none;
+  }
+
+  // No need for an active state here
+}
+
+
+//
+// Button Sizes
+//
+
+.btn-lg {
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+}
+
+.btn-sm {
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+}
+
+
+//
+// Block button
+//
+
+.btn-block {
+  display: block;
+  width: 100%;
+
+  // Vertically space out multiple block buttons
+  + .btn-block {
+    margin-top: $btn-block-spacing-y;
+  }
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}

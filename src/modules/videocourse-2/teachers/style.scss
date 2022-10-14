@@ -1,0 +1,77 @@
+.videocourse__teach {
+	background-image: url('../picture/backgrounds/bg-lightgrey.svg');
+	background-repeat: repeat-x;
+	background-position: center;
+	&-block-dark {
+		background-image: url('../picture/upload/video-Rectangle_88-2.jpg');
+		background-size: cover;
+		padding: 130px 0;
+		@include media-breakpoint-down(md) {
+			padding: 100px 0;
+		}
+		@include media-breakpoint-down(sm) {
+			padding-bottom: 50px;
+		}
+		&-img {
+			&-main {
+				position: absolute;
+				left: 0;
+				right: 0;
+				margin: auto;
+				top: -50px;
+				z-index: auto;
+				width: 190px;
+				@include media-breakpoint-down(sm) {
+					display: none;
+				}
+			}
+			&-small {
+				position: absolute;
+				right: -100px;
+				bottom: 0;
+				z-index: auto;
+				width: 78px;
+				@include media-breakpoint-down(lg) {
+					right: -70px;
+				}
+				@include media-breakpoint-down(md) {
+					display: none;
+				}
+			}
+		}
+	}
+	&-img {
+		width: 420px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		&-small {
+			width: 180px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			bottom: -120px;
+			position: absolute;
+			z-index: auto;
+			@include media-breakpoint-down(sm) {
+				display: none;
+			}
+		}
+		&-big {
+			width: 100%;
+			max-width: 980px;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			left: 0;
+			z-index: auto;
+			position: absolute;
+			@include media-breakpoint-down(sm) {
+				display: none;
+			}
+		}
+		@include media-breakpoint-down(sm) {
+			display: none;
+		}
+	}
+}

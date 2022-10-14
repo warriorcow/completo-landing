@@ -1,0 +1,41 @@
+mixin whitepapers-carousel-file(link, num, title, text)
+	.d-flex.align-items-center.whitepapers__trust-big-carousel-block(data-carousel=Number(num) - 1)
+		.whitepapers__trust-big-carousel-num= num
+		a(href=link).d-block.whitepapers__trust-big-carousel-link
+			.font-weight-bold.mb-1.whitepapers__trust-big-carousel-text= title
+			if text !== undefined
+				.whitepapers__trust-big-carousel-text=text
+.position-relative.pb-5
+	.container.my-md-4
+		.row
+			.col-md-12.col-lg-10.col-xl-8
+				h2.h2.mb-4.mb-md-5.position-relative.z-index-2.form-h2
+					span.yellow-border Почему
+						span.border-container.animation.visible.animated(data-animate="newline")
+					span 
+					span стоит нам доверять?
+		.row.justify-content-center
+			.col-sm-10.col-md-8.col-lg-6.mb-5
+				.videocourse__review-carousel-title-block
+					p.videocourse__review-carousel-title Посмотрите 
+						span.font-weight-bold.text-warning наши кейсы, 
+						span как мы увеличили прибыль своих клиентов
+		.row
+			.col-md-5.col-lg-6.mb-4.whitepapers__trust-small-carousel-bg.order-2.order-md-1
+				iframe(src='https://drive.google.com/file/d/0B9Eq4ucSYbGjSVgwMkZ5OFBvdjg/preview' width='640' height='480').whitepapers__trust-iframe
+			.col-md-7.col-lg-6.mb-4.order-1.order-md-2
+				.whitepapers__trust__prev.whitepapers__trust__nav
+				.whitepapers__trust-big-carousel
+					+whitepapers-carousel-file('https://drive.google.com/file/d/0B9Eq4ucSYbGjSVgwMkZ5OFBvdjg/preview', '1', 'Аэросани «Патруль»', 'Вездеход-амфибия')
+					+whitepapers-carousel-file('https://drive.google.com/file/d/0B9Eq4ucSYbGjb1NCUGVUSV9jWFE/preview', '2', 'Torex', 'Завод стальных дверей')
+					+whitepapers-carousel-file('https://drive.google.com/file/d/0B9Eq4ucSYbGjZUVNOWhMZ0tncTA/preview', '3', 'Продажа сельхоз техники и оборудования')
+					+whitepapers-carousel-file('https://drive.google.com/file/d/0By6T936ia7vUbkV4YzE1VGVlbTQ/preview', '4', 'Медицинская клиника')
+					+whitepapers-carousel-file('https://drive.google.com/file/d/0By6T936ia7vUb0JzWVNmbXh5WXM/preview', '5', 'Лайтком', 'Декоративные светодиодные системы')
+					+whitepapers-carousel-file('https://drive.google.com/file/d/0By6T936ia7vUdUc0a0dhbFNoek0/preview', '6', 'Калита-Финанс', 'Интернет-трейдинг на финансовых рынках')
+					+whitepapers-carousel-file('https://drive.google.com/file/d/0By6T936ia7vUSDhObllZMW5TRWM/preview', '7', 'ДиетаОнлайн', 'Система ведения здорового образа жизни')
+					+whitepapers-carousel-file('https://drive.google.com/file/d/0B9Eq4ucSYbGjOGZ2NVNrakVfbTA/preview', '8', 'Мир Искусств', 'Музыкальная школа')
+					+whitepapers-carousel-file('https://drive.google.com/file/d/0BwLfbWp0FYCIQk1xOGNsd2VoZGc/preview', '9', 'Сквозная веб-аналитика')
+					+whitepapers-carousel-file('https://drive.google.com/file/d/0BwLfbWp0FYCIMlNMVlVwQVRsT00/preview', '10', 'Генератор уникальных сайтов')
+					+whitepapers-carousel-file('https://drive.google.com/file/d/0BwLfbWp0FYCIWXF2OUxaZ0YtT0E/preview', '11', 'Как разработать сложный сайт')
+					+whitepapers-carousel-file('https://drive.google.com/file/d/0BwLfbWp0FYCIUmluMDRVaFJaQlU/preview', '12', 'Как приводить новых клиентов')
+				.whitepapers__trust__next.whitepapers__trust__nav

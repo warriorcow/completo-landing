@@ -1,0 +1,29 @@
+mixin videocourse-teacher(img, text, text2, title, title2)
+	img(src="picture/upload/"+img, alt="").w-100.subscribe__card-img-teach.subscribe__card-img-teach-min
+	.subscribe__card.subscribe__card-with-img
+		.text-center
+			.subscribe__card-title= text
+			.h1.mb-4= text2
+		p.text-muted.text-uppercase.mb-3.text-center
+			small!= title
+		p.text-center.mb-4.pb-3= title2
+.position-relative.pb-5.videocourse__teach.overflow-hidden
+	img(src="picture/upload/video-Group_335.png", alt="").videocourse__teach-img-big
+	.container.my-md-4
+		.row
+			.col-md-12
+				h2.h2.mb-5.position-relative.z-index-2.form-h2
+					span.yellow-border Фразы великих
+						span.border-container.animation.visible.animated(data-animate="newline")
+					span 
+					span людей
+		.row.justify-content-center
+			.col-md-6.col-lg-4.mb-4
+				+videocourse-teacher('whitepapers-brin-.png', 'Сергей', 'Брин', 'Основатель <br> Google', 'Лучше пусть конкуренты думают, что мы растеряны, чем они будут знать наши планы')
+			.col-md-6.col-lg-4.mb-4
+				+videocourse-teacher('whitepapers-degol.png', 'Шарль', 'Де Голль', 'президент <br> Франции', 'Всегда выбирайте самый сложный путь - на нем вы не встретите конкурентов')
+			.col-md-6.col-lg-4.mb-4
+				+videocourse-teacher('whitepapers-gavrikov-.png', 'Андрей', 'Гавриков', 'Генеральный директор <br> “Комплето”', 'Конкурентов нужно любить - у них можно многому научиться')
+		.row
+			.col-md-12.d-flex.justify-content-center 
+				button.btn.btn-warning.data-scroll.mb-4(data-scroll='form-content') Получить инструкцию

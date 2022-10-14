@@ -1,0 +1,46 @@
+mixin videocourse-teacher(img, text, text2, title, title2, ...lists)
+	img(src="picture/upload/"+img, alt="").w-100.subscribe__card-img-teach
+	.subscribe__card.subscribe__card-with-img
+		.text-center
+			.subscribe__card-title= text
+			.h1.mb-4= text2
+		p.text-muted.text-uppercase.mb-3.text-center
+			small!= title
+		p.text-center.mb-4.pb-3= title2
+		p.text-center.font-weight-bold.mb-4 Ключевые компетенции:
+		ul.dealers-level__list
+			each list in lists
+				li.mb-4= list
+.position-relative.py-5.videocourse__teach.overflow-hidden
+	//- img(src="picture/upload/video-Group_425.png", alt="").videocourse__teach-img
+	img(src="picture/upload/video-Group_335.png", alt="").videocourse__teach-img-big
+	//- img(src="picture/upload/video-Group_25.8.png", alt="").videocourse__teach-img-small
+	.container.my-md-4
+		.row
+			.col-md-12
+				h2.h2.mb-5.position-relative.z-index-2.form-h2
+					span.yellow-border Преподаватели
+						span.border-container.animation.visible.animated(data-animate="newline")
+		.row.justify-content-center
+			.col-md-6.col-lg-4.mb-4
+				+videocourse-teacher('block_04_1-color.png', 'Михаил', 'Федоров', 'Технический директор <br> “Комплето”', 'Сертифицированный специалист Яндекс.Директ, Google Adwords, Begun и др., член Гильдии Маркетологов', 'SEO', 'Контекстная реклама', 'Медийная реклама', 'Партнерские сети')
+			.col-md-6.col-lg-4.mb-4
+				+videocourse-teacher('block_04_2-color.png', 'Владимир', 'Давыдов', 'Руководитель проектного отдела <br> “Комплето”', 'Член Гильдии Маркетологов, Microsoft Certified Proffessional, Cambridge FCE.', 'Веб-аналитика и CRM', 'Телефония аналитика', 'Разработка сайтов', 'Контент-маркетинг')
+			.col-md-6.col-lg-4.mb-4
+				+videocourse-teacher('block_04_3-color.png', 'Андрей', 'Гавриков', 'Генеральный директор <br> “Комплето”', 'Состоит в совете Гильдии Маркетологов, NLP MBA, представитель Нидерландского Института Маркетинга в России.', 'Исследования и стратегия', 'Контент-маркетинг', 'PR и персональный брендинг', 'SMM')
+
+.videocourse__teach-block-dark.position-relative
+	//- img(src="picture/upload/video-Group_426.png", alt="").videocourse__teach-block-dark-img-main
+	.container
+		.row
+			.col-md-12.col-lg-11 
+				//- img(src="picture/upload/video-Group_427.png", alt="").videocourse__teach-block-dark-img-small
+				.d-flex
+					.dealers-level__card-icon-block
+						i.icon.dealers-level__card-icon.icon-complect.text-white
+					.dealers-level__bloquote.dealers-level__bloquote-sm.mt-5.mt-md-0
+						p.mb-3
+							span.text-secondary.font-weight-bold.dealers-level__bloquote-title Мы делаем системный digital-маркетинг 
+							span.h4.font-weight-normal.text-white и очень много обучаем специалистов: проводим мастер-классы, выступаем на конференциях и создали свой учебный центр MaEd.ru.
+						p.h4.font-weight-normal.mb-3.text-white С 2015 года мы стали эксклюзивными представителями Нидерландского Института Маркетинга (NIMA) и сертифицируем маркетологов и digital-маркетологов по европейским стандартам.
+						p.h4.font-weight-normal.mb-3.text-white Наши курсы стоят денег, но этот практический курс мы решили распространять бесплатно. Регистрируйтесь, чтоб получить доступ.

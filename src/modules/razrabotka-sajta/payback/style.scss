@@ -1,0 +1,25 @@
+.payback {
+	padding-top: 50px;
+	position: relative;
+	overflow: hidden;
+	z-index: 2;
+	padding-bottom: 50px;
+	&__card {
+		background-color: #FEFDF2;
+		position: relative;
+		padding: 60px 30px 30px;
+		&:before {
+			content: '';
+			width: 100%;
+			height: 100%;
+			background-color: #FECC2F;
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			z-index: -1;
+		}
+	}
+	&__img {
+		box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .2);
+	}
+}

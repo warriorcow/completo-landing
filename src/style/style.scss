@@ -1,0 +1,169 @@
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/root";
+@import "custom_variables";
+
+@import '../modules/header/style';
+//new header
+@import '../modules/header-new/style';
+@import '../modules/footer/style';
+@import '../modules/form/style';
+@import "../modules/form-2/style";
+@import '../modules/about/style';
+@import '../modules/result/style';
+@import '../modules/information/style';
+
+@import '../modules/main-page/main-section/style';
+@import '../modules/main-page/what-we-do/style';
+@import '../modules/main-page/digital-transformation/style';
+@import '../modules/main-page/product/style';
+@import '../modules/main-page/power/style';
+@import '../modules/main-page/cases/style';
+@import '../modules/main-page/marketing/style';
+@import '../modules/main-page/remove/style';
+@import '../modules/main-page/research/style';
+@import '../modules/main-page/clients/style';
+@import '../modules/main-page/saas/style';
+@import '../modules/main-page/maed/style';
+@import '../modules/main-page/education/style';
+@import '../modules/main-page/webinar/style';
+@import '../modules/main-page/blog/style';
+@import '../modules/main-page/community/style';
+@import '../modules/main-page/follow/style';
+
+@import '../modules/dealers-generator/head/style';
+@import '../modules/dealers-generator/dealers-problems/style';
+@import '../modules/dealers-generator/decision/style';
+@import '../modules/dealers-generator/nesessary-system/style';
+@import '../modules/dealers-generator/system-consist/style';
+@import '../modules/dealers-generator/system-help/style';
+@import '../modules/dealers-generator/dealers/style';
+@import '../modules/dealers-generator/profit/style';
+@import '../modules/dealers-generator/system-generate-sites/style';
+@import '../modules/dealers-generator/dealers-sites-system/style';
+@import '../modules/dealers-generator/no-alternative/style';
+@import '../modules/dealers-generator/price/style';
+@import '../modules/dealers-generator/shemes/style';
+@import '../modules/dealers-generator/form/style';
+
+@import '../modules/seo/head/style';
+@import '../modules/seo/seo-system/style';
+@import '../modules/seo/steps/style';
+@import '../modules/seo/schema/style';
+@import '../modules/seo/seo-cases/style';
+@import '../modules/seo/blog/style';
+@import '../modules/seo/form/style';
+
+@import '../modules/razrabotka-sajta/head/style';
+@import '../modules/razrabotka-sajta/make-sites/style';
+@import '../modules/razrabotka-sajta/how-we-make/style';
+@import '../modules/razrabotka-sajta/no-typical/style';
+@import '../modules/razrabotka-sajta/steps/style';
+@import '../modules/razrabotka-sajta/traffic/style';
+@import '../modules/razrabotka-sajta/deadlines/style';
+@import '../modules/razrabotka-sajta/marketing/style';
+@import '../modules/razrabotka-sajta/payback/style';
+@import '../modules/razrabotka-sajta/coast/style';
+
+@import '../modules/digital-strategy/digital-strategy/style';
+@import '../modules/digital-strategy/expert/style';
+@import '../modules/digital-strategy/strategy-steps/style';
+@import '../modules/digital-strategy/best/style';
+@import '../modules/digital-strategy/marketing/style';
+@import '../modules/digital-strategy/payback/style';
+
+@import '../modules/cases/main-page/style';
+
+@import '../modules/cases/amfibia/new-cases-blog/style';
+@import '../modules/cases/amfibia/new-cases-crew/style';
+@import '../modules/cases/amfibia/new-cases-main/style';
+@import '../modules/cases/amfibia/new-cases-results/style';
+@import '../modules/cases/amfibia/new-cases-see/style';
+@import '../modules/cases/amfibia/new-cases-tasks/style';
+@import '../modules/cases/amfibia/new-cases-we-do/style';
+
+@import '../modules/crm/crmwework/style';
+@import '../modules/crm/crmresponsible/style';
+@import '../modules/crm/crmsetup/style';
+
+@import '../modules/consulting/marketing-consulting/style';
+@import '../modules/consulting/why-consulting/style';
+@import '../modules/consulting/price/style';
+@import '../modules/consulting/consulting/style';
+@import '../modules/consulting/consulting-cases/style';
+
+@import '../modules/performance/ad/style';
+
+@import '../modules/dealers/head/style';
+@import '../modules/dealers/dealers-head/style';
+@import '../modules/dealers/expert/style';
+@import '../modules/dealers/system-modules/style';
+@import '../modules/dealers/internet-system/style';
+@import '../modules/dealers/fast/style';
+@import '../modules/dealers/level/style';
+
+@import '../modules/contact/head/style';
+@import '../modules/contact/office/style';
+@import '../modules/contact/map/style';
+
+@import '../modules/subscribe/head/style';
+@import '../modules/subscribe/map/style';
+
+@import '../modules/videocourse/courses/style';
+@import '../modules/videocourse/teachers/style';
+@import '../modules/videocourse/advantages/style';
+@import '../modules/videocourse/review/style';
+@import '../modules/videocourse/marketing/style';
+
+@import '../modules/videocourse-2/courses/style';
+@import '../modules/videocourse-2/advantages/style';
+@import '../modules/videocourse-2/bloquote/style';
+@import '../modules/videocourse-2/video/style';
+
+@import '../modules/whitepapers/courses/style';
+@import '../modules/whitepapers/trust/style';
+@import '../modules/whitepapers/dialog/style';
+@import '../modules/whitepapers/trust-2/style';
+@import '../modules/whitepapers/evolution/style';
+
+@import '../modules/b2b/courses/style';
+@import '../modules/b2b/why-consulting/style';
+@import '../modules/b2b/why-us/style';
+@import '../modules/b2b/test/style';
+
+@import '../modules/cases/b2b/style';
+
+@import '../modules/goonline/head/style';
+
+@import '../modules/form-new/style';
+
+@import '../modules/bank/research/style';
+
+@import '../modules/thank-you/style';
+
+@import '../modules/cases-new/style';
+
+//new b2b
+@import '../modules/b2b-new/head/style';
+@import '../modules/b2b-new/strategy/style';
+@import '../modules/b2b-new/applications/style';
+@import '../modules/b2b-new/sites/style';
+@import '../modules/b2b-new/clients/style';
+@import '../modules/b2b-new/sales/style';
+@import '../modules/b2b-new/cases/style';
+@import '../modules/b2b-new/employees/style';
+@import '../modules/b2b-new/work/style';
+@import '../modules/b2b-new/community/style';
+@import '../modules/b2b-new/book/style';
+@import '../modules/b2b-new/crew/style';
+@import '../modules/b2b-new/b2b/style';
+
+// marathon
+@import '../modules/marathon/head/style';
+
+// tarifs
+@import '../modules/tarifs/style';
+
+//new detail case
+@import '../modules/cases/detail/new-cases-main/style';

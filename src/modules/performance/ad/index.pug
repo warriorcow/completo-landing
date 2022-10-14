@@ -1,0 +1,20 @@
+mixin ad-card-block(icon, name)
+	.col-md-6.col-lg-4.mb-4
+		.border.border-secondary.bg-white.px-3.py-4.d-flex.h-100.ad-block-container-card
+			img(src="picture/upload/"+icon, alt="").mr-3.ad-block-container-card-img
+			p.mb-0.h5= name
+.py-5.ad-block-container
+	.container.my-md-4
+		.row
+			.col-md-12.mb-5
+				+bloquote('Сергей Сухоплюев,', 'Тимлид отдела трафика', 'sergey.png', 'Мы, в Completo, постоянно следим за тенденциями рынка, экспериментируем с новыми источниками трафика, ищем нестандартный подход к существующим каналам трафика. Средний срок нашей работы с одним клиентом — 6 лет.', true)
+			.col-md-12
+				.h4.mb-4.mt-md-4 Знаем какая реклама подойдет для:
+			+ad-card-block('internet.svg', 'Лабораторных комплексов / медицины')
+			+ad-card-block('internet.svg', 'Производителей оборудования')
+			+ad-card-block('website.svg', 'Строительной и другой профессиональной техники')
+			+ad-card-block('internet.svg', 'Телекома/ Системных и IT интеграторов/ Saas/ Мобильных приложений')
+			+ad-card-block('internet.svg', 'Крупных заводов/ Металлургии/ Дилерских сетей')
+			+ad-card-block('website.svg', 'Компаний со сложными продуктами / Продуктов с долгим циклом принятия решений')
+			.col-md-12.d-flex.justify-content-center
+				button.btn.btn-warning.data-scroll.mt-4(data-scroll='form-content') Реклама под мою нишу

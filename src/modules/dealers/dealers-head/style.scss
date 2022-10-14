@@ -1,0 +1,28 @@
+.dealers__head-secondary {
+	@include media-breakpoint-down(md) {
+		overflow: hidden;
+	}
+	&-card {
+		@include media-breakpoint-down(sm) {
+			min-width: 248px;
+		}
+		&-icon {
+			font-size: 82px;
+			color: $yellow;
+
+		}
+	}
+	&__circle {
+		left: auto;
+		right: 100px;
+		top: 0;
+		@include media-breakpoint-down(lg) {
+			top: 40px;
+			right: 170px;
+		}
+		@include media-breakpoint-down(md) {
+			top: 80px;
+			right: 0;
+		}
+	}
+}

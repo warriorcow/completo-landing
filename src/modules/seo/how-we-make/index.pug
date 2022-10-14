@@ -1,0 +1,34 @@
+mixin carousel-list-block(...lists)
+	ul.carousel__list-block.carousel__list-block-seo
+		each list, index in lists
+			if index == 0
+				li.carousel__list-block-item.active.carousel__list-block-item-seo
+					a(href="#" data-link=index).carousel__list-block-item-link= list
+			else
+				li.carousel__list-block-item.carousel__list-block-item-seo
+					a(href="#" data-link=index).carousel__list-block-item-link= list
+mixin carousel-list-main(...images)
+	.carousel__list-carousel.carousel__list-carousel-seo.pb-0.mb-0
+		each img in images
+			img(src="picture/upload/"+img, alt="").w-100
+.bg-lightyellow.py-5.overflow-hidden
+	.container
+		.row
+			.col-md-12
+				h3.h4.mb-4 Будьте в курсе ситуации на рынке с нашей отчетностью:
+		.row
+			.col-xl-3.col-lg-4.col-md-4
+				+carousel-list-block('Отчет по позициям', 'Продажи с органики', 'Доход с органики', 'Поисковый трафик', 'Динамика ссылочной массы', 'Срез по регионам', 'Спрос по отрасли', 'Трафик в сравнение с конкурентами', 'Динамика спроса')
+			.offset-xl-1.col-xl-8.col-lg-8.col-md-8
+				.carousel__list-carousel-notebook
+					+carousel-list-main('slide_1.jpg', 'slide_2.jpg', 'slide_3.jpg', 'slide_4.jpg', 'slide_5.jpg', 'slide_6.jpg', 'slide_7.jpg', 'slide_8.jpg', 'slide_9.jpg')
+				.container
+					.row
+						.col-lg-6
+							p Делаем детальное исследование по каждой позиции и собираем отчёты за последний год
+					.row
+						.col-md-12
+							button.btn.btn-warning.data-scroll.mt-4.mb-4(data-scroll="form-content") Заявка на SEO-аудит
+			.col-md-12
+				.seo-front__card.bg-warning.p-3.text-center.mt-5
+					.h3.mb-0 Стратегию продвижения сайтов (план работ на 1-2 года) делаем бесплатно. Узнайте подробности у наших специалистов

@@ -1,0 +1,123 @@
+mixin b2b__list-el(rotate, text)
+	li.d-flex.align-items-center
+		.b2b__list_element(class="b2b__list_element--" + rotate)
+			img(src="picture/upload/coderwall-logo.svg", alt="").b2b__list_element__img
+		p.font-weight-bold= text
+.bg-light-yellow.mobile-dark-theme
+	.container.py-5.my-4.position-relative
+		.row 
+			.col-lg-8
+				h2.h2__b2b.mb-4.form-h2.text-uppercase.mb-lg-5.xl-nowrap
+					span Настраиваем 
+					span.yellow-border поток заявок / лидогенерацию
+						span.border-container.animation.visible.animated(data-animate="newline")
+				.row 
+					.col-md-3.mb-4
+						+check__dot('Performance', '(контекст + таргет)', true)
+					.col-md-3.mb-4
+						+check__dot('Быстрый запуск', '(посадочная + трафик)', true)
+					.col-md-3.mb-4
+						+check__dot('LinkedIN', 'сеть для поиска', true)
+					.col-md-3.mb-4
+						+check__dot('SEO-', 'продвижение', true)
+				.d-lg-none.position-relative
+					img(src="picture/upload/b2b__qote.svg", alt="").b2b__right-quote
+					img(src="picture/upload/b2b__s.png", alt="").w-100.position-relative.z-index-2
+					p.h5.mb-3
+						span.font-weight-normal Исследования и экспериза в вашей отрасли – 
+						span залог успешной performance-кампании. 
+					p.h5.mb-3
+						span Найдем вашу целевую аудиторию, 
+						span.font-weight-normal где бы она не находилась – в социальных сетях, на сайтах рекламных сетей, в поиске и даже в оффлайн-точках продаж.
+					p 
+						span.h6.mb-0 Сергей Сухоплюев, 
+						br
+						span.text-opacity-5 руководитель отдела трафика
+				.h4.pt-3.mb-4.pb-lg-3
+					span Комплексное продвижение с оплатой по KPI. 
+					span.font-weight-normal Формируем и оптимизируем комплекс каналов до максимального результата:
+				.row.align-items-end
+					.col-md-8.col-xl-9
+						.row 
+							.col-md-6.mb-md-3 
+								ul.mb-0.pl-0
+									+b2b__list-el('0', 'Контентное продвижение')
+									+b2b__list-el('45', 'Нативная реклама')
+									+b2b__list-el('90', 'SEO-продвижение')
+									+b2b__list-el('270', 'Direct-маркетинг')
+							.col-md-6.mb-3 
+								ul.mb-0.pl-0
+									+b2b__list-el('0', 'Контекстно-медийная реклама')
+									+b2b__list-el('45', 'Таргетированная реклама')
+									+b2b__list-el('90', 'Видео- и аудиореклама')
+									+b2b__list-el('270', 'Мобильная реклама')
+					.col-md-4.mb-4.col-xl-3.pb-3
+						button.btn.btn-warning.px-2.data-scroll.w-100.d-none.d-md-block(data-scroll="form-content")
+							small.font-weight-bold Получить поток заявок
+						button.btn.btn-dark.px-2.data-scroll.b2b__header__btn-full.d-md-none(data-scroll="form-content")
+							small.font-weight-bold Получить поток заявок
+				.row.align-items-center
+					.col-lg-5.mb-4 
+						span.h4.form-h2
+							span.yellow-border Точная работа
+								span.border-container.animation.visible.animated(data-animate="newline")
+							span 
+						span.h5.font-weight-normal с таргетом и контекстом дает результат:
+					.col-lg-7
+						.row
+							.col-md-6.mb-4
+								span.h5.font-weight-normal в 
+								span.h3.h3__big.form-h2
+									span.yellow-border 20
+										span.border-container.animation.visible.animated(data-animate="newline")
+									span 
+								span.h5.font-weight-normal раз
+								p.mb-0
+									small рост 
+									small.font-weight-bold объема продаж 
+									small из контекстной рекламы
+							.col-md-6.mb-4
+								span.h5.font-weight-normal в 
+								span.h3.h3__big.form-h2
+									span.yellow-border 19
+										span.border-container.animation.visible.animated(data-animate="newline")
+									span 
+								span.h5.font-weight-normal раз
+								p.mb-0
+									small рост 
+									small.font-weight-bold количества заявок 
+									small из таргетированной рекламы
+			.col-lg-4.d-none.d-lg-block
+				.position-relative
+					img(src="picture/upload/b2b__qote.svg", alt="").b2b__right-quote
+					img(src="picture/upload/b2b__s.png", alt="").w-100.position-relative.z-index-2
+					p.h5.mb-3
+						span.font-weight-normal Исследования и экспериза в вашей отрасли – 
+						span залог успешной performance-кампании. 
+					p.h5.mb-3
+						span Найдем вашу целевую аудиторию, 
+						span.font-weight-normal где бы она не находилась – в социальных сетях, на сайтах рекламных сетей, в поиске и даже в оффлайн-точках продаж.
+					p 
+						span.h6.mb-0 Сергей Сухоплюев, 
+						br
+						span.text-opacity-5 руководитель отдела трафика
+		.row.pt-4.align-items-end
+			.col-lg-3.mb-3.pb-3
+				.h4.mb-md-4.mb-0 Как мы это делаем, читайте в наших кейсах:
+				a(href="#").btn.btn-warning.px-4.d-none.d-md-inline-block.text-warning
+					span.text-dark Все кейсы по лидогенерации
+			.col-lg-9
+				.d-md-none
+					.slick-slider-mob.b2b__slider-mob.mb-4
+						+b2b-case('Rectangle_2875.jpg', 'alta-2.png', 'Как сделать охват в соцсетях 1 млн. человек для стройматериалов')
+						+b2b-case('Rectangle_2876.jpg', 'logo_site.svg', 'Как сделать охват в соцсетях 1 млн. человек для стройматериалов')
+						+b2b-case('Rectangle_2877.jpg', 'Motorola_new_logo.svg', 'Разработка landing-page для сбора заявок в России заявок в России и Европе для СИБУР')
+					a(href="#").btn.btn-dark.px-4.b2b__header__btn-full
+						span Все кейсы по лидогенерации
+				.row.d-none.d-md-flex.justify-content-end
+					.col-md-4.mb-4
+						+b2b-case('Rectangle_2875.jpg', 'alta-2.png', 'Как сделать охват в соцсетях 1 млн. человек для стройматериалов')
+					.col-md-4.mb-4
+						+b2b-case('Rectangle_2876.jpg', 'logo_site.svg', 'Как сделать охват в соцсетях 1 млн. человек для стройматериалов')
+					.col-md-4.mb-4
+						+b2b-case('Rectangle_2877.jpg', 'Motorola_new_logo.svg', 'Разработка landing-page для сбора заявок в России заявок в России и Европе для СИБУР')

@@ -1,0 +1,24 @@
+- var title = "Бесплатный видеокурс по интернет-маркетингу от профессионалов 'Комплето'";
+doctype html
+html(lang="ru")
+	head
+		include modules/head/index.pug
+	body
+		.header-black-bg
+			include modules/header/index.pug
+		include modules/videocourse-2/head/index.pug
+		include modules/videocourse-2/courses/index.pug
+		include modules/videocourse-2/video/index.pug
+		include modules/videocourse-2/bloquote/index.pug
+		include modules/videocourse-2/advantages/index.pug
+		include modules/videocourse-2/marketing/index.pug
+		.form-container
+			.container#new-form-main
+				.row.pt-5.pb-5#form-content
+					.col-md-12
+						.h2.mb-4.form-h2
+							span.yellow-border Обсудить ваши задачи!
+								span.border-container.animation.visible.animated(data-animate="newline")
+					include modules/form/index.pug
+		include modules/footer/index.pug
+		include modules/foot/index.pug

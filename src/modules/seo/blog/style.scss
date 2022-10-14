@@ -1,0 +1,11 @@
+.our-cases-seo {
+	background-image: url('../picture/upload/line_3.png');
+	background-size: cover;
+	background-position: 65% 21%;
+	background-repeat: no-repeat;
+	&-title {
+		@include media-breakpoint-down(md) {
+			font-size: 2.2rem;
+		}
+	}
+}

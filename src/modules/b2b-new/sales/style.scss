@@ -1,0 +1,8 @@
+.b2b__right-text-absolute {
+	position: absolute;
+	top: 0;
+	left: 0;
+	@include media-breakpoint-down(lg) {
+		left: -15px;
+	}
+}

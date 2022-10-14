@@ -1,0 +1,849 @@
+mixin form-new(title, title_white, text)
+	.bg-warning.py-4.form-container-modal-new-style
+		form.form.form-container-modal-new.validate.bg-warning.my-3(method="post" id="new-form-44" novalidate="novalidate")
+			.row.align-items-center
+				.col-lg-4.col-xl-3.text-center
+					.h4.mb-1= title
+						span.text-white= title_white
+					p= text
+				.col-lg-8.col-xl-9.px-xl-5.pt-4.pt-lg-0 
+					.row
+						.col-md-6.pb-4.pb-md-0
+							.form-group
+								input(type="text" placeholder="Фамилия, Имя" required name="name" id="modal-text-414").system-modules-container__form-input.w-100
+							.form-group.mb-lg-0
+								input(type="email" placeholder="Email" required name="email" id="modal-text-424").system-modules-container__form-input.w-100
+						.col-md-6
+							.form-group.pr-2.mb-4
+								button.btn.btn-white.form_btn-new.w-100.form-container-modal-new-btn Подписаться
+							.form-group.mb-lg-0
+								input(type="checkbox" id="modal-text-1454" required checked name="agree").system-modules-container__form-input-radio
+								label(for="modal-text-1454").d-flex.align-items-center
+									span.system-modules-container__form-input-checkbox
+									span.system-modules-container__form-input-checkbox-text Я согласен с 
+										a(href="https://www.completo.ru/privacy_policy.rtf" target="_blank")
+											u правилами обработки персональных данных
+mixin form-messendger(title, title_white, text)
+	.bg-warning.py-4.form-container-modal-new-style
+		form.form.form-container-modal-new.validate.bg-warning.my-3(method="post" id="new-form-44" novalidate="novalidate")
+			.row.align-items-center
+				.col-lg-4.col-xl-5
+					.h4.mb-1= title
+						span.text-white= title_white
+					p= text
+				.col-lg-8.col-xl-7.pr-xl-5.pt-4.pt-lg-0
+					.row
+						.col-md-12
+							.row
+								.col-md-6
+									a.btn.btn-white.form_btn-new.w-100.form-container-modal-new-btn(href="#")
+										i.icon.icon-vk
+										span Регистрация в VK
+
+								.col-md-6
+									a.btn.btn-white.form_btn-new.w-100.form-container-modal-new-btn(href="#")
+										i.icon.icon-tg
+										span Регистрация в Telegram
+mixin social-link(link, img)
+	a(href=link target='_blank')
+		span.rounded-circle.circle.d-flex.align-items-center.justify-content-center
+			img(src="picture/upload/"+img, alt="").footer_social-img
+mixin bloquote(name, titile_bloquote, image, text, type)
+	.container.bloquote-container
+		.row.align-items-center
+			.col-lg-3.col-md-4.mb-3
+				if type === true || type === 'white'
+					img(src="picture/upload/"+image, alt="").bloquote-container-img.bg-white
+				else
+					img(src="picture/upload/"+image, alt="").bloquote-container-img-blue
+				if type === 'white'
+					p.font-weight-bold.mb-0.text-center.text-white= name
+					p.text-center.mb-0.text-white!= titile_bloquote
+				else
+					p.font-weight-bold.mb-0.text-center= name
+					p.text-center.mb-0!= titile_bloquote
+			.col-xl-7.col-md-8.mb-3
+				.bloquote-container-block-container
+					.bloquote-container-block-item
+						if type === true || type === 'white'
+							.bloquote-container-block.bg-warning=text
+						else
+							.bloquote-container-block= text
+mixin bloquoteFull(name, titile_bloquote, image, text)
+	.container.bloquote-container
+		.row.align-items-center
+			.col-lg-3.col-md-4.mb-3
+				img(src="picture/upload/"+image, alt="").bloquote-container-img.bg-white
+				p.font-weight-bold.mb-0.text-center= name
+				p.text-center.mb-0!= titile_bloquote
+			.col-md-8.mb-3
+				.bloquote-container-block-container
+					.bloquote-container-block-item
+						.bloquote-container-block.bg-warning=text
+mixin slick-example(...images)
+	.slick-example-container
+		.slick-example
+			each img in images
+				img(src="picture/upload/"+img, alt="")
+mixin steps-graph(percent1, name1, percent2, name2, percent3, name3)
+	.how-we-make__step
+		.how-we-make__step-item.how-we-make__step-item-top
+			.how-we-make__step-item-text
+				.h1= percent1
+				p.font-weight-bold!= name1
+		.how-we-make__step-item.how-we-make__step-item-middle
+			.how-we-make__step-item-text
+				.h1= percent2
+				p.font-weight-bold!= name2
+		.how-we-make__step-item.how-we-make__step-item-bottom
+			.how-we-make__step-item-text
+				.h1= percent3
+				p.font-weight-bold!= name3
+mixin blog-link(link, img, name)
+	a(href=link target="_blank").d-block
+		img(src="picture/upload/"+img, alt="").w-100.mb-2.blog-img-big
+		u= name
+mixin blog-link-min(link, img, name)
+	a(href=link target="_blank").d-block
+		img(src="picture/upload/"+img, alt="").w-100.mb-2.blog-img-min
+		u.text-dark= name
+mixin scheme-item(name, img, num, text)
+	.big-slick__children
+		.big-slick__children-line.big-slick__children-line-white
+			p= name
+		.big-slick__children-line.big-slick__children-line-last.big-slick__children-line-white
+			h2!= num
+			p!= text
+		img.big-slick__img(src='picture/upload/'+img alt)
+mixin video-item(link, img)
+	a(href=link data-fancybox).video-item__block.d-block
+		img(src="picture/upload/"+img, alt="").w-100
+header.header.header-xl.fixed.d-none.d-lg-block.animated.delay-2s.fadeIn#header
+	.container
+		.row
+			.container-fluid.container-fluid-max
+				nav.navbar.navbar-expand-lg.justify-content-start.p-0.d-flex
+					a.navbar-brand.mr-0.p-0.col-2(href='/')
+						img(src='picture/upload/Completo_logoNEW_white_08-10-2018.png' alt='Completo')
+					button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent1' aria-controls='navbarSupportedContent1' aria-expanded='false' aria-label='Toggle navigation')
+						span
+						span
+						span
+						span
+					#navbarSupportedContent1.collapse.col-8.navbar-collapse
+						ul.navbar-nav
+							li.nav-item.dropdown-element
+								a.nav-link.dropdown-link.mr-2(href='#')
+									span Комплето
+									i.arrow-down
+										span
+										span
+								.nav-link-dropdown(style='display: none;')
+									.container
+										.col-12.justify-content-start
+											.col-8.offset-2
+												ul.dropdown.list-unstyled
+													li
+														a(href='/about/') О компании
+													li
+														a(href='http://school.completo.ru' target='_blank') Школа стажеров
+													li
+														a(href='/vacancy/') Вакансии
+													li
+														a(href='https://club.completo.ru/' target='_blank') Комплето Клуб
+													li
+														a(href='/checklist-for-agencies/') Тест агентств
+							li.nav-item.dropdown-element
+								a.nav-link.dropdown-link.mr-2(href='#')
+									span Услуги
+									i.arrow-down
+										span
+										span
+								.nav-link-dropdown(style='display: none;')
+									.container
+										.col-12.justify-content-start
+											.col-8.offset-2
+												ul.dropdown.list-unstyled.custom-dropdown-item.columns
+													li
+														a(href='/digital-strategy/') Digital-стратегия
+													li
+														a(href='/razrabotka-sajta/') Разработка сайтов
+													li
+														a(href='/b2b/') Компаниям с продуктами В2В
+													li
+														a(href='/dealers/') Компаниям с сетями дилеров
+													li
+														a(href='/dealers-how-to/') Онлайн-система для дилеров и поставщиков
+													li
+														a(href='/dealers-generator/') Система дилерских сайтов
+													li
+														a(href='/salesfarm/') Система подогрева клиентов
+													li
+														a(href='/seo/') SEO оптимизация
+													li
+														a(href='/analytics/') Сквозная аналитика
+													li
+														a(href='/performance/') Performance маркетинг
+													li
+														a(href='/goonline/') Проведение мероприятий онлайн
+													li
+														a(href='https://linkedin.completo.ru/') Продвижение в LinkedIn
+													li
+														a(href='/crm/') Интеграция CRM
+							li.nav-item.dropdown-element
+								a.nav-link.dropdown-link.mr-2(href='#')
+									span Сервисы
+									i.arrow-down
+										span
+										span
+								.nav-link-dropdown(style='display: none;')
+									.container
+										.col-12.justify-content-start
+											.col-8.offset-2
+												ul.dropdown.list-unstyled
+													li
+														a(href='http://goaudit.ru' target='_blank') GoAudit
+													li
+														a(href='http://phonetrack.ru' target='_blank') PhoneTrack
+													li
+														a(href='https://salespilot.ru' target='_blank') SalesPilot
+													li
+														a(href='https://socsale.ru' target='_blank') Socsale
+													li
+														a(href='http://setuper.ru' target='_blank') Setuper
+													li
+														a(href='https://contrack.ru' target='_blank') Contrack
+													li
+														a(href='https://kursbox.ru/' target='_blank') Агрегатор курсов
+							li.nav-item.dropdown-element
+								a.nav-link.dropdown-link.mr-2(href='#')
+									span Мы обучаем
+									i.arrow-down
+										span
+										span
+								.nav-link-dropdown(style='display: none;')
+									.container
+										.col-12.justify-content-start
+											.col-8.offset-2
+												ul.dropdown.list-unstyled.custom-dropdown-item.columns
+													li
+														a(href='/email-marketing/') Подписаться на рассылку
+													li
+														a(href='/edu/') Система прокачки знаний
+													li
+														a(href='https://maed.ru/' target='_blank') Обучающий центр MAED.RU
+													li
+														a(href='/sem/') СЭМ за 6 шагов
+													li
+														a(href='/white-paper/seo/') Мануал по SEO
+													li
+														a(href='/white-paper/kak-razrabotat-site/') Мануал Разработка сайтов
+													li
+														a(href='/white-paper/competitor-analysis/') Мануал Анализ конкурентов
+													li
+														a(href='/checklist-strategy-online-marketing/') Чек-лист digital-стратегии
+													li
+														a(href='/videocourse/') Видеокурс по интернет-маркетингу
+													li
+														a(href='/videocourse-for-managers/') Видеокурс для руководителей
+													li
+														a(href='/research-finance/') Исследование банков
+													li
+														a(href='/research-medicine/') Исследование медцентров
+													li
+														a(href='/research-estate/') Исследование недвижимости
+													li
+														a(href='/research-dealers/') Исследование производителей
+													li
+														a(href='https://stratosessia.maed.ru/' target='_blank') Практикум по стратегии
+													li
+														a(href='https://book.completo.ru/' target='_blank') Книга для digital-маркетолога
+							li.nav-item.dropdown-element
+								a.nav-link.dropdown-link.mr-2(href='#')
+									span Кейсы
+									i.arrow-down
+										span
+										span
+								.nav-link-dropdown(style='display: none;')
+									.container
+										.row.cases__row.mt-3.justify-content-start(style='display: none;')
+											.col-7.col-lg-7
+												ul.columns.dropdown.list-unstyled.header__big-list.pt-0
+													li.pt-0
+														p.text-white.cases__row-title.mt-0.mb-3 Кейсы по услугам
+														ul.list-unstyled.pl-0.mb-4
+															li.nav-items.pb-2.pt-0
+																a(href='/cases/service/kontekstnaya-reklama/') Кейсы по контекстной рекламе
+															li.nav-items.pb-2.pt-0
+																a(href='/cases/service/seo/') Кейсы по SEO
+															li.nav-items.pb-2.pt-0
+																a(href='/cases/service/targetirovannaya-reklama/') Кейсы по таргетированной рекламе
+															li.nav-items.pb-2.pt-0
+																a(href='/cases/service/email-marketing/') Кейсы по email маркетингу
+															li.nav-items.pb-2.pt-0
+																a(href='/cases/service/razrabotka-sayta/') Кейсы по разработке сайтов
+															li.nav-items.pb-2.pt-0
+																a(href='/cases/service/razrabotka-lichnykh-kabinetov/') Разработка личных кабинетов
+															li.nav-items.pb-2.pt-0
+																a(href='/cases/service/tekhnicheskaya-podderzhka/') Техническая поддержка
+															li.nav-items.pb-2.pt-0
+																a(href='/cases/service/smm/') Кейсы по SMM
+															li.nav-items.pb-2.pt-0
+																a(href='/cases/service/progrev-klientov-salesfarm/') Прогрев клиентов (SalesFarm)
+															li.nav-items.pb-2.pt-0
+																a(href='/cases/service/crm-marketing/') Кейсы по CRM маркетингу
+															li.nav-items.pb-2.pt-0
+																a(href='/cases/service/skvoznaya-analitika/') Кейсы по сквозной аналитике
+															li.nav-items.pb-2.pt-0
+																a(href='/cases/service/digital-strategy/') Стратегия интернет-маркетинга
+															li.nav-items.pb-2.pt-0
+																a(href='/cases/service/issledovaniya-konkurentov/') Исследования конкурентов
+															li.nav-items.pb-2.pt-0
+																a(href='/cases/service/serm/') SERM (работа с отзывами)
+															li.nav-items.pb-2.pt-0
+																a(href='/cases/service/razrabotka-mobilnykh-prilozheniy/') Разработка мобильных приложений
+													li.pt-0
+														p.text-white.cases__row-title.mt-0.mb-3 Кейсы по отраслям
+														ul.list-unstyled.pl-0.mb-4
+															li.nav-items.pb-2.pt-0
+																a(href='/cases/branch/b2c-marketing/') B2C маркетинг
+															li.nav-items.pb-2.pt-0
+																a(href='/cases/branch/b2b-marketing/') B2B маркетинг
+															li.nav-items.pb-2.pt-0
+																a(href='/cases/branch/banki/') Банки
+															li.nav-items.pb-2.pt-0
+																a(href='/cases/branch/promyshlennost-i-energetika/') Промышленность и энергетика
+															li.nav-items.pb-2.pt-0
+																a(href='/cases/branch/riteyl-i-b2c-tovary/') Ритейл и B2C товары
+															li.nav-items.pb-2.pt-0
+																a(href='/cases/branch/it/') IT
+															li.nav-items.pb-2.pt-0
+																a(href='/cases/branch/meditsina-i-zdorove/') Медицина и здоровье
+															li.nav-items.pb-2.pt-0
+																a(href='/cases/branch/proizvodstvo-i-distribyutey/') Кейсы по маркетингу для производства и дистрибьютеров
+															li.nav-items.pb-2.pt-0
+																a(href='/cases/branch/uslugi-i-konsalting/') Услуги и консалтинг
+															li.nav-items.pb-2.pt-0
+																a(href='/cases/branch/internet-proekty-i-startapy/') Интернет проекты и стартапы
+															li.nav-items.pb-2.pt-0
+																a(href='/cases/branch/avtorynok-i-logistika/') Авторынок и логистика
+															li.nav-items.pb-2.pt-0
+																a(href='/cases/branch/nedvizhimost-i-stroitelstvo/') Недвижимость и строительство
+													li.pt-0
+														a.cases__row-title.text-white.mt-0.mb-3(href='/cases/') Кейсы по компаниям
+														ul.list-unstyled.pl-0.mb-4
+											.col-4.col-lg-4.p-0.offset-1
+												.cases__row-title.text-white.mb-3.mt-0 Популярные кейсы
+												a.header__cases-card.header__cases-card-1.mb-4(href='/cases/podderzhka-sayta/' style='background-image: url("picture/upload/857424dcc1c7512e5d92a30431d66ad9-2.jpg");')
+													.case__card-container-logo
+														img(src="picture/upload/alta-2.png", alt="").case__card-container-logo-img
+													.header__cases-card-tag.bg-warning.mb-2 Кейс
+													.header__cases-card-text.font-weight-bold.text-white.mb-1 Техническая поддержка сайта производителя дверей.
+												a.header__cases-card.header__cases-card-1.mb-4(href='/cases/bestclinic/' style='background-image: url("picture/upload/feaa4314c12857a7ea8089dd4dfb0ec3.png");')
+													.case__card-container-logo
+														img(src="picture/upload/alta-2.png", alt="").case__card-container-logo-img
+													.header__cases-card-tag.bg-warning.mb-2 Кейс
+													.header__cases-card-text.font-weight-bold.text-white.mb-1 Разработка системы сквозной аналитики для Бест клиник
+							li.nav-item
+								a.nav-link(href='https://blog.completo.ru/' target='_blank') Блог
+							li.nav-item.pr-0.mr-0
+								a.nav-link(href='https://www.completo.ru/contacts/') Контакты
+					a.btn.btn-warning.data-scroll.header__tenderBtn(data-scroll='new-form-main' href='#new-form-main') Пригласить в тендер
+.header.fixed.d-none.d-md-block.d-lg-none
+	.container
+		.row
+			.col-md-12
+				nav.navbar.navbar-expand-lg.justify-content-between
+					a.navbar-brand(href='/')
+						img(src='picture/upload/Completo_logoNEW_white_08-10-2018.png' alt='Completo')
+					button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent2' aria-controls='navbarSupportedContent2' aria-expanded='false' aria-label='Toggle navigation')
+						span
+						span
+						span
+						span
+					#navbarSupportedContent2.collapse.navbar-collapse
+						.row.mt-4.ml-0.mr-0
+							.col-md-3.pl-0
+								ul.navbar-nav
+									li.nav-item.dropdown-element__md
+										a.nav-link.dropdown-link.mr-2.dropdown-link_md.dropdown-link_md-1(href='#')
+											span Комплето
+											i.arrow-down
+												span
+												span
+									li.nav-item.dropdown-element__md
+										a.nav-link.dropdown-link.mr-2.dropdown-link_md.dropdown-link_md-2(href='#')
+											span Услуги
+											i.arrow-down
+												span
+												span
+									li.nav-item.dropdown-element__md
+										a.nav-link.dropdown-link.mr-2.dropdown-link_md.dropdown-link_md-3(href='#')
+											span Сервисы
+											i.arrow-down
+												span
+												span
+									li.nav-item.dropdown-element__md
+										a.nav-link.dropdown-link.mr-2.dropdown-link_md.dropdown-link_md-4(href='#')
+											span Мы обучаем
+											i.arrow-down
+												span
+												span
+									li.nav-item.dropdown-element__md
+										a.nav-link.dropdown-link.mr-2.dropdown-link_md.dropdown-link_md-5(href='#')
+											span Кейсы
+											i.arrow-down
+												span
+												span
+									li.nav-item
+										a.nav-link(href='https://blog.completo.ru/' target='_blank') Блог
+									li.nav-item
+										a.nav-link(href='https://www.completo.ru/contacts/') Контакты
+							.col-md-9
+								div
+									ul.dropdown_md.list-unstyled.dropdown_md-1
+										li.flex-ul-li
+											a(href='/about/') О компании
+										li.flex-ul-li
+											a(href='http://school.completo.ru' target='_blank') Школа стажеров
+										li.flex-ul-li
+											a(href='/vacancy/') Вакансии
+										li.flex-ul-li
+											a(href='https://club.completo.ru/' target='_blank') Комплето Клуб
+										li.flex-ul-li
+											a(href='/checklist-for-agencies/') Тест агентств
+								div
+									ul.dropdown_md.list-unstyled.dropdown_md-2
+										li.flex-ul-li
+											a(href='/digital-strategy/') Digital-стратегия
+										li.flex-ul-li
+											a(href='/razrabotka-sajta/') Разработка сайтов
+										li.flex-ul-li
+											a(href='/b2b/') Компаниям с продуктами В2В
+										li.flex-ul-li
+											a(href='/dealers/') Компаниям с сетями дилеров
+										li.flex-ul-li
+											a(href='/dealers-how-to/') Онлайн-система для дилеров и поставщиков
+										li.flex-ul-li
+											a(href='/dealers-generator/') Система дилерских сайтов
+										li.flex-ul-li
+											a(href='/salesfarm/') Система подогрева клиентов
+										li.flex-ul-li
+											a(href='/seo/') SEO оптимизация
+										li.flex-ul-li
+											a(href='/analytics/') Сквозная аналитика
+										li.flex-ul-li
+											a(href='/performance/') Performance маркетинг
+										li.flex-ul-li
+											a(href='/goonline/') Проведение мероприятий онлайн
+										li.flex-ul-li
+											a(href='https://linkedin.completo.ru/') Продвижение в LinkedIn
+										li.flex-ul-li
+											a(href='/crm/') Интеграция CRM
+								div
+									ul.dropdown_md.list-unstyled.dropdown_md-3
+										li.flex-ul-li
+											a(href='http://goaudit.ru' target='_blank') GoAudit
+										li.flex-ul-li
+											a(href='http://phonetrack.ru' target='_blank') PhoneTrack
+										li.flex-ul-li
+											a(href='https://salespilot.ru' target='_blank') SalesPilot
+										li.flex-ul-li
+											a(href='https://socsale.ru' target='_blank') Socsale
+										li.flex-ul-li
+											a(href='http://setuper.ru' target='_blank') Setuper
+										li.flex-ul-li
+											a(href='https://contrack.ru' target='_blank') Contrack
+										li.flex-ul-li
+											a(href='https://kursbox.ru/' target='_blank') Агрегатор курсов
+								div
+									ul.dropdown_md.list-unstyled.dropdown_md-4
+										li.flex-ul-li
+											a(href='/email-marketing/') Подписаться на рассылку
+										li.flex-ul-li
+											a(href='/edu/') Система прокачки знаний
+										li.flex-ul-li
+											a(href='https://maed.ru/' target='_blank') Обучающий центр MAED.RU
+										li.flex-ul-li
+											a(href='/sem/') СЭМ за 6 шагов
+										li.flex-ul-li
+											a(href='/white-paper/seo/') Мануал по SEO
+										li.flex-ul-li
+											a(href='/white-paper/kak-razrabotat-site/') Мануал Разработка сайтов
+										li.flex-ul-li
+											a(href='/white-paper/competitor-analysis/') Мануал Анализ конкурентов
+										li.flex-ul-li
+											a(href='/checklist-strategy-online-marketing/') Чек-лист digital-стратегии
+										li.flex-ul-li
+											a(href='/videocourse/') Видеокурс по интернет-маркетингу
+										li.flex-ul-li
+											a(href='/videocourse-for-managers/') Видеокурс для руководителей
+										li.flex-ul-li
+											a(href='/research-finance/') Исследование банков
+										li.flex-ul-li
+											a(href='/research-medicine/') Исследование медцентров
+										li.flex-ul-li
+											a(href='/research-estate/') Исследование недвижимости
+										li.flex-ul-li
+											a(href='/research-dealers/') Исследование производителей
+										li.flex-ul-li
+											a(href='https://stratosessia.maed.ru/' target='_blank') Практикум по стратегии
+										li.flex-ul-li
+											a(href='https://book.completo.ru/' target='_blank') Книга для digital-маркетолога
+								div
+									ul#casesTabs.dropdown_md.list-unstyled.cases__tab.dropdown_md-5
+										li
+											p.cases__row-title.text-white.h4.d-inline-block.position-relative.cases__tab-title(data-target='#collapseHeader0' data-toggle='collapse' aria-expanded='false' aria-controls='collapseHeader0' role="button")
+												span Кейсы по услугам
+												|  
+												i.arrow-down
+													span.bg-white
+													|  
+													span.bg-white
+											#collapseHeader0.collapse(data-parent='#casesTabs')
+												ul.list-unstyled.mb-4
+													li
+														a(href='/cases/service/kontekstnaya-reklama/') Кейсы по контекстной рекламе
+													li
+													li
+														a(href='/cases/service/seo/') Кейсы по SEO
+													li
+													li
+														a(href='/cases/service/targetirovannaya-reklama/') Кейсы по таргетированной рекламе
+													li
+													li
+														a(href='/cases/service/email-marketing/') Кейсы по email маркетингу
+													li
+													li
+														a(href='/cases/service/razrabotka-sayta/') Кейсы по разработке сайтов
+													li
+													li
+														a(href='/cases/service/razrabotka-lichnykh-kabinetov/') Разработка личных кабинетов
+													li
+													li
+														a(href='/cases/service/tekhnicheskaya-podderzhka/') Техническая поддержка
+													li
+													li
+														a(href='/cases/service/smm/') Кейсы по SMM
+													li
+													li
+														a(href='/cases/service/progrev-klientov-salesfarm/') Прогрев клиентов (SalesFarm)
+													li
+													li
+														a(href='/cases/service/crm-marketing/') Кейсы по CRM маркетингу
+													li
+													li
+														a(href='/cases/service/skvoznaya-analitika/') Кейсы по сквозной аналитике
+													li
+													li
+														a(href='/cases/service/digital-strategy/') Стратегия интернет-маркетинга
+													li
+													li
+														a(href='/cases/service/issledovaniya-konkurentov/') Исследования конкурентов
+													li
+													li
+														a(href='/cases/service/serm/') SERM (работа с отзывами)
+													li
+													li
+														a(href='/cases/service/razrabotka-mobilnykh-prilozheniy/') Разработка мобильных приложений
+													li
+										li
+											p.cases__row-title.text-white.h4.d-inline-block.position-relative.cases__tab-title(data-target='#collapseHeader1' data-toggle='collapse' aria-expanded='false' aria-controls='collapseHeader1' role="button")
+												span Кейсы по отраслям
+												|  
+												i.arrow-down
+													span.bg-white
+													|  
+													span.bg-white
+											#collapseHeader1.collapse(data-parent='#casesTabs')
+												ul.list-unstyled.mb-4
+													li
+														a(href='/cases/branch/b2c-marketing/') B2C маркетинг
+													li
+													li
+														a(href='/cases/branch/b2b-marketing/') B2B маркетинг
+													li
+													li
+														a(href='/cases/branch/banki/') Банки
+													li
+													li
+														a(href='/cases/branch/promyshlennost-i-energetika/') Промышленность и энергетика
+													li
+													li
+														a(href='/cases/branch/riteyl-i-b2c-tovary/') Ритейл и B2C товары
+													li
+													li
+														a(href='/cases/branch/it/') IT
+													li
+													li
+														a(href='/cases/branch/meditsina-i-zdorove/') Медицина и здоровье
+													li
+													li
+														a(href='/cases/branch/proizvodstvo-i-distribyutey/') Кейсы по маркетингу для производства и дистрибьютеров
+													li
+													li
+														a(href='/cases/branch/uslugi-i-konsalting/') Услуги и консалтинг
+													li
+													li
+														a(href='/cases/branch/internet-proekty-i-startapy/') Интернет проекты и стартапы
+													li
+													li
+														a(href='/cases/branch/avtorynok-i-logistika/') Авторынок и логистика
+													li
+													li
+														a(href='/cases/branch/nedvizhimost-i-stroitelstvo/') Недвижимость и строительство
+													li
+										li
+											a.cases__row-title.text-white.h4.d-inline-block.position-relative(href='/cases/').
+												
+												Кейсы по компаниям
+										li.d-lg-none
+											p.text-white.h4.d-inline-block.position-relative.cases__tab-title(data-target='#collapseHeader3' data-toggle='collapse' aria-expanded='false' aria-controls='collapseHeader3' role="button")
+												span Популярные кейсы
+												|  
+												i.arrow-down
+													span.bg-white
+													|  
+													span.bg-white
+											#collapseHeader3.collapse(data-parent='#casesTabs')
+												ul.list-unstyled.mb-4
+													li
+														a(href='/cases/agexperts/') Создание региональных посадочных для генерации заявок
+													li
+														a(href='/cases/seo-dlya-zavoda/') Комплексная SEO-оптимизация для завода с сетью дилеров
+								div
+									ul.dropdown_md.list-unstyled
+								div
+									ul.dropdown_md.list-unstyled
+						a.btn.btn-warning.data-scroll.header__tenderBtn.mt-2.mb-3(data-scroll='new-form-main' href='#new-form-main') Пригласить в тендер
+.header.fixed.d-block.d-md-none
+	.container
+		.row
+			.col-md-12
+				nav.navbar.navbar-expand-lg.justify-content-between.pl-0.pr-0
+					a.navbar-brand(href='/')
+						img(src='picture/upload/Completo_logoNEW_white_08-10-2018.png' alt='Completo')
+					button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent3' aria-controls='navbarSupportedContent3' aria-expanded='false' aria-label='Toggle navigation')
+						span
+						span
+						span
+						span
+					#navbarSupportedContent3.collapse.navbar-collapse.justify-content-end
+						ul.navbar-nav
+							li.nav-item.dropdown-element.dropdown-element-xs
+								span.nav-link.dropdown-link.d-block.mr-2.nav-link-xs
+									span Комплето
+									|  
+									i.arrow-down
+										span
+										span
+								ul.dropdown.list-unstyled.dropdown-xs
+									li.flex-ul-li
+										a(href='/about/') О компании
+									li.flex-ul-li
+										a(href='http://school.completo.ru' target='_blank') Школа стажеров
+									li.flex-ul-li
+										a(href='/vacancy/') Вакансии
+									li.flex-ul-li
+										a(href='https://club.completo.ru/' target='_blank') Комплето Клуб
+									li.flex-ul-li
+										a(href='/checklist-for-agencies/') Тест агентств
+							li.nav-item.dropdown-element.dropdown-element-xs
+								span.nav-link.dropdown-link.d-block.mr-2.nav-link-xs
+									span Услуги
+									|  
+									i.arrow-down
+										span
+										span
+								ul.dropdown.list-unstyled.dropdown-xs
+									li.flex-ul-li
+										a(href='/digital-strategy/') Digital-стратегия
+									li.flex-ul-li
+										a(href='/razrabotka-sajta/') Разработка сайтов
+									li.flex-ul-li
+										a(href='/b2b/') Компаниям с продуктами В2В
+									li.flex-ul-li
+										a(href='/dealers/') Компаниям с сетями дилеров
+									li.flex-ul-li
+										a(href='/dealers-how-to/') Онлайн-система для дилеров и поставщиков
+									li.flex-ul-li
+										a(href='/dealers-generator/') Система дилерских сайтов
+									li.flex-ul-li
+										a(href='/salesfarm/') Система подогрева клиентов
+									li.flex-ul-li
+										a(href='/seo/') SEO оптимизация
+									li.flex-ul-li
+										a(href='/analytics/') Сквозная аналитика
+									li.flex-ul-li
+										a(href='/performance/') Performance маркетинг
+									li.flex-ul-li
+										a(href='/goonline/') Проведение мероприятий онлайн
+									li.flex-ul-li
+										a(href='https://linkedin.completo.ru/') Продвижение в LinkedIn
+									li.flex-ul-li
+										a(href='/crm/') Интеграция CRM
+							li.nav-item.dropdown-element.dropdown-element-xs
+								span.nav-link.dropdown-link.d-block.mr-2.nav-link-xs
+									span Сервисы
+									|  
+									i.arrow-down
+										span
+										span
+								ul.dropdown.list-unstyled.dropdown-xs
+									li.flex-ul-li
+										a(href='http://goaudit.ru' target='_blank') GoAudit
+									li.flex-ul-li
+										a(href='http://phonetrack.ru' target='_blank') PhoneTrack
+									li.flex-ul-li
+										a(href='https://salespilot.ru' target='_blank') SalesPilot
+									li.flex-ul-li
+										a(href='https://socsale.ru' target='_blank') Socsale
+									li.flex-ul-li
+										a(href='http://setuper.ru' target='_blank') Setuper
+									li.flex-ul-li
+										a(href='https://contrack.ru' target='_blank') Contrack
+									li.flex-ul-li
+										a(href='https://kursbox.ru/' target='_blank') Агрегатор курсов
+							li.nav-item.dropdown-element.dropdown-element-xs
+								span.nav-link.dropdown-link.d-block.mr-2.nav-link-xs
+									span Мы обучаем
+									|  
+									i.arrow-down
+										span
+										span
+								ul.dropdown.list-unstyled.dropdown-xs
+									li.flex-ul-li
+										a(href='/email-marketing/') Подписаться на рассылку
+									li.flex-ul-li
+										a(href='/edu/') Система прокачки знаний
+									li.flex-ul-li
+										a(href='https://maed.ru/' target='_blank') Обучающий центр MAED.RU
+									li.flex-ul-li
+										a(href='/sem/') СЭМ за 6 шагов
+									li.flex-ul-li
+										a(href='/white-paper/seo/') Мануал по SEO
+									li.flex-ul-li
+										a(href='/white-paper/kak-razrabotat-site/') Мануал Разработка сайтов
+									li.flex-ul-li
+										a(href='/white-paper/competitor-analysis/') Мануал Анализ конкурентов
+									li.flex-ul-li
+										a(href='/checklist-strategy-online-marketing/') Чек-лист digital-стратегии
+									li.flex-ul-li
+										a(href='/videocourse/') Видеокурс по интернет-маркетингу
+									li.flex-ul-li
+										a(href='/videocourse-for-managers/') Видеокурс для руководителей
+									li.flex-ul-li
+										a(href='/research-finance/') Исследование банков
+									li.flex-ul-li
+										a(href='/research-medicine/') Исследование медцентров
+									li.flex-ul-li
+										a(href='/research-estate/') Исследование недвижимости
+									li.flex-ul-li
+										a(href='/research-dealers/') Исследование производителей
+									li.flex-ul-li
+										a(href='https://stratosessia.maed.ru/' target='_blank') Практикум по стратегии
+									li.flex-ul-li
+										a(href='https://book.completo.ru/' target='_blank') Книга для digital-маркетолога
+							li.nav-item.dropdown-element.dropdown-element-xs
+								span.nav-link.dropdown-link.d-block.mr-2.nav-link-xs
+									span Кейсы
+									|  
+									i.arrow-down
+										span
+										span
+								ul#casesTabsMob.dropdown.list-unstyled.dropdown-xs.cases-tab-mob
+									li
+										p.text-white.h5.d-inline-block.position-relative.cases-tab-mob-title(data-target='#collapseHeaderMob1' data-toggle='collapse' aria-expanded='false' aria-controls='collapseHeaderMob1' role="button")
+											span Кейсы по услугам
+											|  
+											i.arrow-down
+												span.bg-white
+												|  
+												span.bg-white
+										#collapseHeaderMob1.collapse(data-parent='#casesTabsMob')
+											ul.list-unstyled.mb-4
+												li
+													a(href='/cases/service/kontekstnaya-reklama/') Кейсы по контекстной рекламе
+												li
+													a(href='/cases/service/seo/') Кейсы по SEO
+												li
+													a(href='/cases/service/targetirovannaya-reklama/') Кейсы по таргетированной рекламе
+												li
+													a(href='/cases/service/email-marketing/') Кейсы по email маркетингу
+												li
+													a(href='/cases/service/razrabotka-sayta/') Кейсы по разработке сайтов
+												li
+													a(href='/cases/service/razrabotka-lichnykh-kabinetov/') Разработка личных кабинетов
+												li
+													a(href='/cases/service/tekhnicheskaya-podderzhka/') Техническая поддержка
+												li
+													a(href='/cases/service/smm/') Кейсы по SMM
+												li
+													a(href='/cases/service/progrev-klientov-salesfarm/') Прогрев клиентов (SalesFarm)
+												li
+													a(href='/cases/service/crm-marketing/') Кейсы по CRM маркетингу
+												li
+													a(href='/cases/service/skvoznaya-analitika/') Кейсы по сквозной аналитике
+												li
+													a(href='/cases/service/digital-strategy/') Стратегия интернет-маркетинга
+												li
+													a(href='/cases/service/issledovaniya-konkurentov/') Исследования конкурентов
+												li
+													a(href='/cases/service/serm/') SERM (работа с отзывами)
+												li
+													a(href='/cases/service/razrabotka-mobilnykh-prilozheniy/') Разработка мобильных приложений
+									li
+										p.text-white.h5.d-inline-block.position-relative.cases-tab-mob-title(data-target='#collapseHeaderMob2' data-toggle='collapse' aria-expanded='false' aria-controls='collapseHeaderMob2' role="button")
+											span Кейсы по отраслям
+											|  
+											i.arrow-down
+												span.bg-white
+												|  
+												span.bg-white
+										#collapseHeaderMob2.collapse(data-parent='#casesTabsMob')
+											ul.list-unstyled.mb-4
+												li
+													a(href='/cases/branch/b2c-marketing/') B2C маркетинг
+												li
+													a(href='/cases/branch/b2b-marketing/') B2B маркетинг
+												li
+													a(href='/cases/branch/banki/') Банки
+												li
+													a(href='/cases/branch/promyshlennost-i-energetika/') Промышленность и энергетика
+												li
+													a(href='/cases/branch/riteyl-i-b2c-tovary/') Ритейл и B2C товары
+												li
+													a(href='/cases/branch/it/') IT
+												li
+													a(href='/cases/branch/meditsina-i-zdorove/') Медицина и здоровье
+												li
+													a(href='/cases/branch/proizvodstvo-i-distribyutey/') Кейсы по маркетингу для производства и дистрибьютеров
+												li
+													a(href='/cases/branch/uslugi-i-konsalting/') Услуги и консалтинг
+												li
+													a(href='/cases/branch/internet-proekty-i-startapy/') Интернет проекты и стартапы
+												li
+													a(href='/cases/branch/avtorynok-i-logistika/') Авторынок и логистика
+												li
+													a(href='/cases/branch/nedvizhimost-i-stroitelstvo/') Недвижимость и строительство
+									li
+										a.text-white.h5.d-inline.position-relative.cases-tab-mob-title(href='/cases/') Кейсы по компаниям
+									li.d-lg-none
+										p.text-white.h5.d-inline-block.position-relative.cases-tab-mob-title(data-target='#collapseHeaderMob3' data-toggle='collapse' aria-expanded='false' aria-controls='collapseHeaderMob3' role="button")
+											span Популярные кейсы
+											|  
+											i.arrow-down
+												span.bg-white
+												|  
+												span.bg-white
+										#collapseHeaderMob3.collapse(data-parent='#casesTabsMob')
+											ul.list-unstyled.mb-4
+												li
+													a(href='/cases/favorit-retargeting/') Ретаргетинг для Favorit Motors
+												li
+													a(href='/cases/beautyled/') Как заработать за 2 месяца больше 15 000 000 рублей для клиента и сделать ROI на платных рекламных каналах 700%
+							li.nav-item
+								a.nav-link(href='https://blog.completo.ru/' target='_blank') Блог
+							li.nav-item
+								a.nav-link.pr-0.mr-0(href='https://www.completo.ru/contacts/') Контакты
+						a.btn.btn-warning.data-scroll.header__tenderBtn.mt-2.mb-3(data-scroll='new-form-main' href='#new-form-main') Пригласить в тендер

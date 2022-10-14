@@ -1,0 +1,27 @@
+mixin razrabotka-icon(img, text)
+	.d-flex.align-items-center.primary-head-item.primary-head-item-large
+		.primary-head-item-num
+			img(src="picture/upload/"+img, alt="").primary-head-item-num-icon-new
+		.primary-head-item-text.text-white!= text
+.primary-head
+	.container-fluid.primary-head-container.h-100
+		.row.h-100.align-items-center
+			.col-lg-4.col-md-4.d-none.d-md-block
+					+razrabotka-icon('2560px-Raiffeisen_Bank.png', 'В топе антирейтинга сайтов по отказам – Райффайзенбанк и Возрождение')
+					+razrabotka-icon('2560px-Sberbank_Logo_2020.png', 'Сбербанк превзошел ближайшего конкурента в 7 раз по целевому трафику')
+					+razrabotka-icon('Mask-Group-vbrr.png', 'Первое место рейтинга по привлечению трафика – Всероссийский банк развития регионов')
+			.offset-xl-1.col-md-8.col-xl-6
+				.h1.main-title.primary-head__title.primary-head__title-big Как банки привлекают 
+					br
+					| клиентов из 
+					br 
+					| интернета? 
+				.d-md-none
+					.pb-2
+						+razrabotka-icon('2560px-Raiffeisen_Bank.png', 'В топе антирейтинга сайтов по отказам – Райффайзенбанк и Возрождение')
+						+razrabotka-icon('2560px-Sberbank_Logo_2020.png', 'Сбербанк превзошел ближайшего конкурента в 7 раз по целевому трафику')
+						+razrabotka-icon('Mask-Group-vbrr.png', 'Первое место рейтинга по привлечению трафика – Всероссийский банк развития регионов')
+				.d-block
+					a(href="#" download).btn.btn-warning.data-scroll.mt-4.mb-4.d-inline-block.px-md-5.bank-research__btn.w-100 Скачать PDF
+	.primary-head-video
+		img(src="picture/backgrounds/consulting-bg.jpg", alt="")

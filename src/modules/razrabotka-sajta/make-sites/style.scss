@@ -1,0 +1,25 @@
+.make-sites {
+	&__promo {
+		width: 100%;
+		height: auto;
+		box-shadow: 0 8px 20px 0 rgba(0,0,0,.2);
+		border: 1px solid #FECC2F;
+		border-radius: 5px;
+		margin-top: 30px;
+		&__link {
+			font-size: 1.5rem;
+			color: #212529;
+			text-align: center;
+			text-decoration: none;
+			font-weight: bold;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			transition: all .5s ease-in;
+			&:hover {
+				cursor: pointer;
+				text-decoration: underline;
+			}
+		}
+	}
+}

@@ -1,0 +1,41 @@
+.no-typical {
+	padding: 90px 0 0;
+	position: relative;
+	overflow: hidden;
+	z-index: 2;
+	background-image: url('../picture/backgrounds/black-bg.jpg');
+	.paralax-item {
+		top: -150px;
+	}
+	@include media-breakpoint-down(xs) {
+		h2 {
+			font-size: 2.2rem;
+		}
+		padding: 50px 0;
+	}
+	&__container {
+		&-item {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 15px;
+			@include media-breakpoint-down(md) {
+				margin-top: 40px;
+			}
+			@include media-breakpoint-down(xs) {
+				font-size: 14px;
+			}
+		}
+		&-text {
+			max-width: 260px;
+			width: calc(100% - 130px);
+		}
+		&-num {
+			font-size: 64px;
+			line-height: 1;
+			@include media-breakpoint-down(xs) {
+				font-size: 46px;
+			}
+		}
+	}
+}

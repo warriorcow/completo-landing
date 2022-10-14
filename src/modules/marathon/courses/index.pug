@@ -1,0 +1,29 @@
+mixin videocourse-img(img)
+	a(href="picture/upload/"+img data-fancybox="gallery").videocourse__sert-img
+		img(src="picture/upload/"+img, alt="").w-100
+.marathon__course.pt-5.position-relative
+	.container
+		.row
+			.col-md-12
+				nav.breadcrumb
+					ol.breadcrumb
+						li.breadcrumb-item
+							a(href="/").text-secondary Главная
+						li.breadcrumb-item.active.text-dark(aria-current="page") Марафон по Performance
+			.col-md-12.col-lg-10.col-xl-8
+				h2.h2.mb-5.position-relative.z-index-2.form-h2="Что такое марафон "
+					span.yellow-border.nowrap-text полезного
+						span.border-container.animation.visible.animated(data-animate="newline")
+					span.yellow-border.nowrap-text контента
+						span.border-container.animation.visible.animated(data-animate="newline")
+		.row.mb-4
+			.col-md-12.mt-5.mt-md-0
+				.d-flex.pl-md-2
+					.dealers-level__card-icon-block
+						i.icon.dealers-level__card-icon.icon-dealers-analysis
+					.dealers-level__bloquote.dealers-level__bloquote-sm.mt-5.mt-md-0
+						p.h4.font-weight-normal.mb-3
+							span.text-secondary.font-weight-bold.dealers-level__bloquote-title="Тонны "
+							span образовательного контента с доставкой в ваш мессенджер
+						p.h4.font-weight-normal.mb-3 Голосовые сообщения, статьи, кейсы, видео, и в конце - большой вебинар
+						p.h4.font-weight-normal.mb-3 Мы собрали и актуализировали наш самый полезный контент, чтобы вы за неделю могли стать экспертом по нужному направлению!

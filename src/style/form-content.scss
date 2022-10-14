@@ -1,0 +1,137 @@
+[id^="bs-namespace_form-content"] {
+  @import "font/ptfont";
+  @import "bootstrap/bootstrap-namespace";
+  @import "bootstrap/functions";
+  @import "bootstrap/variables";
+  @import "bootstrap/mixins";
+  @import "bootstrap/root";
+
+  font-family: $font-family-base;
+  @include font-size($font-size-base);
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+  color: $body-color;
+
+  @import "../modules/form-2/style";
+
+  .form {
+    &__wrapper {
+      background-color: #FEFDF2;
+    }
+
+    &-h2 {
+      @include media-breakpoint-down(md) {
+        font-size: 2.2rem;
+      }
+    }
+    a {
+      font-size: inherit;
+    }
+  }
+  .modal {
+    padding: 0;
+    &.show {
+      opacity: 1;
+    }
+    & h2 {
+      font-family: inherit;
+      text-transform: inherit;
+    }
+    &.fade .modal-dialog {
+      transform: none;
+      transition: none;
+      height: auto;
+    }
+    &-header {
+      background: none;
+      border: none;
+      .close:hover {
+        background: none;
+      }
+    }
+    &-content {
+      height: auto;
+    }
+    &-body {
+      & ul {
+        padding: 0;
+        border: none;
+        li a {
+          display: block;
+          width: 80px;
+        }
+      }
+    }
+  }
+
+  .radio-text {
+    font-size: 16px;
+    font-weight: normal;
+
+    strong {
+      font-weight: bold;
+    }
+  }
+
+  .newline {
+    animation-name: newline;
+    animation-timing-function: linear;
+  }
+
+  @keyframes newline {
+    from {
+      width: 0;
+    }
+    to {
+      width: calc(100% + 7px);
+    }
+  }
+
+  .yellow-border {
+    position: relative;
+
+    .border-container {
+      left: 0;
+      bottom: 7px;
+      position: absolute;
+      height: 14px;
+      background-color: $yellow;
+      z-index: -1;
+      width: 0;
+    }
+
+    &-white {
+      .border-container {
+        background-color: $white;
+      }
+    }
+  }
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000
+}
+
+.modal-backdrop.fade {
+  opacity: 0
+}
+
+.modal-backdrop.show {
+  opacity: .5
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto
+}
+

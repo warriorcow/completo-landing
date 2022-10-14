@@ -1,0 +1,41 @@
+- var title = "Система дилерских сайтов для управления продажами партнеров";
+doctype html
+html(lang="ru")
+	head
+		include modules/head/index.pug
+	body
+		include modules/header/index.pug
+		include modules/dealers-generator/head/index.pug
+		include modules/dealers-generator/dealers-problems/index.pug
+		include modules/dealers-generator/decision/index.pug
+		include modules/dealers-generator/nesessary-system/index.pug
+		include modules/dealers-generator/system-consist/index.pug
+		include modules/dealers-generator/system-help/index.pug
+		include modules/dealers-generator/dealers/index.pug
+		include modules/dealers-generator/profit/index.pug
+		include modules/dealers-generator/system-generate-sites/index.pug
+		include modules/dealers-generator/dealers-sites-system/index.pug
+		include modules/dealers-generator/no-alternative/index.pug
+		include modules/dealers-generator/price/index.pug
+		include modules/dealers-generator/shemes/index.pug
+		.about__wrapper-dealers
+			include modules/about/index.pug
+		.form__wrapper
+			.container#new-form-main
+				.row.pt-5.pb-5#form-content
+					.col-md-12
+						.h2.mb-4.form-h2.d-none.d-md-block
+							span.heading-gradient Автоматизируйте региональные продажи
+							br
+							| вместе с Комплето
+						.h2.mb-4.form-h2.d-md-none
+							span.heading-gradient Автоматизируйте
+							br
+							span.heading-gradient региональные
+							br
+							span.heading-gradient продажи
+							br
+							| вместе с Комплето
+					include modules/form/index.pug
+		include modules/footer/index.pug
+		include modules/foot/index.pug

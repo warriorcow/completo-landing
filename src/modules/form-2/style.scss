@@ -1,0 +1,115 @@
+.form {
+	$this: &;
+
+	&.form-content {
+		.form-h2 {
+			@include media-breakpoint-down(md) {
+				font-size: 2.2rem;
+			}
+		}
+		.btn {
+			@include media-breakpoint-down(sm) {
+				width: calc(100% - 10px) !important;
+				padding-left: 1.5rem;
+				padding-right: 1rem;
+			}
+			display: flex;
+			align-items: center;
+			text-align: left;
+			margin-bottom: 0;
+		}
+		.form-input-checkbox {
+			display: flex;
+			align-items: center;
+			border: 1px solid #fecc2f;
+			box-shadow: 4px 4px 0 0 #fecc2f;
+			padding: 10px 10px 10px 10px;
+			position: relative;
+			cursor: pointer;
+			&::before {
+				content: '';
+				width: 8px;
+				height: 8px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				background-color: #000;
+				border-radius: 100%;
+				transition: .2s ease all;
+				opacity: 0;
+			}
+		}
+		.form-input-radio:checked+label .form-input-checkbox::before {
+			opacity: 1;
+		}
+		.form-input-checkbox-text {
+			font-style: normal;
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 21px;
+			display: flex;
+			align-items: center;
+			color: #9A9A9A;
+			@include media-breakpoint-down(sm) {
+				flex-wrap: wrap;
+			}
+		}
+		.form_btn-icon {
+			margin-right: 15px;
+			@include media-breakpoint-down(sm) {
+				margin-right: 10px;
+			}
+		}
+	}
+}
+.visually-hidden {
+	position: absolute;
+	appearance: none;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+.circle--big {
+	width: 80px;
+	height: 80px;
+	@include media-breakpoint-down(sm) {
+		width: 50px;
+		height: 50px;
+	}
+}
+
+a:hover .circle--big {
+	transform: scale(1.1);
+}
+.icon--big {
+	max-width: 50%;
+	max-height: 50%;
+}
+#content-modal-done .modal-content {
+	@include media-breakpoint-up(lg) {
+		min-height: 356px;
+	}
+	.modal-body {
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 26px;
+		text-align: center;
+		@include media-breakpoint-down(sm) {
+			font-size: 14px;
+			line-height: 20px;
+		}
+	}
+	@include media-breakpoint-down(sm) {
+		h2 {
+			font-size: 24px;
+			line-height: 109.99%;
+		}
+	}
+}

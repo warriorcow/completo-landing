@@ -1,0 +1,31 @@
+mixin crew(name, text, src)
+	.crew.animation.big-shadow.visible(data-animate="big_shadow")
+		.new-cases-tasks__quote-avatar.crew__avatar
+			.new-cases-tasks__quote-avatar-img.crew__avatar-img
+				img(src=src, alt="")
+		.new-cases-tasks__quote-under-text.text-center
+			h6.mb-0.mt-2= name
+			p.mb-3
+				small= text
+.new-cases-result
+	.container
+		.row
+			.col-md-12
+				h2.h1.mt-3.mb-4 Команда специалистов
+		.row.d-none.d-lg-flex
+			.col-md-3.mb-4
+				+crew('Роман Цветков', 'руководитель проекта', '../../picture/upload/roman.png')
+			.col-md-3.mb-4
+				+crew('Сергей Сухоплюев', 'руководитель отдела трафика', '../../picture/upload/sergey.png')
+			.col-md-3.mb-4
+				+crew('Владимир Давыдов', '', '../../picture/upload/davydov.png')
+		.row
+			.col-md-12.d-lg-none.d-block
+				.custom-scrollbar
+					.d-flex
+						.col-lg-3.mb-4
+							+crew('Роман Цветков', 'руководитель проекта', '../../picture/upload/roman.png')
+						.col-lg-3.mb-4
+							+crew('Сергей Сухоплюев', 'руководитель отдела трафика', '../../picture/upload/sergey.png')
+						.col-md-3.mb-4
+							+crew('Владимир Давыдов', '', '../../picture/upload/davydov.png')

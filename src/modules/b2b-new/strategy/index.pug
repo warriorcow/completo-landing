@@ -1,0 +1,108 @@
+mixin b2b-case(img, logo, text)
+	a(href="#").b2b-case__card
+		img(src="picture/upload/"+img, alt="").b2b-case__card__bg
+		.case__card-container.p-3
+			.bg-white.position-absolute.right-0.font-weight-bold.px-3.py-2.b2b-case__logo
+				img(src="picture/upload/"+logo, alt="").b2b-case__logo_img
+			small.bg-warning.rounded.px-2.py-1.text-dark.case__card-title.font-weight-bold Кейс
+			p.text-white.mt-2.font-weight-bold.relative.z-index-2.mb-0= text
+mixin b2b__icon-block(icon, text)
+	.d-md-block.d-flex.align-items-center
+		img(src="picture/upload/" + icon + ".svg", alt="").b2b__check-icon.mb-4.mb-sm-0
+		p.mb-4.b2b__sm-text-center.b2b__text-left
+			small!= text
+mixin check__dot(text1, text2, small = false)
+	a(href="#").d-flex.align-items-center 
+		.b2b__check-dot.bg-warning.rounded-circle.d-flex.align-items-center.justify-content-center.mr-3 
+			img(src="picture/upload/tick.svg", alt="").b2b__check-dot-img
+		if small 
+			p.mb-0.text-dark.sm-text-small
+				u= text1 
+				br
+				u.font-weight-bold= text2
+		else
+			p.mb-0.text-dark.sm-text-small
+				u= text1 
+				br
+				u.font-weight-bold= text2
+.container.py-5.my-4.position-relative
+	.absolute-text__b2b b2b
+	.row 
+		.col-lg-8
+			h2.h2__b2b.mb-4.form-h2.text-uppercase.mb-lg-5
+				span.yellow-border Разрабатываем стратегию 
+					span.border-container.animation.visible.animated(data-animate="newline")
+				br
+				span и оцифровываем бизнес
+			.row 
+				.col-md-3.mb-4
+					+check__dot('Digital', 'стратегия')
+				.col-md-3.mb-4
+					+check__dot('Исследование', 'спроса')
+				.col-md-3.mb-4
+					+check__dot('Исследование', 'конкурентов')
+				.col-md-3.mb-4
+					+check__dot('Digital', 'консалтинг')
+			.d-lg-none.position-relative
+				img(src="picture/upload/b2b__qote.svg", alt="").b2b__right-quote
+				img(src="picture/upload/b2b__a.png", alt="").w-100.position-relative.z-index-2
+				p.h5.mb-4
+					span.font-weight-normal Весь наш опыт говорит о том, что 
+					span успех бизнеса 
+					span.font-weight-normal на 80% зависит от правильно выбранной стратегии
+				p 
+					span.h6.mb-0 Андрей Гавриков, 
+					small.text-opacity-5 генеральный директор, 
+					br
+					span.text-opacity-5 сооснователь COMPLETO
+			.h4.pt-3.mb-4.pb-lg-3
+				span.font-weight-normal Какие результаты 
+				br
+				span может дать digital-стратегия 
+				span.text-warning ?
+			.row.align-items-center
+				.col-md-8.col-xl-9
+					.row 
+						.col-xl-3.col-md-6
+							+b2b__icon-block('Frame_22947', '<span class="font-weight-bold">в 18 раз </span><br/> больше заявок')
+						.col-xl-3.col-md-6
+							+b2b__icon-block('Frame_22948', '<span class="font-weight-bold">на 31% </span><br/> рост объема продаж')
+						.col-xl-3.col-md-6
+							+b2b__icon-block('Frame_22949', '<span class="font-weight-bold">8 млн ₽ экономии </span><br/> на рекламе')
+						.col-xl-3.col-md-6
+							+b2b__icon-block('Frame_22950', '<span class="font-weight-bold">в 330 раз</span><br/> рост трафика')
+				.col-md-4.mb-4.col-xl-3
+					button.btn.btn-warning.w-100.px-2.data-scroll(data-scroll="form-content")
+						small.font-weight-bold Разработать стратегию
+		.col-lg-4.relative.d-none.d-lg-block
+			img(src="picture/upload/b2b__qote.svg", alt="").b2b__right-quote
+			img(src="picture/upload/b2b__a.png", alt="").w-100.position-relative.z-index-2
+			p.h5.mb-4
+				span.font-weight-normal Весь наш опыт говорит о том, что 
+				span успех бизнеса 
+				span.font-weight-normal на 80% зависит от правильно выбранной стратегии
+			p 
+				span.h6.mb-0 Андрей Гавриков, 
+				small.text-opacity-5 генеральный директор, 
+				br
+				span.text-opacity-5 сооснователь COMPLETO
+	.row.pt-4.align-items-end
+		.col-lg-3.mb-3.pb-3
+			.h4.mb-md-4.mb-0 Как мы это делаем, читайте в наших кейсах:
+			a(href="#").btn.btn-warning.px-4.d-none.d-md-inline-block.text-warning
+				span.text-dark Все кейсы по стратегиям
+		.col-lg-9
+			.d-md-none
+				.slick-slider-mob.b2b__slider-mob.mb-4
+					+b2b-case('Rectangle_2875.jpg', 'alta-2.png', 'Как сделать охват в соцсетях 1 млн. человек для стройматериалов')
+					+b2b-case('Rectangle_2876.jpg', 'logo_site.svg', 'Как сделать охват в соцсетях 1 млн. человек для стройматериалов')
+					+b2b-case('Rectangle_2877.jpg', 'Motorola_new_logo.svg', 'Разработка landing-page для сбора заявок в России заявок в России и Европе для СИБУР')
+				a(href="#").btn.btn-warning.px-4.b2b__header__btn-full.text-warning
+					span.text-dark Все кейсы по стратегиям
+			.row.d-none.d-md-flex
+				.col-md-4.mb-4
+					+b2b-case('Rectangle_2875.jpg', 'alta-2.png', 'Как сделать охват в соцсетях 1 млн. человек для стройматериалов')
+				.col-md-4.mb-4
+					+b2b-case('Rectangle_2876.jpg', 'logo_site.svg', 'Как сделать охват в соцсетях 1 млн. человек для стройматериалов')
+				.col-md-4.mb-4
+					+b2b-case('Rectangle_2877.jpg', 'Motorola_new_logo.svg', 'Разработка landing-page для сбора заявок в России заявок в России и Европе для СИБУР')

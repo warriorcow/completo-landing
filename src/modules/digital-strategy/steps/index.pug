@@ -1,0 +1,126 @@
+mixin btn-carousel
+	.row
+		.col-6.mb-4
+			button.btn.btn-warning.step__prev.mt-4.mb-4.d-flex.align-items-center.w-100.step__btn-mobile
+				i.icon.icon-arrow-left.step__next-icon
+				span.ml-2 Предыдущий этап
+		.col-6.mb-4
+			button.btn.btn-warning.step__next.mt-4.mb-4.d-flex.align-items-center.w-100.step__btn-mobile
+				span.mr-2 Следующий этап
+				i.icon.icon-arrow-right.step__next-icon
+mixin step-list(...lists)
+	ul.step__list.list-unstyled.d-none.d-md-flex
+		each list, index in lists
+			if index == 0
+				li.step__list-item.active
+					a(href="#" data-link=index).step__list-item-link
+						span.step__list-item-link-num= index + 1
+						span.step__list-item-link-text= list
+			else
+				li.step__list-item
+					a(href="#" data-link=index).step__list-item-link
+						span.step__list-item-link-num= index + 1
+						span.step__list-item-link-text= list
+mixin step-next-btn
+	button.btn.btn-warning.step__next.mt-4.mb-4.d-none.d-md-flex.align-items-center
+		span.mr-2 Следующий этап
+		i.icon.icon-arrow-right.step__next-icon
+mixin step-carousel
+	.step__carousel-container
+		.step__carousel-container-dot
+		.step__carousel-container-dot
+		.step__carousel-container-dot
+		.step__carousel
+			img(src="picture/upload/block9_slide1+.jpg", alt="").w-100
+			img(src="picture/upload/block9_slide2+.jpg", alt="").w-100
+			img(src="picture/upload/block9_slide3+.jpg", alt="").w-100
+			img(src="picture/upload/block9_slide4+.jpg", alt="").w-100
+			img(src="picture/upload/block9_slide5+.jpg", alt="").w-100
+			img(src="picture/upload/block9_slide6+.jpg", alt="").w-100
+.py-5.step.overflow-hidden
+	.container.mt-lg-5.mt-md-4.mb-md-4
+		.row
+			.col-md-12
+				.h2.mb-4.make-sites-section__h2 Этапы разработки маркетинговой стратегии
+				+step-list('Рынок и продукт', 'Аудит', 'Сегментация ЦА', 'Разработка УТП', 'Стратегия по каналам', 'План работ')
+			.col-md-12.d-flex.align-items-center.mb-4
+				.step__heading
+					span.h4.text-uppercase.mb-0 Этап
+					span.step__heading-num.h4.mx-2.mb-0 1
+				h3.step__heading-name.text-uppercase.mb-0 Рынок и продукт
+		.row
+			.col-xl-4.col-lg-5.col-md-6
+				.step__container.step__container-active(data-show="0")
+					.d-block
+						ol.pl-4.mb-4
+							li.mb-2 Формулируем цели и задачи в бизнес-метриках
+							li.mb-2 Изучаем бизнес-модель компании по Остервальду
+							li.mb-2 Исследуем особенности рынка и его объемы
+							li.mb-2 Замеряем размер потенциальной аудитории (интернет-спрос)
+							li.mb-2 Изучаем матрицу услуг и товаров компании
+							li.mb-2 Формируем ядро запросов (b2b и b2c)
+							li.mb-2 Проводим анализ конкурентов (минимум 3)
+							li.mb-2 Формулируем точки роста
+					+step-next-btn
+				.step__container(data-show="1")
+					.d-block
+						ol.pl-4.mb-4
+							li.mb-2 Проводим аудит текущего интернет-маркетинга
+							li.mb-2 Экспресс-аудит сайта и точек контакта
+							li.mb-2  Снимаем показатели конверсии в трафик, заявки, звонки, продажи
+							li.mb-2 Изучаем бизнес-процессы обработки заявок
+							li.mb-2 Изучаем ресурсы компании (сотрудники, бюджеты)
+							li.mb-2 Прогнозируем объем заказов через интернет по всем каналам (контекст, таргет, реклама в сообществах, имейл, поиск и пр.)
+					+step-next-btn
+				.step__container(data-show="2")
+					.d-block
+						ol.pl-4.mb-4
+							li.mb-2 Разбиваем аудиторию на сегменты (типовые персонажи)
+							li.mb-2 Ищем новые сегменты ЦА
+							li.mb-2 Расписываем стадии принятия решения
+							li.mb-2 Разрабатываем путь клиента
+							li.mb-2 Изучаем требования аудитории к продукту
+							li.mb-2 Изучаем ключевые барьеры аудитории к покупке
+							li.mb-2 Прописываем триггеры ЦА к покупке
+							li.mb-2 Прописываем kpi для каждого этапа воронки продаж
+					+step-next-btn
+				.step__container(data-show="3")
+					.d-block
+						ol.pl-4.mb-4
+							li.mb-2 Формулируем позиционирование продукта
+							li.mb-2 Формулируем УТП компании в сравнении с конкурентами
+							li.mb-2 Формулируем УТП продукта в формате «характеристика-преимущество-выгода» для сегментов ЦА
+							li.mb-2 Разрабатываем упаковку продукта
+							li.mb-2 Формулируем триггерные посылы для разных каналов и сегментов ЦА
+					+step-next-btn
+				.step__container(data-show="4")
+					.d-block
+						ol.pl-4.mb-4
+							li.mb-2 Прописываем стратегию привлечения, вовлечения, конвертации и удержания клиентов по каналам:
+								ul.list-lower-alpha.pl-4.mb-2
+									li.mb-2 Поисковое продвижение (SEO)
+									li.mb-2 Контекстная реклама в поисковых системах
+									li.mb-2 Реклама в сетях (РСЯ Яндекс, GDN Google)
+									li.mb-2 Таргетированная реклама в социальных сетях
+									li.mb-2 Видеореклама и промоутирование видео
+									li.mb-2 Партизанские методы
+									li.mb-2 Контент-маркетинг
+									li.mb-2 Блог и словарь терминов
+									li.mb-2 Страницы в социальных сетях
+									li.mb-2 Реклама в тематических сообществах и на порталах
+							li.mb-2 Прописываем kpi и анализ эффективности в каждом канале
+					+step-next-btn
+				.step__container(data-show="5")
+					.d-block
+						ol.pl-4.mb-4
+							li.mb-2 Расписываем тактический план работ
+							li.mb-2 Оцениваем необходимые бюджеты (руб.)
+							li.mb-2 Оцениваем человеческие ресурсы
+							li.mb-2 Составляем график работ по месяцам
+							li.mb-2 Прогнозируем цифровые результаты по всем каналам интернет-маркетинга
+							li.mb-2 Составляем прогностическую модель отдачи вложений
+					button.btn.btn-warning.data-scroll.mt-4.mb-4.d-none.d-md-block(data-scroll="form-content") Заказать стратегию
+			.col-xl-8.col-lg-7.col-md-6
+				+step-carousel
+			.col-md-12.d-md-none
+				+btn-carousel

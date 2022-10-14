@@ -1,0 +1,38 @@
+mixin videocourse-2-list
+	- var n = 1;
+	ul.videocourses__timeline-list
+		while n <=13
+			//- if n === 1
+			//- 	li.videocourses__timeline-list-item.videocourses__timeline-list-item-active(data-num=n)= n++
+			//- else
+			li.videocourses__timeline-list-item(data-num=n)= n++
+.py-5.position-relative.contact-us__office.videocourses__timeline
+	.container.my-md-4
+		.row
+			.col-md-12
+				nav.breadcrumb
+					ol.breadcrumb
+						li.breadcrumb-item
+							a(href="/").text-secondary Главная
+						li.breadcrumb-item
+							a(href="/videocourse/").text-secondary Видеокурс для интернет-маркетологов
+						li.breadcrumb-item.active.text-dark(aria-current="page") Видео
+		.row.align-items-center
+			.col-md-10.col-xl-8.mb-4
+				h2.h2.mb-0.position-relative.z-index-2.form-h2 Шкала прохождения 
+					span.yellow-border курса
+						span.border-container.animation.visible.animated(data-animate="newline")
+			.col-md-2.col-xl-4.text-center.mb-4.d-lg-flex.justify-content-end.align-items-center
+				img(src="picture/upload/Group_326.png", alt="").videocourses__timeline-img
+		.row
+			.col-md-12.mb-4
+				.custom-scrollbar
+					+videocourse-2-list
+			.col-md-12.text-center
+				p.text-muted.font-weight-bold.videocourses__timeline-text.mb-0 Просмотрено 
+					span.videocourses__timeline-num 0
+					span 
+					span видео
+			.col-md-12.d-none.cert-modal-btn
+				.d-flex.justify-content-center.align-items-center
+					button(data-toggle="modal" data-target='#videocourses-cert-modal').btn.btn-warning.mt-4.d-block.mb-4 Получить сертификат

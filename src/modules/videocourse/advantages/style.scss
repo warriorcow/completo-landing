@@ -1,0 +1,175 @@
+.videocourse__advantages {
+	padding-top: 100px;
+	@include media-breakpoint-down(xs) {
+		padding-top: 40px;
+	}
+	&-middle {
+		background-image: url('../picture/backgrounds/advantages-bg.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		padding-top: 160px;
+		padding-bottom: 120px;
+		background-position: top center;
+		@include media-breakpoint-down(lg) {
+			background-image: url('../picture/backgrounds/advantages-bg-middle.png');
+			padding-top: 160px;
+			padding-bottom: 160px;
+		}
+		@include media-breakpoint-down(sm) {
+			background-image: none;
+			padding-top: 40px;
+			padding-bottom: 0;
+		}
+		&-big {
+			padding-top: 220px;
+			padding-bottom: 200px;
+			@include media-breakpoint-down(lg) {
+				padding-top: 345px;
+				padding-bottom: 315px;
+			}
+			@include media-breakpoint-down(md) {
+				padding-top: 220px;
+				padding-bottom: 140px;
+			}
+			@include media-breakpoint-down(sm) {
+				padding-top: 40px;
+				padding-bottom: 40px;
+			}
+			@include media-breakpoint-down(xs) {
+				padding-top: 0px;
+				padding-bottom: 0px;
+			}
+		}
+		&-img {
+			width: 360px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			bottom: -70px;
+			position: absolute;
+			transform: translateX(-200px);
+			@include media-breakpoint-down(sm) {
+				display: none;
+			}
+		}
+	}
+	&-img {
+		@include media-breakpoint-down(md) {
+			width: 190px;
+		}
+	}
+	&-row {
+		@include media-breakpoint-up(lg) {
+			margin-top: 100px;
+		}
+	}
+}
+
+.videocourse-card-advantages {
+	position: relative;
+	height: 250px;
+	padding: 10px;
+	text-align: center;
+	min-width: 250px;
+	width: 250px;
+	margin: 0 15px 20px;
+	&:first-child {
+		margin-left: 0;
+	}
+	@include media-breakpoint-down(lg) {
+		height: 210px;
+		width: 210px;
+		min-width: 210px;
+	}
+	&-body-up {
+		transform: translateY(-19px);
+	}
+	&-head {
+		height: 120px;
+		i {
+			font-size: 82px;
+			line-height: 1;
+		}
+	}
+	&-title {
+		font-size: 32px;
+		color: $yellow;
+		line-height: 1;
+		font-weight: bold;
+		@include media-breakpoint-down(lg) {
+			font-size: 24px;
+		}
+	}
+	&:before {
+		content: '';
+		z-index: auto;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 0; 
+		height: 0; 
+		border-top: 250px solid transparent;
+		border-bottom: 0 solid transparent; 
+		border-right: 250px solid #F2F2F2; 
+		@include media-breakpoint-down(lg) {
+			border-right-width: 210px;
+			border-top-width: 210px;
+		}
+	}
+	> * {
+		position: relative;
+		z-index: 1;
+	}
+}
+
+.form-container-modal-new-style {
+	position: relative;
+	margin-left: 35px;
+	margin-right: 35px;
+	z-index: 3;
+	@include media-breakpoint-down(lg) {
+		padding-right: 25px;
+		padding-left: 25px;
+	}
+	@include media-breakpoint-down(md) {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.form-container-modal-new {
+		position: relative;
+		z-index: 2;
+	}
+	&:before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		background-color: $yellow;
+		transform: skew(-15deg);
+		left: -35px;
+		padding-left: 30px;
+		top: 0;
+		position: absolute;
+		z-index: 1;
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
+	}
+	&:after {
+		content: '';
+		width: 0; 
+		height: 0; 
+		border-left: 35px solid transparent;
+		border-right: 35px solid transparent;
+		border-bottom: 182px solid #CFA00B;
+		position: absolute;
+		top: 0;
+		right: -35px;
+		z-index: 3;
+		@include media-breakpoint-down(lg) {
+			border-bottom-width: 186px;
+		}
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,27 @@
+- var title = "Страница исследования банков";
+doctype html
+html(lang="ru")
+	head
+		include modules/head/index.pug
+	body
+		include modules/header/index.pug
+		include modules/bank/head/index.pug
+		include modules/bank/marketing-consulting/index.pug
+		include modules/bank/consulting/index.pug
+		include modules/bank/research/index.pug
+		include modules/bank/steps/index.pug
+		include modules/bank/consulting-cases/index.pug
+		.about__wrapper-razrabotka
+			include modules/about/index.pug
+		.form-container
+			.container#new-form-main
+				.row.pt-5.pb-5#form-content
+					.col-md-12
+						.h2.mb-4.form-h2
+							span.yellow-border Куда
+								span.border-container.animation.visible.animated(data-animate="newline")
+							span 
+							span отправить материалы?
+					include modules/form-new/index.pug
+		include modules/footer/index.pug
+		include modules/foot/index.pug

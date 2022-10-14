@@ -1,0 +1,89 @@
+$c-base:            #333;
+$c-bg:              #FFFDE5;
+$c-accent:          #FECC2F;
+
+$breakpoint-xl-min: 1200px;
+$breakpoint-lg-max: 1199.98px;
+$breakpoint-lg-min: 992px;
+$breakpoint-md-max: 991.98px;
+$breakpoint-md-min: 768px;
+$breakpoint-sm-max: 767.98px;
+$breakpoint-sm-min: 576px;
+$breakpoint-xs-max: 575.98px;
+
+.case-cost {
+	font-family: 'PT Sans', sans-serif;
+    background: $c-bg url('../assets/images/case-cost/case-cost-bg.png');
+    color: $c-base;
+
+    *,
+	*:before,
+	*:after {
+	    box-sizing: border-box;
+	}
+
+    &__container {
+        max-width: 1140px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+
+    &__content {
+        padding: 74px 10px 160px 93px;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 1.08;
+    }
+
+    &__line {
+        display: inline;
+        background-image: linear-gradient(to bottom, $c-accent, $c-accent);
+        background-repeat: no-repeat;
+        background-position: left 0 bottom 0.1em;
+        background-size: 100% 0.3125em;
+    }
+
+    &__outline {
+        color: $c-bg;
+        text-shadow: 0 1px 0 #000, 0 -1px 0 #000, 1px 0 0 #000, -1px 0 0 #000;
+
+        @supports (-webkit-text-stroke: 1px black) {
+            text-shadow: none;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 1px black;
+        }
+    }
+
+    @media (max-width : $breakpoint-lg-max) {
+        &__container {
+            max-width: none;
+            padding: 0 20px;
+        }
+    
+        &__content {
+            padding: 65px 0 132px 0;
+        }
+    }
+
+    @media (max-width : $breakpoint-sm-max) {
+        &__container {
+            padding: 0 15px;
+        }
+
+        &__content {
+            padding: 23px 0 122px 0;
+        }
+
+        &__title {
+            font-size: 36px;
+            line-height: 39px;
+        }
+    }
+}
+
+@import "includes/price/_price";
+@import "includes/time/_time";
+@import "includes/comments/_comments";
