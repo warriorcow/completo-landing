@@ -1,0 +1,44 @@
+.company-reviews 
+	.container
+		h2 Отзывы клиентов 
+	.container
+		.custom-scrollbar.d-flex
+			.company-reviews__wrapper
+				each review in Array(5)
+					.company-reviews__item
+						.company-reviews__item-body
+							.company-reviews__item-text 
+								span После тщательного отбора в качестве подрядчика мы выбрали интерактивное агентство COMPLETO и ни разу не пожалели о своем решении. Уверен, что новый портал позволит нам вести внутрикорпоративные коммуникации на принципиально ином качественном уровне.
+							a.company-reviews__item-link(href="") Читать полностью
+						.company-reviews__item-footer
+							.company-reviews__item-reviewer
+								.company-reviews__item-reviewer-photo
+									img(src="picture/upload/5.png" alt="")
+								div
+									.company-reviews__item-reviewer-name Владимир Давыдов, 
+									.company-reviews__item-reviewer-position Директор по маркетингу и развитию
+							.company-reviews__item-logo
+								img(src="picture/upload/otkritie-logo.png" alt="")
+	.company-reviews__bg-text #reviews
+
+.company-reviews.company-reviews_mobile
+	.container
+		h2 Отзывы клиентов
+	.container
+		.company-slider-mob.company-reviews__wrapper
+			each review in Array(5)
+				.company-reviews__item
+					.company-reviews__item-body
+						.company-reviews__item-text 
+							span После тщательного отбора в качестве подрядчика мы выбрали интерактивное агентство COMPLETO и ни разу не пожалели о своем решении. Уверен, что новый портал позволит нам вести внутрикорпоративные коммуникации на принципиально ином качественном уровне.
+						a.company-reviews__item-link(href="") Читать полностью
+					.company-reviews__item-footer
+						.company-reviews__item-reviewer
+							.company-reviews__item-reviewer-photo
+								img(src="picture/upload/5.png" alt="")
+							div
+								.company-reviews__item-reviewer-name Владимир Давыдов, 
+								.company-reviews__item-reviewer-position Директор по маркетингу и развитию
+						.company-reviews__item-logo
+							img(src="picture/upload/otkritie-logo.png" alt="")
+	.company-reviews__bg-text #reviews

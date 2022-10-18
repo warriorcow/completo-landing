@@ -52,3 +52,8 @@
 //= ../modules/marathon/program/script.js
 //= ../modules/marathon/head/script.js
 //= ../modules/cases/detail/new-cases-main/script.js
+
+//= ../modules/company/mission/script.js
+//= ../modules/company/history/script.js
+//= ../modules/company/structure/script.js
+//= ../modules/company/reviews/script.js

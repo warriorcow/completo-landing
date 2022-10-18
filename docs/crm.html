@@ -1,0 +1,1891 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>Создание CRM</title>
+    <meta name="description" content="Digital-трансформация, автоматизация интернет-маркетинга 🚀, системный электронный маркетинг: готовые решения для b2b-компаний и производителей с дилерскими сетями ➡">
+    <meta property="og:image" content="https://www.completo.ru/images/main.jpg">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <header class="header header-xl fixed d-none d-lg-block animated delay-2s fadeIn" id="header">
+      <div class="container">
+        <div class="row">
+          <div class="container-fluid container-fluid-max">
+            <nav class="navbar navbar-expand-lg justify-content-start p-0 d-flex"><a class="navbar-brand mr-0 p-0 col-2" href="/"><img src="picture/upload/Completo_logoNEW_white_08-10-2018.png" alt="Completo"></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span><span></span></button>
+              <div class="collapse col-8 navbar-collapse" id="navbarSupportedContent1">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown-element"><a class="nav-link dropdown-link mr-2" href="#"><span>Комплето</span><i class="arrow-down"><span></span><span></span></i></a>
+                    <div class="nav-link-dropdown" style="display: none;">
+                      <div class="container">
+                        <div class="col-12 justify-content-start">
+                          <div class="col-8 offset-2">
+                            <ul class="dropdown list-unstyled">
+                              <li><a href="/about/">О компании</a></li>
+                              <li><a href="http://school.completo.ru" target="_blank">Школа стажеров</a></li>
+                              <li><a href="/vacancy/">Вакансии</a></li>
+                              <li><a href="https://club.completo.ru/" target="_blank">Комплето Клуб</a></li>
+                              <li><a href="/checklist-for-agencies/">Тест агентств</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown-element"><a class="nav-link dropdown-link mr-2" href="#"><span>Услуги</span><i class="arrow-down"><span></span><span></span></i></a>
+                    <div class="nav-link-dropdown" style="display: none;">
+                      <div class="container">
+                        <div class="col-12 justify-content-start">
+                          <div class="col-8 offset-2">
+                            <ul class="dropdown list-unstyled custom-dropdown-item columns">
+                              <li><a href="/digital-strategy/">Digital-стратегия</a></li>
+                              <li><a href="/razrabotka-sajta/">Разработка сайтов</a></li>
+                              <li><a href="/b2b/">Компаниям с продуктами В2В</a></li>
+                              <li><a href="/dealers/">Компаниям с сетями дилеров</a></li>
+                              <li><a href="/dealers-how-to/">Онлайн-система для дилеров и поставщиков</a></li>
+                              <li><a href="/dealers-generator/">Система дилерских сайтов</a></li>
+                              <li><a href="/salesfarm/">Система подогрева клиентов</a></li>
+                              <li><a href="/seo/">SEO оптимизация</a></li>
+                              <li><a href="/analytics/">Сквозная аналитика</a></li>
+                              <li><a href="/performance/">Performance маркетинг</a></li>
+                              <li><a href="/goonline/">Проведение мероприятий онлайн</a></li>
+                              <li><a href="https://linkedin.completo.ru/">Продвижение в LinkedIn</a></li>
+                              <li><a href="/crm/">Интеграция CRM</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown-element"><a class="nav-link dropdown-link mr-2" href="#"><span>Сервисы</span><i class="arrow-down"><span></span><span></span></i></a>
+                    <div class="nav-link-dropdown" style="display: none;">
+                      <div class="container">
+                        <div class="col-12 justify-content-start">
+                          <div class="col-8 offset-2">
+                            <ul class="dropdown list-unstyled">
+                              <li><a href="http://goaudit.ru" target="_blank">GoAudit</a></li>
+                              <li><a href="http://phonetrack.ru" target="_blank">PhoneTrack</a></li>
+                              <li><a href="https://salespilot.ru" target="_blank">SalesPilot</a></li>
+                              <li><a href="https://socsale.ru" target="_blank">Socsale</a></li>
+                              <li><a href="http://setuper.ru" target="_blank">Setuper</a></li>
+                              <li><a href="https://contrack.ru" target="_blank">Contrack</a></li>
+                              <li><a href="https://kursbox.ru/" target="_blank">Агрегатор курсов</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown-element"><a class="nav-link dropdown-link mr-2" href="#"><span>Мы обучаем</span><i class="arrow-down"><span></span><span></span></i></a>
+                    <div class="nav-link-dropdown" style="display: none;">
+                      <div class="container">
+                        <div class="col-12 justify-content-start">
+                          <div class="col-8 offset-2">
+                            <ul class="dropdown list-unstyled custom-dropdown-item columns">
+                              <li><a href="/email-marketing/">Подписаться на рассылку</a></li>
+                              <li><a href="/edu/">Система прокачки знаний</a></li>
+                              <li><a href="https://maed.ru/" target="_blank">Обучающий центр MAED.RU</a></li>
+                              <li><a href="/sem/">СЭМ за 6 шагов</a></li>
+                              <li><a href="/white-paper/seo/">Мануал по SEO</a></li>
+                              <li><a href="/white-paper/kak-razrabotat-site/">Мануал Разработка сайтов</a></li>
+                              <li><a href="/white-paper/competitor-analysis/">Мануал Анализ конкурентов</a></li>
+                              <li><a href="/checklist-strategy-online-marketing/">Чек-лист digital-стратегии</a></li>
+                              <li><a href="/videocourse/">Видеокурс по интернет-маркетингу</a></li>
+                              <li><a href="/videocourse-for-managers/">Видеокурс для руководителей</a></li>
+                              <li><a href="/research-finance/">Исследование банков</a></li>
+                              <li><a href="/research-medicine/">Исследование медцентров</a></li>
+                              <li><a href="/research-estate/">Исследование недвижимости</a></li>
+                              <li><a href="/research-dealers/">Исследование производителей</a></li>
+                              <li><a href="https://stratosessia.maed.ru/" target="_blank">Практикум по стратегии</a></li>
+                              <li><a href="https://book.completo.ru/" target="_blank">Книга для digital-маркетолога</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown-element"><a class="nav-link dropdown-link mr-2" href="#"><span>Кейсы</span><i class="arrow-down"><span></span><span></span></i></a>
+                    <div class="nav-link-dropdown" style="display: none;">
+                      <div class="container">
+                        <div class="row cases__row mt-3 justify-content-start" style="display: none;">
+                          <div class="col-7 col-lg-7">
+                            <ul class="columns dropdown list-unstyled header__big-list pt-0">
+                              <li class="pt-0">
+                                <p class="text-white cases__row-title mt-0 mb-3">Кейсы по услугам</p>
+                                <ul class="list-unstyled pl-0 mb-4">
+                                  <li class="nav-items pb-2 pt-0"><a href="/cases/service/kontekstnaya-reklama/">Кейсы по контекстной рекламе</a></li>
+                                  <li class="nav-items pb-2 pt-0"><a href="/cases/service/seo/">Кейсы по SEO</a></li>
+                                  <li class="nav-items pb-2 pt-0"><a href="/cases/service/targetirovannaya-reklama/">Кейсы по таргетированной рекламе</a></li>
+                                  <li class="nav-items pb-2 pt-0"><a href="/cases/service/email-marketing/">Кейсы по email маркетингу</a></li>
+                                  <li class="nav-items pb-2 pt-0"><a href="/cases/service/razrabotka-sayta/">Кейсы по разработке сайтов</a></li>
+                                  <li class="nav-items pb-2 pt-0"><a href="/cases/service/razrabotka-lichnykh-kabinetov/">Разработка личных кабинетов</a></li>
+                                  <li class="nav-items pb-2 pt-0"><a href="/cases/service/tekhnicheskaya-podderzhka/">Техническая поддержка</a></li>
+                                  <li class="nav-items pb-2 pt-0"><a href="/cases/service/smm/">Кейсы по SMM</a></li>
+                                  <li class="nav-items pb-2 pt-0"><a href="/cases/service/progrev-klientov-salesfarm/">Прогрев клиентов (SalesFarm)</a></li>
+                                  <li class="nav-items pb-2 pt-0"><a href="/cases/service/crm-marketing/">Кейсы по CRM маркетингу</a></li>
+                                  <li class="nav-items pb-2 pt-0"><a href="/cases/service/skvoznaya-analitika/">Кейсы по сквозной аналитике</a></li>
+                                  <li class="nav-items pb-2 pt-0"><a href="/cases/service/digital-strategy/">Стратегия интернет-маркетинга</a></li>
+                                  <li class="nav-items pb-2 pt-0"><a href="/cases/service/issledovaniya-konkurentov/">Исследования конкурентов</a></li>
+                                  <li class="nav-items pb-2 pt-0"><a href="/cases/service/serm/">SERM (работа с отзывами)</a></li>
+                                  <li class="nav-items pb-2 pt-0"><a href="/cases/service/razrabotka-mobilnykh-prilozheniy/">Разработка мобильных приложений</a></li>
+                                </ul>
+                              </li>
+                              <li class="pt-0">
+                                <p class="text-white cases__row-title mt-0 mb-3">Кейсы по отраслям</p>
+                                <ul class="list-unstyled pl-0 mb-4">
+                                  <li class="nav-items pb-2 pt-0"><a href="/cases/branch/b2c-marketing/">B2C маркетинг</a></li>
+                                  <li class="nav-items pb-2 pt-0"><a href="/cases/branch/b2b-marketing/">B2B маркетинг</a></li>
+                                  <li class="nav-items pb-2 pt-0"><a href="/cases/branch/banki/">Банки</a></li>
+                                  <li class="nav-items pb-2 pt-0"><a href="/cases/branch/promyshlennost-i-energetika/">Промышленность и энергетика</a></li>
+                                  <li class="nav-items pb-2 pt-0"><a href="/cases/branch/riteyl-i-b2c-tovary/">Ритейл и B2C товары</a></li>
+                                  <li class="nav-items pb-2 pt-0"><a href="/cases/branch/it/">IT</a></li>
+                                  <li class="nav-items pb-2 pt-0"><a href="/cases/branch/meditsina-i-zdorove/">Медицина и здоровье</a></li>
+                                  <li class="nav-items pb-2 pt-0"><a href="/cases/branch/proizvodstvo-i-distribyutey/">Кейсы по маркетингу для производства и дистрибьютеров</a></li>
+                                  <li class="nav-items pb-2 pt-0"><a href="/cases/branch/uslugi-i-konsalting/">Услуги и консалтинг</a></li>
+                                  <li class="nav-items pb-2 pt-0"><a href="/cases/branch/internet-proekty-i-startapy/">Интернет проекты и стартапы</a></li>
+                                  <li class="nav-items pb-2 pt-0"><a href="/cases/branch/avtorynok-i-logistika/">Авторынок и логистика</a></li>
+                                  <li class="nav-items pb-2 pt-0"><a href="/cases/branch/nedvizhimost-i-stroitelstvo/">Недвижимость и строительство</a></li>
+                                </ul>
+                              </li>
+                              <li class="pt-0"><a class="cases__row-title text-white mt-0 mb-3" href="/cases/">Кейсы по компаниям</a>
+                                <ul class="list-unstyled pl-0 mb-4"></ul>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-4 col-lg-4 p-0 offset-1">
+                            <div class="cases__row-title text-white mb-3 mt-0">Популярные кейсы</div><a class="header__cases-card header__cases-card-1 mb-4" href="/cases/podderzhka-sayta/" style="background-image: url(&quot;picture/upload/857424dcc1c7512e5d92a30431d66ad9-2.jpg&quot;);">
+                              <div class="case__card-container-logo"><img class="case__card-container-logo-img" src="picture/upload/alta-2.png" alt=""></div>
+                              <div class="header__cases-card-tag bg-warning mb-2">Кейс</div>
+                              <div class="header__cases-card-text font-weight-bold text-white mb-1">Техническая поддержка сайта производителя дверей.</div></a><a class="header__cases-card header__cases-card-1 mb-4" href="/cases/bestclinic/" style="background-image: url(&quot;picture/upload/feaa4314c12857a7ea8089dd4dfb0ec3.png&quot;);">
+                              <div class="case__card-container-logo"><img class="case__card-container-logo-img" src="picture/upload/alta-2.png" alt=""></div>
+                              <div class="header__cases-card-tag bg-warning mb-2">Кейс</div>
+                              <div class="header__cases-card-text font-weight-bold text-white mb-1">Разработка системы сквозной аналитики для Бест клиник</div></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="https://blog.completo.ru/" target="_blank">Блог</a></li>
+                  <li class="nav-item pr-0 mr-0"><a class="nav-link" href="https://www.completo.ru/contacts/">Контакты</a></li>
+                </ul>
+              </div><a class="btn btn-warning data-scroll header__tenderBtn" data-scroll="new-form-main" href="#new-form-main">Пригласить в тендер</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="header fixed d-none d-md-block d-lg-none">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <nav class="navbar navbar-expand-lg justify-content-between"><a class="navbar-brand" href="/"><img src="picture/upload/Completo_logoNEW_white_08-10-2018.png" alt="Completo"></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span><span></span></button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+                <div class="row mt-4 ml-0 mr-0">
+                  <div class="col-md-3 pl-0">
+                    <ul class="navbar-nav">
+                      <li class="nav-item dropdown-element__md"><a class="nav-link dropdown-link mr-2 dropdown-link_md dropdown-link_md-1" href="#"><span>Комплето</span><i class="arrow-down"><span></span><span></span></i></a></li>
+                      <li class="nav-item dropdown-element__md"><a class="nav-link dropdown-link mr-2 dropdown-link_md dropdown-link_md-2" href="#"><span>Услуги</span><i class="arrow-down"><span></span><span></span></i></a></li>
+                      <li class="nav-item dropdown-element__md"><a class="nav-link dropdown-link mr-2 dropdown-link_md dropdown-link_md-3" href="#"><span>Сервисы</span><i class="arrow-down"><span></span><span></span></i></a></li>
+                      <li class="nav-item dropdown-element__md"><a class="nav-link dropdown-link mr-2 dropdown-link_md dropdown-link_md-4" href="#"><span>Мы обучаем</span><i class="arrow-down"><span></span><span></span></i></a></li>
+                      <li class="nav-item dropdown-element__md"><a class="nav-link dropdown-link mr-2 dropdown-link_md dropdown-link_md-5" href="#"><span>Кейсы</span><i class="arrow-down"><span></span><span></span></i></a></li>
+                      <li class="nav-item"><a class="nav-link" href="https://blog.completo.ru/" target="_blank">Блог</a></li>
+                      <li class="nav-item"><a class="nav-link" href="https://www.completo.ru/contacts/">Контакты</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-9">
+                    <div>
+                      <ul class="dropdown_md list-unstyled dropdown_md-1">
+                        <li class="flex-ul-li"><a href="/about/">О компании</a></li>
+                        <li class="flex-ul-li"><a href="http://school.completo.ru" target="_blank">Школа стажеров</a></li>
+                        <li class="flex-ul-li"><a href="/vacancy/">Вакансии</a></li>
+                        <li class="flex-ul-li"><a href="https://club.completo.ru/" target="_blank">Комплето Клуб</a></li>
+                        <li class="flex-ul-li"><a href="/checklist-for-agencies/">Тест агентств</a></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <ul class="dropdown_md list-unstyled dropdown_md-2">
+                        <li class="flex-ul-li"><a href="/digital-strategy/">Digital-стратегия</a></li>
+                        <li class="flex-ul-li"><a href="/razrabotka-sajta/">Разработка сайтов</a></li>
+                        <li class="flex-ul-li"><a href="/b2b/">Компаниям с продуктами В2В</a></li>
+                        <li class="flex-ul-li"><a href="/dealers/">Компаниям с сетями дилеров</a></li>
+                        <li class="flex-ul-li"><a href="/dealers-how-to/">Онлайн-система для дилеров и поставщиков</a></li>
+                        <li class="flex-ul-li"><a href="/dealers-generator/">Система дилерских сайтов</a></li>
+                        <li class="flex-ul-li"><a href="/salesfarm/">Система подогрева клиентов</a></li>
+                        <li class="flex-ul-li"><a href="/seo/">SEO оптимизация</a></li>
+                        <li class="flex-ul-li"><a href="/analytics/">Сквозная аналитика</a></li>
+                        <li class="flex-ul-li"><a href="/performance/">Performance маркетинг</a></li>
+                        <li class="flex-ul-li"><a href="/goonline/">Проведение мероприятий онлайн</a></li>
+                        <li class="flex-ul-li"><a href="https://linkedin.completo.ru/">Продвижение в LinkedIn</a></li>
+                        <li class="flex-ul-li"><a href="/crm/">Интеграция CRM</a></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <ul class="dropdown_md list-unstyled dropdown_md-3">
+                        <li class="flex-ul-li"><a href="http://goaudit.ru" target="_blank">GoAudit</a></li>
+                        <li class="flex-ul-li"><a href="http://phonetrack.ru" target="_blank">PhoneTrack</a></li>
+                        <li class="flex-ul-li"><a href="https://salespilot.ru" target="_blank">SalesPilot</a></li>
+                        <li class="flex-ul-li"><a href="https://socsale.ru" target="_blank">Socsale</a></li>
+                        <li class="flex-ul-li"><a href="http://setuper.ru" target="_blank">Setuper</a></li>
+                        <li class="flex-ul-li"><a href="https://contrack.ru" target="_blank">Contrack</a></li>
+                        <li class="flex-ul-li"><a href="https://kursbox.ru/" target="_blank">Агрегатор курсов</a></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <ul class="dropdown_md list-unstyled dropdown_md-4">
+                        <li class="flex-ul-li"><a href="/email-marketing/">Подписаться на рассылку</a></li>
+                        <li class="flex-ul-li"><a href="/edu/">Система прокачки знаний</a></li>
+                        <li class="flex-ul-li"><a href="https://maed.ru/" target="_blank">Обучающий центр MAED.RU</a></li>
+                        <li class="flex-ul-li"><a href="/sem/">СЭМ за 6 шагов</a></li>
+                        <li class="flex-ul-li"><a href="/white-paper/seo/">Мануал по SEO</a></li>
+                        <li class="flex-ul-li"><a href="/white-paper/kak-razrabotat-site/">Мануал Разработка сайтов</a></li>
+                        <li class="flex-ul-li"><a href="/white-paper/competitor-analysis/">Мануал Анализ конкурентов</a></li>
+                        <li class="flex-ul-li"><a href="/checklist-strategy-online-marketing/">Чек-лист digital-стратегии</a></li>
+                        <li class="flex-ul-li"><a href="/videocourse/">Видеокурс по интернет-маркетингу</a></li>
+                        <li class="flex-ul-li"><a href="/videocourse-for-managers/">Видеокурс для руководителей</a></li>
+                        <li class="flex-ul-li"><a href="/research-finance/">Исследование банков</a></li>
+                        <li class="flex-ul-li"><a href="/research-medicine/">Исследование медцентров</a></li>
+                        <li class="flex-ul-li"><a href="/research-estate/">Исследование недвижимости</a></li>
+                        <li class="flex-ul-li"><a href="/research-dealers/">Исследование производителей</a></li>
+                        <li class="flex-ul-li"><a href="https://stratosessia.maed.ru/" target="_blank">Практикум по стратегии</a></li>
+                        <li class="flex-ul-li"><a href="https://book.completo.ru/" target="_blank">Книга для digital-маркетолога</a></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <ul class="dropdown_md list-unstyled cases__tab dropdown_md-5" id="casesTabs">
+                        <li>
+                          <p class="cases__row-title text-white h4 d-inline-block position-relative cases__tab-title" data-target="#collapseHeader0" data-toggle="collapse" aria-expanded="false" aria-controls="collapseHeader0" role="button"><span>Кейсы по услугам</span> <i class="arrow-down"><span class="bg-white"></span> <span class="bg-white"></span></i></p>
+                          <div class="collapse" id="collapseHeader0" data-parent="#casesTabs">
+                            <ul class="list-unstyled mb-4">
+                              <li><a href="/cases/service/kontekstnaya-reklama/">Кейсы по контекстной рекламе</a></li>
+                              <li></li>
+                              <li><a href="/cases/service/seo/">Кейсы по SEO</a></li>
+                              <li></li>
+                              <li><a href="/cases/service/targetirovannaya-reklama/">Кейсы по таргетированной рекламе</a></li>
+                              <li></li>
+                              <li><a href="/cases/service/email-marketing/">Кейсы по email маркетингу</a></li>
+                              <li></li>
+                              <li><a href="/cases/service/razrabotka-sayta/">Кейсы по разработке сайтов</a></li>
+                              <li></li>
+                              <li><a href="/cases/service/razrabotka-lichnykh-kabinetov/">Разработка личных кабинетов</a></li>
+                              <li></li>
+                              <li><a href="/cases/service/tekhnicheskaya-podderzhka/">Техническая поддержка</a></li>
+                              <li></li>
+                              <li><a href="/cases/service/smm/">Кейсы по SMM</a></li>
+                              <li></li>
+                              <li><a href="/cases/service/progrev-klientov-salesfarm/">Прогрев клиентов (SalesFarm)</a></li>
+                              <li></li>
+                              <li><a href="/cases/service/crm-marketing/">Кейсы по CRM маркетингу</a></li>
+                              <li></li>
+                              <li><a href="/cases/service/skvoznaya-analitika/">Кейсы по сквозной аналитике</a></li>
+                              <li></li>
+                              <li><a href="/cases/service/digital-strategy/">Стратегия интернет-маркетинга</a></li>
+                              <li></li>
+                              <li><a href="/cases/service/issledovaniya-konkurentov/">Исследования конкурентов</a></li>
+                              <li></li>
+                              <li><a href="/cases/service/serm/">SERM (работа с отзывами)</a></li>
+                              <li></li>
+                              <li><a href="/cases/service/razrabotka-mobilnykh-prilozheniy/">Разработка мобильных приложений</a></li>
+                              <li></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li>
+                          <p class="cases__row-title text-white h4 d-inline-block position-relative cases__tab-title" data-target="#collapseHeader1" data-toggle="collapse" aria-expanded="false" aria-controls="collapseHeader1" role="button"><span>Кейсы по отраслям</span> <i class="arrow-down"><span class="bg-white"></span> <span class="bg-white"></span></i></p>
+                          <div class="collapse" id="collapseHeader1" data-parent="#casesTabs">
+                            <ul class="list-unstyled mb-4">
+                              <li><a href="/cases/branch/b2c-marketing/">B2C маркетинг</a></li>
+                              <li></li>
+                              <li><a href="/cases/branch/b2b-marketing/">B2B маркетинг</a></li>
+                              <li></li>
+                              <li><a href="/cases/branch/banki/">Банки</a></li>
+                              <li></li>
+                              <li><a href="/cases/branch/promyshlennost-i-energetika/">Промышленность и энергетика</a></li>
+                              <li></li>
+                              <li><a href="/cases/branch/riteyl-i-b2c-tovary/">Ритейл и B2C товары</a></li>
+                              <li></li>
+                              <li><a href="/cases/branch/it/">IT</a></li>
+                              <li></li>
+                              <li><a href="/cases/branch/meditsina-i-zdorove/">Медицина и здоровье</a></li>
+                              <li></li>
+                              <li><a href="/cases/branch/proizvodstvo-i-distribyutey/">Кейсы по маркетингу для производства и дистрибьютеров</a></li>
+                              <li></li>
+                              <li><a href="/cases/branch/uslugi-i-konsalting/">Услуги и консалтинг</a></li>
+                              <li></li>
+                              <li><a href="/cases/branch/internet-proekty-i-startapy/">Интернет проекты и стартапы</a></li>
+                              <li></li>
+                              <li><a href="/cases/branch/avtorynok-i-logistika/">Авторынок и логистика</a></li>
+                              <li></li>
+                              <li><a href="/cases/branch/nedvizhimost-i-stroitelstvo/">Недвижимость и строительство</a></li>
+                              <li></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li><a class="cases__row-title text-white h4 d-inline-block position-relative" href="/cases/">Кейсы по компаниям</a></li>
+                        <li class="d-lg-none">
+                          <p class="text-white h4 d-inline-block position-relative cases__tab-title" data-target="#collapseHeader3" data-toggle="collapse" aria-expanded="false" aria-controls="collapseHeader3" role="button"><span>Популярные кейсы</span> <i class="arrow-down"><span class="bg-white"></span> <span class="bg-white"></span></i></p>
+                          <div class="collapse" id="collapseHeader3" data-parent="#casesTabs">
+                            <ul class="list-unstyled mb-4">
+                              <li><a href="/cases/agexperts/">Создание региональных посадочных для генерации заявок</a></li>
+                              <li><a href="/cases/seo-dlya-zavoda/">Комплексная SEO-оптимизация для завода с сетью дилеров</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <ul class="dropdown_md list-unstyled"></ul>
+                    </div>
+                    <div>
+                      <ul class="dropdown_md list-unstyled"></ul>
+                    </div>
+                  </div>
+                </div><a class="btn btn-warning data-scroll header__tenderBtn mt-2 mb-3" data-scroll="new-form-main" href="#new-form-main">Пригласить в тендер</a>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header fixed d-block d-md-none">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <nav class="navbar navbar-expand-lg justify-content-between pl-0 pr-0"><a class="navbar-brand" href="/"><img src="picture/upload/Completo_logoNEW_white_08-10-2018.png" alt="Completo"></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent3" aria-controls="navbarSupportedContent3" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span><span></span></button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent3">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown-element dropdown-element-xs"><span class="nav-link dropdown-link d-block mr-2 nav-link-xs"><span>Комплето</span> <i class="arrow-down"><span></span><span></span></i></span>
+                    <ul class="dropdown list-unstyled dropdown-xs">
+                      <li class="flex-ul-li"><a href="/about/">О компании</a></li>
+                      <li class="flex-ul-li"><a href="http://school.completo.ru" target="_blank">Школа стажеров</a></li>
+                      <li class="flex-ul-li"><a href="/vacancy/">Вакансии</a></li>
+                      <li class="flex-ul-li"><a href="https://club.completo.ru/" target="_blank">Комплето Клуб</a></li>
+                      <li class="flex-ul-li"><a href="/checklist-for-agencies/">Тест агентств</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown-element dropdown-element-xs"><span class="nav-link dropdown-link d-block mr-2 nav-link-xs"><span>Услуги</span> <i class="arrow-down"><span></span><span></span></i></span>
+                    <ul class="dropdown list-unstyled dropdown-xs">
+                      <li class="flex-ul-li"><a href="/digital-strategy/">Digital-стратегия</a></li>
+                      <li class="flex-ul-li"><a href="/razrabotka-sajta/">Разработка сайтов</a></li>
+                      <li class="flex-ul-li"><a href="/b2b/">Компаниям с продуктами В2В</a></li>
+                      <li class="flex-ul-li"><a href="/dealers/">Компаниям с сетями дилеров</a></li>
+                      <li class="flex-ul-li"><a href="/dealers-how-to/">Онлайн-система для дилеров и поставщиков</a></li>
+                      <li class="flex-ul-li"><a href="/dealers-generator/">Система дилерских сайтов</a></li>
+                      <li class="flex-ul-li"><a href="/salesfarm/">Система подогрева клиентов</a></li>
+                      <li class="flex-ul-li"><a href="/seo/">SEO оптимизация</a></li>
+                      <li class="flex-ul-li"><a href="/analytics/">Сквозная аналитика</a></li>
+                      <li class="flex-ul-li"><a href="/performance/">Performance маркетинг</a></li>
+                      <li class="flex-ul-li"><a href="/goonline/">Проведение мероприятий онлайн</a></li>
+                      <li class="flex-ul-li"><a href="https://linkedin.completo.ru/">Продвижение в LinkedIn</a></li>
+                      <li class="flex-ul-li"><a href="/crm/">Интеграция CRM</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown-element dropdown-element-xs"><span class="nav-link dropdown-link d-block mr-2 nav-link-xs"><span>Сервисы</span> <i class="arrow-down"><span></span><span></span></i></span>
+                    <ul class="dropdown list-unstyled dropdown-xs">
+                      <li class="flex-ul-li"><a href="http://goaudit.ru" target="_blank">GoAudit</a></li>
+                      <li class="flex-ul-li"><a href="http://phonetrack.ru" target="_blank">PhoneTrack</a></li>
+                      <li class="flex-ul-li"><a href="https://salespilot.ru" target="_blank">SalesPilot</a></li>
+                      <li class="flex-ul-li"><a href="https://socsale.ru" target="_blank">Socsale</a></li>
+                      <li class="flex-ul-li"><a href="http://setuper.ru" target="_blank">Setuper</a></li>
+                      <li class="flex-ul-li"><a href="https://contrack.ru" target="_blank">Contrack</a></li>
+                      <li class="flex-ul-li"><a href="https://kursbox.ru/" target="_blank">Агрегатор курсов</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown-element dropdown-element-xs"><span class="nav-link dropdown-link d-block mr-2 nav-link-xs"><span>Мы обучаем</span> <i class="arrow-down"><span></span><span></span></i></span>
+                    <ul class="dropdown list-unstyled dropdown-xs">
+                      <li class="flex-ul-li"><a href="/email-marketing/">Подписаться на рассылку</a></li>
+                      <li class="flex-ul-li"><a href="/edu/">Система прокачки знаний</a></li>
+                      <li class="flex-ul-li"><a href="https://maed.ru/" target="_blank">Обучающий центр MAED.RU</a></li>
+                      <li class="flex-ul-li"><a href="/sem/">СЭМ за 6 шагов</a></li>
+                      <li class="flex-ul-li"><a href="/white-paper/seo/">Мануал по SEO</a></li>
+                      <li class="flex-ul-li"><a href="/white-paper/kak-razrabotat-site/">Мануал Разработка сайтов</a></li>
+                      <li class="flex-ul-li"><a href="/white-paper/competitor-analysis/">Мануал Анализ конкурентов</a></li>
+                      <li class="flex-ul-li"><a href="/checklist-strategy-online-marketing/">Чек-лист digital-стратегии</a></li>
+                      <li class="flex-ul-li"><a href="/videocourse/">Видеокурс по интернет-маркетингу</a></li>
+                      <li class="flex-ul-li"><a href="/videocourse-for-managers/">Видеокурс для руководителей</a></li>
+                      <li class="flex-ul-li"><a href="/research-finance/">Исследование банков</a></li>
+                      <li class="flex-ul-li"><a href="/research-medicine/">Исследование медцентров</a></li>
+                      <li class="flex-ul-li"><a href="/research-estate/">Исследование недвижимости</a></li>
+                      <li class="flex-ul-li"><a href="/research-dealers/">Исследование производителей</a></li>
+                      <li class="flex-ul-li"><a href="https://stratosessia.maed.ru/" target="_blank">Практикум по стратегии</a></li>
+                      <li class="flex-ul-li"><a href="https://book.completo.ru/" target="_blank">Книга для digital-маркетолога</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown-element dropdown-element-xs"><span class="nav-link dropdown-link d-block mr-2 nav-link-xs"><span>Кейсы</span> <i class="arrow-down"><span></span><span></span></i></span>
+                    <ul class="dropdown list-unstyled dropdown-xs cases-tab-mob" id="casesTabsMob">
+                      <li>
+                        <p class="text-white h5 d-inline-block position-relative cases-tab-mob-title" data-target="#collapseHeaderMob1" data-toggle="collapse" aria-expanded="false" aria-controls="collapseHeaderMob1" role="button"><span>Кейсы по услугам</span> <i class="arrow-down"><span class="bg-white"></span> <span class="bg-white"></span></i></p>
+                        <div class="collapse" id="collapseHeaderMob1" data-parent="#casesTabsMob">
+                          <ul class="list-unstyled mb-4">
+                            <li><a href="/cases/service/kontekstnaya-reklama/">Кейсы по контекстной рекламе</a></li>
+                            <li><a href="/cases/service/seo/">Кейсы по SEO</a></li>
+                            <li><a href="/cases/service/targetirovannaya-reklama/">Кейсы по таргетированной рекламе</a></li>
+                            <li><a href="/cases/service/email-marketing/">Кейсы по email маркетингу</a></li>
+                            <li><a href="/cases/service/razrabotka-sayta/">Кейсы по разработке сайтов</a></li>
+                            <li><a href="/cases/service/razrabotka-lichnykh-kabinetov/">Разработка личных кабинетов</a></li>
+                            <li><a href="/cases/service/tekhnicheskaya-podderzhka/">Техническая поддержка</a></li>
+                            <li><a href="/cases/service/smm/">Кейсы по SMM</a></li>
+                            <li><a href="/cases/service/progrev-klientov-salesfarm/">Прогрев клиентов (SalesFarm)</a></li>
+                            <li><a href="/cases/service/crm-marketing/">Кейсы по CRM маркетингу</a></li>
+                            <li><a href="/cases/service/skvoznaya-analitika/">Кейсы по сквозной аналитике</a></li>
+                            <li><a href="/cases/service/digital-strategy/">Стратегия интернет-маркетинга</a></li>
+                            <li><a href="/cases/service/issledovaniya-konkurentov/">Исследования конкурентов</a></li>
+                            <li><a href="/cases/service/serm/">SERM (работа с отзывами)</a></li>
+                            <li><a href="/cases/service/razrabotka-mobilnykh-prilozheniy/">Разработка мобильных приложений</a></li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <p class="text-white h5 d-inline-block position-relative cases-tab-mob-title" data-target="#collapseHeaderMob2" data-toggle="collapse" aria-expanded="false" aria-controls="collapseHeaderMob2" role="button"><span>Кейсы по отраслям</span> <i class="arrow-down"><span class="bg-white"></span> <span class="bg-white"></span></i></p>
+                        <div class="collapse" id="collapseHeaderMob2" data-parent="#casesTabsMob">
+                          <ul class="list-unstyled mb-4">
+                            <li><a href="/cases/branch/b2c-marketing/">B2C маркетинг</a></li>
+                            <li><a href="/cases/branch/b2b-marketing/">B2B маркетинг</a></li>
+                            <li><a href="/cases/branch/banki/">Банки</a></li>
+                            <li><a href="/cases/branch/promyshlennost-i-energetika/">Промышленность и энергетика</a></li>
+                            <li><a href="/cases/branch/riteyl-i-b2c-tovary/">Ритейл и B2C товары</a></li>
+                            <li><a href="/cases/branch/it/">IT</a></li>
+                            <li><a href="/cases/branch/meditsina-i-zdorove/">Медицина и здоровье</a></li>
+                            <li><a href="/cases/branch/proizvodstvo-i-distribyutey/">Кейсы по маркетингу для производства и дистрибьютеров</a></li>
+                            <li><a href="/cases/branch/uslugi-i-konsalting/">Услуги и консалтинг</a></li>
+                            <li><a href="/cases/branch/internet-proekty-i-startapy/">Интернет проекты и стартапы</a></li>
+                            <li><a href="/cases/branch/avtorynok-i-logistika/">Авторынок и логистика</a></li>
+                            <li><a href="/cases/branch/nedvizhimost-i-stroitelstvo/">Недвижимость и строительство</a></li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li><a class="text-white h5 d-inline position-relative cases-tab-mob-title" href="/cases/">Кейсы по компаниям</a></li>
+                      <li class="d-lg-none">
+                        <p class="text-white h5 d-inline-block position-relative cases-tab-mob-title" data-target="#collapseHeaderMob3" data-toggle="collapse" aria-expanded="false" aria-controls="collapseHeaderMob3" role="button"><span>Популярные кейсы</span> <i class="arrow-down"><span class="bg-white"></span> <span class="bg-white"></span></i></p>
+                        <div class="collapse" id="collapseHeaderMob3" data-parent="#casesTabsMob">
+                          <ul class="list-unstyled mb-4">
+                            <li><a href="/cases/favorit-retargeting/">Ретаргетинг для Favorit Motors</a></li>
+                            <li><a href="/cases/beautyled/">Как заработать за 2 месяца больше 15 000 000 рублей для клиента и сделать ROI на платных рекламных каналах 700%</a></li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="https://blog.completo.ru/" target="_blank">Блог</a></li>
+                  <li class="nav-item"><a class="nav-link pr-0 mr-0" href="https://www.completo.ru/contacts/">Контакты</a></li>
+                </ul><a class="btn btn-warning data-scroll header__tenderBtn mt-2 mb-3" data-scroll="new-form-main" href="#new-form-main">Пригласить в тендер</a>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="primary-head">
+      <div class="container-fluid primary-head-container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-lg-4 col-md-4 d-none d-md-block">
+                <div class="d-flex align-items-center primary-head-item primary-head-item-large">
+                  <div class="primary-head-item-num"><img class="primary-head-item-num-icon" src="picture/upload/feature.svg" alt=""></div>
+                  <div class="primary-head-item-text text-white">Спроектируем CRM-систему под вашу специфику</div>
+                </div>
+                <div class="d-flex align-items-center primary-head-item primary-head-item-large">
+                  <div class="primary-head-item-num"><img class="primary-head-item-num-icon" src="picture/upload/market.svg" alt=""></div>
+                  <div class="primary-head-item-text text-white">Настроим систему для нетиповых бизнес-процессов</div>
+                </div>
+                <div class="d-flex align-items-center primary-head-item primary-head-item-large">
+                  <div class="primary-head-item-num"><img class="primary-head-item-num-icon" src="picture/upload/internet-crm.svg" alt=""></div>
+                  <div class="primary-head-item-text text-white">Обучим ваших сотрудников CRM-маркетингу</div>
+                </div>
+          </div>
+          <div class="offset-xl-1 col-md-8 col-xl-6">
+            <div class="h1 main-title primary-head__title">Проектируем,<br>внедряем и&nbsp;развиваем<br>CRM и&nbsp;системы<br>автоматизации продаж <br>для B2B-компаний</div>
+            <button class="btn btn-warning data-scroll mt-4 mb-4 d-block" data-scroll="form-content">Обсудить проект</button>
+          </div>
+        </div>
+      </div>
+      <div class="primary-head-video"><img src="picture/upload/crm-top-background.png" alt=""></div>
+    </div>
+    <div class="py-5">
+      <div class="container my-md-4">
+        <div class="row">
+          <div class="col-md-12">
+            <nav class="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a class="text-secondary" href="/">Главная</a></li>
+                <li class="breadcrumb-item active text-dark" aria-current="page">CRM-система</li>
+              </ol>
+            </nav>
+          </div>
+          <div class="col-md-12">
+            <h1 class="h2 mb-4 form-h2">Зачем вам нужна CRM-система <br><span class="yellow-border">и какие задачи<span class="border-container animation visible animated" data-animate="newline"></span></span> она поможет решить?</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mb-4">
+            <p class="font-weight-normal">Самая основная задача CRM системы - контроль и автоматизация отдела продаж. </p>
+            <p class="font-weight-normal">Но текущие реалии бизнеса заставляют внедрять в CRM различные бизнес процессы,  такие как управленческая отчетность, планирование и прогнозирование результатов работы коммерческого департамента, контроль дилеров или торговых представителей, сбор заказов и их распределение, и так далее. </p>
+            <p class="font-weight-normal">Качественно продуманная CRM система позволяет руководителю видеть не только этапы работы над каждой сделкой, но также понимать куда движутся продажи компании и что необходимо сделать для достижения целевых показателей.</p>
+            <p class="h3 text-warning">Вам нужна CRM-система, если:</p>
+            <div class="row">
+              <div class="col-md-6">
+                <ul class="mb-0 pl-3">
+                  <li class="text-warning mb-3"><span class="text-dark">Не фиксируются все <strong>заявки из разных источников</strong></span></li>
+                  <li class="text-warning"><span class="text-dark"><strong>Рутина демотивирует</strong> и отнимает время у ваших продавцов</span></li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="mb-0 pl-3">
+                  <li class="text-warning mb-3"><span class="text-dark">Сложно <strong>контролировать продавцов</strong></span></li>
+                  <li class="text-warning"><span class="text-dark"><strong>Не видны слабые места </strong>в ваших бизнес-процессах</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="row align-items-center mt-4">
+              <div class="col-md-6 mb-4">
+                <button class="btn btn-warning data-scroll d-block" data-scroll="form-content">Хочу всё знать</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-4">
+            <div class="form__alarm w-100">
+              <p class="text-dark mr-2 mb-0 ml-0 text--semibold">До</p>
+              <div class="h1 mb-2">50%</div>
+              <p class="mb-2 text-dark make-sites__custom-item text--semibold">рост прибыли после внедрения<br> CRM-систем*</p>
+            </div><a class="video-item__block d-block" href="https://www.youtube.com/watch?v=fqF6eb8bQfs" data-fancybox><img class="w-100" src="picture/upload/crm-background-top.png" alt=""></a>
+            <div class="mt-2"><a class="text-underline" href="https://www.youtube.com/watch?v=fqF6eb8bQfs" data-fancybox="">
+                <u>Михаил Федоров рассказывает как усилить отдел продаж в кризис</u></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="py-5 bg-lightyellow border-secondary border-top border-bottom overflow-hidden">
+      <div class="container my-md-4">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="mb-4 mb-md-5 form-h2"><span class="yellow-border z-index-2">С какими<span class="border-container animation visible animated" data-animate="newline"></span></span><span> </span><span>CRM мы работаем:</span></h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 order-2 order-lg-1">
+            <div class="crm-block crm-block-active" data-show="0">
+              <p class="mb-4">Одна из самых простых и популярных CRM систем на российском рынке. Отлично подходит для малого и среднего бизнеса.</p>
+              <p class="mb-4">Её основное преимущество в простоте настройки и использования. Идеально подойдет для построения отдела продаж.</p>
+                  <div class="form__alarm d-flex align-items-start bg-white">
+                    <div class="form__alarm__icon"><img class="form__alarm__icon-img" src="picture/upload/internet-black.svg" alt=""></div>
+                    <p class="mb-3 text-dark ml-0">Главное преимущество <span class="font-weight-bold">AmoCRM </span> - быстрая и легкая интеграция с большим количеством сервисов.</p>
+                  </div>
+                  <button class="btn btn-warning data-scroll d-block" data-scroll="form-content">Узнать плюсы</button>
+            </div>
+            <div class="crm-block" data-show="1">
+              <p class="mb-4">Bitrix24 - идеально подойдет вам, если экосистема вашей компании завязана на продуктах 1C.</p>
+              <p class="mb-4">Большая и функциональная - это именно те слова, которые хорошо описывают возможности CRM Bitrix24. В ней есть возможность управлять соцсетями, документами, файлами, календарем, почтой, бизнес процессами и так далее...</p>
+                  <div class="form__alarm d-flex align-items-start bg-white">
+                    <div class="form__alarm__icon"><img class="form__alarm__icon-img" src="picture/upload/analysis-black.svg" alt=""></div>
+                    <p class="mb-3 text-dark ml-0"><span class="font-weight-bold">Bitrix24 </span> подойдет тем, кто хочет “вживить” CRM в уже настроенные процессы 1С и с её помощью не только увеличивать продажи, но и управлять смежными процессами.</p>
+                  </div>
+                  <button class="btn btn-warning data-scroll d-block" data-scroll="form-content">Узнать плюсы</button>
+            </div>
+            <div class="crm-block" data-show="2">
+              <p class="mb-4">Сейчас на рынке появилось огромное количество отраслевых CRM систем, которые упрощают работу в сфере недвижимости, туризма, банковской сфере, транспорта, производства и так далее.</p>
+              <p class="mb-4">Наши специалисты помогут в них разобраться и подберут то решение, которое лучше всего подойдет вашему бизнесу.</p>
+                  <div class="form__alarm d-flex align-items-start bg-white">
+                    <div class="form__alarm__icon"><img class="form__alarm__icon-img" src="picture/upload/thumb-up-black.svg" alt=""></div>
+                    <p class="mb-3 text-dark ml-0"><span class="font-weight-bold">Иные коробочные решения </span> подойдут ряду узких бизнес-систем со специфическим циклом сделки.</p>
+                  </div>
+                  <button class="btn btn-warning data-scroll d-block" data-scroll="form-content">Узнать плюсы</button>
+            </div>
+            <div class="crm-block" data-show="3">
+              <p class="mb-4">Если у вас сложный, многоуровневый бизнес процесс, с помощью CRM вы хотите контролировать не только отдел продаж, но и дилеров, подрядчиков, работу заводов доставку до конечного потребителя - мы разработаем уникальную CRM именно под ваши нужды и свяжем её с любыми бизнес процессами.</p>
+                  <div class="form__alarm d-flex align-items-start bg-white">
+                    <div class="form__alarm__icon"><img class="form__alarm__icon-img" src="picture/upload/profit-black.svg" alt=""></div>
+                    <p class="mb-3 text-dark ml-0"><span class="font-weight-bold">Индивидуальная CRM </span> подойдет сложному бизнесу и дилерским сетям. <span class="d-block mt-3"> Наши специалисты качественно проработают её под все ваши требования.</span></p>
+                  </div>
+                  <button class="btn btn-warning data-scroll d-block" data-scroll="form-content">Узнать плюсы</button>
+            </div>
+          </div>
+          <div class="col-lg-8 order-1 order-lg-2">
+                <ul class="carousel__list-block carousel__list-block-seo carousel__list-block-crm d-flex align-items-center justify-content-between mb-4 mt-0">
+                  <li class="carousel__list-block-item active carousel__list-block-item-seo mx-2 text-center px-3"><a class="carousel__list-block-item-link" href="#" data-link="0">AmoCRM</a></li>
+                  <li class="carousel__list-block-item carousel__list-block-item-seo mx-2 text-center px-3"><a class="carousel__list-block-item-link" href="#" data-link="1">Bitrix24</a></li>
+                  <li class="carousel__list-block-item carousel__list-block-item-seo mx-2 text-center px-3"><a class="carousel__list-block-item-link" href="#" data-link="2">Другие коробочные решения</a></li>
+                  <li class="carousel__list-block-item carousel__list-block-item-seo mx-2 text-center px-3"><a class="carousel__list-block-item-link" href="#" data-link="3">Индивидуальная CRM</a></li>
+                </ul>
+            <div class="px-md-5">
+              <div class="carousel__list-carousel-notebook carousel__list-carousel-notebook-no-dots mb-5">
+                    <div class="carousel__list-carousel carousel__list-carousel-seo carousel__list-carousel-crm pb-0 mb-0"><img class="w-100" src="picture/upload/crm-slide_1.jpg" alt=""><img class="w-100" src="picture/upload/crm-slide_2.jpg" alt=""><img class="w-100" src="picture/upload/crm-slide_3.jpg" alt=""><img class="w-100" src="picture/upload/crm-slide_4.jpg" alt="">
+                    </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 order-3">
+            <div class="bg-warning p-3 text-center mt-5">
+              <div class="h3 mb-0">Мы способны создать или настроить любую версию CRM системы которая понадобится вашему бизнесу</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="py-5 bg-lightyellow border-secondary border-bottom overflow-hidden">
+      <div class="container my-md-4">
+        <div class="row">
+          <div class="col-lg-8 col-xl-7">
+            <h2 class="mb-4 mb-md-5 form-h2"><span>Какие задачи стоят перед </span><span class="yellow-border">ответственным за CRM<span class="border-container animation visible animated" data-animate="newline"></span></span></h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-sm-6 mb-4"><img class="crm__icon" src="picture/upload/icon_website.svg" alt="">
+            <p class="mb-4 h4 font-weight-normal"><span class="font-weight-bold">Обеспечить </span><span>попадание в CRM всех заявок и обращений (автолиды)</span></p>
+            <ul class="pl-3">
+              <li class="mb-2">Звонок по телефону</li>
+              <li class="mb-2">Форма на сайте</li>
+              <li class="mb-2">Чат на сайте</li>
+              <li class="mb-2">E-mail</li>
+              <li class="mb-2">Мессенджеры с сайта</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-sm-6 mb-4"><img class="crm__icon" src="picture/upload/icon_structure.svg" alt="">
+            <p class="mb-4 h4 font-weight-normal"><span class="font-weight-bold">Автоматизировать, </span><span>описать и сделать измеримыми бизнес-процессы продаж</span></p>
+            <ul class="pl-3">
+              <li class="mb-2">Разбить сделку на этапы, настроить автоматические действия между этапами</li>
+              <li class="mb-2">Настроить источники заявок для попадания в воронку</li>
+              <li class="mb-2">Продумать автоматические задачи ответственному за сделки на каждом этапе</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-sm-6 mb-4"><img class="crm__icon" src="picture/upload/icon_shedule.svg" alt="">
+            <p class="mb-4 h4 font-weight-normal"><span class="font-weight-bold">Убрать рутину,</span><span>демотивирующую и отнимающую время продавцов</span></p>
+            <ul class="pl-3">
+              <li class="mb-2">Одна система для работы менеджера</li>
+              <li class="mb-2">Генерация документов по шаблону</li>
+              <li class="mb-2">Отправка сообщений, уведомления клиентам</li>
+              <li class="mb-2">Напоминания о запланированных задачах</li>
+              <li class="mb-2">Ручное внесение в CRM данных из других систем</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-sm-6 mb-4"><img class="crm__icon" src="picture/upload/icon_market_new.svg" alt="">
+            <p class="mb-4 h4 font-weight-normal"><span class="font-weight-bold">Использовать базу </span><span>клиентов для маркетинговых мероприятий</span></p>
+            <ul class="pl-3">
+              <li class="mb-2">Сегментация клиентов</li>
+              <li class="mb-2">Рассылки email, sms, мессенджеры</li>
+              <li class="mb-2">Напоминания менеджерам позвонить</li>
+              <li class="mb-2">Подключение подогревающей рекламы и промоутирования кейсов</li>
+              <li class="mb-2">Запуск триггерных цепочек сообщений</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-sm-6 mb-4"><img class="crm__icon" src="picture/upload/icon_resources.svg" alt="">
+            <p class="mb-4 h4 font-weight-normal"><span class="font-weight-bold">Синхронизировать </span><span>руководство и отдел продаж с помощью отчетности отдела</span></p>
+            <ul class="pl-3">
+              <li class="mb-2">Прогноз продаж</li>
+              <li class="mb-2">Количество сделок с разбивкой по статусам</li>
+              <li class="mb-2">Эффективность менеджеров</li>
+              <li class="mb-2">Эффективность рекламных каналов</li>
+              <li class="mb-2">ABC/XYZ анализ</li>
+              <li class="mb-2">RFM анализ</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="crm__icon d-none d-sm-block"></div><img src="picture/upload/icon_thinking_man.svg" alt="">
+            <div class="d-sm-flex justify-content-end d-block">
+              <p class="font-weight-bold crm-responce__text">CRM для компаний с сетями дилеров сокращает расходы на персонал</p>
+            </div>
+            <div class="d-sm-flex justify-content-end d-block">
+              <div class="d-block">
+                <div class="d-flex align-items-end"><img class="mb-2" src="picture/upload/icon_bar.svg" alt=""><span class="font-weight-bold mx-3 mb-2">на </span><span class="h1 mb-0">20%*</span></div><small><small>*По нашим собственным прикидкам</small></small>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+                <div class="container bloquote-container">
+                  <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-4 mb-3"><img class="bloquote-container-img bg-white" src="picture/upload/misha.png" alt="">
+                      <p class="font-weight-bold mb-0 text-center">Михаил Федоров,</p>
+                      <p class="text-center mb-0">совладелец, технический директор «Комплето»</p>
+                    </div>
+                    <div class="col-xl-7 col-md-8 mb-3">
+                      <div class="bloquote-container-block-container">
+                        <div class="bloquote-container-block-item">
+                          <div class="bloquote-container-block bg-warning">Сама по себе CRM-система - это просто база данных по клиентам, ничего больше. Правильные процессы вокруг CRM — вот то, что повышает продажи</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="dealers-problems bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-xl-8">
+            <h2 class="mb-4">Знаем мы ваши CRMы! Внедряли...</h2>
+            <p class="mb-5">Возможно вы уже пытались внедрить CRM в свою организацию, но есть ряд ошибок без решения которых система становится почти бесполезна.</p>
+          </div>
+        </div>
+        <div class="row dealers-problems__card-container-main mobile_slider">
+          <div class="col-md-6 col-lg-3 dealers-problems__card-container">
+            <div class="dealers-problems__card dealers-problems__card-1">
+              <p class="h4 mb-3"><span>Интеграцию получил </span><span class="text-danger">в подарок </span><span>к лицензии.</span></p>
+              <p>Интеграция сложных бизнес процессов - сложная задача. Бесплатно и качественно её никто не сделает.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 dealers-problems__card-container">
+            <div class="dealers-problems__card">
+              <p class="h4 mb-3"><span>Программу купил - </span><span class="text-danger">процессы не купил.</span></p>
+              <p>Если нет регламента процессов - программа не поможет. Нужно делать всё в комплексе.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 dealers-problems__card-container">
+            <div class="dealers-problems__card">
+              <p class="h4 mb-3"><span>Программу купил - </span><span class="text-danger">автоматизацию процессов не купил</span></p>
+              <p>Переносить заявки из мессенджеров и почты в CRM - дополнительная работа.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 dealers-problems__card-container">
+            <div class="dealers-problems__card dealers-problems__card-2">
+              <p class="h4 mb-3"><span>Программу купил - </span><span class="text-danger">интеграцию с другим ПО забыл. </span></p>
+              <p>Перенос информации между системами увеличивает вероятность ошибки.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 dealers-problems__card-container">
+            <div class="dealers-problems__card dealers-problems__card-3">
+              <p class="h4 mb-3"><span>Программу купил - </span><span class="text-danger">поддержку не купил. </span></p>
+              <p>Процессы меняются - CRM меняется следом. Без поддержки она быстро устареет.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 dealers-problems__card-container">
+            <div class="dealers-problems__card">
+              <p class="h4 mb-3"><span>Программу купил - </span><span class="text-danger">контроль и планерки не купил. </span></p>
+              <p>60 мин/нед. контроля за отделом продаж для прозрачности в СRM - необходимое условие.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 dealers-problems__card-container">
+            <div class="dealers-problems__card dealers-problems__card-4">
+              <p class="h4 mb-3"><span>Программу купил, доработки купил, </span><span class="text-danger">и решил сделать из 1С автомат Калашникова </span></p>
+              <p>Важное условие работы с CRM - удобство. Когда функций слишком много - становится неудобно работать.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="dealers-problems__main-card"><img class="dealers-problems__main-card__img" src="picture/upload/crm-itog.png" alt="">
+              <div class="dealers-problems__quote">
+                <div class="h2 text-dark">Подведем итог:</div>
+                <div class="dealers-problems__quote-text h5 text-secondary"><span class="text-dark">Даже самую сложную проблему можно решить с помощью грамотной постановки задачи. С этим мы вам поможем.</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="py-5 bg-lightyellow border-top border-secondary border-bottom">
+      <div class="container my-md-4">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="mb-5">Настраиваем сложные CRM-системы</h3>
+          </div>
+        </div>
+        <div class="row">
+              <div class="col-lg col-md-4 mb-4 mb-lg-4">
+                <div class="crm-setup">
+                  <div class="crm-setup__head">
+                    <div class="crm-setup__icon-block mx-auto mb-2"><img class="crm-setup__icon" src="picture/upload/face-icon__1.png" alt=""></div>
+                    <div class="h5 text-center mb-0">Для управления отделом продаж в b2b</div>
+                  </div>
+                  <div class="d-lg-none">
+                    <div class="crm-setup__body">
+                      <p class="mb-3">Продажи на рынке B2B обычно отличаются не только большим количеством ЛВПР, но и более сложным циклом сделки.</p>
+                      <p class="mb-3">Также стоит учитывать что цикл сделки меняется в зависимости от отрасли и найти стандартное решение иногда просто невозможно.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg col-md-4 mb-4 mb-lg-4">
+                <div class="crm-setup">
+                  <div class="crm-setup__head">
+                    <div class="crm-setup__icon-block mx-auto mb-2"><img class="crm-setup__icon" src="picture/upload/face-icon__2.png" alt=""></div>
+                    <div class="h5 text-center mb-0">Для контроля работы с холодной базой клиентов</div>
+                  </div>
+                  <div class="d-lg-none">
+                    <div class="crm-setup__body">
+                      <p class="mb-3">При большом объеме холодных звонков важно автоматизировать контроль менеджеров колл центра.</p>
+                      <p class="mb-3">Зачастую это занимает такое же количество ресурсов, как и работа самих операторов.</p>
+                      <p class="mb-3">На помощь может прийти автоматическая транскрибация звонков с последующим выделением из них ошибочных фраз.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg col-md-4 mb-4 mb-lg-4">
+                <div class="crm-setup">
+                  <div class="crm-setup__head">
+                    <div class="crm-setup__icon-block mx-auto mb-2"><img class="crm-setup__icon" src="picture/upload/face-icon__3.png" alt=""></div>
+                    <div class="h5 text-center mb-0">Для управления армией торговых представителей</div>
+                  </div>
+                  <div class="d-lg-none">
+                    <div class="crm-setup__body">
+                      <p class="mb-3">CRM для торговых представителей имеет специфические особенности - она должна просчитывать маршрут агента, упросить ему заполнение огромного количества информации о товаре, считывать его корректное расположение и выявлять ошибки в сортировке на полках.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg col-md-4 mb-4 mb-lg-4">
+                <div class="crm-setup">
+                  <div class="crm-setup__head">
+                    <div class="crm-setup__icon-block mx-auto mb-2"><img class="crm-setup__icon" src="picture/upload/face-icon__4.png" alt=""></div>
+                    <div class="h5 text-center mb-0">Для управления дилерскими сетями</div>
+                  </div>
+                  <div class="d-lg-none">
+                    <div class="crm-setup__body">
+                      <p class="mb-3">Специфика CRM Для дилерских сетей состоит в том, что заказы могут приходить как на основной сайт компании, так и на сайты дилеров.</p>
+                      <p class="mb-3">Производителю важно видеть как их отрабатывает дилер, а дилеру важно получать информацию о движении заказа в оперативном режиме.</p>
+                      <p class="mb-3">Также важной спецификой является учет складских остатков в опредленном регионе.</p>
+                      <p class="mb-3">Оперативное принятие решения в этих и других вопросах может сэкономить миллионы.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg col-md-4 mb-4 mb-lg-4">
+                <div class="crm-setup">
+                  <div class="crm-setup__head">
+                    <div class="crm-setup__icon-block crm-setup__icon-block-green mx-auto mb-2"><img class="crm-setup__icon" src="picture/upload/face-icon__5.png" alt=""></div>
+                    <div class="h5 text-center text-green-crm mb-0">Для зеленых менеджеров</div>
+                  </div>
+                  <div class="d-lg-none">
+                    <div class="crm-setup__body crm-setup__body-green">
+                      <p class="mb-3">Обучение новых сотрудников работе в компании зачастую очень сложный процесс занимающий много времени.</p>
+                      <p class="mb-3">Современные умные CRM системы позволяют в режиме реального времени давать подсказку сотруднику что ответить на тот или иной вопрос клиента, напомнить молодому специалисту о тонкостях продукта и помочь заполнить необходимые документы.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="row">
+              <div class="col-lg col-md-4 mb-5 mb-lg-4 d-none d-lg-block">
+                <div class="crm-setup__body h-100">
+                  <p class="mb-3">Продажи на рынке B2B обычно отличаются не только большим количеством ЛВПР, но и более сложным циклом сделки.</p>
+                  <p class="mb-3">Также стоит учитывать что цикл сделки меняется в зависимости от отрасли и найти стандартное решение иногда просто невозможно.</p>
+                </div>
+              </div>
+              <div class="col-lg col-md-4 mb-5 mb-lg-4 d-none d-lg-block">
+                <div class="crm-setup__body h-100">
+                  <p class="mb-3">При большом объеме холодных звонков важно автоматизировать контроль менеджеров колл центра.</p>
+                  <p class="mb-3">Зачастую это занимает такое же количество ресурсов, как и работа самих операторов.</p>
+                  <p class="mb-3">На помощь может прийти автоматическая транскрибация звонков с последующим выделением из них ошибочных фраз.</p>
+                </div>
+              </div>
+              <div class="col-lg col-md-4 mb-5 mb-lg-4 d-none d-lg-block">
+                <div class="crm-setup__body h-100">
+                  <p class="mb-3">CRM для торговых представителей имеет специфические особенности - она должна просчитывать маршрут агента, упросить ему заполнение огромного количества информации о товаре, считывать его корректное расположение и выявлять ошибки в сортировке на полках.</p>
+                </div>
+              </div>
+              <div class="col-lg col-md-4 mb-5 mb-lg-4 d-none d-lg-block">
+                <div class="crm-setup__body h-100">
+                  <p class="mb-3">Специфика CRM Для дилерских сетей состоит в том, что заказы могут приходить как на основной сайт компании, так и на сайты дилеров.</p>
+                  <p class="mb-3">Производителю важно видеть как их отрабатывает дилер, а дилеру важно получать информацию о движении заказа в оперативном режиме.</p>
+                  <p class="mb-3">Также важной спецификой является учет складских остатков в опредленном регионе.</p>
+                  <p class="mb-3">Оперативное принятие решения в этих и других вопросах может сэкономить миллионы.</p>
+                </div>
+              </div>
+              <div class="col-lg col-md-4 mb-5 mb-lg-4 d-none d-lg-block">
+                <div class="crm-setup__body crm-setup__body-green h-100">
+                  <p class="mb-3">Обучение новых сотрудников работе в компании зачастую очень сложный процесс занимающий много времени.</p>
+                  <p class="mb-3">Современные умные CRM системы позволяют в режиме реального времени давать подсказку сотруднику что ответить на тот или иной вопрос клиента, напомнить молодому специалисту о тонкостях продукта и помочь заполнить необходимые документы.</p>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+    <div class="py-5 step overflow-hidden">
+      <div class="container mt-lg-5 mt-md-4 mb-md-4">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="h2 mb-4">Этапы нашей работы по внедрению CRM</div>
+                <ul class="step__list list-unstyled d-none d-md-flex">
+                  <li class="step__list-item active"><a class="step__list-item-link" href="#" data-link="0"><span class="step__list-item-link-num">1</span><span class="step__list-item-link-text">Описание бизнес процессов отдела продаж</span></a></li>
+                  <li class="step__list-item"><a class="step__list-item-link" href="#" data-link="1"><span class="step__list-item-link-num">2</span><span class="step__list-item-link-text">Техническое Задание на внедрение CRM</span></a></li>
+                  <li class="step__list-item"><a class="step__list-item-link" href="#" data-link="2"><span class="step__list-item-link-num">3</span><span class="step__list-item-link-text">Разработка CRM-системы согласно ТЗ</span></a></li>
+                  <li class="step__list-item"><a class="step__list-item-link" href="#" data-link="3"><span class="step__list-item-link-num">4</span><span class="step__list-item-link-text">Настройка маркетинговой составляющей </span></a></li>
+                  <li class="step__list-item"><a class="step__list-item-link" href="#" data-link="4"><span class="step__list-item-link-num">5</span><span class="step__list-item-link-text">Обучение сотрудников работе с CRM </span></a></li>
+                  <li class="step__list-item"><a class="step__list-item-link" href="#" data-link="5"><span class="step__list-item-link-num">6</span><span class="step__list-item-link-text">Дальнейшая поддержка</span></a></li>
+                </ul>
+          </div>
+          <div class="col-md-12 d-flex align-items-center mb-4">
+            <div class="step__heading"><span class="h4 text-uppercase mb-0">Этап</span><span class="step__heading-num h4 mx-2 mb-0">1</span></div>
+            <h3 class="step__heading-name text-uppercase mb-0">Описание бизнес процессов отдела продаж</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-4 col-lg-5 col-md-6">
+            <div class="step__container step__container-active" data-show="0">
+              <div class="d-block">
+                <ol class="pl-4 mb-4">
+                  <li class="mb-2">Проводим брифинг с отделом продаж по процессам и описываем их</li>
+                  <li class="mb-2">Оцениваем их состояние и готовность к оцифровке</li>
+                </ol>
+                <div class="border p-3 my-3 w-100">
+                  <div class="h3 font-weight-normal">Поймем, откуда приходят клиенты и через какие каналы осуществляются продажи</div>
+                </div>
+              </div>
+                  <button class="btn btn-warning step__next mt-4 mb-4 d-none d-md-flex align-items-center"><span class="mr-2">Следующий этап</span><i class="icon icon-arrow-right step__next-icon"></i></button>
+            </div>
+            <div class="step__container" data-show="1">
+              <div class="d-block">
+                <ol class="pl-4 mb-4">
+                  <li class="mb-2">Описываем необходимый функционал для оцифровки процессов</li>
+                  <li class="mb-2">Разбиваем их на итерации</li>
+                  <li class="mb-2">Подбираем CRM из типовых решений или готовим ТЗ на самописную версию</li>
+                  <li class="mb-2">При необходимости прописываем дополнительные расширения и интеграции</li>
+                </ol>
+              </div>
+                  <button class="btn btn-warning step__next mt-4 mb-4 d-none d-md-flex align-items-center"><span class="mr-2">Следующий этап</span><i class="icon icon-arrow-right step__next-icon"></i></button>
+            </div>
+            <div class="step__container" data-show="2">
+              <div class="d-block">
+                <ol class="pl-4 mb-4">
+                  <li class="mb-2">При выборе типового решения делаем настройку выбранной CRM(AmoCRM, TerraSoft, Bitrix24 или любая другая) или пишем CRM под прописанные в ТЗ требования с нуля</li>
+                  <li class="mb-2">Подключаем все существующие каналы поступления заявок</li>
+                  <li class="mb-2">Импортируем (или помогаем вам импортировать) в CRM базу клиентов</li>
+                </ol>
+              </div>
+                  <button class="btn btn-warning step__next mt-4 mb-4 d-none d-md-flex align-items-center"><span class="mr-2">Следующий этап</span><i class="icon icon-arrow-right step__next-icon"></i></button>
+            </div>
+            <div class="step__container" data-show="3">
+              <div class="d-block">
+                <p class="mb-4">Любая CRM система хороша тем, что мы знаем какой этап воронки в данный момент проходит клиент.</p>
+                <p class="mb-4">Благодаря этой информации мы можем настроить CRM маркетинг и подогревать потенциального клиента материалами отрабатывающими возражения на конкретном этапе продаж.</p>
+              </div>
+                  <button class="btn btn-warning step__next mt-4 mb-4 d-none d-md-flex align-items-center"><span class="mr-2">Следующий этап</span><i class="icon icon-arrow-right step__next-icon"></i></button>
+            </div>
+            <div class="step__container" data-show="4">
+              <div class="d-block">
+                <p class="mb-4">Проводим обучающие семинары для ваших сотрудников.</p>
+                <p class="mb-4">Рассказываем о всех тонкостях работы и том, как оптимизировать своё рабочее время при работе с CRM.</p>
+              </div>
+                  <button class="btn btn-warning step__next mt-4 mb-4 d-none d-md-flex align-items-center"><span class="mr-2">Следующий этап</span><i class="icon icon-arrow-right step__next-icon"></i></button>
+            </div>
+            <div class="step__container" data-show="5">
+              <div class="d-block">
+                <ol class="pl-4 mb-4">
+                  <li class="mb-2"><span class="mb-2 d-block">Услуга поддержки и удаленного помощника для отдела продаж. Выборочный контроль обработки входящих звонков, регламент планерок по CRM, контроль дисциплины ведения CRM:</span>
+                    <ul class="pl-4 mb-2">
+                      <li class="mb-2">статус проектов в воронке и помощь менеджерам в подготовке</li>
+                      <li class="mb-2">контроль постановки и исполнения задач, способствующих их движению,</li>
+                      <li class="mb-2">помощь в выстраивании отчетности по отделу продаж,</li>
+                      <li class="mb-2">помощь в формировании скриптов продаж с лучшими практиками отдела</li>
+                    </ul>
+                  </li>
+                  <li class="mb-2">Заказная разработка дополнительных модулей для CRM или заказной CRM системы</li>
+                </ol>
+              </div>
+              <button class="btn btn-warning data-scroll mt-4 mb-4 d-none d-md-block" data-scroll="form-content">Заказать CRM</button>
+            </div>
+          </div>
+          <div class="col-xl-8 col-lg-7 col-md-6">
+                <div class="step__carousel bg-white rounded-0"><img class="w-100" src="picture/upload/crm-steps-1.png" alt=""><img class="w-100" src="picture/upload/crm-steps-2.png" alt=""><img class="w-100" src="picture/upload/crm-steps-3.png" alt=""><img class="w-100" src="picture/upload/crm-steps-4.png" alt=""><img class="w-100" src="picture/upload/crm-steps-5.png" alt=""><img class="w-100" src="picture/upload/crm-steps-6.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="profit bg-white">
+      <div class="profit__title profit__title-absolute">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 profit__title-container bg-white">
+              <div class="row">
+                <div class="col-lg-9 col-xl-7">
+                  <h2 class="mb-4">Как мы помогаем развивать CRM-систему</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="profit__list-block">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-3 col-lg-4 profit__list-container">
+              <ul class="list-unstyled profit__list d-none d-lg-block">
+                <li class="profit__list-active"><a href="#dealers-site">1. Вводим в процесс и обучаем продавцов продукту</a></li>
+                <li><a href="#personal-seo">2. Обучаем правильной работе с CRM и ПО</a></li>
+                <li><a href="#ad-item">3. Контроль соблюдения методологии продаж и работы по процессу</a></li>
+                <li><a href="#dealers-control">4. Контроль работы продавцов в части ведения CRM</a></li>
+                <li><a href="#dealers-control-2">5. Коучинг продавцов - наставничество</a></li>
+                <li><a href="#dealers-control-3">6. Продажи в соц.сетях</a></li>
+                <li><a href="#dealers-control-4">7. Как узнать, когда правильно позвонить клиенту</a></li>
+              </ul>
+              <div class="d-block d-lg-none align-items-center mt-2 mb-4">
+                <div class="profit__select-container">
+                  <select class="profit__select" id="profit__nav-mobile" name="profit__nav-mobile">
+                    <option value="#dealers-site">1. Вводим в процесс и обучаем продавцов продукту</option>
+                    <option value="#personal-seo"> 2. Обучаем правильной работе с CRM и ПО</option>
+                    <option value="#ad-item">3. Контроль соблюдения методологии продаж и работы по процессу</option>
+                    <option value="#dealers-control"> 4. Контроль работы продавцов в части ведения CRM</option>
+                    <option value="#dealers-control-2">5. Коучинг продавцов - наставничество</option>
+                    <option value="#dealers-control-3">6. Продажи в соц.сетях</option>
+                    <option value="#dealers-control-4">7. Как узнать, когда правильно позвонить клиенту</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="profit__container">
+        <div class="container">
+          <div class="row">
+            <div class="offset-xl-3 offset-lg-4 col-xl-9 col-lg-8 profit__container-initial">
+              <div class="profit__calc-container-item profit__calc-container-item-active" id="dealers-site">
+                <h3 class="text-uppercase mb-4">Потоково обучаем и контролируем процесс</h3>
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <ul class="pl-3">
+                      <li class="mb-3"><span class="d-block mb-3">Используем программное обеспечение</span>
+                        <ul class="pl-0 list-unstyled">
+                          <li class="mb-3">- Getcourse - SAAS решение</li>
+                          <li class="mb-3">- Moodle - бесплатная для установки на свой сервер</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <ul class="pl-3">
+                      <li class="mb-3"><span class="d-block mb-3">Один раз подготавливаем:</span>
+                        <ul class="pl-0 list-unstyled">
+                          <li class="mb-3">- программу</li>
+                          <li class="mb-3">- серию материалов</li>
+                          <li class="mb-3">- дополнительные материалы</li>
+                          <li class="mb-3">- тесты на каждый из модулей и общий</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-12 col-xl-8">
+                    <div class="system-consist__img-container"><img src="picture/upload/crm-wehelp-1.png" alt=""></div>
+                  </div>
+                </div>
+              </div>
+              <div class="profit__calc-container-item" id="personal-seo">
+                <div class="row">
+                  <div class="col-xl-8 col-lg-7 mb-4">
+                    <h3 class="text-uppercase mb-4"> Пошаговый помощник для обучения сложным интерфейсам</h3>
+                    <p class="mb-4">Решение для корпоративного сегмента.</p>
+                    <ul class="pl-3 mb-4">
+                      <li class="mb-3">Устанавливается как на корпоративные решения (1С, Microsoft, Bitrix Корпоративный портал), так и на веб приложения</li>
+                      <li class="mb-3">Не изменяет код продукта, не получает доступ к данным и не нарушает корпоративных политик безопасности.</li>
+                    </ul><a href="http://setuper.ru" target="_blank">http://setuper.ru</a>
+                  </div>
+                  <div class="col-xl-4 col-lg-5 mb-4">
+                    <div class="p-3 border border-warning bg-white profit__shadow mb-4"><small><em>Время поиска данных в 2-3 раза меньше, чем при "слепом тыканье" - не нужно запоминать последовательность шагов и пытаться их повторить.</em></small></div><a href="https://docs.google.com/presentation/d/1qv9_pl3ueR29KOlkI1jvbmGw_2zhRCLzN13bjhvN1c8/edit#slide=id.g6d5e8519a1_0_0"><i class="icon icon-crm-download text-dark"></i>
+                      <u>Скачать презентацию</u></a>
+                    <div class="d-flex align-items-center mt-4"><img class="mr-3" src="picture/upload/crm-funnel.svg" alt="">
+                      <p class="mb-0">Интеграция <br> c CRM</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 col-xl-8">
+                    <div class="system-consist__img-container"><img src="picture/upload/crm-wehelp-2.png" alt=""></div>
+                  </div>
+                </div>
+              </div>
+              <div class="profit__calc-container-item" id="ad-item">
+                <div class="row">
+                  <div class="col-xl-8 col-lg-7 mb-4">
+                    <h3 class="text-uppercase mb-4">Аудит и рекомендации для ваших продавцов</h3>
+                    <p class="mb-4">Решение для корпоративного сегмента</p>
+                    <ul class="pl-3 mb-4">
+                      <li class="mb-3">Разовый удаленный аудит отдела продаж по записям разговоров</li>
+                      <li class="mb-3">Транскрибатор звонков (подключаемся по IP к АТС, распознаем звонок с помощью Yandex SpeechKit, добавляем в события CRM)</li>
+                      <li class="mb-3">Услуга прослушивания звонков операторов и подготовка отчетности (Услуга у Completo).</li>
+                    </ul>
+                  </div>
+                  <div class="col-xl-4 col-lg-5 mb-4">
+                    <div class="p-3 border border-warning bg-white profit__shadow"><small><em>По результатам аудита и рекомедаций формируется база знаний с успешными приемами от ваших продавцов или книга продаж.</em></small></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 col-xl-8">
+                    <div class="system-consist__img-container"><img src="picture/upload/crm-wehelp-3.png" alt=""></div>
+                  </div>
+                </div>
+              </div>
+              <div class="profit__calc-container-item" id="dealers-control">
+                <div class="row">
+                  <div class="col-xl-8 col-lg-7 mb-4">
+                    <h3 class="text-uppercase mb-4">Планирование продаж</h3>
+                    <p class="mb-4">Решение для корпоративного сегмента.</p>
+                    <ul class="pl-3 mb-4">
+                      <li class="mb-3"><span>Продавцы готовятся к планерке</span>
+                        <ul class="pl-3">
+                          <li class="mb-3"><span>фильтр по наиболее важному статусу</span>
+                            <ul class="pl-3">
+                              <li class="mb-3">проверяем статус клиентов в воронке</li>
+                              <li class="mb-3">ставим задачи, выполнение которых подвинет </li>
+                            </ul>
+                          </li>
+                          <li class="mb-3"><span>фильтр по менее важному статусу</span>
+                            <ul class="pl-3">
+                              <li class="mb-3">повтор действий</li>
+                              <li class="mb-3">...</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="mb-3">Руководитель проверяет визуально, задает вопросы по важным клиентам, фиксируем в задачах</li>
+                    </ul>
+                  </div>
+                  <div class="col-xl-4 col-lg-5 mb-4">
+                    <div class="p-3 border border-warning bg-white profit__shadow"><small><em>План продаж не равняется выручке, помним об этом! План продаж - это детализация выручки и декомпозиция очерёдности действий для её достижения.</em></small></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 col-xl-8">
+                    <div class="system-consist__img-container"><img src="picture/upload/crm-wehelp-4.png" alt=""></div>
+                  </div>
+                </div>
+              </div>
+              <div class="profit__calc-container-item" id="dealers-control-2">
+                <div class="row">
+                  <div class="col-xl-8 col-lg-7 mb-4">
+                    <h3 class="text-uppercase mb-4">Лев продаж - приложение в WhatsApp для помощи и мотивации продавцов</h3>
+                    <p class="mb-4">Лев продаж - умный ежедневник для продавца.</p>
+                    <ul class="pl-3 mb-4">
+                      <li class="mb-3">Помощник в продажах</li>
+                      <li class="mb-3">Мотиватор продавца</li>
+                      <li class="mb-3">Напоминание о необходимых действиях</li>
+                      <li class="mb-3">Подсказывает, кому лучше уделить внимание, чтобы выполнить план продаж</li>
+                    </ul><a href="http://saleslion.ru" target="_blank">http://saleslion.ru</a>
+                  </div>
+                  <div class="col-xl-4 col-lg-5 mb-4">
+                    <div class="p-3 border border-warning bg-white profit__shadow mb-4">
+                      <div class="mb-3"><small><em>Быстрый ввод данных, напоминания, подсказки, графики - в одном месте, удобно, наглядно.</em></small></div><small><em>На основе интеллектуального движка и системы оценки встреч лев подсказывает что, когда и в каком объёме нужно сделать.</em></small>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 col-xl-8">
+                    <div class="system-consist__img-container"><img src="picture/upload/crm-wehelp-5.png" alt=""></div>
+                  </div>
+                </div>
+              </div>
+              <div class="profit__calc-container-item" id="dealers-control-3">
+                <div class="row">
+                  <div class="col-xl-8 col-lg-7 mb-4">
+                    <h3 class="text-uppercase mb-4">Веб-сервис для мониторинга комментариев</h3>
+                    <ul class="pl-3 mb-4">
+                      <li class="mb-3">Отфильтрует и покажет вам только те комментарии, которые принесут продажи.</li>
+                      <li class="mb-3">Ведите базу потенциальных покупателей, следите за комментариями и сохраняйте историю общения.</li>
+                      <li class="mb-3">Сервис собирает комментарии о заказах со всех аккаунтов в одну ленту. Там же вы можете отвечать клиентам.</li>
+                    </ul><a href="https://www.socsale.ru" target="_blank">https://www.socsale.ru</a>
+                  </div>
+                  <div class="col-xl-4 col-lg-5 mb-4">
+                    <div class="p-3 border border-warning bg-white profit__shadow mb-4"><small><em>Чем быстрее вы увидите комментарий о заказе и ответите, тем больше вероятность продать. Чтобы найти комментарии от потенциальных покупателей, понадобится не более 30 минут в день.</em></small></div>
+                    <div class="d-flex align-items-center mt-4"><img class="mr-3" src="picture/upload/crm-funnel.svg" alt="">
+                      <p class="mb-0">Интеграция <br> c CRM</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 col-xl-8">
+                    <div class="system-consist__img-container"><img src="picture/upload/crm-wehelp-6.png" alt=""></div>
+                  </div>
+                </div>
+              </div>
+              <div class="profit__calc-container-item border-bottom-0 pb-0" id="dealers-control-4">
+                <div class="row">
+                  <div class="col-xl-8 col-lg-7 mb-4">
+                    <h3 class="text-uppercase mb-4">Сервис отправки электронных коммерческих предложений</h3>
+                    <p class="mb-4">Поможет увеличить количество сделок и сэкономит время.</p>
+                    <ul class="pl-3 mb-4">
+                      <li class="mb-3">Продавец тратит на 30% меньше времени на отправку КП и холодные звонки.</li>
+                      <li class="mb-3">Сделки проходят на 40% быстрее</li>
+                      <li class="mb-3">Вы всегда знаете, в какой момент лучше отправить КП и перезвонить клиенту.</li>
+                      <li class="mb-3">Количество открытых КП увеличивается на 20%</li>
+                    </ul><a href="https://www.socsale.ru" target="_blank">https://www.socsale.ru</a>
+                  </div>
+                  <div class="col-xl-4 col-lg-5 mb-4">
+                    <div class="p-3 border border-warning bg-white profit__shadow mb-4"><small><em>Ваше КП — это полноценная посадочная страница, к которой подключается Google Analytics и Яндекс. Метрика. И вы будете знать что конкретно изучает на вашей странице клиент и как сделать КП более конверсионным.</em></small></div>
+                    <div class="d-flex align-items-center mt-4"><img class="mr-3" src="picture/upload/crm-funnel.svg" alt="">
+                      <p class="mb-0">Интеграция <br> c CRM</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 col-xl-8">
+                    <div class="system-consist__img-container"><img src="picture/upload/crm-wehelp-7.png" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="by-marketing">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="h3 mb-4">Какие результаты дает внедрение CRM-систем</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-3 mb-4 by-marketing__border-1">
+            <div class="by-marketing__num">на 36 %</div>
+            <p class="mb-0">рост продаж на том же потоке входящих обращений</p>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4 by-marketing__border-2">
+            <div class="by-marketing__num">до 15 %</div>
+            <p class="mb-0">рост повторных продаж на той же базе</p>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4 by-marketing__border-1">
+            <div class="by-marketing__num">в 1,5 раз</div>
+            <p class="mb-0">сокращение сроков обработки текущих заявок</p>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="by-marketing__num">до 30 %</div>
+            <p class="mb-0">вырастают повторные продажи с рассылок</p>
+          </div>
+        </div>
+        <div class="row mt-4 align-items-center">
+          <div class="col-lg-4 col-md-6 mb-3">
+            <button class="btn btn-warning data-scroll mt-4 mb-4" data-scroll="form-content">Хочу настройку CRM</button>
+          </div>
+          <div class="col-lg-8 col-md-6 mb-3">
+            <div class="d-flex justify-content-end"><a class="by-marketing__link" href="https://www.completo.ru/cases/?_ga=2.147232759.1998974493.1582659695-433447864.1582659695" target="_blank"><span>Смотреть другие наши кейсы</span>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;">
+                  <path d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111 C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587 c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                </svg></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="py-5 border-top border-secondary border-bottom bg-lightyellow">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-lg-8 col-xl-6">
+            <div class="h2 mb-3">Слишком сложно разобраться во всех тонкостях?</div>
+            <p class="mb-5">Наши статьи прольют свет на то как это делается и каких результатов можно достичь, а также в них мы разберем несколько “граблей” при самостоятельной настройке CRM.</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-4"><a class="d-block" href="https://blog.completo.ru/kak-podnyat-prodazhi-kompanii-s-setyu-dilerov-s-pomoschyu-telefonii/" target="_blank"><img class="w-100 mb-2 blog-img-big" src="picture/upload/crm-blog-bg-1.png" alt="">
+                  <u>Как поднять продажи компании с сетью дилеров с помощью телефонии</u></a>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4"><a class="d-block" href="https://blog.completo.ru/kak-povysit-prodazhi-v-dilerskih-setjah/" target="_blank"><img class="w-100 mb-2 blog-img-big" src="picture/upload/crm-blog-bg-2.png" alt="">
+                  <u>Как повысить продажи в дилерских сетях.</u></a>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4"><a class="d-block" href="https://blog.completo.ru/prodazhi-v-krizis/" target="_blank"><img class="w-100 mb-2 blog-img-big" src="picture/upload/crm-blog-bg-3.png" alt="">
+                  <u>Как повысить эффективность удаленного отдела продаж в условиях кризиса</u></a>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4"><a class="d-block" href="https://blog.completo.ru/socsale-crm-sistema-prodazh-cherez-sotsialnye-seti/" target="_blank"><img class="w-100 mb-2 blog-img-big" src="picture/upload/crm-blog-bg-4.png" alt="">
+                  <u>Socsale. CRM-система продаж в социальных сетях</u></a>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4"><a class="d-block" href="https://blog.completo.ru/kak-veb-analitika-vliyaet-na-povyishenie-prodazh-4-keysa-ot-kompleto/" target="_blank"><img class="w-100 mb-2 blog-img-big" src="picture/upload/crm-blog-bg-5.png" alt="">
+                  <u>Как веб-аналитика влияет на продажи</u></a>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4"><a class="d-block" href="https://blog.completo.ru/kak-avtomatizirovat-prodazhi/" target="_blank"><img class="w-100 mb-2 blog-img-big" src="picture/upload/crm-blog-bg-6.png" alt="">
+                  <u>9 цифровых “помощников” отдела продаж</u></a>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4"><a class="d-block" href="https://blog.completo.ru/kommercheskoje-predlozhenije-oshibki/" target="_blank"><img class="w-100 mb-2 blog-img-big" src="picture/upload/crm-blog-bg-7.png" alt="">
+                  <u>Клиент “слился” после коммерческого предложения: 6 причин, и как этого избежать</u></a>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4"><a class="d-block" href="https://blog.completo.ru/pochemu-fishechki-ne-prinosyat-prodazhi/" target="_blank"><img class="w-100 mb-2 blog-img-big" src="picture/upload/crm-blog-bg-8.png" alt="">
+                  <u>Как повысить эффективность удаленного отдела продаж в условиях кризиса</u></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-warning py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-sm-5">
+            <div class="h4 text-white mb-2">Результаты внедрения CRM<br><span class="text-dark">для федерального производителя с сетью дилеров</span></div>
+            <div class="d-flex slick-example-margin pt-4 mb-4 pb-3"><img class="mr-2 slick-example-margin-img" src="picture/upload/el_black_graph.svg" alt="">
+              <div class="d-block">
+                <div class="h6 mb-0">Увеличение продаж после внедрения CRM</div>
+                <p class="mb-0 slick-example-text">на<span class="h1 slick-example-text-title">26%</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-9 col-sm-7"><img class="w-100" src="picture/upload/crm-implement-1.png" alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="information bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6">
+            <div class="h2 mb-5">Собираете информацию для руководства?</div>
+          </div>
+          <div class="col-md-12">
+            <div class="row justify-content-center">
+              <div class="col-lg-4 col-md-6 mb-3">
+                <div class="information__card">
+                  <p class="h4 font-weight-normal">Пришлем коммерческое предложение</p>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 mb-3">
+                <div class="information__card">
+                  <p class="h4 font-weight-normal">Проведем<br>презентацию</p><img src="picture/upload/dotted_circle.png" alt="">
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-8 mb-3">
+                <div class="information__card">
+                  <p class="h4 font-weight-normal">Поможем защитить бюджеты</p>
+                  <div class="message-box">
+                    <div class="message-box__from message-box__dialog">Сколько будет за разработку?</div>
+                    <div class="message-box__to message-box__dialog">Итого выйдет <span class="malevich"> </span><span>рублей</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row pb-5">
+              <div class="col-md-12 mt-4 d-flex justify-content-center">
+                <button class="btn btn-warning data-scroll" data-scroll="form-content">Заказать демонстрацию</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about__wrapper-razrabotka">
+      <section class="about__wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-10">
+              <div class="h2 mb-4 about_h2">О <span class="yellow-border">Комплето<span class="border-container animation visible animated" data-animate="newline"></span></span></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <p class="mb-4">Маркетинговая группа «Комплето» строит комплексный интернет-маркетинг для успешных компаний. У нас лучшая в России экспертиза для:</p>
+              <ul class="pl-0">
+                <li>B2B-компаний</li>
+                <li>Производителей с сетями дилеров</li>
+                <li>Поставщиков сложных товаров и услуг</li>
+              </ul>
+              <button class="btn btn-warning data-scroll mb-4" data-scroll="form-content">Поговорить с нами</button>
+            </div>
+            <div class="col-lg-8 col-md-6">
+              <div class="about__clients about__clients-rounded animate" data-animate="big_shadow__black">
+                <h3 class="h5 about__clients__title">С кем мы работаем:</h3>
+                <div class="row">
+                  <div class="col-4 col-lg-3"><img src="picture/upload/image_26.png" alt></div>
+                  <div class="col-4 col-lg-3"><img src="picture/upload/image_27.png" alt></div>
+                  <div class="col-4 col-lg-3"><img src="picture/upload/image_28.png" alt></div>
+                  <div class="col-4 col-lg-3"><img src="picture/upload/image_29.png" alt></div>
+                  <div class="col-4 col-lg-3"><img src="picture/upload/image_30.png" alt></div>
+                  <div class="col-4 col-lg-3"><img src="picture/upload/image_31.png" alt></div>
+                  <div class="col-4 col-lg-3"><img src="picture/upload/image_32.png" alt></div>
+                  <div class="col-4 col-lg-3"><img src="picture/upload/image_33.png" alt></div>
+                  <div class="col-4 col-lg-3"><img src="picture/upload/image_34.png" alt></div>
+                  <div class="col-4 col-lg-3"><img src="picture/upload/image_35.png" alt></div>
+                  <div class="col-4 col-lg-3"><img src="picture/upload/image_36.png" alt></div>
+                  <div class="col-4 col-lg-3">
+                    <h4 class="text-dark">И ещё</h4>
+                    <h2 class="text-secondary">85</h2>
+                    <h4 class="text-dark">клиентов</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row about__row-number">
+            <div class="col-md-12">
+              <h3 class="mb-3">Комплето в цифрах:</h3>
+            </div>
+            <div class="col-md-3 col-6 m-b-l mb-3">
+              <div class="about__num about__num-1 g-glitch" data-glitch="5">5</div>
+              <p class="about__p-1 mt-2">выделенных команд под проект</p>
+            </div>
+            <div class="col-md-3 col-6 m-b-l mb-3">
+              <div class="about__num about__num-2 g-glitch" data-glitch="6">6</div>
+              <p class="about__p-2 mt-2">лет — средний срок сотрудничества с клиентами</p>
+            </div>
+            <div class="col-md-3 col-6 m-b-l mb-3">
+              <div class="about__num about__num-3 g-glitch" data-glitch="426">426</div>
+              <p class="about__p-3 mt-2">реализованных стратегий электронного маркетинга</p>
+            </div>
+            <div class="col-md-3 col-6 m-b-l mb-3">
+              <div class="about__num about__num-4 g-glitch" data-glitch="586">586</div>
+              <p class="about__p-4 mt-2">студентов выпустили в своем центре «Маркетинговое образование»</p>
+            </div>
+            <div class="col-md-3 col-6 m-b-l">
+              <div class="about__num"><span class="about__absolute">на </span><span class="g-glitch" data-glitch="146%">146%</span></div>
+              <p class="mt-2">погружаемся в ваш бизнес</p>
+            </div>
+            <div class="col-md-3 col-6 m-b-l">
+              <div class="about__num about__num-5 g-glitch" data-glitch="226+">226+</div>
+              <p class="about__p-5 mt-2">кейсов опубликовали</p>
+            </div>
+            <div class="col-md-3 col-6 m-b-l">
+              <div class="about__num about__num-6 g-glitch" data-glitch="20+">20+</div>
+              <p class="about__p-6 mt-2">лет опыта в маркетинге</p>
+            </div>
+            <div class="col-md-3 col-6 m-b-l">
+              <div class="about__num about__num-7 g-glitch" data-glitch="100+">100+</div>
+              <p class="about__p-7 mt-2">специалистов в компании</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="form-container">
+      <div class="container" id="new-form-main">
+        <div class="row pt-5 pb-5" id="form-content">
+          <div class="col-md-12">
+            <div class="h2 mb-4 form-h2">Сделайте сайт инструментом бизнеса<br>вместе с <span class="yellow-border">Комплето<span class="border-container animation visible animated" data-animate="newline"></span></span></div>
+          </div>
+          <div class="col-md-12">
+            <form class="form validate p-4" id="new-form" method="post" novalidate="novalidate" data-form="127" data-formtype="180">
+              <div class="row">
+                <div class="col-lg-4 mb-4">
+                  <div class="form-group">
+                    <label for="text-01">Как вас зовут</label>
+                    <input id="text-01" type="text" placeholder="Введите ваше имя" required name="name">
+                  </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                  <div class="form-group">
+                    <label for="text-02">Контактный телефон</label>
+                    <input class="phone" id="text-02" type="text" placeholder="Телефон" required name="phone">
+                  </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                  <div class="form-group">
+                    <label for="text-03">Электронная почта</label>
+                    <input id="text-03" type="email" placeholder="Введите ваш E-mail" name="email" required>
+                  </div>
+                </div>
+                <div class="col-lg-8 mb-4">
+                  <div class="form-group">
+                    <label for="text-04">Введите название или сайт компании</label>
+                    <input id="text-04" type="text" placeholder="Введите название или сайт компании" name="name-company" required>
+                  </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                  <div class="form-group">
+                    <label for="text-05">Бюджет на маркетинг (в месяц)</label>
+                    <input id="text-05" type="text" placeholder="Введите ваш бюджет в рублях" name="money" required>
+                  </div>
+                </div>
+                <div class="col-lg-12 mb-4">
+                  <div class="form-group">
+                    <label for="text-06">Подробнее о задачах</label>
+                    <textarea id="text-06" placeholder="Опишите ваши задачи и вопросы, кто принимает решение..." name="message" required></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-8 mb-md-4 order-md-1 order-2">
+                  <div class="form__alarm form__alarm-razrabotka"><i class="icon icon-warning"></i>
+                    <p class="mb-2">Мы оставляем за собой право не ответить на заявку, если она недостаточно подробно заполнена</p>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4 order-md-2 order-1">
+                  <label class="file-input"> 
+                    <input class="file-input-file" type="file"><span class="file-input-item"><img class="file-input-item-img" src="picture/upload/Line_326.svg" alt=""><span class="ml-3 file-input-item-text">Прикрепить файл</span></span>
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="row">
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                      <button class="btn btn-warning form_btn w-100">Поехали</button>
+                    </div>
+                    <div class="col-md-6 col-lg-8 d-flex align-items-center">
+                      <p class="mb-4">Нажимая кнопку, <a href="https://completo.ru/privacy_policy.rtf">
+                          <u>вы соглашаетесь с правилами обработки персональных данных</u></a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <div class="modal-title">
+                    <h2 class="text-center mb-4">Спасибо!</h2>
+                  </div>
+                  <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span class="modal__close-btn" aria-hidden="true"></span></button>
+                </div>
+                <div class="modal-body text-center">
+                  <p class="mb-4 text-center">Мы свяжемся с вами в течение рабочего дня.<br>Если у вас срочная задача, позвоните нам: +7(495) 640-89-97</p><img class="mb-4 modal__completo-logo" src="picture/upload/Completo_logoNEW.jpg" alt="">
+                  <p class="text-center">Если вам нужно эффективное продвижение существующего сайта,<br>посмотрите наши <a href="https://www.completo.ru/seo/">
+                      <u>услуги SEO </u></a>и <a href="https://www.completo.ru/salesfarm/">
+                      <u>подогрева клиентов </u></a>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer pb-4 pt-5">
+      <div class="container">
+        <div class="row d-none d-sm-flex">
+          <div class="col-lg-4 col-sm-6" id="footer-parent-1">
+            <p class="footer__title active-title font-weight-bold text-warning" data-click="show-ul">Услуги</p>
+                <div class="py-2"><a class="text-white dropdown-footer-block" href="#collapse-footer-1" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-footer-1">
+                    <u>Комплексные проекты</u></a></div>
+                <div class="collapse" id="collapse-footer-1" data-parent="#footer-parent-1">
+                  <ul class="footer__active-ul list-unstyled footer__ul ml-0 mb-3 pl-2 pt-2">
+                    <li class="mb-2 pb-1"><a class="text-white" href="#">Digital стратегия</a></li>
+                    <li class="mb-2 pb-1"><a class="text-white" href="#">Digital консалтинг</a></li>
+                    <li class="mb-2 pb-1"><a class="text-white" href="#">Компаниям с продуктами B2B</a></li>
+                    <li class="mb-2 pb-1"><a class="text-white" href="#">Компаниям с дилерскими сетями</a></li>
+                    <li class="mb-2 pb-1"><a class="text-white" href="#">Быстрый запуск - посадочная + реклама</a></li>
+                  </ul>
+                </div>
+                <div class="py-2"><a class="text-white dropdown-footer-block" href="#collapse-footer-2" data-toggle="collapse" aria-expanded="true" aria-controls="collapse-footer-2">
+                    <u>Маркетинг</u></a></div>
+                <div class="collapse show" id="collapse-footer-2" data-parent="#footer-parent-1">
+                  <ul class="footer__active-ul list-unstyled footer__ul ml-0 mb-3 pl-2 pt-2">
+                    <li class="mb-2 pb-1"><a class="text-white" href="#">Performance - контекст и таргетинг</a></li>
+                    <li class="mb-2 pb-1"><a class="text-white" href="#">SEO оптимизация</a></li>
+                    <li class="mb-2 pb-1"><a class="text-white" href="#">Продвижение в linkedIN</a></li>
+                    <li class="mb-2 pb-1"><a class="text-white" href="#">Email маркетинг</a></li>
+                    <li class="mb-2 pb-1"><a class="text-white" href="#">CRM маркетинг</a></li>
+                    <li class="mb-2 pb-1"><a class="text-white" href="#">SMM</a></li>
+                    <li class="mb-2 pb-1"><a class="text-white" href="#">Сквозная аналитика</a></li>
+                    <li class="mb-2 pb-1"><a class="text-white" href="#">Проведение мероприятий онлайн</a></li>
+                    <li class="mb-2 pb-1"><a class="text-white" href="#">Система подогрева клиентов</a></li>
+                    <li class="mb-2 pb-1"><a class="text-white" href="#">SERM (Работа с отзывами)</a></li>
+                    <li class="mb-2 pb-1"><a class="text-white footer__active-ul-disabled" href="#">Account Based Marketing</a></li>
+                  </ul>
+                </div>
+                <div class="py-2"><a class="text-white dropdown-footer-block" href="#collapse-footer-3" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-footer-3">
+                    <u>Разработка</u></a></div>
+                <div class="collapse" id="collapse-footer-3" data-parent="#footer-parent-1">
+                  <ul class="footer__active-ul list-unstyled footer__ul ml-0 mb-3 pl-2 pt-2">
+                    <li class="mb-2 pb-1"><a class="text-white" href="#">Разработка сайтов</a></li>
+                    <li class="mb-2 pb-1"><a class="text-white" href="#">Система дилерских сайтов / сайты клоны</a></li>
+                    <li class="mb-2 pb-1"><a class="text-white" href="#">B2B порталы</a></li>
+                    <li class="mb-2 pb-1"><a class="text-white" href="#">Техническая поддержка</a></li>
+                    <li class="mb-2 pb-1"><a class="text-white" href="#">Разработка мобильных приложений</a></li>
+                    <li class="mb-2 pb-1"><a class="text-white" href="#">Разработка онлайн сервисов</a></li>
+                  </ul>
+                </div>
+                <div class="py-2"><a class="text-white dropdown-footer-block" href="#collapse-footer-4" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-footer-4">
+                    <u>Дизайн</u></a></div>
+                <div class="collapse" id="collapse-footer-4" data-parent="#footer-parent-1">
+                  <ul class="footer__active-ul list-unstyled footer__ul ml-0 mb-3 pl-2 pt-2">
+                    <li class="mb-2 pb-1"><a class="text-white" href="#">Брендинг</a></li>
+                    <li class="mb-2 pb-1"><a class="text-white" href="#">Разработка продукта</a></li>
+                  </ul>
+                </div>
+                <div class="py-2"><a class="text-white dropdown-footer-block" href="#collapse-footer-5" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-footer-5">
+                    <u>Продажи</u></a></div>
+                <div class="collapse" id="collapse-footer-5" data-parent="#footer-parent-1">
+                  <ul class="footer__active-ul list-unstyled footer__ul ml-0 mb-3 pl-2 pt-2">
+                    <li class="mb-2 pb-1"><a class="text-white" href="#">Интеграция CRM</a></li>
+                    <li class="mb-2 pb-1"><a class="text-white" href="#">Система контроля дилерской сети</a></li>
+                    <li class="mb-2 pb-1"><a class="text-white" href="#">Построение отделов продаж</a></li>
+                  </ul>
+                </div>
+            <div class="mb-5">
+                  <div class="py-2"><a class="text-white dropdown-footer-block" href="#collapse-footer-6" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-footer-6">
+                      <u>Исследования</u></a></div>
+                  <div class="collapse" id="collapse-footer-6" data-parent="#footer-parent-1">
+                    <ul class="footer__active-ul list-unstyled footer__ul ml-0 mb-3 pl-2 pt-2">
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Исследование конкурентов</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Customer Journey Map</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Заказные исследования</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Исследование спроса</a></li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="d-lg-none">
+              <p class="footer__title" data-click="show-ul"><a class="font-weight-bold" href="https://www.completo.ru/about/">О компании</a></p>
+              <ul class="list-unstyled footer__ul ml-0 mb-4">
+                <li class="footer__main-link"><a href="https://www.completo.ru/about/" target="_blank">О компании</a></li>
+                <li class="footer__main-link"><a href="http://school.completo.ru/" target="_blank">Школа стажеров</a></li>
+                <li class="footer__main-link"><a href="https://club.completo.ru" target="_blank">Комплето Клуб</a></li>
+                <li class="footer__main-link"><a href="https://www.completo.ru/vacancy/" target="_blank">Вакансии</a></li>
+                <li class="footer__main-link"><a href="https://www.completo.ru/checklist-for-agencies/" target="_blank">Тест агентств</a></li>
+                <li class="footer__main-link"><a href="https://www.completo.ru/privacy_policy.rtf" target="_blank">Политика конфиденциальности</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6" id="footer-parent-3">
+            <p class="footer__title font-weight-bold text-warning" data-click="show-ul">Наши кейсы</p>
+            <div class="mb-5">
+                  <div class="py-2"><a class="text-white dropdown-footer-block" href="#collapse-footer-10" data-toggle="collapse" aria-expanded="true" aria-controls="collapse-footer-10">
+                      <u>Кейсы по отраслям</u></a></div>
+                  <div class="collapse show" id="collapse-footer-10" data-parent="#footer-parent-3">
+                    <ul class="footer__active-ul list-unstyled footer__ul ml-0 mb-3 pl-2 pt-2">
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">B2C маркетинг</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">B2B маркетинг</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Банки</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Промышленность и энергетика</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Ритейл и B2C товары</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">IT</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Медицина и здоровье</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Производство и дистрибьютеры</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Услуги и консалтинг</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Интернет проекты и стартапы</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Авторынок и логистика</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Недвижимость и строительство</a></li>
+                    </ul>
+                  </div>
+                  <div class="py-2"><a class="text-white dropdown-footer-block" href="#collapse-footer-11" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-footer-11">
+                      <u>Кейсы по услугам</u></a></div>
+                  <div class="collapse" id="collapse-footer-11" data-parent="#footer-parent-3">
+                    <ul class="footer__active-ul list-unstyled footer__ul ml-0 mb-3 pl-2 pt-2">
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Кейсы по контекстной рекламе</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Кейсы по SEO</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Кейсы по таргетированной рекламе</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Кейсы по email маркетингу</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Кейсы по разработке сайтов</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Разработка личных кабинетов</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Техническая поддержка</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Кейсы по SMM</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Прогрев клиентов (SalesFarm)</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Кейсы по CRM маркетингу</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Кейсы по сквозной аналитике</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Стратегия интернет-маркетинга</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Исследования конкурентов</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">SERM (работа с отзывами)</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Разработка мобильных приложений</a></li>
+                    </ul>
+                  </div>
+              <ul class="footer__active-ul list-unstyled footer__ul ml-0 mb-3 pt-2">
+                <li class="mb-2 pb-1"><a class="text-white" href="#">
+                    <u>Кейсы по компаниям</u></a></li>
+              </ul>
+            </div>
+            <ul class="list-unstyled d-lg-none ml-0 mb-5">
+              <li class="footer__link-content mb-4"><a class="font-weight-bold" href="https://blog.completo.ru/">
+                  <u>Блог</u></a></li>
+              <li class="footer__link-content mb-4"><a class="font-weight-bold" href="https://www.completo.ru/contacts/">
+                  <u>Контакты</u></a></li>
+              <li class="footer__link-content mb-4"><a class="font-weight-bold" href="https://wa.me/79587091189">
+                  <u>Написать в WhatsApp</u></a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-sm-6 d-none d-lg-block">
+            <p class="footer__title" data-click="show-ul"><a class="font-weight-bold" href="https://www.completo.ru/about/">О компании</a></p>
+            <ul class="list-unstyled footer__ul ml-0">
+              <li class="footer__main-link"><a href="https://www.completo.ru/about/" target="_blank">О компании</a></li>
+              <li class="footer__main-link"><a href="http://school.completo.ru/" target="_blank">Школа стажеров</a></li>
+              <li class="footer__main-link"><a href="https://club.completo.ru" target="_blank">Комплето Клуб</a></li>
+              <li class="footer__main-link"><a href="https://www.completo.ru/vacancy/" target="_blank">Вакансии</a></li>
+              <li class="footer__main-link"><a href="https://www.completo.ru/checklist-for-agencies/" target="_blank">Тест агентств</a></li>
+              <li class="footer__main-link"><a href="https://www.completo.ru/privacy_policy.rtf" target="_blank">Политика конфиденциальности</a></li>
+            </ul>
+            <ul class="list-unstyled hide-md ml-0 mt-5">
+              <li class="footer__link-content mb-4"><a class="font-weight-bold" href="https://blog.completo.ru/">
+                  <u>Блог</u></a></li>
+              <li class="footer__link-content mb-4"><a class="font-weight-bold" href="https://www.completo.ru/contacts/">
+                  <u>Контакты</u></a></li>
+              <li class="footer__link-content mb-4"><a class="font-weight-bold" href="tel:+74956408997">
+                  <u>+7(495) 640-89-97</u></a></li>
+              <li class="footer__link-content mb-4"><a class="font-weight-bold" href="https://wa.me/79587091189">
+                  <u>Написать в WhatsApp</u></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row d-sm-none" id="footer-mobile-block">
+          <div class="col-12" id="footer-parent-mob-1"><a class="footer__title-xs font-weight-bold text-warning d-block mb-3" href="#footer-parent-container-mob-1" data-toggle="collapse" aria-expanded="false" aria-controls="footer-parent-container-mob-1"><span>Услуги</span><i class="arrow-down"><span></span><span></span></i></a>
+            <div class="collapse text-center" id="footer-parent-container-mob-1" data-parent="#footer-mobile-block">
+                  <div class="py-2"><a class="text-white dropdown-footer-block" href="#collapse-footer-mob-1" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-footer-mob-1">
+                      <u>Комплексные проекты</u></a></div>
+                  <div class="collapse" id="collapse-footer-mob-1" data-parent="#footer-parent-mob-1">
+                    <ul class="footer__active-ul list-unstyled footer__ul ml-0 mb-3 pl-2 pt-2">
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Digital стратегия</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Digital консалтинг</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Компаниям с продуктами B2B</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Компаниям с дилерскими сетями</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Быстрый запуск - посадочная + реклама</a></li>
+                    </ul>
+                  </div>
+                  <div class="py-2"><a class="text-white dropdown-footer-block" href="#collapse-footer-mob-2" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-footer-mob-2">
+                      <u>Маркетинг</u></a></div>
+                  <div class="collapse" id="collapse-footer-mob-2" data-parent="#footer-parent-mob-1">
+                    <ul class="footer__active-ul list-unstyled footer__ul ml-0 mb-3 pl-2 pt-2">
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Performance - контекст и таргетинг</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">SEO оптимизация</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Продвижение в linkedIN</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Email маркетинг</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">CRM маркетинг</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">SMM</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Сквозная аналитика</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Проведение мероприятий онлайн</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Система подогрева клиентов</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">SERM (Работа с отзывами)</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white footer__active-ul-disabled" href="#">Account Based Marketing</a></li>
+                    </ul>
+                  </div>
+                  <div class="py-2"><a class="text-white dropdown-footer-block" href="#collapse-footer-mob-3" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-footer-mob-3">
+                      <u>Разработка</u></a></div>
+                  <div class="collapse" id="collapse-footer-mob-3" data-parent="#footer-parent-mob-1">
+                    <ul class="footer__active-ul list-unstyled footer__ul ml-0 mb-3 pl-2 pt-2">
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Разработка сайтов</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Система дилерских сайтов / сайты клоны</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">B2B порталы</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Техническая поддержка</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Разработка мобильных приложений</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Разработка онлайн сервисов</a></li>
+                    </ul>
+                  </div>
+                  <div class="py-2"><a class="text-white dropdown-footer-block" href="#collapse-footer-mob-4" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-footer-mob-4">
+                      <u>Дизайн</u></a></div>
+                  <div class="collapse" id="collapse-footer-mob-4" data-parent="#footer-parent-mob-1">
+                    <ul class="footer__active-ul list-unstyled footer__ul ml-0 mb-3 pl-2 pt-2">
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Брендинг</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Разработка продукта</a></li>
+                    </ul>
+                  </div>
+                  <div class="py-2"><a class="text-white dropdown-footer-block" href="#collapse-footer-mob-5" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-footer-mob-5">
+                      <u>Продажи</u></a></div>
+                  <div class="collapse" id="collapse-footer-mob-5" data-parent="#footer-parent-mob-1">
+                    <ul class="footer__active-ul list-unstyled footer__ul ml-0 mb-3 pl-2 pt-2">
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Интеграция CRM</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Система контроля дилерской сети</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Построение отделов продаж</a></li>
+                    </ul>
+                  </div>
+              <div class="mb-4">
+                    <div class="py-2"><a class="text-white dropdown-footer-block" href="#collapse-footer-mob-6" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-footer-mob-6">
+                        <u>Исследования</u></a></div>
+                    <div class="collapse" id="collapse-footer-mob-6" data-parent="#footer-parent-mob-1">
+                      <ul class="footer__active-ul list-unstyled footer__ul ml-0 mb-3 pl-2 pt-2">
+                        <li class="mb-2 pb-1"><a class="text-white" href="#">Исследование конкурентов</a></li>
+                        <li class="mb-2 pb-1"><a class="text-white" href="#">Customer Journey Map</a></li>
+                        <li class="mb-2 pb-1"><a class="text-white" href="#">Заказные исследования</a></li>
+                        <li class="mb-2 pb-1"><a class="text-white" href="#">Исследование спроса</a></li>
+                      </ul>
+                    </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12" id="footer-parent-mob-2"><a class="footer__title-xs font-weight-bold text-warning d-block mb-3" href="#footer-parent-container-mob-2" data-toggle="collapse" aria-expanded="false" aria-controls="footer-parent-container-mob-2"><span>Наши кейсы</span><i class="arrow-down"><span></span><span></span></i></a>
+            <div class="collapse text-center" id="footer-parent-container-mob-2" data-parent="#footer-mobile-block">
+                  <div class="py-2"><a class="text-white dropdown-footer-block" href="#collapse-footer-mob-10" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-footer-mob-10">
+                      <u>Кейсы по отраслям</u></a></div>
+                  <div class="collapse" id="collapse-footer-mob-10" data-parent="#footer-parent-mob-2">
+                    <ul class="footer__active-ul list-unstyled footer__ul ml-0 mb-3 pl-2 pt-2">
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">B2C маркетинг</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">B2B маркетинг</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Банки</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Промышленность и энергетика</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Ритейл и B2C товары</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">IT</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Медицина и здоровье</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Производство и дистрибьютеры</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Услуги и консалтинг</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Интернет проекты и стартапы</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Авторынок и логистика</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Недвижимость и строительство</a></li>
+                    </ul>
+                  </div>
+                  <div class="py-2"><a class="text-white dropdown-footer-block" href="#collapse-footer-mob-11" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-footer-mob-11">
+                      <u>Кейсы по услугам</u></a></div>
+                  <div class="collapse" id="collapse-footer-mob-11" data-parent="#footer-parent-mob-2">
+                    <ul class="footer__active-ul list-unstyled footer__ul ml-0 mb-3 pl-2 pt-2">
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Кейсы по контекстной рекламе</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Кейсы по SEO</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Кейсы по таргетированной рекламе</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Кейсы по email маркетингу</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Кейсы по разработке сайтов</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Разработка личных кабинетов</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Техническая поддержка</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Кейсы по SMM</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Прогрев клиентов (SalesFarm)</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Кейсы по CRM маркетингу</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Кейсы по сквозной аналитике</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Стратегия интернет-маркетинга</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Исследования конкурентов</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">SERM (работа с отзывами)</a></li>
+                      <li class="mb-2 pb-1"><a class="text-white" href="#">Разработка мобильных приложений</a></li>
+                    </ul>
+                  </div>
+              <ul class="footer__active-ul list-unstyled footer__ul ml-0 mb-3 pt-2">
+                <li class="mb-2 pb-1"><a class="text-white" href="#">
+                    <u>Кейсы по компаниям</u></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12" id="footer-parent-mob-3"><a class="footer__title-xs font-weight-bold text-warning d-block mb-3" href="#footer-parent-container-mob-3" data-toggle="collapse" aria-expanded="false" aria-controls="footer-parent-container-mob-3"><span>О компании</span><i class="arrow-down"><span></span><span></span></i></a>
+            <div class="collapse text-center" id="footer-parent-container-mob-3" data-parent="#footer-mobile-block">
+              <ul class="footer__active-ul list-unstyled footer__ul ml-0 mb-3">
+                <li class="footer__main-link"><a href="https://www.completo.ru/about/" target="_blank">О компании</a></li>
+                <li class="footer__main-link"><a href="http://school.completo.ru/" target="_blank">Школа стажеров</a></li>
+                <li class="footer__main-link"><a href="https://club.completo.ru" target="_blank">Комплето Клуб</a></li>
+                <li class="footer__main-link"><a href="https://www.completo.ru/vacancy/" target="_blank">Вакансии</a></li>
+                <li class="footer__main-link"><a href="https://www.completo.ru/checklist-for-agencies/" target="_blank">Тест агентств</a></li>
+                <li class="footer__main-link"><a href="https://www.completo.ru/privacy_policy.rtf" target="_blank">Политика конфиденциальности</a></li>
+              </ul>
+            </div>
+            <ul class="list-unstyled d-lg-none ml-0">
+              <li class="footer__link-content mb-3"><a class="font-weight-bold" href="https://blog.completo.ru/">
+                  <u>Блог</u></a></li>
+              <li class="footer__link-content mb-3"><a class="font-weight-bold" href="https://www.completo.ru/contacts/">
+                  <u>Контакты</u></a></li>
+              <li class="footer__link-content mb-3"><a class="font-weight-bold" href="https://wa.me/79587091189">
+                  <u>Написать в WhatsApp</u></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row footer__last-row">
+          <div class="col-lg-4 col-sm-6 xs-order-2">
+            <p class="text-white mb-3">&#169;<span class="footer-date">2020</span>, Маркетинговая группа «Комплето»</p><a class="navbar-brand" href="https://www.completo.ru"><img src="https://www.completo.ru/picture/upload/Completo_logoNEW_white_08-10-2018.png" alt=""></a>
+          </div>
+          <div class="col-lg-4 col-sm-6 xs-order-1">
+            <p class="text-white mb-3">Изучайте все наши материалы бесплатно и присоединяйтесь к нам!</p>
+            <ul class="footer__social-link d-flex pl-0 list-unstyled">
+              <li class="mr-3"><a href="https://www.facebook.com/completo.ru/" target="_blank"><span class="rounded-circle circle d-flex align-items-center justify-content-center"><img class="footer_social-img" src="picture/upload/facebook-svgrepo-com.svg" alt=""></span></a>
+              </li>
+              <li class="mr-3"><a href="https://vk.com/completoru" target="_blank"><span class="rounded-circle circle d-flex align-items-center justify-content-center"><img class="footer_social-img" src="picture/upload/iconmonstr-vk-1.svg" alt=""></span></a>
+              </li>
+              <li class="mr-3"><a href="http://completo.tv/" target="_blank"><span class="rounded-circle circle d-flex align-items-center justify-content-center"><img class="footer_social-img" src="picture/upload/iconmonstr-youtube-1.svg" alt=""></span></a>
+              </li>
+              <li class="mr-3"><a href="https://www.linkedin.com/company/completo/" target="_blank"><span class="rounded-circle circle d-flex align-items-center justify-content-center"><img class="footer_social-img" src="picture/upload/iconmonstr-linkedin-1.svg" alt=""></span></a>
+              </li>
+              <li class="mr-3"><a href="https://www.instagram.com/completo.ru/" target="_blank"><span class="rounded-circle circle d-flex align-items-center justify-content-center"><img class="footer_social-img" src="picture/upload/iconmonstr-instagram-11.svg" alt=""></span></a>
+              </li>
+            </ul>
+            <ul class="footer__social-link d-flex pl-0 list-unstyled">
+              <li class="mr-3"><a href="https://twitter.com/Completo_Ru/" target="_blank"><span class="rounded-circle circle d-flex align-items-center justify-content-center"><img class="footer_social-img" src="picture/upload/iconmonstr-twitter-1.svg" alt=""></span></a>
+              </li>
+              <li class="mr-3"><a href="https://www.slideshare.net/Completo_ru" target="_blank"><span class="rounded-circle circle d-flex align-items-center justify-content-center"><img class="footer_social-img" src="picture/upload/slideshare-logo.svg" alt=""></span></a>
+              </li>
+              <li class="mr-3"><a href="https://www.behance.net/completo" target="_blank"><span class="rounded-circle circle d-flex align-items-center justify-content-center"><img class="footer_social-img" src="picture/upload/iconmonstr-behance-1.svg" alt=""></span></a>
+              </li>
+              <li class="mr-3"><a href="mailto:contact@completo.ru" target="_blank"><span class="rounded-circle circle d-flex align-items-center justify-content-center"><img class="footer_social-img" src="picture/upload/iconmonstr-email-2.svg" alt=""></span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-sm-6 xs-order-1">
+            <button class="btn btn-warning data-scroll" data-scroll="form-content">Запросить предложение</button>
+          </div>
+          <div class="col-lg-4 col-sm-6 d-lg-none d-flex align-items-center footer_phone-link"><a class="font-weight-bold text-warning" href="tel:+74956408997">
+              <u>+7(495) 640-89-97</u></a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/libs.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

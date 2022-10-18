@@ -1,0 +1,190 @@
+.company-finding {
+	padding: 95px 0;
+	background: #FFFBEB;
+
+	@media (max-width: 767px) {
+		display: none;
+		padding: 24px 0 50px
+	}
+
+	&_mobile {
+		visibility: hidden;
+		position: absolute;
+		opacity: 0;
+
+		@media (max-width: 767px) {
+			position: relative;
+			visibility: visible;
+			display: block;
+			opacity: 1;
+		}
+	}
+
+	&__slider {
+		display: flex;
+		margin-top: 35px;
+		gap: 34px;
+
+		&-item {
+			z-index: 1;
+			width: calc(100% / 3);
+			padding: 52px 22px 30px;
+			position: relative;
+
+			@media (max-width: 767px) {
+				min-height: 200px;
+				display: inline-flex !important;
+				flex-direction: column;
+			}
+
+			&-bg {
+				z-index: -1;
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+
+				&::before {
+					position: absolute;
+					background: rgba(0, 0, 0, 0.58);
+					content: '';
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+				}
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+
+			&-title {
+				font-weight: 700;
+				font-size: 22px;
+				line-height: 116%;
+				color: #F7D033;
+
+				@media (max-width: 767px) {
+					margin-top: auto;
+				}
+			}
+
+			&-link {
+				margin-top: 75px;
+				font-weight: 700;
+				color: #FFFFFF;
+				display: inline-flex;
+				align-items: center;
+
+				@media (max-width: 767px) {
+					margin-top: 24px;
+				}
+
+				&:hover {
+					text-decoration: none;
+					color: #FFFFFF;
+				}
+
+				&::after {
+					margin-left: 16px;
+					content: url('/picture/upload/company/arrow-white.png');
+				}
+
+				span {
+					display: inline-block;
+					color: #F7D033;
+				}
+			}
+		}
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		font-weight: 700;
+		font-size: 24px;
+		text-decoration: underline;
+		text-decoration-style: dashed;
+		text-decoration-color: #F7D033;
+		text-underline-offset: 8px;
+		color: #212121;
+		margin-top: 34px;
+
+		&:hover {
+			text-decoration: none;
+			color: #212121;
+		}
+
+		&::after {
+			margin-left: 25px;
+			content: url('/picture/upload/company/arrow.png');
+		}
+	}
+}
+
+.company-trainees {
+	background: #FFFBEB;
+	padding-bottom: 110px;
+
+	@media (max-width: 767px) {
+		display: none;
+		padding: 24px 0 50px
+	}
+
+	&_mobile {
+		visibility: hidden;
+		position: absolute;
+		opacity: 0;
+
+		@media (max-width: 767px) {
+			position: relative;
+			visibility: visible;
+			display: block;
+			opacity: 1;
+		}
+	}
+
+
+	&__slider {
+		margin-top: 30px;
+		display: flex;
+		gap: 40px;
+		margin-bottom: 45px;
+
+		&-item {
+			overflow: hidden;
+			width: calc(100% / 4);
+			background: #FFF;
+			box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.06);
+			border-radius: 2px;
+
+			&-body {
+				padding: 27px 27px 40px;
+			}
+
+			&-img {
+				height: 174px;
+				background: #F7D033;
+				display: flex;
+				align-items: flex-end;
+				justify-content: center;
+			}
+
+			&-title {
+				text-align: center;
+				font-weight: 700;
+				font-size: 24px;
+				margin-bottom: 35px;
+			}
+		}
+	}
+
+	&__button {
+		width: 235px;
+		height: 65px;
+	}
+}

@@ -6,3 +6,12 @@
 	font-style: normal;
         font-display: fallback; 
 }
+
+@font-face {
+	font-family: 'RobotoMono Bold';
+	font-display: fallback;
+	src: local('RobotoMono'), local('RobotoMono-Bold'), url('../fonts/RobotoMono-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+        font-display: fallback; 
+}

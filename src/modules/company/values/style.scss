@@ -1,0 +1,155 @@
+.company-values {
+	display: flex;
+	background-color: #FFFBEB;
+	position: relative;
+	padding-bottom: 100px;
+	overflow: hidden;
+	z-index: 1;
+
+	@media (max-width: 1280px) {
+		padding-bottom: 0;
+	}
+
+	&::before {
+		background-color: #f7d033;
+		position: absolute;
+		content: '';
+		width: 60%;
+		height: 160%;
+		top: -400px;
+		right: -440px;
+		border-radius: 100%;
+
+		@media (max-width: 1280px) {
+			width: 600px;
+			height: 1040px;
+			top: -720px;
+			right: -270px;
+			z-index: -1;
+		}
+	}
+
+	&::after {
+		background: url('/picture/upload/achievements-decor.png');
+		position: absolute;
+		content: '';
+		width: 50%;
+		height: 100%;
+		top: 0;
+		right: 0;
+		z-index: -1;
+
+		@media (max-width: 1280px) {
+			width: 100%;
+		}
+	}
+
+	&__left {
+		padding: 95px 0;
+		width: 50%;
+
+		@media (max-width: 1280px) {
+			width: 100%;
+			padding: 45px 0;
+		}
+	}
+
+	&__right {
+		padding: 185px 0 0;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		width: 50%;
+		position: relative;
+
+		@media (max-width: 1280px) {
+			align-content: center;
+			position: absolute;
+			width: 100%;
+			right: 20px;
+			padding: 110px 0 0;	
+		}
+
+
+		&::before {
+			background: url('/picture/upload/company/arrow-values.png') no-repeat center / contain;
+			position: absolute;
+			content: '';
+			width: 235px;
+			height: 65px;
+			top: 380px;
+			left: -200px;
+
+			@media (max-width: 1280px) {
+				width: 96px;
+				height: 50px;
+				top: 270px;
+				right: 190px;
+				transform: rotate(225deg) scale(1, -1);
+				left: auto;
+			}
+		}
+	}
+
+	&__text {
+		position: relative;
+		margin-top: 135px;
+		line-height: 22px;
+		padding-left: 65px;
+		max-width: 500px;
+
+		@media (max-width: 1280px) {
+			font-size: 15px;
+			line-height: 24px;
+			margin-top: 285px;
+			width: 100%;
+		}
+
+		&::before {
+			position: absolute;
+			content: '';
+			width: 40px;
+			height: 4px;
+			background-color: #F7D033;
+			left: 0;
+			top: 13px;
+		}
+	}
+
+	&__cloud-text {
+		text-transform: uppercase;
+		line-height: 1;
+
+		&:first-child {
+			margin-right: 22px;
+			@media (max-width: 1280px) {
+				margin-right: 6px;
+			}
+		}
+
+		&_sm {
+			font-size: 22px;
+
+			@media (max-width: 1280px) {
+				font-size: 13px;
+			}
+		}
+
+		&_md {
+			font-size: 36px;
+
+			@media (max-width: 1280px) {
+				font-size: 18px;
+			}
+		}
+
+		&_lg {
+			font-size: 56px;
+			font-weight: 700;
+
+			@media (max-width: 1280px) {
+				font-size: 20px;
+			}
+		}
+	}
+}

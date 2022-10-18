@@ -30,5 +30,5 @@ $('.slick-slider-mob').slick({
 	arrows: false,
 	dots:true,
 	fade: true,
-	cssEase: 'linear'
+	cssEase: 'linear',
 });

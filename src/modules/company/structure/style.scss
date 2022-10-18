@@ -1,0 +1,186 @@
+.company-structure {
+	padding: 95px 0 40px;
+	background-color: #FEFAEB;
+
+	&__wrapper {
+		margin-top: 55px;
+	}
+
+	&__tabs {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		min-height: 456px;
+		gap: 22px;
+	}
+
+	&__tab {
+		display: flex;
+		align-items: center;
+		height: 88px;
+		padding: 0 30px;
+		border: 1px solid #F7D033;
+		max-width: 342px;
+		width: 100%;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 119%;
+		text-decoration-line: underline;
+		text-transform: uppercase;
+		background: url('/picture/upload/achievements-decor.png');
+		color: rgba(33, 33, 33, 0.7);
+		cursor: pointer;
+		position: relative;
+		z-index: 1;
+		
+		&.active {
+			pointer-events: none;
+			color: #212121;
+			background: url('/picture/upload/achievements-decor.png'), rgba(247, 208, 51, 0.51);
+
+			&::before {
+				position: absolute;
+				content: url('/picture/upload/company/triangle-white.png');
+				top: 10px;
+				left: 15px;
+				z-index: -1;
+			}
+		}
+	}
+
+	&__tab-content {
+		display: none;
+		position: absolute;
+		width: calc(100% - 404px);
+		right: 0;
+		top: 0;
+		height: 100%;
+		padding: 45px 42px 65px 50px;
+		background: linear-gradient(90deg, rgba(247, 208, 51, 1) 35%, rgba(47, 47, 47, 1) 35%);
+
+		&.active {
+			display: block;
+		}
+
+		&-count {
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 109%;
+			color: #212121;
+
+			span {
+				position: relative;
+				display: inline-block;
+				z-index: 1;
+
+				&::before {
+					position: absolute;
+					top: 4px;
+					left: 50%;
+					width: 107%;
+					height: 100%;
+					background-color: #fff;
+					content: '';
+					z-index: -1;
+					transform: translateX(-50%);
+				}
+			}
+		}
+
+		&-text {
+			margin-top: 70px;
+			padding: 38px 27px 26px 31px;
+			background-color: #fff;
+			font-size: 18px;
+			max-width: 456px;
+			line-height: 140%;
+			position: relative;
+
+			&::before {
+				content: url('/picture/upload/company/quotes.svg');
+				top: -17px;
+				right: 30px;
+				position: absolute;
+				filter: invert(93%) sepia(98%) saturate(2435%) hue-rotate(327deg) brightness(99%) contrast(95%);
+				transform: scale(1.4) rotate(-37deg);
+			}
+		}
+
+		&-peoples {
+			display: flex;
+			align-items: center;
+			gap: 24px;
+			margin-left: 50px;
+		}
+
+		&-people {
+			position: relative;
+
+			&-photo {
+				width: 80px;
+				height: 80px;
+				background: #F7D033;
+				border-radius: 100%;
+				overflow: hidden;
+				display: flex;
+
+				&:focus>.company-structure__tab-content-info {
+					display: block;
+				}
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+					pointer-events: none;
+				}
+			}
+
+			&-title {
+				font-weight: 700;
+				font-size: 20px;
+				line-height: 109%;
+			}
+
+			&-position {
+				font-size: 10px;
+				line-height: 109%;
+			}
+		}
+
+		&-info {
+			display: none;
+			position: absolute;
+			top: -115px;
+			right: -150px;
+			clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 9% 90%, 0 100%, 0% 75%);
+			background-color: #fff;
+			padding: 25px;
+			z-index: 1;
+
+			&-link {
+				font-weight: 700;
+				font-size: 12px;
+				line-height: 100%;
+				text-decoration-line: underline;
+				color: #292929;
+			}
+
+			&-title {
+				font-weight: 700;
+				font-size: 20px;
+			}
+
+			&-position {
+				font-size: 10px;
+				text-transform: uppercase;
+				margin-top: 6px;
+			}
+
+			hr {
+				background: #F7D033;
+				margin: 16px 0 13px;
+			}
+		}
+	}
+}

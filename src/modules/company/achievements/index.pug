@@ -1,0 +1,28 @@
+.company-achievements
+	.container
+		h2 
+			span.yellow-border Достижения
+				span.border-container.animation.visible.animated(data-animate="newline")
+	.container
+		.custom-scrollbar.d-flex
+			.company-achievements__wrapper
+				each achievement in Array(5)
+					.company-achievements__item
+						.company-achievements__item-icon
+							img(src="picture/upload/company/achievement-logo-1.png" alt="")
+						.company-achievements__item-text Делаем <strong>комплексный электронный маркетинг</strong> с 2007 года, когда еще не существовало термина “digital-маркетинг”.
+	.company-achievements__bg-text #success
+
+.company-achievements.company-achievements_mobile
+	.container
+		h2 
+			span.yellow-border Достижения
+				span.border-container.animation.visible.animated(data-animate="newline")
+	.container
+		.company-slider-mob.company-achievements__wrapper
+			each achievement in Array(5)
+				.company-achievements__item
+					.company-achievements__item-icon
+						img(src="picture/upload/company/achievement-logo-1.png" alt="")
+					.company-achievements__item-text Делаем <strong>комплексный электронный маркетинг</strong> с 2007 года, когда еще не существовало термина “digital-маркетинг”.
+	.company-achievements__bg-text #success

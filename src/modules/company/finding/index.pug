@@ -1,0 +1,86 @@
+.company-finding
+	.container
+		h2 мы в поисках сотрудников!
+		.company-finding__slider 
+			.company-finding__slider-item
+				.company-finding__slider-item-bg 
+					img(src="picture/upload/company/finding-1.png" alt="")
+				.company-finding__slider-item-title Digital - маркетолог
+				a.company-finding__slider-item-link(href="") Подробнее на&nbsp;
+					span hh.ru
+			.company-finding__slider-item
+				.company-finding__slider-item-bg 
+					img(src="picture/upload/company/finding-1.png" alt="")
+				.company-finding__slider-item-title Digital - маркетолог
+				a.company-finding__slider-item-link(href="") Подробнее на&nbsp;
+					span hh.ru
+			.company-finding__slider-item
+				.company-finding__slider-item-bg 
+					img(src="picture/upload/company/finding-1.png" alt="")
+				.company-finding__slider-item-title Digital - маркетолог
+				a.company-finding__slider-item-link(href="") Подробнее на&nbsp;
+					span hh.ru
+		
+		a.company-finding__link(href="") Все вакансии
+
+.company-finding.company-finding_mobile
+	.container
+		h2 мы в поисках сотрудников!
+		.company-slider-mob.company-finding__slider 
+			.company-finding__slider-item
+				.company-finding__slider-item-bg 
+					img(src="picture/upload/company/finding-1.png" alt="")
+				.company-finding__slider-item-title Digital - маркетолог
+				a.company-finding__slider-item-link(href="") Подробнее на&nbsp;
+					span hh.ru
+			.company-finding__slider-item
+				.company-finding__slider-item-bg 
+					img(src="picture/upload/company/finding-1.png" alt="")
+				.company-finding__slider-item-title Digital - маркетолог
+				a.company-finding__slider-item-link(href="") Подробнее на&nbsp;
+					span hh.ru
+			.company-finding__slider-item
+				.company-finding__slider-item-bg 
+					img(src="picture/upload/company/finding-1.png" alt="")
+				.company-finding__slider-item-title Digital - маркетолог
+				a.company-finding__slider-item-link(href="") Подробнее на&nbsp;
+					span hh.ru
+		
+		a.company-finding__link(href="") Все вакансии
+
+.company-trainees
+	.container 
+		h2 Школа стажеров
+		.company-trainees__slider
+			each trainee, index in Array(4)
+				.company-trainees__slider-item
+					.company-trainees__slider-item-img
+						img(src=`picture/upload/company/trainee-${index+1}.png` alt="")
+					.company-trainees__slider-item-body
+						.company-trainees__slider-item-title Стажер
+						ul.list
+							li Пошаговое обучение (1 месяц)
+							li Небольшие задачи от команд и отделов
+							li Серия аттестаций
+							li Дипломная работа
+		.d-flex.justify-content-center
+			button.company-trainees__button.btn.btn-warning.data-scroll(data-scroll='form-content') Школа стажеров
+
+.company-trainees.company-trainees_mobile
+	.container 
+		h2 Школа стажеров
+		.company-slider-mob.company-trainees__slider
+			each trainee, index in Array(4)
+				.company-trainees__slider-item
+					.company-trainees__slider-item-img
+						img(src=`picture/upload/company/trainee-${index+1}.png` alt="")
+					.company-trainees__slider-item-body
+						.company-trainees__slider-item-title Стажер
+						ul.list
+							li Пошаговое обучение (1 месяц)
+							li Небольшие задачи от команд и отделов
+							li Серия аттестаций
+							li Дипломная работа
+		.d-flex.justify-content-center
+			button.company-trainees__button.btn.btn-warning.data-scroll(data-scroll='form-content') Школа стажеров
+	

@@ -2,7 +2,7 @@ const gulp = require('gulp')
 //const imagemin = require('gulp-imagemin')
 
 module.exports = function images() {
-	return gulp.src('src/img/*/*.{gif,png,jpg,svg,mp4}')
+	return gulp.src('src/img/**/*.{gif,png,jpg,svg,mp4}')
 		/*.pipe(imagemin([
 			imagemin.mozjpeg({
 				quality: 75,

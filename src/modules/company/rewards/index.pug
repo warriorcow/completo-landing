@@ -1,0 +1,40 @@
+-
+	var rewards = [
+		{
+			icon: 'rating-icon-1',
+			rating: 'RUWARD',
+			score: '6',
+			title: 'Разработка комплексной digital-стратегии компании/бренда. №1 среди B2B-компаний',
+			year: '2022'
+		},
+		{
+			icon: 'rating-icon-1',
+			rating: 'RUWARD',
+			score: '66',
+			title: 'Внедрение систем сквозной аналитики	',
+			year: '2022'
+		},
+		{
+			icon: 'rating-icon-1',
+			rating: 'RUWARD',
+			score: '66',
+			title: 'Внедрение систем сквозной аналитики	',
+			year: '2022'
+		}
+	]
+
+.rewards
+	.container 
+		h2 награды и Рейтинги
+
+		.rewards__list
+			each reward in rewards
+				.rewards__item
+					.rewards__icon
+						img(src=`picture/upload/company/${reward.icon}.png` alt=reward.icon)
+					.rewards__rating= reward.rating
+					.rewards__score= reward.score
+					.rewards__title= reward.title
+					.rewards__year= reward.year
+
+		.rewards__more Показать еще

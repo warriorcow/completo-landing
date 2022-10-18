@@ -1,0 +1,130 @@
+.company-history {
+	padding: 60px 0 95px;
+
+	&__wrapper {
+		margin-top: 60px;
+	}
+
+	&__slider {
+		max-width: 1100px;
+		height: 445px;
+
+		&-item {
+			position: relative;
+			padding: 50px 0 80px 50px;
+			height: 100%;
+			max-width: 1100px;
+			width: 100%;
+			border-radius: 0px 0px 167px 0px;
+			overflow: hidden;
+
+			&::before {
+				z-index: -1;
+				position: absolute;
+				content: url('/picture/upload/company/history-bg.png');
+				height: 100%;
+				top: 0;
+				left: 0;
+			}
+
+			&-title {
+				font-weight: 700;
+				font-size: 56px;
+				line-height: 119%;
+				text-transform: uppercase;
+				color: #FFFFFF;
+				margin-bottom: 20px;
+			}
+
+			&-desc {
+				font-size: 22px;
+				line-height: 28px;
+				color: #FFFFFF;
+				max-width: 360px;
+				width: 100%;
+			}
+
+			&-text {
+				margin-top: 40px;
+				padding: 30px;
+				background-color: #fff;
+				max-width: 550px;
+				width: 100%;
+				font-size: 14px;
+			}
+
+			&-img {
+				position: absolute;
+				right: 0;
+				top: 0;
+				height: 100%;
+				z-index: -2;
+
+				img {
+					height: 100%;
+				}
+			}
+		}
+
+		&-dots {
+			position: relative;
+			display: flex;
+			flex-direction: column-reverse;
+			align-items: flex-end;
+			justify-content: space-between;
+			margin-left: auto;
+			padding-left: 15px;
+
+			&::before {
+				content: '';
+				background-color: #f7d033;
+				height: 95%;
+				width: 3px;
+				right: 3.5px;
+				top: 50%;
+				position: absolute;
+				z-index: -1;
+				transform: translateY(-50%);
+			}
+		}
+
+		&-dot {
+			font-size: 28px;
+			line-height: 28px;
+			position: relative;
+			cursor: pointer;
+			padding-right: 43px;
+			white-space: nowrap;
+
+			&::after {
+				content: '';
+				background-color: #F7D033;
+				height: 12px;
+				width: 12px;
+				right: 0;
+				top: 8px;
+				position: absolute;
+				border-radius: 100%;
+			}
+
+			&.active {
+				font-weight: 700;
+				font-size: 46px;
+
+				&::before {
+					content: '';
+					background-color: #F7D033;
+					height: 24px;
+					width: calc(100% - 43px);
+					bottom: -15px;
+					position: absolute;
+					z-index: -1;
+				}
+
+				&::after {
+					transform: scale(1.667);
+				}
+			}
+		}
+	}
+}

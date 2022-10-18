@@ -1,0 +1,23 @@
+html(lang="ru")
+	head
+		include modules/head/index.pug
+	body.company
+		include modules/header/index.pug
+		include modules/company/mission/index.pug
+		//- include modules/company/structure/index.pug
+		include modules/company/clients/index.pug
+		include modules/company/reviews/index.pug
+		include modules/company/rewards/index.pug
+		include modules/company/achievements/index.pug
+		//- include modules/company/history/index.pug
+		include modules/company/values/index.pug
+		include modules/company/job/index.pug
+		include modules/company/finding/index.pug
+		.container.mt-4
+			.h2.mb-4.form-h2
+				span Сотрудничать с 
+				span.yellow-border Комплето
+					span.border-container.animation.visible.animated(data-animate="newline")
+			include modules/form/index.pug
+		include modules/footer/index.pug
+		include modules/foot/index.pug

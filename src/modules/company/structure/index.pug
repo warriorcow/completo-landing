@@ -1,0 +1,82 @@
+-
+	var tabs = [
+		{
+			id: 1,
+			name: 'Команда стратегий',
+			count: '6 человек',
+			text: 'Через стратегию, цели и общее видение синхронизируется работа всех команд на комплексных проектах. Команда проводит аудиты, исследует рынки, сегментируюет целевую аудиторию, генерирует инсайты и разрабатывает стратегические планы всех digital-активностей',
+			peoples: [
+				{
+					photo: '/picture/upload/company/people-1.png',
+					name: 'Артем Елисов',
+					position: 'Руководитель'
+				},
+				{
+					photo: 'picture/upload/company/job-face.png',
+					name: 'Артем Елисов',
+					position: 'Руководитель'
+				},
+				{
+					photo: '/picture/upload/company/people-1.png',
+					name: 'Артем Елисов',
+					position: 'Руководитель'
+				},
+			]
+		},
+		{
+			id: 2,
+			name: 'Команда трафика',
+			count: '6 человек',
+			text: 'Команда, которая может найти в интернете любую аудиторию и превратить в теплый трафик. Команда с закрытыми глазами пользуется любыми рекламными кабинетами, и наизусть помнит топ выдачи по всем ключевым запросам.',
+			peoples: [
+				{
+					photo: '/picture/upload/company/people-1.png',
+					name: 'Артем Елисов',
+					position: 'Руководитель'
+				},
+				{
+					photo: 'picture/upload/company/job-face.png',
+					name: 'Артем Елисов',
+					position: 'Руководитель'
+				},
+				{
+					photo: '/picture/upload/company/people-1.png',
+					name: 'Артем Елисов',
+					position: 'Руководитель'
+				},
+			]
+		}
+	]
+
+mixin tab-content(ctx)
+	.company-structure__tab-content(data-id=ctx.id, class=(ctx.id === 1 ? 'active' : ''))
+		.d-flex
+			.d-block
+				.company-structure__tab-content-count 
+					span= ctx.count 
+					| &nbsp;в команде 
+					br
+					| стратегий
+				
+				.company-structure__tab-content-text= ctx.text
+			.company-structure__tab-content-peoples
+				each people, index in ctx.peoples
+					.company-structure__tab-content-people(data-id=index)
+						a.company-structure__tab-content-people-photo(href="#!")
+							img(src=people.photo, alt="")
+						.company-structure__tab-content-info
+							.company-structure__tab-content-info-title= people.name
+							.company-structure__tab-content-info-position= people.position
+							hr
+							a.company-structure__tab-content-info-link(href='https://google.com') Перейти
+						
+
+.company-structure
+	.container 
+		h2 Структура компании
+
+		.company-structure__wrapper
+			.company-structure__tabs
+				each tab in tabs 
+					.company-structure__tab(data-id=tab.id, class=(tab.id === 1 ? 'active' : ''))= tab.name
+					+tab-content(tab)

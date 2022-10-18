@@ -1,0 +1,51 @@
+-
+	var company_logos = [
+		'alta',
+		'angara',
+		'beeline',
+		'dassault',
+		'exon-mobil',
+		'get-response',
+		'lesaffre',
+		'megaflex',
+		'motorola',
+		'panasonic',
+		'pik',
+		'reg-system',
+		'rostelecom',
+		'sas',
+		'sbi',
+		'segment',
+		'severstal',
+		'sibur',
+		'stels',
+		'superjob',
+		'torex',
+		'veka',
+		'velux',
+		'world-tools'
+	]
+
+.company-clients 
+	.container 
+		h2 Наши 
+			span.yellow-border клиенты
+				span.border-container.animation.visible.animated(data-animate="newline")
+	.container 
+		.company-clients__wrapper
+			each logo in company_logos
+				.company-clients__item
+					img(src=`picture/upload/clients-logo/${logo}.png`, alt="")
+	.container 
+		.company-clients__footer
+			.company-clients__inner
+				.company-clients__stats
+					.company-clients__stats-title 550+
+					.company-clients__stats-desc Успешных кейсов
+				.company-clients__stats
+					.company-clients__stats-title 130+
+					.company-clients__stats-desc клиентов
+			
+			.company-clients__inner
+				a.company-clients__link(href="#!") Клиенты и кейсы 
+				button.company-clients__button.btn.btn-warning.data-scroll(data-scroll='form-content') Стать клиентом
