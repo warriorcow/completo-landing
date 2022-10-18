@@ -29,7 +29,7 @@
 
 		&::after {
 			margin-left: 25px;
-			content: url('/picture/upload/company/arrow.png');
+			content: url('../picture/upload/company/arrow.png');
 
 			@media (max-width: 1280px) {
 				display: none;
@@ -47,7 +47,7 @@
 
 		&::after {
 			position: absolute;
-			content: url('/picture/upload/company/rectangle.png');
+			content: url('../picture/upload/company/rectangle.png');
 			bottom: -10px;
 			left: -220px;
 			z-index: -1;
@@ -61,7 +61,7 @@
 
 		&::before {
 			position: absolute;
-			content: url('/picture/upload/company/quotes-black.png');
+			content: url('../picture/upload/company/quotes-black.png');
 			bottom: 150px;
 			left: 20px;
 

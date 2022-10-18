@@ -30,7 +30,7 @@
 	}
 
 	&::after {
-		background: url('/picture/upload/achievements-decor.png');
+		background: url('../picture/upload/achievements-decor.png');
 		position: absolute;
 		content: '';
 		width: 50%;
@@ -72,7 +72,7 @@
 
 
 		&::before {
-			background: url('/picture/upload/company/arrow-values.png') no-repeat center / contain;
+			background: url('../picture/upload/company/arrow-values.png') no-repeat center / contain;
 			position: absolute;
 			content: '';
 			width: 235px;

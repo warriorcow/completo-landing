@@ -91,7 +91,7 @@
 
 				&::after {
 					margin-left: 16px;
-					content: url('/picture/upload/company/arrow-white.png');
+					content: url('../picture/upload/company/arrow-white.png');
 				}
 
 				span {
@@ -121,7 +121,7 @@
 
 		&::after {
 			margin-left: 25px;
-			content: url('/picture/upload/company/arrow.png');
+			content: url('../picture/upload/company/arrow.png');
 		}
 	}
 }

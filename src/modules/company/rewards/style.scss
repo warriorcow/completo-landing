@@ -59,7 +59,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			background: url('/picture/upload/company/laurel.png') no-repeat center / contain;
+			background: url('../picture/upload/company/laurel.png') no-repeat center / contain;
 			font-weight: 700;
 			font-size: 20px;
 			min-width: 60px;
@@ -87,7 +87,7 @@
 			}
 
 			&::after {
-				content: url('/picture/upload/company/arrow-yellow.png');
+				content: url('../picture/upload/company/arrow-yellow.png');
 				margin-left: 16px;
 
 				@media (max-width: 767px) {

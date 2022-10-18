@@ -27,7 +27,7 @@
 		line-height: 119%;
 		text-decoration-line: underline;
 		text-transform: uppercase;
-		background: url('/picture/upload/achievements-decor.png');
+		background: url('../picture/upload/achievements-decor.png');
 		color: rgba(33, 33, 33, 0.7);
 		cursor: pointer;
 		position: relative;
@@ -36,11 +36,11 @@
 		&.active {
 			pointer-events: none;
 			color: #212121;
-			background: url('/picture/upload/achievements-decor.png'), rgba(247, 208, 51, 0.51);
+			background: url('../picture/upload/achievements-decor.png'), rgba(247, 208, 51, 0.51);
 
 			&::before {
 				position: absolute;
-				content: url('/picture/upload/company/triangle-white.png');
+				content: url('../picture/upload/company/triangle-white.png');
 				top: 10px;
 				left: 15px;
 				z-index: -1;
@@ -97,7 +97,7 @@
 			position: relative;
 
 			&::before {
-				content: url('/picture/upload/company/quotes.svg');
+				content: url('../picture/upload/company/quotes.svg');
 				top: -17px;
 				right: 30px;
 				position: absolute;
